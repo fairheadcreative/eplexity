@@ -1,0 +1,12 @@
+# Site settings
+title: Eplexity
+permalink: /:title/
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+# Local port
+port: 5000

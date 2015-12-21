@@ -1,0 +1,51 @@
+//rules for plates with cakes, slices, toppings..
+.plate { 
+	@include clearfix;
+	border: 1px solid $light-gray;
+	border-radius: 3px;
+	padding: 1em;
+	
+	.specs { 
+		@include clearfix;
+		@include plate-line;
+
+		li {
+			@include span-columns(2);
+
+			&:first-child { 
+				@include span-columns(4);
+				padding-left: 3em; 
+			}
+		}
+	}
+
+	.cake { 
+		@include clearfix;
+		@include plate-line;
+
+		&:last-child { 
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+
+		.cake-type { 
+			position: relative;
+			@include span-columns(4);
+			padding-left: 3em; 
+
+			.icon {
+				position: absolute;
+				display: block;
+				height: 1.2em;
+				width: 1.7em;
+				border-radius: $base-border-radius;
+				left: 0; 
+				top: 3px;
+				background: $light-gray;
+			}
+
+			}
+
+		.cake-specs { @include span-columns(2); }
+	}
+}

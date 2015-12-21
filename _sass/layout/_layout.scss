@@ -1,0 +1,14 @@
+@import
+        "plate",
+        "actions"
+;
+
+.page-header {
+    @include outer-container;
+
+    h1 { text-align: center; }
+}
+
+.page-content {
+    @include outer-container;
+}

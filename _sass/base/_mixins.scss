@@ -1,0 +1,6 @@
+//set of local mixins
+@mixin plate-line {
+	border-bottom: 1px solid $light-gray;
+	margin-bottom: 0.75em;
+	padding-bottom: 0.5em;
+}
