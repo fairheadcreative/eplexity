@@ -5,7 +5,7 @@
 	border-radius: 3px;
 	padding: 1em;
 	
-	.specs { 
+	.specs-type { 
 		@include clearfix;
 		@include plate-line;
 
@@ -15,6 +15,29 @@
 			&:first-child { 
 				@include span-columns(4);
 				padding-left: 3em; 
+			}
+		}
+	}
+	
+	.plate-details {
+		margin: $base-spacing 0 $base-spacing*2; 
+
+		.specs-name { 
+			@include clearfix;
+			@include plate-line;
+
+			li {
+				@include span-columns(4);
+			}
+		}
+
+		.value-row { 
+			@include clearfix;
+
+			.value-type {
+				@include span-columns(4);
+
+				&:first-child { padding: 0 $small-spacing; }
 			}
 		}
 	}
@@ -47,5 +70,27 @@
 			}
 
 		.cake-specs { @include span-columns(2); }
+
+	}
+
+	&.tabbed {
+		margin-top: 2em;
+
+		.tabs {
+			display: block;
+			text-align: center;
+			margin-bottom: -1px;
+			margin-top: -2.9em;
+
+			li {
+				display: inline-block;
+				border: 1px solid $light-gray;
+				border-bottom: none;
+				border-radius:  $base-border-radius  $base-border-radius 0 0;  
+				padding: .25em $small-spacing 0;
+
+				&.active { border-bottom: 1px solid white; }
+			}
+		}
 	}
 }

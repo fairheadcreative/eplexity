@@ -29,13 +29,14 @@ p {
 
 a {
   color: $action-color;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color $base-duration $base-timing;
 
   &:active,
   &:focus,
   &:hover {
     color: shade($action-color, 25%);
+    text-decoration: none;
   }
 }
 

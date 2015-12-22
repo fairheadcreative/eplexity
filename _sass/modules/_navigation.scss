@@ -132,9 +132,6 @@
       display: inline;
       line-height: $centered-navigation-height;
 
-      a {
-        padding-right: $centered-navigation-item-padding;
-      }
     }
   }
 
@@ -144,6 +141,15 @@
     border-left: 1px solid $light-gray;
 
     @include media($horizontal-bar-mode) { display: inline; }
+
+    a {
+      border: 1px solid $medium-gray;
+      border-radius: 50%;
+      height: 2em;
+      line-height: 1.9;
+      text-align: center;
+      width: 2em;
+    }
   }
 
   li.logo.nav-link {
