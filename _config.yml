@@ -1,6 +1,7 @@
 # Site settings
 title: Eplexity
 permalink: /:title/
+baseurl: /eplexity
 
 # Build settings
 markdown: kramdown
