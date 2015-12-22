@@ -37,7 +37,7 @@
 			.value-type {
 				@include span-columns(4);
 
-				&:first-child { padding: 0 $small-spacing; }
+				&:first-child { padding: 0 $small-spacing; } 
 			}
 		}
 	}

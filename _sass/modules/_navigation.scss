@@ -31,8 +31,10 @@
 
     .icon {
       display: block;
-      height: 1.2em;
-      width: 1.7em;
+      height: 2em;
+      position: relative;
+      top: 0.9em;
+      width: 2em;
       border-radius: $base-border-radius;
       background: $light-gray;
     }
@@ -139,6 +141,7 @@
     margin-left: 0;
     padding-left: $centered-navigation-submenu-padding;
     border-left: 1px solid $light-gray;
+    display: none;
 
     @include media($horizontal-bar-mode) { display: inline; }
 
