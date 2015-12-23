@@ -1,4 +1,4 @@
-.centered-navigation {
+nav {
   $base-border-radius: 3px !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
@@ -10,74 +10,52 @@
   $centered-navigation-color-hover: $base-font-color;
   $centered-navigation-height: 60px;
   $centered-navigation-item-padding: 1em;
-  $centered-navigation-submenu-padding: 1em;
+  $centered-navigation-submenu-spacing: 1em;
   $centered-navigation-submenu-width: 12em;
   $centered-navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
 
-  
   border-bottom: 1px solid $light-gray;
-  min-height: $centered-navigation-height;
-  width: 100%;
-  z-index: 9999;
+  @include clearfix;
+  margin-top: $small-spacing;
 
   // Nav menu
-
-  .centered-navigation-wrapper {
-    @include outer-container;
-    @include clearfix;
-    position: relative;
-    z-index: 999;
-  }
 
   ul.centered-navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     display: block;
     text-align: center;
-    margin: 0 auto;
-    overflow: visible;
+    overflow-y: hidden;
     padding: 0;
     width: 100%;
-    z-index: 99999;
     white-space: nowrap;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     &.show {
       display: block;
-    }
-
-    @include media ($horizontal-bar-mode) {
     }
   }
 
   // The nav items
 
-  .nav-link:first-child {
-      margin-left: $centered-navigation-item-nudge;
-  }
-
   ul li.nav-link {
     background: transparent;
-    display: inline;
-    line-height: $centered-navigation-height;
+    display: inline-block;
     overflow: hidden;
-    margin-right: $centered-navigation-submenu-padding;
-    padding: $small-spacing;
-    text-align: right;
-    width: 100%;
-    z-index: 9999;
 
-    &.active { 
-      background: $light-gray;
-      border-radius: $base-border-radius;
-    }
+    &.active a {
+        background: $light-gray;
+        border-radius: $base-border-radius;
+      }
 
     a {
       color: $centered-navigation-color;
       display: inline-block;
       outline: none;
       text-decoration: none;
+      padding: .5em $small-spacing;
+      margin: 0 .25em;
 
       &:focus,
       &:hover {
@@ -86,28 +64,31 @@
     }
 
     &.divider {
-      margin-left: 0;
-      padding-left: $centered-navigation-submenu-padding;
       border-left: 1px solid $light-gray;
+
+      &.active a { margin-left: .52em; }
     }
+
+    &:first-child { margin-left: $small-spacing; }
   }
 
   ul li.nav-close {
-    display: inline;
+    border: 1px solid $medium-gray;
+    border-radius: 50%;
+    height: 2em;
+    text-align: center;
+    width: 2em;
+    position: relative;
+    bottom: 5px;
 
     a {
-      border: 1px solid $medium-gray;
-      border-radius: 50%;
-      height: 2em;
-      line-height: 1.9;
-      text-align: center;
-      width: 2em;
+      display: block;
+      padding: 0;
+      line-height: 2;
     }
   }
 
   li.logo.nav-link {
-    display: inline;
-    line-height: 0;
     border-right: 1px solid $light-gray;
   }
 
@@ -115,23 +96,25 @@
       display: block;
       height: 2em;
       width: 2em;
-      position: relative;
-      top: .6em;
       border-radius: $base-border-radius;
       background: $light-gray;
+      margin-right: $small-spacing;
+      margin: 0 .5em .5em 0;
+      top: 5px;
+      position: relative;
     }
 
   // Sub menus
 
   li.more.nav-link {
-    padding-right: $centered-navigation-submenu-padding;
+    padding-right: $centered-navigation-submenu-spacing;
 
     > ul > li:first-child a  {
       padding-top: 1em;
     }
 
     a {
-      margin-right: $centered-navigation-submenu-padding;
+      margin-right: $centered-navigation-submenu-spacing;
     }
 
     > a {
@@ -147,23 +130,23 @@
 
   li.more {
     overflow: visible;
-    padding-right: $centered-navigation-submenu-padding;
+    padding-right: $centered-navigation-submenu-spacing;
     position: relative;
 
     a {
-      padding-right: $centered-navigation-submenu-padding;
+      padding-right: $centered-navigation-submenu-spacing;
     }
 
     > a {
       padding-right: 1.6em;
       position: relative;
-        margin-right: $centered-navigation-submenu-padding;
+        margin-right: $centered-navigation-submenu-spacing;
 
       &:after {
         content: "›";
         font-size: 1.2em;
         position: absolute;
-        right: $centered-navigation-submenu-padding / 2;
+        right: $centered-navigation-submenu-spacing / 2;
       }
     }
 
