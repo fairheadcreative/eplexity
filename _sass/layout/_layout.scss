@@ -5,10 +5,16 @@
 
 .page-header {
     @include outer-container;
+    margin-top: $small-spacing;
 
     h1 { text-align: center; }
 }
 
 .page-content {
     @include outer-container;
+}
+
+.lead {
+  text-align: center;
+  font-size: 1.1em;
 }
