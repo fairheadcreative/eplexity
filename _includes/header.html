@@ -1,7 +1,11 @@
 <header class="page-header" role="banner">
+  {% include modules/nav.html %}
 
-    {% include modules/nav.html %}
-    
-    <h1 class="site-title">{{ page.title }}</h1>
+  {% if page.flash-message %}
+  <div class="flash-{{ page.flash-type }}">
+    <span>{{ page.flash-message }}</span>
+  </div>
+  {% endif %}
 
+  <h1 class="site-title">{{ page.title }}</h1>
 </header>

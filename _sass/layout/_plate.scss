@@ -5,6 +5,11 @@
 	border-radius: 3px;
 	padding: 1em;
 	margin: 0 $small-spacing $small-spacing;
+
+  &.plate-small {
+    max-width: 25em;
+    margin: 0 auto $small-spacing;
+  }
 	
 	.specs-type { 
 		@include clearfix;

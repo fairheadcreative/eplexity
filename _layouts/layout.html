@@ -13,7 +13,7 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 </head>
 
-<body>
+<body{% if page.class %} class="{{ page.class }}"{% endif %}>
 
   {% include header.html %}
   <div class="page-content">
