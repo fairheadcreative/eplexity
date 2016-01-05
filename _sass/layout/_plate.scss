@@ -48,7 +48,8 @@
 		}
 	}
 
-	.cake { 
+	.cake,
+	.slice { 
 		@include clearfix;
 		@include plate-line;
 
@@ -57,7 +58,8 @@
 			padding-bottom: 0;
 		}
 
-		.cake-type { 
+		.cake-type,
+		.slice-type { 
 			position: relative;
 			@include span-columns(4);
 			padding-left: 3em; 
@@ -73,9 +75,10 @@
 				background: $light-gray;
 			}
 
-			}
+		}
 
-		.cake-specs { @include span-columns(2); }
+		.cake-specs,
+		.slice-specs { @include span-columns(2); }
 
 	}
 
