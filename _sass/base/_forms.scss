@@ -82,13 +82,35 @@ input[type="file"] {
   margin-bottom: $small-spacing;
   width: 100%;
 }
-
 select {
-  margin-bottom: $base-spacing;
   max-width: 100%;
-  width: auto;
+  width: auto; 
 }
 
-.login input {
-  width: 100%;
+.login,
+.registration {
+  input {
+    @include fill-parent;
+  }
+
+  select { 
+    background-color: $base-background-color;
+    border: $base-border;
+    border-radius: $base-border-radius;
+    box-shadow: $form-box-shadow;
+    box-sizing: border-box;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    margin-bottom: $small-spacing;
+    transition: border-color $base-duration $base-timing;
+    padding: $base-spacing / 3;
+
+    &.select-full { 
+      @include fill-parent; 
+    }
+
+    &.select-half { 
+      @include span-columns(6); 
+    }
+  }
 }
