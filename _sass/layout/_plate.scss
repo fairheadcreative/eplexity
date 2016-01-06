@@ -40,7 +40,8 @@
 		.value-row { 
 			@include clearfix;
 
-			.value-type {
+			.value-type,
+			.value {
 				@include span-columns(4);
 
 				&:first-child { padding: 0 $small-spacing; } 
@@ -90,6 +91,8 @@
 			text-align: center;
 			margin-bottom: -1px;
 			margin-top: -2.9em;
+			white-space: nowrap;
+			overflow-x: auto;
 
 			li {
 				display: inline-block;
@@ -97,8 +100,14 @@
 				border-bottom: none;
 				border-radius:  $base-border-radius  $base-border-radius 0 0;  
 				padding: .25em $small-spacing 0;
+				cursor: pointer;
 
-				&.active { border-bottom: 1px solid white; }
+				&:hover { background: $light-gray; }
+				&.active { 
+					border-bottom: 1px solid white;
+					cursor: inherit;
+					background: $base-background-color;
+				 }
 			}
 		}
 	}

@@ -1,22 +1,41 @@
 ---
 layout: layout
-title: Chocolate Cake
-class: item-edit cakes
+title: Cocoa Slice
+class: item-edit slices
 ---
 
 <section class="plate tabbed">
   <ul class="tabs">
+    <li data-tab="access">Access</li>
     <li data-tab="specs" class="active">Specs</li>
-    <li data-tab="function1">Function</li>
-    <li data-tab="function2">Function</li>
+    <li data-tab="monitoring">Monitoring</li>
+    <li data-tab="snapshots">Snapshots</li>
+    <li data-tab="settings">*</li>
   </ul>
+
+  <div data-plate="access">
+    <div class="plate-details">
+      Access
+    </div>
+  </div>
 
   <div data-plate="specs">
     <div class="plate-details">
       <ul class="specs-name">
+        <li>Image</li>
+        <li>Version</li>
+      </ul>
+      <div class="value-row">
+        <span class="value-type">Ubuntu</span>
+        <span class="value">14.04.3x64</span>
+      </div>
+    </div>
+
+    <div class="plate-details">
+      <ul class="specs-name">
         <li>Storage</li>
         <li>Total</li>
-        <li>Used</li>
+        <li>Available</li> 
       </ul>
       <div class="value-row">
         <span class="value-type">Capacity</span>
@@ -34,7 +53,7 @@ class: item-edit cakes
       <ul class="specs-name">
         <li>CPU</li>
         <li>Total</li>
-        <li>Used</li>
+        <li>Available</li>
       </ul>
       <div class="value-row">
         <span class="value-type">Count</span>
@@ -45,32 +64,19 @@ class: item-edit cakes
 
     <div class="plate-details">
       <ul class="specs-name">
-        <li>vRAM</li>
+        <li>NICs</li>
         <li>Total</li>
-        <li>Used</li>
+        <li>Available</li>
       </ul>
       <div class="value-row">
-        <span class="value-type">Capacity</span>
-        <span class="value">256GB</span>
-        <span class="value">128GB</span>
-      </div>
-    </div>
-
-    <div class="plate-details">
-      <ul class="specs-name">
-        <li>Networking</li>
-        <li>Total</li>
-        <li>Used</li>
-      </ul>
-      <div class="value-row">
-        <span class="value-type">vLAN2900</span>
+        <span class="value-type">vLAN 2900</span>
         <span class="value">10GB</span>
-        <span class="value">5GB</span>
+        <span class="value">8GB</span>
       </div>
       <div class="value-row">
-        <span class="value-type">vLAN2901</span>
-        <span class="value">5GB</span>
-        <span class="value">3GB</span>
+        <span class="value-type">vLAN 2901</span>
+        <span class="value">6GB</span>
+        <span class="value">2GB</span>
       </div>
     </div>
 
@@ -78,25 +84,31 @@ class: item-edit cakes
       <ul class="specs-name">
         <li>Bandwidth</li>
         <li>Total</li>
-        <li>Used</li>
+        <li>Available</li>
       </ul>
       <div class="value-row">
         <span class="value-type">Capacity</span>
         <span class="value">1GBit</span>
-        <span class="value">1GBit</span>
+        <span class="value">0.7GBit</span>
       </div>
     </div>
   </div>
 
-  <div data-plate="function1">
+  <div data-plate="monitoring">
     <div class="plate-details">
-      Function 1
+      Monitoring
     </div>
   </div>
 
-  <div data-plate="function2">
+  <div data-plate="snapshots">
     <div class="plate-details">
-      Function 2
+      Snapshots
+    </div>
+  </div>
+
+  <div data-plate="settings">
+    <div class="plate-details">
+      Settings
     </div>
   </div>
 
