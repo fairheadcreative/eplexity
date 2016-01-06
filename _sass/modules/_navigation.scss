@@ -21,7 +21,7 @@ nav {
 
   // Nav menu
 
-  ul.centered-navigation-menu {
+  .centered-navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
     display: block;
@@ -36,125 +36,77 @@ nav {
     &.show {
       display: block;
     }
-  }
 
-  // The nav items
+      li {
+         background: transparent;
+         display: inline-block;
+         overflow: hidden;
+         line-height: 1.5;
 
-  ul li.nav-link {
-    background: transparent;
-    display: inline-block;
-    overflow: hidden;
-    line-height: 1.5;
+         a {
+            color: $centered-navigation-color;
+            display: inline-block;
+            outline: none;
+            text-decoration: none;
+            padding: .5em $small-spacing;
+            margin: 0 .25em;
 
-    &.active a {
-        background: $light-gray;
-        border-radius: $base-border-radius;
+            &:focus,
+            &:hover {
+               color: $centered-navigation-color-hover;
+            }
+         }
+
+         &.divider {
+         border-left: 1px solid $light-gray;
+
+         &.active a { margin-left: .52em; }
+         }
+
+         &:first-child { margin-left: $small-spacing; }
       }
 
-    a {
-      color: $centered-navigation-color;
-      display: inline-block;
-      outline: none;
-      text-decoration: none;
-      padding: .5em $small-spacing;
-      margin: 0 .25em;
+      .nav-close {
+          border: 1px solid $medium-gray;
+          border-radius: 50%;
+          height: 2.3em;
+          text-align: center;
+          width: 2.3em;
+          line-height: 2.3em;
+          position: relative;
+          top: -1px;
 
-      &:focus,
-      &:hover {
-        color: $centered-navigation-color-hover;
+         a {
+            display: block;
+            padding: 0;
+         }
       }
-    }
 
-    &.divider {
-      border-left: 1px solid $light-gray;
-
-      &.active a { margin-left: .52em; }
-    }
-
-    &:first-child { margin-left: $small-spacing; }
-  }
-
-  ul li.nav-close {
-    border: 1px solid $medium-gray;
-    border-radius: 50%;
-    height: 2.3em;
-    text-align: center;
-    width: 2.3em;
-    line-height: 2.3em;
-    position: relative;
-    top: -1px;
-
-    a {
-      display: block;
-      padding: 0;
-    }
-  }
-
-  li.logo.nav-link {
-    border-right: 1px solid $light-gray;
-  }
-
-  .logo .icon {
-      display: block;
-      height: 2em;
-      width: 2em;
-      border-radius: $base-border-radius;
-      background: $light-gray;
-      margin-right: $small-spacing;
-      margin: 0 .5em .5em 0;
-      top: 5px;
-      position: relative;
-    }
-
-  // Sub menus
-
-  li.more.nav-link {
-    padding-right: $centered-navigation-submenu-spacing;
-
-    > ul > li:first-child a  {
-      padding-top: 1em;
-    }
-
-    a {
-      margin-right: $centered-navigation-submenu-spacing;
-    }
-
-    > a {
-      padding-right: 0.6em;
-    }
-
-    > a:after {
-      @include position(absolute, auto -0.4em auto auto);
-      color: $centered-navigation-color;
-      content: "\25BE";
-    }
-  }
-
-  li.more {
-    overflow: visible;
-    padding-right: $centered-navigation-submenu-spacing;
-    position: relative;
-
-    a {
-      padding-right: $centered-navigation-submenu-spacing;
-    }
-
-    > a {
-      padding-right: 1.6em;
-      position: relative;
-        margin-right: $centered-navigation-submenu-spacing;
-
-      &:after {
-        content: "›";
-        font-size: 1.2em;
-        position: absolute;
-        right: $centered-navigation-submenu-spacing / 2;
+      .logo {
+         border-right: 1px solid $light-gray;
       }
-    }
 
-    &:focus > .submenu,
-    &:hover > .submenu {
-      display: block;
-    }
+      .logo .icon {
+         display: block;
+         height: 2em;
+         width: 2em;
+         border-radius: $base-border-radius;
+         background: $light-gray;
+         margin-right: $small-spacing;
+         margin: 0 .5em .5em 0;
+         top: 5px;
+         position: relative;
+      }
+
   }
+}
+
+//select navigation items relative to active page
+
+.cakes .cakes a,
+.slices .slices a,
+.toppings .toppings a,
+.tickets .tickets a,
+.billing .billing a {
+   @include nav-selected;
 }
