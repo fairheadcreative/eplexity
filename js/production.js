@@ -7,28 +7,31 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 $(function() {
 
 //toggle tabs
+
+  var plateContent = $("[data-plate]");
+
   //find and show active tab content, hide the rest
-  $("[data-plate]").each(function(){
-       $(this).hide();
-       var active = $('.active').attr('data-tab');
-      if($(this).attr('data-plate') == active ) {
-          $(this).show();
-      }
+  plateContent.each(function(){
+
+      var active = $('.active').attr('data-tab');
+      $(this).attr('data-plate') == active? $(this).show() : $(this).hide();
+
   });
 
   //toggle active tab
   $('.tabs li').on( "click", function(e) {
+
       e.preventDefault();
-      var tabValue = $(this).attr('data-tab'); 
-      var siblings = $('.tabs li');
-      $("[data-plate]").each(function(){
-          $(this).hide();
-          if($(this).attr('data-plate') == tabValue) {
-              $(this).show();
-          }
+      var tabValue = $(this).attr('data-tab'), 
+          siblings = $('.tabs li');
+
+      plateContent.each(function(){ 
+        $(this).attr('data-plate') == tabValue? $(this).show() : $(this).hide();
       });
+
       siblings.removeClass('active');
       $(this).addClass('active');
+
   });
 
 });
