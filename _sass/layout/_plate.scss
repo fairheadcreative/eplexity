@@ -27,6 +27,8 @@
 	
 	.plate-details {
 		margin: $base-spacing 0 $base-spacing*2; 
+		padding: $small-spacing;
+		border-radius: $base-border-radius;
 
 		.specs-name { 
 			@include clearfix;
@@ -41,11 +43,58 @@
 			@include clearfix;
 
 			.value-type,
-			.value {
+			.value,
+			.value-edit {
 				@include span-columns(4);
 
 				&:first-child { padding: 0 $small-spacing; } 
 			}
+
+			.value-edit input,
+			.value-edit select {
+				@include span-columns(6);
+				padding: $small-spacing/2;
+			}
+		}
+
+		.actions-row {
+			border-top: 1px solid $light-gray;
+			padding-top: $small-spacing; 
+			margin-top: $small-spacing;
+			@include clearfix; 
+
+			.actions-buttons { 
+				@include span-columns(8); 
+
+				button {
+					@media screen and (max-width: $small-screen) { margin-top: .5em; }
+				}
+			}
+			.actions-link { 
+				@include span-columns(4);
+				line-height: 2.5;
+
+				@media screen and (max-width: $small-screen) { 
+					line-height: 1;
+					padding-top: $small-spacing;
+				}
+			}
+		}
+
+		&[data-details="show"] {
+			cursor: pointer;
+
+			&:hover {
+				background: $light-gray;	
+				transition: background .3s;		
+			}			
+		}
+
+		&[data-details="edit"] {
+			padding: $small-spacing;
+			background: $secondary-background-color;
+			border: 1px solid $light-gray;
+			
 		}
 	}
 

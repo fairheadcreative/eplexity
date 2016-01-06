@@ -31,7 +31,7 @@ class: item-edit slices
       </div>
     </div>
 
-    <div class="plate-details">
+    <div class="plate-details" data-details="show">
       <ul class="specs-name">
         <li>Storage</li>
         <li>Total</li>
@@ -46,6 +46,49 @@ class: item-edit slices
         <span class="value-type">IOPs</span>
         <span class="value">2000</span>
         <span class="value">500</span>
+      </div>
+    </div>
+    <div class="plate-details" data-details="edit">
+      <ul class="specs-name">
+        <li>Edit Storage</li>
+        <li>Total</li>
+        <li>Available</li> 
+      </ul>
+      <div class="value-row">
+        <span class="value-type">Disk 1</span>
+        <span class="value-edit">
+          <input placeholder="500">
+          <select class="select-half" name="units">
+            <option value="GB">GB</option>
+            <option value="TB">TB</option>
+            <option value="MB">MB</option>
+          </select>
+        </span>
+        <span class="value">250GB</span>
+      </div>
+      <div class="value-row">
+        <span class="value-type">Disk 2</span>
+        <span class="value-edit">
+          <input placeholder="500">
+          <select name="units">
+            <option value="GB">GB</option>
+            <option value="TB">TB</option>
+            <option value="MB">MB</option>
+          </select>
+        </span>
+        <span class="value">250GB</span>
+      </div>
+      <div class="value-row">  
+        <a class="value" href="#">Add disk</a>
+      </div>
+      <div class="actions-row">
+        <span class="actions-buttons">
+          <button>Save changes</button>
+          <button>Cancel</button>
+        </span>
+        <span class="actions-link">
+          <a href="#">Buy more storage</a>
+        </span>
       </div>
     </div>
 
