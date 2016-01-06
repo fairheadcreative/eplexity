@@ -4,3 +4,8 @@
 	margin-bottom: 0.75em;
 	padding-bottom: 0.5em;
 }
+
+@mixin nav-selected {
+	background: $light-gray;
+    border-radius: $base-border-radius;
+}

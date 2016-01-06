@@ -40,7 +40,8 @@
 		.value-row { 
 			@include clearfix;
 
-			.value-type {
+			.value-type,
+			.value {
 				@include span-columns(4);
 
 				&:first-child { padding: 0 $small-spacing; } 
@@ -48,7 +49,8 @@
 		}
 	}
 
-	.cake { 
+	.cake,
+	.slice { 
 		@include clearfix;
 		@include plate-line;
 
@@ -57,7 +59,8 @@
 			padding-bottom: 0;
 		}
 
-		.cake-type { 
+		.cake-type,
+		.slice-type { 
 			position: relative;
 			@include span-columns(4);
 			padding-left: 3em; 
@@ -73,9 +76,10 @@
 				background: $light-gray;
 			}
 
-			}
+		}
 
-		.cake-specs { @include span-columns(2); }
+		.cake-specs,
+		.slice-specs { @include span-columns(2); }
 
 	}
 
@@ -87,6 +91,8 @@
 			text-align: center;
 			margin-bottom: -1px;
 			margin-top: -2.9em;
+			white-space: nowrap;
+			overflow-x: auto;
 
 			li {
 				display: inline-block;
@@ -94,8 +100,14 @@
 				border-bottom: none;
 				border-radius:  $base-border-radius  $base-border-radius 0 0;  
 				padding: .25em $small-spacing 0;
+				cursor: pointer;
 
-				&.active { border-bottom: 1px solid white; }
+				&:hover { background: $light-gray; }
+				&.active { 
+					border-bottom: 1px solid white;
+					cursor: inherit;
+					background: $base-background-color;
+				 }
 			}
 		}
 	}
