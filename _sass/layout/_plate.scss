@@ -89,6 +89,11 @@
 				margin-bottom: 0;
 				padding-bottom: 0;
 			}
+
+			.pick-slice {
+				select,
+				input {	width: 100%; }
+			}
 		}
 
 		.step-row { 
@@ -179,7 +184,7 @@
 			display: block;
 			text-align: center;
 			margin-bottom: -1px;
-			margin-top: -2.9em;
+			margin-top: -2.8em;
 			white-space: nowrap;
 			overflow-x: auto;
 

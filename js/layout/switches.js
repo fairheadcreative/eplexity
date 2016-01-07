@@ -58,9 +58,8 @@ $(function() {
   var counter = 0;
   var interval = setInterval(function() {
       counter++;
-      // Display 'counter' wherever you want to display it.
       if (counter == 3) {
-          $('.action-infobox h2').html('Yum! Your new slice is now ready!');
+          $('.slices .action-infobox h2').html('Yum! Your new slice is now ready!');
           clearInterval(interval);
       }
   }, 1000);
