@@ -18,6 +18,8 @@
   vertical-align: middle;
   white-space: nowrap;
 
+  @include media-query($medium-screen) { padding: $small-spacing; }
+
   &:hover,
   &:focus {
     background-color: shade($action-color, 20%);
