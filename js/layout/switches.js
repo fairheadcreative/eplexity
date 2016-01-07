@@ -54,14 +54,4 @@ $(function() {
     $(this).parent().hide();
   });
 
-  //switch add slice success message - DEMO
-  var counter = 0;
-  var interval = setInterval(function() {
-      counter++;
-      if (counter == 3) {
-          $('.slices .action-infobox h2').html('Yum! Your new slice is now ready!');
-          clearInterval(interval);
-      }
-  }, 1000);
-
 });

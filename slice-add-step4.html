@@ -10,32 +10,34 @@ class: item-edit slices
   </div>
 </section>
 
-<section class="plate">
-  <div class="step-details">
-    <ul class="specs-name">
-      <li>Name</li>
-      <li>Description</li>
-    </ul>
-    <div class="step-row">
-      <span class="value value-icon"><span class="icon"></span>Chocolate</span>
-      <span class="value">Description</span>
-      <span class="value"><button data-content="Added!">Add</button></span>
+<form action="slice-add-step5.html">
+  <section class="plate">
+    <div class="step-details">
+      <ul class="specs-name">
+        <li>Name</li>
+        <li>Description</li>
+      </ul>
+      <div class="step-row">
+        <span class="value value-icon"><span class="icon"></span>Managed Backups</span>
+        <span class="value">Description</span>
+        <span class="value"><button data-content="Added!" data-value="backups">Add</button><input type="checkbox" name="backups" data-toppings="backups" class="hide"></span>
+      </div>
+      <div class="step-row">
+        <span class="value value-icon"><span class="icon"></span>Slice Monitoring</span>
+        <span class="value">Description</span>
+        <span class="value"><button data-content="Added!" data-value="monitoring">Add</button><input type="checkbox" name="monitoring" data-toppings="monitoring" class="hide"></span>
+      </div>
+      <div class="step-row">
+        <span class="value value-icon"><span class="icon"></span>SysOps</span>
+        <span class="value">Description</span>
+        <span class="value"><button data-content="Added!" data-value="sysops">Add</button><input type="checkbox" name="sysops" data-toppings="sysops" class="hide"></span>
+      </div>
     </div>
-    <div class="step-row">
-      <span class="value value-icon"><span class="icon"></span>Vanilla</span>
-      <span class="value">Description</span>
-      <span class="value"><button data-content="Added!">Add</button></span>
-    </div>
-    <div class="step-row">
-      <span class="value value-icon"><span class="icon"></span>Vanilla</span>
-      <span class="value">Description</span>
-      <span class="value"><button data-content="Added!">Add</button></span>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="actions">
-  <div class="action-handler">
-    <a class="button" href="slice-add-step5.html">Continue</a>
-  </div>
-</section>
+  <section class="actions">
+    <div class="action-handler">
+        <input type="submit" value="Continue">
+    </div>
+  </section>
+</form>

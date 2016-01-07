@@ -6,6 +6,32 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 
 $(function() {
 
+  //send value to hidden checkboxes
+  $('[data-value]').on('click', function(){
+    var value = $(this).attr('data-value');
+    $('[data-toppings="' + value + '"]').prop('checked', true);
+  });
+
+  //increment/decrement number of slices and pass value
+  var slicesNumber = ['one slice','two slices','three slices','four slices','five slices'],
+      i = 0,
+      arrayLength = slicesNumber.length;
+    $('.button.increment').on('click', function(){
+      i = (i+1) % arrayLength;
+      $('.slice-count').html(slicesNumber[i]);
+      $('[name="quantity"]').attr('value', i+1);
+    });  
+    $('.button.decrement').on('click', function(){
+      i = (i-1) % arrayLength;
+      var hold = i < 0 ? 0 : i;
+      $('.slice-count').html(slicesNumber[hold]);
+      $('[name="quantity"]').attr('value', hold+1);
+    });   
+
+});
+
+$(function() {
+
 //toggle tabs
 
   var plateContent = $('[data-plate]');
@@ -59,15 +85,5 @@ $(function() {
   $('.action-close').on('click', function(){
     $(this).parent().hide();
   });
-
-  //switch add slice success message - DEMO
-  var counter = 0;
-  var interval = setInterval(function() {
-      counter++;
-      if (counter == 3) {
-          $('.slices .action-infobox h2').html('Yum! Your new slice is now ready!');
-          clearInterval(interval);
-      }
-  }, 1000);
 
 });
