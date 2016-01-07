@@ -34,8 +34,7 @@ $(function() {
 
   });
 
-  //toggle product details edit
-
+  //toggle product details edit DEMO
   var detailsShow = $('[data-details="show"]'),
       detailEdit =  $('[data-details="edit"]').hide(),
       detailClose = $('.actions-row button');
@@ -49,5 +48,27 @@ $(function() {
     $(this).closest('[data-details="edit"]').hide();
     detailsShow.show();
   });
+
+  //toggle buttons content
+  $('[data-content]').on('click', function(){
+    var content = $(this).attr('data-content');
+    $(this).replaceWith(content);
+  });
+
+  //close button
+  $('.action-close').on('click', function(){
+    $(this).parent().hide();
+  });
+
+  //switch add slice success message - DEMO
+  var counter = 0;
+  var interval = setInterval(function() {
+      counter++;
+      // Display 'counter' wherever you want to display it.
+      if (counter == 3) {
+          $('.action-infobox h2').html('Yum! Your new slice is now ready!');
+          clearInterval(interval);
+      }
+  }, 1000);
 
 });

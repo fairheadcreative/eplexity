@@ -6,10 +6,21 @@
 	padding: 1em;
 	margin: 0 $small-spacing $small-spacing;
 
-  &.plate-small {
-    max-width: 25em;
-    margin: 0 auto $small-spacing;
-  }
+	&.plate-small {
+		max-width: 25em;
+		margin: 0 auto $small-spacing;
+	}
+
+	.icon {
+		position: absolute;
+		display: block;
+		height: 1.2em;
+		width: 1.7em;
+		border-radius: $base-border-radius;
+		left: 0; 
+		top: 3px;
+		background: $light-gray;
+	}
 	
 	.specs-type { 
 		@include clearfix;
@@ -25,8 +36,10 @@
 		}
 	}
 	
-	.plate-details {
-		margin: $base-spacing 0 $base-spacing*2; 
+	.plate-details,
+	.step-details,
+	.step-counter {
+		margin: $base-spacing 0; 
 		padding: $small-spacing;
 		border-radius: $base-border-radius;
 
@@ -37,10 +50,16 @@
 			li {
 				@include span-columns(4);
 			}
+
+			li.small {
+				@include span-columns(3);
+			}
 		}
 
-		.value-row { 
+		.value-row,
+		.step-row { 
 			@include clearfix;
+			margin-bottom: $small-spacing;
 
 			.value-type,
 			.value,
@@ -50,11 +69,33 @@
 				&:first-child { padding: 0 $small-spacing; } 
 			}
 
+			.value-small {
+				@include span-columns(3);
+			}
+
+			.value-icon {
+				position: relative;
+
+				&:first-child { padding: 0 $small-spacing 0 $base-spacing*1.5; } 
+			}
+
 			.value-edit input,
 			.value-edit select {
 				@include span-columns(6);
 				padding: $small-spacing/2;
 			}
+
+			&:last-child { 
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+
+		.step-row { 
+			border-bottom: 1px solid $light-gray; 
+			padding-bottom:  $small-spacing;
+
+			&:last-child { border-bottom: none;  }
 		}
 
 		.actions-row {
@@ -98,6 +139,16 @@
 		}
 	}
 
+	.step-counter { 
+		text-align: center;
+
+		.button {
+
+			&.increment { margin-left: $base-spacing; }
+			&.decrement { margin-right: $base-spacing; }
+		}
+	}
+
 	.cake,
 	.slice { 
 		@include clearfix;
@@ -113,17 +164,6 @@
 			position: relative;
 			@include span-columns(4);
 			padding-left: 3em; 
-
-			.icon {
-				position: absolute;
-				display: block;
-				height: 1.2em;
-				width: 1.7em;
-				border-radius: $base-border-radius;
-				left: 0; 
-				top: 3px;
-				background: $light-gray;
-			}
 
 		}
 
