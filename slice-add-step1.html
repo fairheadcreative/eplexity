@@ -1,0 +1,93 @@
+---
+layout: layout
+title: First, let's choose an image
+class: item-edit slices
+---
+
+<section class="actions">
+  <div class="action-info">
+    <p>Explanation text</p>
+  </div>
+</section>
+
+<section class="plate tabbed">
+  <ul class="tabs">
+    <li data-tab="distros" class="active">Distros</li>
+    <li data-tab="apps">Apps</li>
+    <li data-tab="snapshots">Snapshots</li>
+  </ul>
+
+  <div data-plate="distros">
+    <div class="step-details">
+      <ul class="specs-name">
+        <li>Name</li>
+        <li>Description</li>
+      </ul>
+      <div class="step-row">
+        <span class="value-type value-icon"><span class="icon"></span> Ubuntu</span>
+        <span class="value">Description</span>
+        <span class="value">
+          <form action="slice-add-step2.html">
+            <select name="versions" onchange="window.location.href='slice-add-step2.html'">
+              <option value="">Select a version</option>
+              <option value="warty">Warty Warthog</option>
+              <option value="hoary">Hoary Hedgehog</option>
+            </select>            
+          </form>
+        </span>
+      </div>
+      <div class="step-row">
+        <span class="value-type value-icon"><span class="icon"></span> Fedora</span>
+        <span class="value">Description</span>
+        <span class="value">
+          <form action="slice-add-step2.html">
+            <select name="versions" onchange="window.location.href='slice-add-step2.html'">
+              <option value="">Select a version</option>
+              <option value="yarrow">Yarrow</option>
+              <option value="tettnang">Tettnang</option>
+            </select>            
+          </form>
+        </span>
+      </div>
+      <div class="step-row">
+        <span class="value-type value-icon"><span class="icon"></span> FreeBSD</span>
+        <span class="value">Description</span>
+        <span class="value">
+          <form action="slice-add-step2.html">
+            <select name="versions" onchange="window.location.href='slice-add-step2.html'">
+              <option value="">Select a version</option>
+              <option value="102">10.2</option>
+              <option value="92">9.2</option>
+            </select>            
+          </form>
+        </span>
+      </div>
+      <div class="step-row">
+        <span class="value-type value-icon"><span class="icon"></span> Ubuntu</span>
+        <span class="value">Description</span>
+        <span class="value">
+          <form action="slice-add-step2.html">
+            <select name="versions" onchange="window.location.href='slice-add-step2.html'">
+              <option value="">Select a version</option>
+              <option value="warty">Warty Warthog</option>
+              <option value="hoary">Hoary Hedgehog</option>
+            </select>            
+          </form>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div data-plate="apps">
+    <div class="plate-details">
+      Apps
+    </div>
+  </div>
+
+  <div data-plate="snapshots">
+    <div class="plate-details">
+      Snapshots
+    </div>
+  </div>
+
+</section>

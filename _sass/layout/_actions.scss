@@ -4,4 +4,36 @@
 	.action-handler {
 		text-align: center;
 	}
+
+	.action-info {
+		margin: $small-spacing auto;
+		padding: 0  $small-spacing  $base-spacing;
+		max-width: 50%;
+		text-align: center;
+	}
+
+	.action-infobox {
+		margin: $small-spacing auto;
+		padding: $base-spacing $small-spacing;
+		max-width: 75%;
+		text-align: center;
+		border: 1px solid $light-gray;
+		border-radius: $base-border-radius;
+		position: relative;
+	}
+
+	.action-close {
+		background: $light-gray;
+		border-radius: 50%;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(50%, -50%);
+		cursor: pointer;
+		height: 2em;
+		width: 2em;
+		line-height: 1.8;
+	}
 }
