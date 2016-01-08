@@ -7,7 +7,10 @@
     @include outer-container;
     margin-top: $small-spacing;
 
-    h1 { text-align: center; }
+    .site-title { 
+    	text-align: center; 
+    	padding: 0 $base-spacing;
+    }
 }
 
 .page-content {
