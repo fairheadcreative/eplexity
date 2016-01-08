@@ -17,9 +17,9 @@ $(function() {
     });  
     $('.button.decrement').on('click', function(){
       i = (i-1) % arrayLength;
-      var hold = i < 0 ? 0 : i;
-      $('.slice-count').html(slicesNumber[hold]);
-      $('[name="quantity"]').attr('value', hold+1);
+      if(i < 0){i=arrayLength-1};
+      $('.slice-count').html(slicesNumber[i]);
+      $('[name="quantity"]').attr('value', i+1);
     });   
 
 });
