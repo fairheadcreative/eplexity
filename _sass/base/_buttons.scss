@@ -26,7 +26,8 @@
     color: #fff;
   }
 
-  &:disabled {
+  &:disabled,
+  &.inactive {
     cursor: not-allowed;
     opacity: 0.5;
 

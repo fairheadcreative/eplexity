@@ -5,6 +5,7 @@
 	border-radius: 3px;
 	padding: 1em;
 	margin: 0 $small-spacing $small-spacing;
+	position: relative;
 
 	&.plate-small {
 		max-width: 25em;
@@ -39,7 +40,7 @@
 	.plate-details,
 	.step-details,
 	.step-counter {
-		margin: $base-spacing 0; 
+		margin: $small-spacing 0; 
 		padding: $small-spacing;
 		border-radius: $base-border-radius;
 
@@ -144,6 +145,70 @@
 		}
 	}
 
+	.ticket {
+		margin: $small-spacing 0; 
+		padding: $small-spacing;
+		border-radius: $base-border-radius;
+		@include clearfix;
+
+		.ticket-message {			
+			border: 1px solid $light-gray;
+			border-radius: $base-border-radius;
+			margin-bottom: $base-spacing;
+
+			&.user,
+			&.admin {
+				@include span-columns(10);
+			}
+
+			&.admin { 
+				float: right;
+				margin-right: 0;
+
+				.msg-info { text-align: right; } 
+			}
+
+			.msg-info,
+			.msg-text { padding: $small-spacing; }
+
+			&.image {
+				@include span-columns(5);
+				border-top: 1px solid $light-gray;
+				border-bottom: 1px solid $light-gray;
+
+				.image-placeholder {
+					height: 100px;
+					width: 100%;
+					background: $secondary-background-color;
+				}
+			}
+		}
+
+		.ticket-type {
+			@include span-columns(10);
+			padding-bottom:  $small-spacing;
+
+			@include media-query($medium-screen) { @include span-columns(9); }
+
+			&:first-child { padding: 0 $small-spacing; }
+		}
+
+		.ticket-row { 
+			@include clearfix;
+			@include plate-line;
+
+			&:last-child { border-bottom: none; } 
+
+			.value-icon {
+				position: relative;
+
+				&:first-child { padding: 0 $small-spacing 0 $base-spacing*1.5; } 
+			}
+		}
+
+
+	}
+
 	.step-counter { 
 		text-align: center;
 
@@ -152,6 +217,11 @@
 			&.increment { margin-left: $base-spacing; }
 			&.decrement { margin-right: $base-spacing; }
 		}
+	}
+
+	.step-right {
+		text-align: right;
+		float: right;
 	}
 
 	.cake,
@@ -175,6 +245,23 @@
 		.cake-specs,
 		.slice-specs { @include span-columns(2); }
 
+	}
+
+	.ticket-post {
+		@include clearfix;
+		margin-bottom: $small-spacing;
+		padding-top: $base-spacing;
+		border-top: 1px solid $light-gray;
+
+		.message-input { 
+			@include span-columns(10); 
+
+			@include media-query($medium-screen) { @include span-columns(9); }
+		}
+	}
+
+	.specs-title { 
+		@include plate-line;
 	}
 
 	&.tabbed {
