@@ -81,3 +81,13 @@ body {
   border: 1px solid $light-gray;
   border-radius: $base-border-radius;
 }
+
+.button.remove {
+  background: white;
+  color: $red;
+  border: $base-border;
+}
+
+.button.small {
+  font-size: .7em;
+}

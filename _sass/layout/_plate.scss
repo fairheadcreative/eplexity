@@ -64,6 +64,19 @@
 			li.small {
 				@include span-columns(3);
 			}
+
+      &.specs-bakery {
+        li { @include span-columns(4); }
+
+        li:nth-child(3) {
+          @include span-columns(2);
+        }
+
+        li:last-child {
+          @include span-columns(2);
+          text-align: right;
+        }
+      }
 		}
 
 		.value-row,
@@ -247,7 +260,7 @@
 	}
 
 	.cake,
-	.slice { 
+	.slice {
 		@include clearfix;
 		@include plate-line;
 
@@ -262,13 +275,11 @@
 			position: relative;
 			@include span-columns(4);
 			padding-left:  $base-spacing*2; 
-
 		}
 
 		.cake-specs,
 		.slice-specs,
 		.client-specs { @include span-columns(2); }
-
 	}
 
 	.ticket-post {
@@ -317,4 +328,21 @@
 			}
 		}
 	}
+}
+
+.bakery-row {
+  clear: both;
+
+  .value,
+  .value-type { @include span-columns(4); }
+
+  .value:nth-child(3) {
+    @include span-columns(2);
+  }
+
+  input[type="text"] {
+    max-width: 3em;
+    display: inline-block;
+    margin-right: .25em;
+  }
 }
