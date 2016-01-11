@@ -1,11 +1,8 @@
 .progress-bar-indication {  
-  $base-border-color: $light-grey !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-line-height: 1.5em !default;
   $action-color: $light-gray !default;
-  $progress-border-color: $base-border-color;
-  $progress-border: 1px solid $progress-border-color;
   $progress-meter-border-color: $action-color;
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
@@ -14,21 +11,15 @@
   $progress-color: white;
 
   background-color: $progress-background;
-  border-radius: $base-border-radius;
-  border: $progress-border;
-  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
-  margin: 0 auto;
+  margin: .5em auto 0;
   width: 100%;
+  height: .5em;
 
   > span.meter {
     box-sizing: border-box;
     background-color: $progress-meter-color;
     background-repeat: repeat-x;
-    background-size: 40px 40px;
-    border-bottom-right-radius: 0;
-    border-radius: $base-border-radius /1.5;
     border-top-right-radius: 0;
-    border: $progress-meter-border;
     display: inline-block;
     height: 100%;
     width: 60%;
@@ -36,7 +27,7 @@
 
   p {
     color: $progress-color;    
-    line-height: $base-line-height;
+    height: .5em;
     margin: 0;
     padding: .1em .5em;
     text-shadow: 0 0 1px black;
