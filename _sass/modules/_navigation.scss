@@ -107,6 +107,8 @@ nav {
 .slices .slices a,
 .toppings .toppings a,
 .tickets .tickets a,
-.billing .billing a {
+.billing .billing a,
+.clients .reseller-clients a,
+.bakery .reseller-bakery a {
    @include nav-selected;
 }

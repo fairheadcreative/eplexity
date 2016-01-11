@@ -257,7 +257,8 @@
 		}
 
 		.cake-type,
-		.slice-type { 
+		.slice-type,
+		.client-type { 
 			position: relative;
 			@include span-columns(4);
 			padding-left:  $base-spacing*2; 
@@ -265,7 +266,8 @@
 		}
 
 		.cake-specs,
-		.slice-specs { @include span-columns(2); }
+		.slice-specs,
+		.client-specs { @include span-columns(2); }
 
 	}
 

@@ -73,3 +73,11 @@ body {
 .specs-type {
   color: $medium-gray;
 }
+
+.ticket-scheduled {
+  background: white;
+  margin: 0 (-$small-spacing);
+  padding: $small-spacing !important;
+  border: 1px solid $light-gray;
+  border-radius: $base-border-radius;
+}
