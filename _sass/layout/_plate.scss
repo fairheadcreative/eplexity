@@ -12,6 +12,13 @@
 		margin: 0 auto $small-spacing;
 	}
 
+	.span-2 { @include span-columns(2); }
+	.span-3 { @include span-columns(3); }
+	.span-4 { @include span-columns(4); }
+	.span-6 { @include span-columns(6); }
+	.span-8 { @include span-columns(8); }
+	.span-10 { @include span-columns(10); }
+
 	.icon {
 		position: absolute;
 		display: block;
@@ -32,14 +39,20 @@
 
 			&:first-child { 
 				@include span-columns(4);
-				padding-left: 3em; 
+				padding-left:  $base-spacing*2; 
 			}
 		}
 	}
 	
+	.plate-details {
+		margin: $small-spacing 0; 
+		padding: $small-spacing;
+	}
+	
 	.plate-details,
 	.step-details,
-	.step-counter {
+	.step-counter,
+	.step-billing {
 		margin: $small-spacing 0; 
 		padding: $small-spacing;
 		border-radius: $base-border-radius;
@@ -77,7 +90,7 @@
 			.value-icon {
 				position: relative;
 
-				&:first-child { padding: 0 $small-spacing 0 $base-spacing*1.5; } 
+				&:first-child { padding: 0 $small-spacing 0 $base-spacing*2; } 
 			}
 
 			.value-edit input,
@@ -145,6 +158,15 @@
 		}
 	}
 
+	.step-billing {
+
+	ul,
+	.step-row {
+		.span-4 { @include span-columns(4); }
+		.span-8 { @include span-columns(8); }
+		}
+	}
+
 	.ticket {
 		margin: $small-spacing 0; 
 		padding: $small-spacing;
@@ -202,7 +224,7 @@
 			.value-icon {
 				position: relative;
 
-				&:first-child { padding: 0 $small-spacing 0 $base-spacing*1.5; } 
+				&:first-child { padding: 0 $small-spacing 0 $base-spacing*2; } 
 			}
 		}
 
@@ -238,7 +260,7 @@
 		.slice-type { 
 			position: relative;
 			@include span-columns(4);
-			padding-left: 3em; 
+			padding-left:  $base-spacing*2; 
 
 		}
 
