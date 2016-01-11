@@ -60,19 +60,19 @@ $(function() {
 
   });
 
-  //toggle product details edit DEMO
+  //toggle product details edit
   var detailsShow = $('[data-details="show"]'),
-      detailEdit =  $('[data-details="edit"]').hide(),
-      detailClose = $('.actions-row button');
+    detailEdit =  $('[data-details="edit"]').hide(),
+    detailClose = $('[data-edit="close"]');
 
   detailsShow.on('click', function() {
     $(this).hide();
-    detailEdit.show();
+    $(this).siblings(detailEdit).show();
   });
 
   detailClose.on('click', function() {
-    $(this).closest('[data-details="edit"]').hide();
-    detailsShow.show();
+    $(this).closest(detailEdit).hide();
+    $(this).closest(detailEdit).siblings(detailsShow).show();
   });
 
   //toggle buttons content
