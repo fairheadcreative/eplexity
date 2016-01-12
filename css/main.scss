@@ -55,3 +55,39 @@ $on-laptop:        800px;
         "modules/modules",
         "syntax-highlighting"
 ;
+
+
+
+.cake-type,
+.slice-type {
+}
+
+body {
+  background: #FBFBFB;
+}
+
+.plate {
+  background: white;
+}
+
+.specs-type {
+  color: $medium-gray;
+}
+
+.ticket-scheduled {
+  background: white;
+  margin: 0 (-$small-spacing);
+  padding: $small-spacing !important;
+  border: 1px solid $light-gray;
+  border-radius: $base-border-radius;
+}
+
+.button.remove {
+  background: white;
+  color: $red;
+  border: $base-border;
+}
+
+.button.small {
+  font-size: .7em;
+}

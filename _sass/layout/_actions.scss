@@ -1,41 +1,42 @@
 .actions {
 	margin-bottom: $small-spacing;
 
-	.action-handler {
-		text-align: center;
-	}
+  &+.plate.tabbed { margin-top: $base-spacing*2; }
+}
 
-	.action-info {
-		margin: $small-spacing auto;
-		padding: 0  $small-spacing  $base-spacing;
-		max-width: 50%;
-		text-align: center;
-	}
+.action-handler {
+  text-align: center;
+}
 
-	.action-infobox {
-		margin: $small-spacing auto;
-		padding: $base-spacing $small-spacing;
-		max-width: 75%;
-		text-align: center;
-		border: 1px solid $light-gray;
-		border-radius: $base-border-radius;
-		position: relative;
-	}
+.action-info {
+  margin: -$small-spacing auto 0;
+  padding: 0 1em;
+  max-width: 40em;
+  text-align: center;
+}
 
-	.action-close {
-		background: $light-gray;
-		border-radius: 50%;
-		display: block;
-		position: absolute;
-		right: 0;
-		top: 0;
-		-webkit-transform: translate(-50%, -50%);
-		transform: translate(50%, -50%);
-		cursor: pointer;
-		height: 2em;
-		width: 2em;
-		line-height: 1.8;
-	}
+.action-infobox {
+  background: white;
+  margin: $small-spacing auto;
+  padding: $base-spacing $small-spacing;
+  max-width: 75%;
+  text-align: center;
+  border: 1px solid $light-gray;
+  border-radius: $base-border-radius;
+  position: relative;
+}
 
-	&+.plate.tabbed { margin-top: $base-spacing*2; }
+.action-close {
+  background: $light-gray;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
+  cursor: pointer;
+  height: 2em;
+  width: 2em;
+  line-height: 1.8;
 }
