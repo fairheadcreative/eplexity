@@ -1,12 +1,8 @@
 nav {
-  $base-border-radius: 3px !default;
-  $dark-gray: #333 !default;
-  $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
   $centered-navigation-background: $light-gray;
-  $centered-navigation-color: transparentize($base-font-color, 0.3);
+  $centered-navigation-color: $medium-gray;
   $centered-navigation-color-hover: $base-font-color;
   $centered-navigation-height: 60px;
   $centered-navigation-item-padding: 1em;
@@ -58,28 +54,28 @@ nav {
          }
 
          &.divider {
-         border-left: 1px solid $light-gray;
+           border-left: 1px solid $light-gray;
 
-         &.active a { margin-left: .52em; }
+           &.active a { margin-left: .52em; }
          }
 
          &:first-child { margin-left: $small-spacing; }
       }
 
       .nav-close {
-          border: 1px solid $medium-gray;
-          border-radius: 50%;
-          height: 2.3em;
-          text-align: center;
-          width: 2.3em;
-          line-height: 2.3em;
-          position: relative;
-          top: -1px;
+        border: 1px solid $medium-gray;
+        border-radius: 50%;
+        height: 2.3em;
+        text-align: center;
+        width: 2.3em;
+        line-height: 2.3em;
+        position: relative;
+        top: -1px;
 
-         a {
-            display: block;
-            padding: 0;
-         }
+        a {
+          display: block;
+          padding: 0;
+        }
       }
 
       .logo {
@@ -110,5 +106,5 @@ nav {
 .billing .billing a,
 .clients .reseller-clients a,
 .bakery .reseller-bakery a {
-   @include nav-selected;
+  color: $base-font-color;
 }

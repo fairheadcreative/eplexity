@@ -1,11 +1,9 @@
 .progress-bar-indication {  
-  $base-border-radius: 3px !default;
-  $base-background-color: white !default;
-  $base-line-height: 1.5em !default;
-  $action-color: $light-gray !default;
-  $progress-meter-border-color: $action-color;
+  $progress-meter-border-color: $green;
+  $progress-meter-border-color-warning: $red;
   $progress-meter-border: 1px solid darken($progress-meter-border-color, 15%);
   $progress-meter-color: $progress-meter-border-color;
+  $progress-meter-color-warning: $progress-meter-border-color-warning;
   $progress-background: darken($base-background-color, 5);
   $progress-animation-duration: 0.7s;
   $progress-color: white;
@@ -23,6 +21,10 @@
     display: inline-block;
     height: 100%;
     width: 60%;
+
+    &.warning {
+      background-color: $progress-meter-color-warning;
+    }
   }
 
   p {
