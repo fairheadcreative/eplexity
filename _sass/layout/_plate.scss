@@ -91,14 +91,6 @@
 			@include clearfix;
 			margin-bottom: $small-spacing;
 
-			.value-type,
-			.value,
-			.value-edit {
-				@include span-columns(4);
-
-				//&:first-child { padding: 0 $small-spacing; } 
-			}
-
 			.value-small {
 				@include span-columns(3);
 			}

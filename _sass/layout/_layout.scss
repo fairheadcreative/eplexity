@@ -17,6 +17,12 @@
     @include outer-container;
 }
 
+.page-footer {
+    @include outer-container;
+    margin-top: $small-spacing;
+    text-align: center; 
+    }
+
 .lead {
   text-align: center;
   font-size: 1.1em;
