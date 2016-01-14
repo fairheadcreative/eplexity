@@ -27,13 +27,37 @@
 	.icon {
 		position: absolute;
 		display: block;
-		height: 1.2em;
+		height: 1.7em;
 		width: 1.7em;
 		border-radius: $base-border-radius;
 		left: 0; 
-		top: 3px;
+		top: -1px;
 		background: $light-gray;
+
+    &.icon-platform-factionbloc {
+      background: url('../images/icon-platform-factionbloc.png') no-repeat;
+      background-size: contain;
+    }
+
+    &.icon-billing-pdf {
+      background: url('../images/icon-billing-pdf.png') no-repeat;
+      background-size: contain;
+    }
 	}
+
+  .ticket-unread:after {
+    content: '1';
+    background: $red;
+    color: white;
+    border-radius: $border-radius-round;
+    width: 1.4em;
+    height: 1.4em;
+    display: inline-block;
+    font-size: .7em;
+    text-align: center;
+    position: relative;
+    top: -10px;
+  }
 	
 	.specs-type { 
 		@include clearfix;
@@ -276,6 +300,10 @@
 			@include span-columns(4);
 			padding-left:  $base-spacing*2; 
 		}
+
+		.client-type { 
+      padding-left: 0;
+    }
 
 		.cake-specs,
 		.slice-specs,
