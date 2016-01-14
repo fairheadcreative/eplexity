@@ -18,11 +18,15 @@ $base-z-index: 0;
 
 // Colors
 $blue: #00A9FC;
+$light-blue: lighten($blue, 30);
+$bright-blue: lighten($blue, 47);
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 $red: #FF8A86;
 $green: #76DB8F;
+$light-green: lighten($green, 20);
+$bright-green: lighten($green, 30);
 
 // Font Colors
 $base-font-color: $dark-gray;

@@ -12,8 +12,9 @@ nav {
   $horizontal-bar-mode: $large-screen;
 
   border-bottom: 1px solid $light-gray;
+  background: white;
   @include clearfix;
-  padding-bottom: $small-spacing;
+  padding: $small-spacing / 2 0;
 
   // Nav menu
 
@@ -27,7 +28,7 @@ nav {
     width: 100%;
     white-space: nowrap;
     overflow-x: auto;
-    line-height: .75;
+    font-size: .9em;
 
     &.show {
       display: block;
@@ -37,14 +38,13 @@ nav {
          background: transparent;
          display: inline-block;
          overflow: hidden;
-         line-height: 1.5;
 
          a {
             color: $centered-navigation-color;
             display: inline-block;
             outline: none;
             text-decoration: none;
-            padding: .5em $small-spacing;
+            padding: .3em $small-spacing;
             margin: 0 .25em;
 
             &:focus,
@@ -55,6 +55,7 @@ nav {
 
          &.divider {
            border-left: 1px solid $light-gray;
+           padding-left: .3em;
 
            &.active a { margin-left: .52em; }
          }
@@ -78,20 +79,15 @@ nav {
         }
       }
 
-      .logo {
-         border-right: 1px solid $light-gray;
-      }
-
-      .logo .icon {
-         display: block;
-         height: 2em;
-         width: 2em;
-         border-radius: $base-border-radius;
-         background: $light-gray;
-         margin-right: $small-spacing;
-         margin: 0 .5em .5em 0;
-         top: 5px;
-         position: relative;
+      .logo .icon { 
+        background: url('../images/logo.png') no-repeat;
+        background-size: contain;
+        display: block;
+        height: 2em;
+        width: 3.5em;
+        margin-right: $small-spacing;
+        border-right: 1px solid $light-gray;
+        margin: 0 .5em 0 0;
       }
 
   }
@@ -106,5 +102,5 @@ nav {
 .billing .billing a,
 .clients .reseller-clients a,
 .bakery .reseller-bakery a {
-  color: $base-font-color;
+  color: $action-color;
 }

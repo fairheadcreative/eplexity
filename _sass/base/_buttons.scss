@@ -1,4 +1,5 @@
-#{$all-buttons} {
+#{$all-buttons},
+.button {
   appearance: none;
   background-color: $action-color;
   border: 0;
@@ -35,4 +36,14 @@
       background-color: $action-color;
     }
   }
+}
+
+.button.small {
+  font-size: .8em;
+}
+
+.button.secondary {
+  background: $medium-gray;
+
+  &:hover { background: darken($medium-gray, 10); }
 }
