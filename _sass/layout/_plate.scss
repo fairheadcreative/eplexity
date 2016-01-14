@@ -6,7 +6,7 @@
 	padding: 1em;
 	margin: 0 $small-spacing $small-spacing;
 	position: relative;
-  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  	box-shadow: 0 1px 1px rgba(0,0,0,.05);
 
 	&.plate-small {
 		max-width: 25em;
@@ -73,6 +73,13 @@
           text-align: right;
         }
       }
+		}
+
+		.value-group {
+			@include clearfix;
+			margin-bottom: $small-spacing;
+			padding-bottom: $small-spacing;
+			border-bottom: 1px solid $light-gray;
 		}
 
 		.value-row,
@@ -153,8 +160,12 @@
 			padding: $small-spacing;
 			background: $bright-blue;
 			border: $base-border;
-      border-color: #D6E1E6;
-      margin: 0 0 1em;
+      		border-color: #D6E1E6;
+      		margin: 0 0 1em;
+		}
+
+		&[data-details="show"] {
+      		margin: 0 0 1em;
 		}
 	}
 
@@ -288,6 +299,12 @@
 		@include plate-line;
 	}
 
+	.count { 
+		float: left;
+		display: inline-block;
+		padding-right: $small-spacing;
+	}
+
 	&.tabbed {
 		margin-top: 3.5em;
 
@@ -297,8 +314,8 @@
 			margin-top: -3.15em;
 			white-space: nowrap;
 			overflow-x: auto;
-      position: relative;
-      bottom: -1px;
+      		position: relative;
+      		bottom: -1px;
 
 			li {
 				display: inline-block;
@@ -313,13 +330,15 @@
         }
 
 				&.active { 
-          border: 1px solid $light-gray;
+          			border: 1px solid $light-gray;
 					border-bottom: 1px solid white;
 					cursor: inherit;
 					background: $base-background-color;
-          bottom: -1px;
+          			bottom: -1px;
 				 }
 			}
+
+			+ .details-toggler { margin-top: 1em; }
 		}
 	}
 }
