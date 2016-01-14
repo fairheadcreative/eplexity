@@ -97,6 +97,18 @@ nav {
         margin: 0 .5em 0 0;
       }
 
+      .signout a {
+        text-indent: -999em;
+        background: url('../images/sign-out.png') right no-repeat;
+        background-size: 18px;
+        display: block;
+        height: 2em;
+        width: 2.5em;
+        margin-left: $small-spacing;
+        border-left: 1px solid $light-gray;
+        margin: 0 .5em 0 0;
+      }
+
   }
 }
 
@@ -108,6 +120,7 @@ nav {
 .tickets .tickets a,
 .billing .billing a,
 .clients .reseller-clients a,
-.bakery .reseller-bakery a {
+.bakery .reseller-bakery a,
+.user .user a {
   color: $action-color;
 }
