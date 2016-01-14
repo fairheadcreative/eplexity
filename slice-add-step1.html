@@ -1,6 +1,6 @@
 ---
 layout: layout
-title: First, let's choose an image
+title: OK. First, let's choose an image
 class: item-edit slices
 ---
 
@@ -80,7 +80,36 @@ class: item-edit slices
 
   <div data-plate="apps">
     <div class="plate-details">
-      Apps
+      <ul class="specs-name">
+        <li>Name</li>
+        <li>Description</li>
+      </ul>
+      <div class="step-row">
+        <span class="value-type span-4 value-icon"><span class="icon"></span> WordPress</span>
+        <span class="value span-4">Description</span>
+        <span class="value span-4 text-right">
+          <form action="slice-add-step2.html">
+            <select name="version" onchange="this.form.submit()">
+              <option value="">Select a version</option>
+              <option value="warty">4.4.1</option>
+              <option value="hoary">4.4.0</option>
+            </select>            
+          </form>
+        </span>
+      </div>
+      <div class="step-row">
+        <span class="value-type span-4 value-icon"><span class="icon"></span> Ruby on Rails</span>
+        <span class="value span-4">Description</span>
+        <span class="value span-4 text-right">
+          <form action="slice-add-step2.html">
+            <select name="version" onchange="this.form.submit()">
+              <option value="">Select a version</option>
+              <option value="warty">4.2.0</option>
+              <option value="hoary">4.1.0</option>
+            </select>            
+          </form>
+        </span>
+      </div>
     </div>
   </div>
 
