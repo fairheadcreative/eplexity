@@ -1,12 +1,8 @@
 nav {
-  $base-border-radius: 3px !default;
-  $dark-gray: #333 !default;
-  $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
   $centered-navigation-background: $light-gray;
-  $centered-navigation-color: transparentize($base-font-color, 0.3);
+  $centered-navigation-color: $medium-gray;
   $centered-navigation-color-hover: $base-font-color;
   $centered-navigation-height: 60px;
   $centered-navigation-item-padding: 1em;
@@ -16,8 +12,9 @@ nav {
   $horizontal-bar-mode: $large-screen;
 
   border-bottom: 1px solid $light-gray;
+  background: white;
   @include clearfix;
-  padding-bottom: $small-spacing;
+  padding: $small-spacing / 2 0;
 
   // Nav menu
 
@@ -31,7 +28,7 @@ nav {
     width: 100%;
     white-space: nowrap;
     overflow-x: auto;
-    line-height: .75;
+    font-size: .9em;
 
     &.show {
       display: block;
@@ -41,14 +38,13 @@ nav {
          background: transparent;
          display: inline-block;
          overflow: hidden;
-         line-height: 1.5;
 
          a {
             color: $centered-navigation-color;
             display: inline-block;
             outline: none;
             text-decoration: none;
-            padding: .5em $small-spacing;
+            padding: .3em $small-spacing;
             margin: 0 .25em;
 
             &:focus,
@@ -58,44 +54,40 @@ nav {
          }
 
          &.divider {
-         border-left: 1px solid $light-gray;
+           border-left: 1px solid $light-gray;
+           padding-left: .3em;
 
-         &.active a { margin-left: .52em; }
+           &.active a { margin-left: .52em; }
          }
 
          &:first-child { margin-left: $small-spacing; }
       }
 
       .nav-close {
-          border: 1px solid $medium-gray;
-          border-radius: 50%;
-          height: 2.3em;
-          text-align: center;
-          width: 2.3em;
-          line-height: 2.3em;
-          position: relative;
-          top: -1px;
+        border: 1px solid $medium-gray;
+        border-radius: 50%;
+        height: 2.3em;
+        text-align: center;
+        width: 2.3em;
+        line-height: 2.3em;
+        position: relative;
+        top: -1px;
 
-         a {
-            display: block;
-            padding: 0;
-         }
+        a {
+          display: block;
+          padding: 0;
+        }
       }
 
-      .logo {
-         border-right: 1px solid $light-gray;
-      }
-
-      .logo .icon {
-         display: block;
-         height: 2em;
-         width: 2em;
-         border-radius: $base-border-radius;
-         background: $light-gray;
-         margin-right: $small-spacing;
-         margin: 0 .5em .5em 0;
-         top: 5px;
-         position: relative;
+      .logo .icon { 
+        background: url('../images/logo.png') no-repeat;
+        background-size: contain;
+        display: block;
+        height: 2em;
+        width: 3.5em;
+        margin-right: $small-spacing;
+        border-right: 1px solid $light-gray;
+        margin: 0 .5em 0 0;
       }
 
   }
@@ -110,5 +102,5 @@ nav {
 .billing .billing a,
 .clients .reseller-clients a,
 .bakery .reseller-bakery a {
-   @include nav-selected;
+  color: $action-color;
 }

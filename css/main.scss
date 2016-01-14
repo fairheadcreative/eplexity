@@ -56,14 +56,8 @@ $on-laptop:        800px;
         "syntax-highlighting"
 ;
 
-
-
-.cake-type,
-.slice-type {
-}
-
 body {
-  background: #FBFBFB;
+  background: #F9F7F5;
 }
 
 .plate {
@@ -88,6 +82,10 @@ body {
   border: $base-border;
 }
 
-.button.small {
-  font-size: .7em;
+.text-right {
+  text-align: right;
+}
+
+.step-row select {
+  width: 100%;
 }

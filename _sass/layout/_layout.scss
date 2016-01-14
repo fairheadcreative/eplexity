@@ -4,13 +4,10 @@
 ;
 
 .page-header {
-    @include outer-container;
-    margin-top: $small-spacing;
-
-    .site-title { 
-    	text-align: center; 
-    	padding: 0 $base-spacing;
-    }
+  .site-title { 
+    text-align: center; 
+    padding: 0 $base-spacing;
+  }
 }
 
 .page-content {
