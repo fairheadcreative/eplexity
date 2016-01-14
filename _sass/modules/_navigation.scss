@@ -16,6 +16,13 @@ nav {
   @include clearfix;
   padding: $small-spacing / 2 0;
 
+  @include media($medium-screen) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 8;
+  }
+
   // Nav menu
 
   .centered-navigation-menu {
