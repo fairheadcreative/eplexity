@@ -21,19 +21,27 @@ $(function() {
   });
 
   //increment/decrement number of slices and pass value
-  var slicesNumber = ['one slice','two slices','three slices','four slices','five slices'],
+  var slicesNumber = ['One','Two','Three','Four','Five'],
       i = 0,
       arrayLength = slicesNumber.length;
     $('.button.increment').on('click', function(){
       i = (i+1) % arrayLength;
-      $('.slice-count').html(slicesNumber[i]);
+      $('.item-count').html(slicesNumber[i]);
       $('[name="quantity"]').attr('value', i+1);
+      var item = $('.item-type');
+      if(i>0){
+        item.addClass('plural');
+      }else{item.removeClass('plural');};
     });  
     $('.button.decrement').on('click', function(){
       i = (i-1) % arrayLength;
       if(i < 0){i=arrayLength-1};
-      $('.slice-count').html(slicesNumber[i]);
+      $('.item-count').html(slicesNumber[i]);
       $('[name="quantity"]').attr('value', i+1);
+      var item = $('.item-type');
+      if(i>0){
+        item.addClass('plural');
+      }else{item.removeClass('plural');};
     });   
 
 });
