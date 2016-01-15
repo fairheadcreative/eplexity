@@ -3,7 +3,7 @@
 	@include clearfix;
 	border: 1px solid $light-gray;
 	border-radius: 3px;
-	padding: 1em;
+	padding: $base-spacing;
 	margin: 0 $small-spacing $small-spacing;
 	position: relative;
   	box-shadow: 0 1px 1px rgba(0,0,0,.05);
@@ -368,6 +368,19 @@
 
 			+ .details-toggler { margin-top: 1em; }
 		}
+	}
+}
+
+.chat .plate {
+	.ticket {
+		height: calc(100vh - 345px);
+		overflow-y: scroll;
+		padding-right: $base-spacing;
+	}
+
+	.ticket-post {
+	 position: relative;
+	 background: white;
 	}
 }
 
