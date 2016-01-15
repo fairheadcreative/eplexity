@@ -6,6 +6,15 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 
 $(function() {
 
+  //scroll page to reveal ticket message
+  var postBox = $('.ticket-post'),
+      postHeight = postBox.outerHeight();
+  $("html,body").animate({scrollTop: postBox.offset().top - postHeight}); 
+
+});
+
+$(function() {
+
   //send value to hidden checkboxes
   $('[data-value]').on('click', function(){
     var value = $(this).attr('data-value');
@@ -27,6 +36,10 @@ $(function() {
       $('.slice-count').html(slicesNumber[i]);
       $('[name="quantity"]').attr('value', i+1);
     });   
+
+});
+
+$(function() {
 
 });
 
