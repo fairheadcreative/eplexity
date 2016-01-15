@@ -95,18 +95,46 @@ class: item-edit slices
         </div>
       </div>
     </div>
-<!--end: details toggler-->
-    <div class="plate-details">
-      <ul class="specs-name">
-        <li class="span-4">CPU</li>
-        <li class="span-4">Total</li>
-        <li class="span-4">Available</li>
-      </ul>
-      <div class="value-row">
-        <span class="value-type span-4">Count</span>
-        <span class="value span-4">4</span>
-        <span class="value span-4">2</span>
+
+    <div class="details-toggler">
+      <div class="plate-details" data-details="show">
+        <ul class="specs-name">
+          <li>vRAM</li>
+          <li>Total</li>
+          <li>Available</li>
+        </ul>
+        <div class="value-row">
+          <span class="value-type span-4">Capacity</span>
+          <span class="value span-4">256GB</span>
+          <span class="value span-4">128GB</span>
+        </div>
       </div>
+
+      <div class="plate-details" data-details="edit">
+        <ul class="specs-name">
+          <li class="span-4">Edit vRAM</li>
+          <li class="span-4">Total</li>
+          <li class="span-4">Available</li> 
+        </ul>
+        <div class="value-row">
+          <span class="value-type span-4">Capacity</span>
+          <span class="value-edit span-4">
+            <input placeholder="256">
+            <select class="select-half" name="units">
+              <option value="GB">GB</option>
+              <option value="TB">TB</option>
+              <option value="MB">MB</option>
+            </select>
+          </span>
+          <span class="value span-4">128GB</span>
+        </div>
+        <div class="actions-row">
+          <span class="actions-buttons">
+            <button class="plate-save button small" data-edit="close">Save changes</button>
+            <button class="plate-cancel button small secondary" data-edit="close">Cancel</button>
+          </span>
+        </div>
+      </div>   
     </div>
 
     <div class="plate-details">

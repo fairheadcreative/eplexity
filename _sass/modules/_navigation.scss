@@ -16,6 +16,13 @@ nav {
   @include clearfix;
   padding: $small-spacing / 2 0;
 
+  @include media($medium-screen) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 8;
+  }
+
   // Nav menu
 
   .centered-navigation-menu {
@@ -55,7 +62,8 @@ nav {
 
          &.divider {
            border-left: 1px solid $light-gray;
-           padding-left: .3em;
+           padding-left: 1em;
+           margin-left: .7em;
 
            &.active a { margin-left: .52em; }
          }
@@ -90,6 +98,50 @@ nav {
         margin: 0 .5em 0 0;
       }
 
+      .signout a {
+        text-indent: -999em;
+        position: relative;
+        display: block;
+        height: 2em;
+        width: 3.7em;
+        margin-left: $small-spacing;
+        border-left: 1px solid $light-gray;
+        top: -1px;
+
+        &:before {
+          right: 10px;
+          width: 16px;
+          height: 16px;
+          border: 2px solid $medium-gray;
+          margin-top: -6px;
+          background: transparent;
+          border-radius: $border-radius-round;
+          content: "";
+          position: absolute;
+          top: 50%;
+        }
+
+        &:after {
+          right: 16px;
+          width: 4px;
+          height: 11px;
+          border: 1px solid #fff;
+          margin: -8px 0 0;
+          background: $medium-gray;
+          content: "";
+          position: absolute;
+          top: 47%;
+        }
+
+        &:hover:before {
+          border-color: $action-color;
+        }
+
+        &:hover:after {
+          background: $action-color; 
+        }
+      }
+
   }
 }
 
@@ -101,6 +153,7 @@ nav {
 .tickets .tickets a,
 .billing .billing a,
 .clients .reseller-clients a,
-.bakery .reseller-bakery a {
+.bakery .reseller-bakery a,
+.user .user a {
   color: $action-color;
 }

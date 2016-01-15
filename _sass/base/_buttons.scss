@@ -47,3 +47,8 @@
 
   &:hover { background: darken($medium-gray, 10); }
 }
+
+.button.expand {
+  width: 100%;
+  text-align: center;
+}
