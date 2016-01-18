@@ -72,7 +72,7 @@
 
 	.group {
 		margin: ($small-spacing / 2) 0;
-		padding: $small-spacing;
+		padding: $small-spacing $small-spacing 0;
 		border-radius: $base-border-radius;
 
 		.value-group {
@@ -94,15 +94,14 @@
 		}
 
 		&[data-details="edit"] {
-			padding: $small-spacing;
 			background: $bright-blue;
 			border: $base-border;
       		border-color: #D6E1E6;
-      		margin: 0 0 1em;
+      		margin: 0 0 $small-spacing;
 		}
 
 		&[data-details="show"] {
-      		margin: 0 0 1em;
+      		margin: 0 0 $small-spacing;
 		}
 	}
 
@@ -214,25 +213,6 @@
 
 			//&:first-child { padding: 0 $small-spacing; }
 		}
-
-		.ticket-row { 
-			@include clearfix;
-			@include plate-line;
-
-			&:last-child {
-        border-bottom: none; 
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
-
-			.value-icon {
-				position: relative;
-
-				&:first-child { padding: 0 $small-spacing 0 $base-spacing*2; } 
-			}
-		}
-
-
 	}
 
 	.step-counter { 
@@ -268,7 +248,7 @@
 		}
 	}
 
-	.specs-title { 
+	.row-title { 
 		@include plate-line;
 	}
 
@@ -289,6 +269,7 @@
 			overflow-x: auto;
       		position: relative;
       		bottom: -1px;
+      		margin-bottom: 1.375em;
 
 			li {
 				display: inline-block;
@@ -308,10 +289,8 @@
 					cursor: inherit;
 					background: $base-background-color;
           			bottom: -1px;
-				 }
+				}
 			}
-
-			+ .plate-tab { margin-top: 1.375em; }
 		}
 	}
 }
