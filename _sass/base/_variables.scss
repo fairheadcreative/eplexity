@@ -23,6 +23,7 @@ $bright-blue: lighten($blue, 47);
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$bright-gray: lighten($light-gray, 10);
 $red: #FF1911;
 $green: #76DB8F;
 $light-green: lighten($green, 20);

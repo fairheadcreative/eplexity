@@ -170,35 +170,53 @@
 
 	.ticket {
 		border-radius: $base-border-radius;
+    margin-right: -1.5em;
+    margin-top: -1.5em;
+    padding-top: 1.5em;
 		@include clearfix;
 
 		.ticket-message {			
-			border: 1px solid $light-gray;
-			border-radius: $base-border-radius;
 			margin-bottom: $base-spacing;
-
+      border-radius: $base-border-radius;
+      width: auto;
+     
 			&.user,
 			&.admin {
-				@include span-columns(10);
+        clear: both;
 			}
 
-			&.admin { 
-				float: right;
-				margin-right: 0;
+      &.admin {
+        background: $bright-gray;
+      }
 
-				.msg-info { text-align: right; } 
+      &.user {
+        background: $green;
+        color: white;
+				float: right;	
+
+				.msg-info {
+          text-align: right;
+          
+          time { opacity: .7; }
+        } 
 			}
 
-			.msg-info,
-			.msg-text { padding: $small-spacing; }
+      .msg-info {
+        font-size: .7em;
+        padding: 1em 1em 0;
+        
+        time { opacity: .4; }
+      }
+
+      .msg-text {
+        padding: 0.3em 0.75em 0.75em;
+      }
 
 			&.image {
 				@include span-columns(5);
-				border-top: 1px solid $light-gray;
-				border-bottom: 1px solid $light-gray;
 
 				.image-placeholder {
-					height: 100px;
+					height: 140px;
 					width: 100%;
 					background: $secondary-background-color;
 				}
@@ -236,16 +254,32 @@
 	}
 
 	.ticket-post {
+    background: $bright-blue;
 		@include clearfix;
 		margin-bottom: $small-spacing;
 		padding-top: $base-spacing;
 		border-top: 1px solid $light-gray;
+    margin: 0 -1.5em -1.5em;
+    padding: 0.5em 0.5em 0.5em;
+    height: 57px;
 
-		.message-input { 
-			@include span-columns(10); 
+    form {
+      position: relative;
+    }
 
-			@include media-query($medium-screen) { @include span-columns(9); }
-		}
+    input[type="text"] {
+      height: 40px;
+      padding-right: 75px;
+    }
+
+    .button.small {
+      height: 34px;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      border-radius: 2px;
+      padding-top: .8em;
+    }
 	}
 
 	.row-title { 
@@ -261,15 +295,79 @@
 	&.tabbed {
 		margin-top: 3.5em;
 
+    li[data-tab="settings"] {
+      width: 39px;
+
+      strong {
+        text-indent: -999em;
+        display: block;
+      }
+    }
+
+
+    .icon-settings {
+      width: 13px;
+      background: #F9F7F5;
+      height: 13px;
+      border-radius: 100px;
+      border: 2px solid $dark-gray;
+      position: absolute;
+      top: 11px;
+
+      &, span {
+        &:before {
+          content: '';
+          width: 3px;
+          height: 17px;
+          background: $dark-gray;;
+          display: block;
+          position: absolute;
+          top: -4px;
+          left: 3px;
+        }
+
+        &:after {
+          content: '';
+          width: 17px;
+          height: 3px;
+          background: $dark-gray;;
+          display: block;
+          position: absolute;
+          top: 3px;
+          left: -4px;
+        }
+      }
+
+      em {
+        border-radius: $border-radius-round;
+        background: #F9F7F5;
+        width: 9px;
+        height: 9px;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+      }
+
+      span {
+        &:after {
+          @include transform(rotate(45deg));
+        }
+        &:before,
+        &:after {
+          @include transform(rotate(-45deg));
+        }
+      }
+    }
+
 		.tabs {
 			display: block;
 			text-align: center;
 			margin-top: -3.65em;
 			white-space: nowrap;
 			overflow-x: auto;
-      		position: relative;
-      		bottom: -1px;
-      		margin-bottom: 1.375em;
+      position: relative;
+      bottom: -0.5px;
+      margin-bottom: 1.375em;
 
 			li {
 				display: inline-block;
@@ -297,14 +395,14 @@
 
 .chat .plate {
 	.ticket {
-		height: calc(100vh - 345px);
+		height: calc(100vh - 270px);
 		overflow-y: scroll;
 		padding-right: $base-spacing;
-	}
 
-	.ticket-post {
-	 position: relative;
-	 background: white;
+		@include media($medium-screen) {
+      height: calc(100vh - 250px);
+    }
+
 	}
 }
 
