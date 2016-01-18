@@ -115,7 +115,7 @@
 			border-bottom: none;
 		}
 
-		input,
+		input:not([type="submit"]),
 		select {
 			padding: $small-spacing/2;
 			width: 100%;
