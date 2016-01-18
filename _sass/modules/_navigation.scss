@@ -147,13 +147,13 @@ nav {
 
 //select navigation items relative to active page
 
-.cakes .cakes a,
-.slices .slices a,
-.toppings .toppings a,
+.platform .platform a,
+.infrastructure .infrastructure a,
+.marketplace .marketplace a,
 .tickets .tickets a,
 .billing .billing a,
 .clients .reseller-clients a,
-.bakery .reseller-bakery a,
+.products .reseller-products a,
 .user .user a {
   color: $action-color;
 }

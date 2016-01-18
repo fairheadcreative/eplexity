@@ -1,7 +1,7 @@
 ---
 layout: layout
 title: OK. First, let's choose an image
-class: item-edit slices
+class: item-edit infrastructure
 ---
 
 <section class="actions">
@@ -17,104 +17,104 @@ class: item-edit slices
     <li data-tab="snapshots">Snapshots</li>
   </ul>
 
-  <div data-plate="distros">
-    <div class="step-details">
-      <ul class="specs-name">
-        <li>Name</li>
-        <li>Description</li>
+  <div class="plate-tab" data-plate="distros">
+    <div class="group">
+      <ul class="heading">
+        <li class="span-4 push-2">Name</li>
+        <li class="span-4">Description</li>
       </ul>
-      <div class="step-row">
-        <span class="value-type span-4 value-icon"><span class="icon"></span> Ubuntu</span>
-        <span class="value span-4">Description</span>
-        <span class="value span-4 text-right">
-          <form action="slice-add-step2.html">
+      <div class="row">
+        <div class="span-4 push-2"><span class="icon"></span> Ubuntu</div>
+        <div class="span-4">Description</div>
+        <div class="span-4">
+          <form action="infrastructure-add-step2.html">
             <select name="version" onchange="this.form.submit()">
               <option value="">Select a version</option>
               <option value="warty">Warty Warthog</option>
               <option value="hoary">Hoary Hedgehog</option>
             </select>            
           </form>
-        </span>
+        </div>
       </div>
-      <div class="step-row">
-        <span class="value-type span-4 value-icon"><span class="icon"></span> Fedora</span>
-        <span class="value span-4">Description</span>
-        <span class="value span-4 text-right">
-          <form action="slice-add-step2.html">
+      <div class="row">
+        <div class="span-4 push-2"><span class="icon"></span> Fedora</div>
+        <div class="span-4">Description</div>
+        <div class="span-4">
+          <form action="infrastructure-add-step2.html">
             <select name="version" onchange="this.form.submit()">
               <option value="">Select a version</option>
               <option value="yarrow">Yarrow</option>
               <option value="tettnang">Tettnang</option>
             </select>            
           </form>
-        </span>
+        </div>
       </div>
-      <div class="step-row">
-        <span class="value-type span-4 value-icon"><span class="icon"></span> FreeBSD</span>
-        <span class="value span-4">Description</span>
-        <span class="value span-4 text-right">
-          <form action="slice-add-step2.html">
+      <div class="row">
+        <div class="span-4 push-2"><span class="icon"></span> FreeBSD</div>
+        <div class="span-4">Description</div>
+        <div class="span-4">
+          <form action="infrastructure-add-step2.html">
             <select name="version" onchange="this.form.submit()">
               <option value="">Select a version</option>
               <option value="102">10.2</option>
               <option value="92">9.2</option>
             </select>            
           </form>
-        </span>
+        </div>
       </div>
-      <div class="step-row">
-        <span class="value-type span-4 value-icon"><span class="icon"></span> Ubuntu</span>
-        <span class="value span-4">Description</span>
-        <span class="value span-4 text-right">
-          <form action="slice-add-step2.html">
+      <div class="row">
+        <div class="span-4 push-2"><span class="icon"></span> Ubuntu</div>
+        <div class="span-4">Description</div>
+        <div class="span-4">
+          <form action="infrastructure-add-step2.html">
             <select name="version" onchange="this.form.submit()">
               <option value="">Select a version</option>
               <option value="warty">Warty Warthog</option>
               <option value="hoary">Hoary Hedgehog</option>
             </select>            
           </form>
-        </span>
+        </div>
       </div>
     </div>
   </div>
 
-  <div data-plate="apps">
-    <div class="plate-details">
-      <ul class="specs-name">
-        <li>Name</li>
-        <li>Description</li>
+  <div class="plate-tab" data-plate="apps">
+    <div class="group">
+      <ul class="heading">
+        <li class="span-4 push-2">Name</li>
+        <li class="span-4">Description</li>
       </ul>
-      <div class="step-row">
-        <span class="value-type span-4 value-icon"><span class="icon"></span> WordPress</span>
-        <span class="value span-4">Description</span>
-        <span class="value span-4 text-right">
-          <form action="slice-add-step2.html">
+      <div class="row">
+        <div class="span-4 push-2"><span class="icon"></span> WordPress</div>
+        <div class="span-4">Description</div>
+        <div class="span-4">
+          <form action="infrastructure-add-step2.html">
             <select name="version" onchange="this.form.submit()">
               <option value="">Select a version</option>
               <option value="warty">4.4.1</option>
               <option value="hoary">4.4.0</option>
             </select>            
           </form>
-        </span>
+        </div>
       </div>
-      <div class="step-row">
-        <span class="value-type span-4 value-icon"><span class="icon"></span> Ruby on Rails</span>
-        <span class="value span-4">Description</span>
-        <span class="value span-4 text-right">
-          <form action="slice-add-step2.html">
+      <div class="row">
+        <div class="span-4 push-2"><span class="icon"></span> Ruby on Rails</div>
+        <div class="span-4">Description</div>
+        <div class="span-4">
+          <form action="infrastructure-add-step2.html">
             <select name="version" onchange="this.form.submit()">
               <option value="">Select a version</option>
               <option value="warty">4.2.0</option>
               <option value="hoary">4.1.0</option>
             </select>            
           </form>
-        </span>
+        </div>
       </div>
     </div>
   </div>
 
-  <div data-plate="snapshots">
-    <div class="plate-details">
+  <div class="plate-tab" data-plate="snapshots">
+    <div class="group">
       Snapshots
     </div>
   </div>

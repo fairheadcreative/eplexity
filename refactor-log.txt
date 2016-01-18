@@ -1,0 +1,58 @@
+filename changes:
+	deleted:    cake-add-step1.html		 	>created>	platform-add-step1.html
+    deleted:    cake-add-step2.html		 	>created>	platform-add-step2.html
+    deleted:    cake-add-step3import.html 	>created>	platform-add-step3import.html
+    deleted:    cake-add-step3new.html 		>created>	platform-add-step3new.html
+    deleted:    cake-add-step4new.html 		>created>	platform-add-step4new.html
+    deleted:    cake-add-step5new.html 		>created>	platform-add-step5new.html
+    deleted:    cake-add-step6new.html 		>created>	platform-add-step6new.html
+    deleted:    cake-add-successnew.html 	>created>	platform-add-successnew.html
+    deleted:    cake-details.html		 	>created>	platform-details.html
+    deleted:    reseller-bakery.html	 	>created>	reseller-products.html
+    deleted:    slice-add-step0.html	 	>created>	infrastructure-add-step0.html
+    deleted:    slice-add-step1.html	 	>created>	infrastructure-add-step1.html
+    deleted:    slice-add-step2.html	 	>created>	infrastructure-add-step2.html
+    deleted:    slice-add-step3.html	 	>created>	infrastructure-add-step3.html
+    deleted:    slice-add-step4.html	 	>created>	infrastructure-add-step4.html
+    deleted:    slice-add-step5.html	 	>created>	infrastructure-add-step5.html
+    deleted:    slice-add-step6.html	 	>created>	infrastructure-add-step6.html
+    deleted:    slice-add-success.html	 	>created>	infrastructure-add-success.html
+    deleted:    slice-details.html	 		>created>	infrastructure-details.html
+    deleted:    slices.html	 				>created>	infrastructure.html
+    deleted:    toppings-add-success.html	>created>	marketplace-add-success.html
+    deleted:    toppings.html	 			>created>	marketplace.html
+
+-simplified structure, so that every block consists of same group of elements:
+ section.plate
+ 	div.group
+ 		ul.heading
+ 			li.span-n
+ 			/li.span-n
+ 		/ul.heading
+ 		div.row
+ 			div.span-n
+ 			/div.span-n
+ 		/.row
+ 	/.group
+ /section.plate
+ 		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+
+        

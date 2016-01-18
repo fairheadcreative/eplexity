@@ -1,0 +1,173 @@
+---
+layout: layout
+title: Cocoa Slice
+class: item-edit slices
+---
+
+<section class="actions">
+  <div class="action-infobox">
+    <h2>Yum! backups topping added to Cocoa slice.</h2>
+    <p>Explanation text</p>
+    <span class="action-close">x</span>
+  </div>
+</section>
+
+<section class="plate tabbed">
+  <ul class="tabs">
+    <li data-tab="access">Access</li>
+    <li data-tab="specs" class="active">Specs</li>
+    <li data-tab="backups">Backups</li>
+    <li data-tab="monitoring">Monitoring</li>
+    <li data-tab="snapshots">Snapshots</li>
+    <li data-tab="settings">*</li>
+  </ul>
+
+  <div class="plate-tab" data-plate="access">
+    <div class="group">
+      Access
+    </div>
+  </div>
+
+  <div class="plate-tab" data-plate="specs">
+    <div class="group">
+      <ul class="heading">
+        <li class="span-4">Image</li>
+        <li class="span-4">Version</li>
+      </ul>
+      <div class="row">
+        <div class="span-4">Ubuntu</div>
+        <div class="span-4">14.04.3x64</div>
+      </div>
+    </div>
+    
+    <div class="details-toggler">
+      <div class="group" data-details="show">
+        <ul class="heading">
+          <li class="span-4">Storage</li>
+          <li class="span-4">Total</li>
+          <li class="span-4">Available</li> 
+        </ul>
+        <div class="row sub">
+          <div class="span-4">Capacity</div>
+          <div class="span-4">200TB</div>
+          <div class="span-4">120TB</div>
+        </div>
+        <div class="row">
+          <div class="span-4">IOPs</div>
+          <div class="span-4">2000</div>
+          <div class="span-4">500</div>
+        </div>
+      </div>
+      <div class="group" data-details="edit">
+        <ul class="heading">
+          <li class="span-4">Edit Storage</li>
+          <li class="span-4">Total</li>
+          <li class="span-4">Available</li> 
+        </ul>
+        <div class="row">
+          <div class="span-4">Disk 1</div>
+          <div class="span-4">
+            <input placeholder="500">
+            <select class="select-half" name="units">
+              <option value="GB">GB</option>
+              <option value="TB">TB</option>
+              <option value="MB">MB</option>
+            </select>
+          </div>
+          <div class="span-4">250GB</div>
+        </div>
+        <div class="row">
+          <div class="span-4">Disk 2</div>
+          <div class="span-4">
+            <input placeholder="500">
+            <select name="units">
+              <option value="GB">GB</option>
+              <option value="TB">TB</option>
+              <option value="MB">MB</option>
+            </select>
+          </div>
+          <div class="span-4">250GB</div>
+        </div>
+        <div class="row">  
+          <a class="value" href="#">Add disk</a>
+        </div>
+        <div class="row">
+            <button data-edit="close">Save changes</button>
+            <button data-edit="close">Cancel</button>
+          <span class="right">
+            <a href="#">Buy more storage</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <ul class="heading">
+        <li class="span-4">CPU</li>
+        <li class="span-4">Total</li>
+        <li class="span-4">Available</li>
+      </ul>
+      <div class="row">
+        <div class="span-4">Count</div>
+        <div class="span-4">4</div>
+        <div class="span-4">2</div>
+      </div>
+    </div>
+
+    <div class="group">
+      <ul class="heading">
+        <li class="span-4">NICs</li>
+        <li class="span-4">Total</li>
+        <li class="span-4">Available</li>
+      </ul>
+      <div class="row sub">
+        <div class="span-4">vLAN 2900</div>
+        <div class="span-4">10GB</div>
+        <div class="span-4">8GB</div>
+      </div>
+      <div class="row">
+        <div class="span-4">vLAN 2901</div>
+        <div class="span-4">6GB</div>
+        <div class="span-4">2GB</div>
+      </div>
+    </div>
+
+    <div class="group">
+      <ul class="heading">
+        <li class="span-4">Bandwidth</li>
+        <li class="span-4">Total</li>
+        <li class="span-4">Available</li>
+      </ul>
+      <div class="row">
+        <div class="span-4">Capacity</div>
+        <div class="span-4">1GBit</div>
+        <div class="span-4">0.7GBit</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="plate-tab" data-plate="backups">
+    <div class="group">
+      Backups
+    </div>
+  </div>
+
+  <div class="plate-tab" data-plate="monitoring">
+    <div class="group">
+      Monitoring
+    </div>
+  </div>
+
+  <div class="plate-tab" data-plate="snapshots">
+    <div class="group">
+      Snapshots
+    </div>
+  </div>
+
+  <div class="plate-tab" data-plate="settings">
+    <div class="group">
+      Settings
+    </div>
+  </div>
+
+</section>

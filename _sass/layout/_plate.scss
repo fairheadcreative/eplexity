@@ -4,15 +4,17 @@
 	border: 1px solid $light-gray;
 	border-radius: 3px;
 	padding: $base-spacing;
-	margin: 0 $small-spacing $small-spacing;
+	margin: 0 0 $small-spacing;
 	position: relative;
   	box-shadow: 0 1px 1px rgba(0,0,0,.05);
 
 	&.plate-small {
 		max-width: 25em;
 		margin: 0 auto $small-spacing;
+		padding: $base-spacing;
 	}
 
+	.span-1 { @include span-columns(1); }
 	.span-2 { @include span-columns(2); }
 	.span-3 { @include span-columns(3); }
 	.span-4 { @include span-columns(4); }
@@ -22,7 +24,10 @@
 	.span-10 { @include span-columns(10); }
 
 	.push-1 { padding-left: $base-spacing; }
-	.push-2 { padding-left: $base-spacing*2; }
+	.push-2 { 
+		padding-left: $base-spacing*2;
+		position: relative
+	}
 
 	.icon {
 		position: absolute;
@@ -34,70 +39,41 @@
 		top: -1px;
 		background: $light-gray;
 
-    &.icon-platform-factionbloc {
-      background: url('../images/icon-platform-factionbloc.png') no-repeat;
-      background-size: contain;
-    }
+	    &.icon-platform-factionbloc {
+	      background: url('../images/icon-platform-factionbloc.png') no-repeat;
+	      background-size: contain;
+	    }
 
-    &.icon-billing-pdf {
-      background: url('../images/icon-billing-pdf.png') no-repeat;
-      background-size: contain;
-    }
+	    &.icon-billing-pdf {
+	      background: url('../images/icon-billing-pdf.png') no-repeat;
+	      background-size: contain;
+	    }
 	}
 
-  .ticket-unread:after {
-    content: '1';
-    background: $red;
-    color: white;
-    border-radius: $border-radius-round;
-    width: 1.4em;
-    height: 1.4em;
-    display: inline-block;
-    font-size: .7em;
-    text-align: center;
-    position: relative;
-    top: -10px;
-  }
+  	.ticket-unread:after {
+	    content: '1';
+	    background: $red;
+	    color: white;
+	    border-radius: $border-radius-round;
+	    width: 1.4em;
+	    height: 1.4em;
+	    display: inline-block;
+	    font-size: .7em;
+	    text-align: center;
+	    position: relative;
+	    top: -10px;
+	 }
 	
-	.specs-type { 
+	.heading { 
 		@include clearfix;
 		@include plate-line;
+		color: $medium-gray;
 	}
 
-	.plate-details,
-	.step-details,
-	.step-counter,
-	.step-billing {
+	.group {
 		margin: ($small-spacing / 2) 0;
 		padding: $small-spacing;
 		border-radius: $base-border-radius;
-
-		.specs-name { 
-			@include clearfix;
-			@include plate-line;
-      font-weight: bold;
-
-			li {
-				@include span-columns(4);
-			}
-
-			li.small {
-				@include span-columns(3);
-			}
-
-      &.specs-bakery {
-        li { @include span-columns(4); }
-
-        li:nth-child(3) {
-          @include span-columns(2);
-        }
-
-        li:last-child {
-          @include span-columns(2);
-          text-align: right;
-        }
-      }
-		}
 
 		.value-group {
 			@include clearfix;
@@ -106,77 +82,14 @@
 			border-bottom: 1px solid $light-gray;
 		}
 
-		.value-row,
-		.step-row { 
-			@include clearfix;
-			margin-bottom: $small-spacing;
-
-			.value-small {
-				@include span-columns(3);
-			}
-
-			.value-icon {
-				position: relative;
-
-				&:first-child { padding: 0 $small-spacing 0 $base-spacing*2; } 
-			}
-
-			.value-edit input,
-			.value-edit select {
-				@include span-columns(6);
-				padding: $small-spacing/2;
-			}
-
-			&:last-child { 
-				margin-bottom: 0;
-				padding-bottom: 0;
-			}
-
-			.pick-slice {
-				select,
-				input {	width: 100%; }
-			}
-		}
-
-		.step-row { 
-			border-bottom: 1px solid $light-gray; 
-			padding-bottom:  $small-spacing;
-
-			&:last-child { border-bottom: none;  }
-		}
-
-		.actions-row {
-      border-top: 1px solid rgba(0,0,0,.1);
-			padding-top: $small-spacing; 
-			margin-top: $small-spacing;
-			@include clearfix; 
-
-			.actions-buttons { 
-				@include span-columns(8); 
-
-				button {
-					@media screen and (max-width: $small-screen) { margin-top: .5em; }
-				}
-			}
-			.actions-link { 
-				@include span-columns(4);
-				line-height: 2.5;
-
-				@media screen and (max-width: $small-screen) { 
-					line-height: 1;
-					padding-top: $small-spacing;
-				}
-			}
-		}
-
 		&[data-details="show"] {
 			cursor: pointer;
 			border: 1px solid transparent;
-      margin: 0;
+      		margin: 0;
 
 			&:hover {
 				background: $bright-blue;
-        border: 1px solid $bright-blue;
+        		border: 1px solid $bright-blue;
 			}			
 		}
 
@@ -193,10 +106,64 @@
 		}
 	}
 
+	.row {
+		@include clearfix;
+		@include plate-line;
+		padding-top: $small-spacing/2;
+		padding-bottom: $small-spacing;
+
+		&:last-child { 
+			border-bottom: none;
+		}
+
+		input,
+		select {
+			padding: $small-spacing/2;
+			width: 100%;
+
+			&.half,
+			&.half {
+				@include span-columns(6);
+				
+			}
+		}
+
+		.pick-slice {
+			select,
+			input {	width: 100%; }
+		}
+
+		button, 
+		.button {
+			width: auto;
+			@media screen and (max-width: $small-screen) { margin-top: .5em; }
+		}
+
+		.actions-buttons { 
+			margin-top: $small-spacing; 
+		}
+
+		.actions-link { 
+			@include span-columns(4);
+			line-height: 2.5; 
+
+			@media screen and (max-width: $small-screen) { 
+				line-height: 1;
+				padding-top: $small-spacing;
+			}
+		}
+	}
+
+	.sub { 
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+
 	.step-billing {
 
 	ul,
-	.step-row {
+	.row {
 		.span-4 { @include span-columns(4); }
 		.span-8 { @include span-columns(8); }
 		}
@@ -276,38 +243,16 @@
 			&.increment { margin-left: $base-spacing; }
 			&.decrement { margin-right: $base-spacing; }
 		}
+
+		.counter-text { 
+			display: inline-block;
+			min-width: 30%;
+		}
 	}
 
 	.step-right {
 		text-align: right;
 		float: right;
-	}
-
-	.cake,
-	.slice {
-		@include clearfix;
-		@include plate-line;
-
-		&:last-child { 
-			border-bottom: none;
-			padding-bottom: 0;
-		}
-
-		.cake-type,
-		.slice-type,
-		.client-type { 
-			position: relative;
-			@include span-columns(4);
-			padding-left:  $base-spacing*2; 
-		}
-
-		.client-type { 
-      padding-left: 0;
-    }
-
-		.cake-specs,
-		.slice-specs,
-		.client-specs { @include span-columns(2); }
 	}
 
 	.ticket-post {
@@ -339,7 +284,7 @@
 		.tabs {
 			display: block;
 			text-align: center;
-			margin-top: -3.15em;
+			margin-top: -3.65em;
 			white-space: nowrap;
 			overflow-x: auto;
       		position: relative;
@@ -366,7 +311,7 @@
 				 }
 			}
 
-			+ .details-toggler { margin-top: 1em; }
+			+ .plate-tab { margin-top: 1.375em; }
 		}
 	}
 }
@@ -384,7 +329,7 @@
 	}
 }
 
-.bakery-row {
+.products-row {
   clear: both;
 
   .value,

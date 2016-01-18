@@ -13,268 +13,257 @@ class: item-edit billing
   </ul>
 
 <!--contracts start-->
-  <div class="step-billing" data-plate="contracts">
-    <ul class="specs-type">
-      <li class="span-8 push-2">Name</li>
-      <li class="span-4">Date</li>
-    </ul>
-    <div class="step-row">
-      <span class="value-type value-icon span-8"><span class="icon icon-billing-pdf"></span> <a href="#">Terms & Conditions (clean)</a></span>
-      <span class="value span-4">Nov 14 2015</span>
-      </span>
-    </div>
-    <div class="step-row">
-      <span class="value-type value-icon span-8"><span class="icon icon-billing-pdf"></span> <a href="#">Terms & Conditions (signed)</a></span>
-      <span class="value span-4">Nov 14 2015</span>
-      </span>
-    </div>
-    <div class="step-row">
-      <span class="value-type value-icon span-8"><span class="icon icon-billing-pdf"></span> <a href="#">First Service Order</a></span>
-      <span class="value span-4">Nov 14 2015</span>
-      </span>
+  <div class="plate-tab" data-plate="contracts">
+    <div class="group">
+      <ul class="heading">
+        <li class="span-8 push-2">Name</li>
+        <li class="span-4">Date</li>
+      </ul>
+      <div class="row">
+        <div class="span-8 push-2"><span class="icon icon-billing-pdf"></span> <a href="#">Terms & Conditions (clean)</a></div>
+        <div class="span-4">Nov 14 2015</div>
+      </div>
+      <div class="row">
+        <div class="span-8 push-2"><span class="icon icon-billing-pdf"></span> <a href="#">Terms & Conditions (signed)</a></div>
+        <div class="span-4">Nov 14 2015</div>
+      </div>
+      <div class="row">
+        <div class="span-8 push-2"><span class="icon icon-billing-pdf"></span> <a href="#">First Service Order</a></div>
+        <div class="span-4">Nov 14 2015</div>
+      </div>
     </div>
   </div>
+
 <!--orders start-->
-  <div class="step-billing" data-plate="orders">
-    <div class="plate-details">
-      <ul class="specs-type">
+  <div class="plate-tab" data-plate="orders">
+    <div class="group">
+      <ul class="heading">
         <li class="span-8">Name</li>
         <li class="span-4">Date</li>
       </ul>
-
-      <div class="details-toggler">
-        <div class="plate-details" data-details="show">
-          <div class="step-row">
-            <span class="value-type span-8">Vanilla Cake added</span>
-            <span class="value span-4">Nov 14 2015</span>
-            </span>
-          </div>
-        </div>
-        <div class="plate-details" data-details="edit">
-          <div class="step-row">
-            <span class="value-type span-8">Vanilla Cake added</span>
-            </span>
-          </div>
-          <div class="">
-            <ul class="specs-type">
-              <li class="span-7">SKU</li>
-              <li class="span-3">QTY</li>
-              <li class="span-2">TOTAL</li>
-            </ul>
-            <div class="step-row">
-              <span class="span-7">Cake</span>
-              <span class="span-3">1</span>
-              <span class="span-2">$1000</span>
-            </div>
-            <div class="step-row">
-              <span class="span-7 push-1">Specification</span>
-              <span class="span-3">2</span>
-              <span class="span-2">$500</span>
-            </div>
-            <div class="step-row">
-              <span class="span-7 push-1">Specification</span>
-              <span class="span-3">1</span>
-              <span class="span-2">$500</span>
-            </div>
-            <button class="plate-close button small secondary" data-edit="close">Close</button>
-          </div>
+    </div>
+    <div class="details-toggler">
+      <div class="group" data-details="show">
+        <div class="row">
+          <div class="span-8">Vanilla Cake added</div>
+          <div class="span-4">Nov 14 2015</div>
         </div>
       </div>
 
-      <div class="details-toggler">
-        <div class="plate-details" data-details="show">
-          <div class="step-row">
-            <span class="value-type span-8">Chocolate Cake added</span>
-            <span class="value span-4">Nov 14 2015</span>
-            </span>
-          </div>
+      <div class="group" data-details="edit">
+        <div class="row">
+          <div class="span-8">Vanilla Cake added</div>          
         </div>
-        <div class="plate-details" data-details="edit">
-          <div class="step-row">
-            <span class="value-type span-8">Chocolate Cake added</span>
-            </span>
-          </div>
-          <div class="">
-            <ul class="specs-type">
-              <li class="span-7">SKU</li>
-              <li class="span-3">QTY</li>
-              <li class="span-2">TOTAL</li>
-            </ul>
-            <div class="step-row">
-              <span class="span-7">Cake</span>
-              <span class="span-3">1</span>
-              <span class="span-2">$1000</span>
-            </div>
-            <div class="step-row">
-              <span class="span-7 push-1">Specification</span>
-              <span class="span-3">2</span>
-              <span class="span-2">$500</span>
-            </div>
-            <div class="step-row">
-              <span class="span-7 push-1">Specification</span>
-              <span class="span-3">1</span>
-              <span class="span-2">$500</span>
-            </div>
-            <button class="plate-close button small secondary" data-edit="close">Close</button>
-          </div>
+        <ul class="heading">
+          <li class="span-7">SKU</li>
+          <li class="span-3">QTY</li>
+          <li class="span-2">TOTAL</li>
+        </ul>
+        <div class="row">
+          <div class="span-7">Cake</div>
+          <div class="span-3">1</div>
+          <div class="span-2">$1000</div>
+        </div>
+        <div class="row">
+          <div class="span-7 push-1">Specification</div>
+          <div class="span-3">2</div>
+          <div class="span-2">$500</div>
+        </div>
+        <div class="row">
+          <div class="span-7 push-1">Specification</div>
+          <div class="span-3">1</div>
+          <div class="span-2">$500</div>
+        </div>       
+        <div class="row">
+          <button class="plate-close button small secondary" data-edit="close">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="details-toggler">
+      <div class="group" data-details="show">
+        <div class="row">
+          <div class="span-8">Chocolate Cake added</div>
+          <div class="span-4">Nov 14 2015</div>
         </div>
       </div>
 
+      <div class="group" data-details="edit">
+        <div class="row">
+          <div class="span-8">Chocolate Cake added</div>          
+        </div>
+        <ul class="heading">
+          <li class="span-7">SKU</li>
+          <li class="span-3">QTY</li>
+          <li class="span-2">TOTAL</li>
+        </ul>
+        <div class="row">
+          <div class="span-7">Cake</div>
+          <div class="span-3">1</div>
+          <div class="span-2">$1000</div>
+        </div>
+        <div class="row">
+          <div class="span-7 push-1">Specification</div>
+          <div class="span-3">2</div>
+          <div class="span-2">$500</div>
+        </div>
+        <div class="row">
+          <div class="span-7 push-1">Specification</div>
+          <div class="span-3">1</div>
+          <div class="span-2">$500</div>
+        </div>
+        <div class="row">
+          <button class="plate-close button small secondary" data-edit="close">Close</button>
+        </div>
+      </div>
     </div>
   </div>
+
 <!--invoices start-->
-  <div class="step-billing" data-plate="invoices">
-    <div class="plate-details">
-      <ul class="specs-type">
+  <div class="plate-tab" data-plate="invoices">
+    <div class="group">
+      <ul class="heading">
         <li class="span-8">Name</li>
         <li class="span-4">Date</li>
       </ul>
-
-      <div class="details-toggler">
-        <div class="plate-details" data-details="show">
-          <div class="step-row">
-            <span class="value-type span-8">September 2015 invoice</span>
-            <span class="value span-4">Sep 14 2015</span>
-            </span>
-          </div>
-        </div>
-        <div class="plate-details" data-details="edit">
-          <div class="step-row">
-            <span class="value-type span-8">September 2015 invoice</span>
-            </span>
-          </div>
-          <div class="">
-            <ul class="specs-type">
-              <li class="span-7">SKU</li>
-              <li class="span-3">QTY</li>
-              <li class="span-2">TOTAL</li>
-            </ul>
-            <div class="step-row">
-              <span class="span-7">Cake</span>
-              <span class="span-3">1</span>
-              <span class="span-2">$1000</span>
-            </div>
-            <div class="step-row">
-              <span class="span-7">Cake</span>
-              <span class="span-3">1</span>
-              <span class="span-2">$1000</span>
-            </div>
-            <div class="step-row">
-              <span class="span-2 right">$2000</span>
-            </div>
-            <a class="button small" href="javascript:window.print()">Print</a>
-            <button class="button small">Save PDF copy</button>
-            <button class="button small secondary" data-edit="close">Close</button>
-          </div>
+    </div>
+    <div class="details-toggler">
+      <div class="group" data-details="show">
+        <div class="row">
+          <div class="span-8">September 2015 invoice</div>
+          <div class="span-4">Sep 14 2015</div> 
         </div>
       </div>
 
-      <div class="details-toggler">
-        <div class="plate-details" data-details="show">
-          <div class="step-row">
-            <span class="value-type span-8">August 2015 invoice</span>
-            <span class="value span-4">Aug 14 2015</span>
-            </span>
-          </div>
+      <div class="group" data-details="edit">
+        <div class="row">
+          <div class="span-8">September 2015 invoice</div>
         </div>
-        <div class="plate-details" data-details="edit">
-          <div class="step-row">
-            <span class="value-type span-8">August 2015 invoice</span>
-            </span>
-          </div>
-          <div class="">
-            <ul class="specs-type">
-              <li class="span-7">SKU</li>
-              <li class="span-3">QTY</li>
-              <li class="span-2">TOTAL</li>
-            </ul>
-            <div class="step-row">
-              <span class="span-7">Cake</span>
-              <span class="span-3">1</span>
-              <span class="span-2">$1000</span>
-            </div>
-            <div class="step-row">
-              <span class="span-7">Cake</span>
-              <span class="span-3">1</span>
-              <span class="span-2">$1000</span>
-            </div>
-            <div class="step-row">
-              <span class="span-2 right">$2000</span>
-            </div>
-            <a class="button small" href="javascript:window.print()">Print</a>
-            <button class="button small">Save PDF copy</button>
-            <button class="button small secondary" data-edit="close">Close</button>
-          </div>
+        <ul class="heading">
+          <li class="span-7">SKU</li>
+          <li class="span-3">QTY</li>
+          <li class="span-2">TOTAL</li>
+        </ul>
+        <div class="row">
+          <div class="span-7">Cake</div>
+          <div class="span-3">1</div>
+          <div class="span-2">$1000</div>
+        </div>
+        <div class="row">
+          <div class="span-7">Cake</div>
+          <div class="span-3">1</div>
+          <div class="span-2">$1000</div>
+        </div>
+        <div class="row">
+          <div class="span-2 right">$2000</div>
+        </div>
+        <div class="row">
+          <a class="button small" href="javascript:window.print()">Print</a>
+          <button class="button small">Save PDF copy</button>
+          <button class="button small secondary" data-edit="close">Close</button>
         </div>
       </div>
-
+    </div>
+    <div class="details-toggler">
+      <div class="group" data-details="show">
+        <div class="row">
+          <div class="span-8">August 2015 invoice</div>
+          <div class="span-4">Sep 14 2015</div> 
+        </div>
+      </div>
+      
+      <div class="group" data-details="edit">
+        <div class="row">
+          <div class="span-8">August 2015 invoice</div>
+        </div>
+        <ul class="heading">
+          <li class="span-7">SKU</li>
+          <li class="span-3">QTY</li>
+          <li class="span-2">TOTAL</li>
+        </ul>
+        <div class="row">
+          <div class="span-7">Cake</div>
+          <div class="span-3">1</div>
+          <div class="span-2">$1000</div>
+        </div>
+        <div class="row">
+          <div class="span-7">Cake</div>
+          <div class="span-3">1</div>
+          <div class="span-2">$1000</div>
+        </div>
+        <div class="row">
+          <div class="span-2 right">$2000</div>
+        </div>
+        <div class="row">
+          <a class="button small" href="javascript:window.print()">Print</a>
+          <button class="button small">Save PDF copy</button>
+          <button class="button small secondary" data-edit="close">Close</button>
+        </div>
+      </div>
     </div>
   </div>
+
 <!--credits start-->
-  <div class="step-billing" data-plate="credits">
-    <div class="plate-details">
-      <ul class="specs-type">
+  <div class="plate-tab" data-plate="credits">
+    <div class="group">
+      <ul class="heading">
         <li class="span-8">Name</li>
         <li class="span-4">Date</li>
       </ul>
+    </div>
 
-      <div class="details-toggler">
-        <div class="plate-details" data-details="show">
-          <div class="step-row">
-            <span class="value-type span-8">Outage credit</span>
-            <span class="value span-4">Sep 14 2015</span>
-            </span>
-          </div>
-        </div>
-        <div class="plate-details" data-details="edit">
-          <div class="step-row">
-            <span class="value-type span-8">Outage credit</span>
-            </span>
-          </div>
-          <div class="">
-            <ul class="specs-type">
-              <li class="span-10">SKU</li>
-              <li class="span-2">TOTAL</li>
-            </ul>
-            <div class="step-row">
-              <span class="span-10">Cake outage (3 hours)</span>
-              <span class="span-2">$1000</span>
-            </div>
-            <div class="step-row">
-              <span class="span-2 right">$1000</span>
-            </div>
-            <a class="button small" href="javascript:window.print()">Print</a>
-            <button class="button small">Save PDF copy</button>
-            <button class="button small secondary" data-edit="close">Close</button>
-          </div>
+    <div class="details-toggler">
+      <div class="group" data-details="show">
+        <div class="row">
+          <div class="span-8">Outage credit</div>
+          <div class="span-4">Sep 14 2015</div>
         </div>
       </div>
+      <div class="group" data-details="edit">
+        <div class="row">
+          <div class="span-8">Outage credit</div>
+        </div>
+        <ul class="heading">
+          <li class="span-10">SKU</li>
+          <li class="span-2">TOTAL</li>
+        </ul>
+        <div class="row">
+          <div class="span-10">Cake outage (3 hours)</div>
+          <div class="span-2">$1000</div>
+        </div>
+        <div class="row">
+          <div class="span-2 right">$1000</div>
+        </div>
+        <div class="row">
+          <a class="button small" href="javascript:window.print()">Print</a>
+          <button class="button small">Save PDF copy</button>
+          <button class="button small secondary" data-edit="close">Close</button>
+        </div>
+      </div>
+    </div>
 
       <div class="details-toggler">
-        <div class="plate-details" data-details="show">
-          <div class="step-row">
-            <span class="value-type span-8">Referral credit</span>
-            <span class="value span-4">Aug 14 2015</span>
-            </span>
+        <div class="group" data-details="show">
+          <div class="row">
+            <div class="span-8">Referral credit</div>
+            <div class="span-4">Aug 14 2015</div>
           </div>
         </div>
-        <div class="plate-details" data-details="edit">
-          <div class="step-row">
-            <span class="value-type span-8">Referral credit</span>
-            </span>
+        <div class="group" data-details="edit">
+          <div class="row">
+            <div class="span-8">Referral credit</div>
           </div>
-          <div class="">
-            <ul class="specs-type">
-              <li class="span-10">SKU</li>
-              <li class="span-2">TOTAL</li>
-            </ul>
-            <div class="step-row">
-              <span class="span-10">Refferal ID</span>
-              <span class="span-2">$500</span>
-            </div>
-            <div class="step-row">
-              <span class="span-2 right">$500</span>
-            </div>
+          <ul class="heading">
+            <li class="span-10">SKU</li>
+            <li class="span-2">TOTAL</li>
+          </ul>
+          <div class="row">
+            <div class="span-10">Refferal ID</div>
+            <div class="span-2">$500</div>
+          </div>
+          <div class="row">
+            <div class="span-2 right">$500</div>
+          </div>
+          <div class="row">
             <a class="button small" href="javascript:window.print()">Print</a>
             <button class="button small">Save PDF copy</button>
             <button class="button small secondary" data-edit="close">Close</button>
