@@ -25,6 +25,8 @@ $medium-gray: #999;
 $light-gray: #ddd;
 $bright-gray: lighten($light-gray, 10);
 $red: #FF1911;
+$light-red: lighten($red, 20);
+$bright-red: lighten($red, 30);
 $green: #76DB8F;
 $light-green: lighten($green, 20);
 $bright-green: lighten($green, 30);
