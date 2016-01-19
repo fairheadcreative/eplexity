@@ -12,6 +12,10 @@
 		max-width: 25em;
 		margin: 0 auto $small-spacing;
 		padding: $base-spacing;
+
+		input {
+			margin-bottom: $small-spacing;
+		}
 	}
 
 	.span-1 { @include span-columns(1); }
@@ -68,6 +72,39 @@
 		@include clearfix;
 		@include plate-line;
 		color: $medium-gray;
+	}	
+
+	.details-toggler {
+
+		&.divider {
+
+			[data-details="show"] {
+
+	      		.row:last-child {     			
+					border-bottom: 1px solid $light-gray;
+	      		}
+
+				&:hover {
+		      		.row:last-child {     			
+						border-bottom:  1px solid transparent;
+		      		}
+				}			
+			}
+
+			&:last-child {
+
+				[data-details="show"] {
+
+		      		.row:last-child {     			
+						border-bottom:  1px solid transparent;
+		      		}
+				}
+			}
+		}
+
+		.group {
+			padding-top: $small-spacing/2;
+		}
 	}
 
 	.group {
@@ -103,6 +140,10 @@
 		&[data-details="show"] {
       		margin: 0 0 $small-spacing;
 		}
+
+		& + .details-toggler {
+			margin-top: $small-spacing;
+		}
 	}
 
 	.row {
@@ -110,9 +151,15 @@
 		@include plate-line;
 		padding-top: $small-spacing/2;
 		padding-bottom: $small-spacing;
+		position: relative;
 
 		&:last-child { 
 			border-bottom: none;
+			margin-bottom: 0;
+		}
+
+		*:last-child { 
+			margin-bottom: 0;
 		}
 
 		input:not([type="submit"]),
