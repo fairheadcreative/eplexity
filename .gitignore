@@ -3,3 +3,4 @@ _site
 .sass-cache
 to-do.txt
 Gemfile.lock
+*.swp

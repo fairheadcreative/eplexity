@@ -6,7 +6,12 @@
 	padding: $base-spacing;
 	margin: 0 0 $small-spacing;
 	position: relative;
-  	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+  .plate-notice {
+    padding: 1em;
+    text-align: center;
+  }
 
 	&.plate-small {
 		max-width: 25em;
