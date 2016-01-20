@@ -11,7 +11,7 @@ nav {
   $centered-navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
 
-  border-bottom: 1px solid $light-gray;
+  border-bottom: 1px solid $base-border-color;
   background: white;
   @include clearfix;
   padding: $small-spacing / 2 0;
@@ -61,7 +61,7 @@ nav {
          }
 
          &.divider {
-           border-left: 1px solid $light-gray;
+           border-left: 1px solid $base-border-color;
            padding-left: 1em;
            margin-left: .7em;
 
@@ -94,7 +94,7 @@ nav {
         height: 2em;
         width: 3.5em;
         margin-right: $small-spacing;
-        border-right: 1px solid $light-gray;
+        border-right: 1px solid $base-border-color;
         margin: 0 .5em 0 0;
       }
 
@@ -105,7 +105,7 @@ nav {
         height: 2em;
         width: 3.7em;
         margin-left: $small-spacing;
-        border-left: 1px solid $light-gray;
+        border-left: 1px solid $base-border-color;
         top: -1px;
 
         &:before {

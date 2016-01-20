@@ -65,7 +65,7 @@ $(function() {
   });
 
   //toggle active tab
-  $('.tabs li').on( 'click', function(e) {
+  $('.tabs li:not(.settings)').on( 'click', function(e) {
 
       e.preventDefault();
       var tabValue = $(this).attr('data-tab'), 

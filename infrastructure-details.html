@@ -10,7 +10,15 @@ class: item-edit infrastructure
     <li data-tab="specs" class="active">Specs</li>
     <li data-tab="monitoring">Monitoring</li>
     <li data-tab="snapshots">Snapshots</li>
-    <li data-tab="settings-power" class="settings"><div class="icon-settings"><span><em></em></span></div><strong>Settings</strong></li>
+    <li class="settings"><div class="icon-settings"><span><em></em></span></div><strong>Settings</strong>
+      <ul>
+        <li data-tab="settings-power">Power</li>
+        <li data-tab="settings-rename">Rename</li>
+        <li data-tab="settings-backups">Backups</li>
+        <li data-tab="settings-history">History</li>
+        <li data-tab="settings-destroy">Destroy</li>
+      </ul>
+    </li>
   </ul>
 
   <div class="plate-tab" data-plate="access">
@@ -184,7 +192,7 @@ class: item-edit infrastructure
   </div>
 
   <div class="plate-tab" data-plate="settings-power">
-    <div class="group action-info">
+    <div class="group info">
       <h2>This slice is turned on.</h2>
       <p>If you want to turn it off, make sure:</p>
       <ul>
@@ -199,7 +207,7 @@ class: item-edit infrastructure
   </div>
 
   <div class="plate-tab" data-plate="settings-rename">
-    <div class="group action-info">
+    <div class="group info">
       <h2>This slice is called 'Cocoa Slice'.</h2>
       <p>If you want to rename it, make sure:</p>
       <ul>
@@ -244,7 +252,7 @@ class: item-edit infrastructure
   </div>
 
   <div class="plate-tab" data-plate="settings-destroy">
-    <div class="group action-info">
+    <div class="group info">
       <h2>Careful, this can't be undone!</h2>
       <p>If you want to destroy it, make sure:</p>
       <ul>

@@ -1,7 +1,7 @@
 //rules for plates with cakes, slices, toppings..
 .plate { 
 	@include clearfix;
-	border: 1px solid $light-gray;
+	border: 1px solid $base-border-color;
 	border-radius: 3px;
 	padding: $base-spacing;
 	margin: 0 0 $small-spacing;
@@ -81,7 +81,7 @@
 			[data-details="show"] {
 
 	      		.row:last-child {     			
-					border-bottom: 1px solid $light-gray;
+					border-bottom: 1px solid $base-border-color;
 					margin-bottom: -1px;
 	      		}		
 			}
@@ -111,7 +111,7 @@
 			@include clearfix;
 			margin-bottom: $small-spacing;
 			padding-bottom: $small-spacing;
-			border-bottom: 1px solid $light-gray;
+			border-bottom: 1px solid $base-border-color;
 		}
 
 		&[data-details="show"] {
@@ -138,6 +138,20 @@
 
 		& + .details-toggler {
 			margin-top: $small-spacing;
+		}
+
+		&.info {
+			text-align: center;
+
+			ul {
+				list-style: disc;
+				text-align: left;
+				width: 50%;
+				margin-left: 50%;
+				-webkit-transform: translate-x(-50%);
+				transform: translatex(-50%);
+				margin-bottom: $small-spacing;
+			}
 		}
 	}
 
@@ -177,7 +191,7 @@
 		button, 
 		.button {
 			width: auto;
-			@media screen and (max-width: $small-screen) { margin-top: .5em; }
+			@media screen and (max-width: $medium-screen) { margin-top: .5em; }
 		}
 
 		.actions-buttons { 
@@ -188,7 +202,7 @@
 			@include span-columns(4);
 			line-height: 2.5; 
 
-			@media screen and (max-width: $small-screen) { 
+			@media screen and (max-width: $medium-screen) { 
 				line-height: 1;
 				padding-top: $small-spacing;
 			}
@@ -296,14 +310,14 @@
 	}
 
 	.ticket-post {
-    background: $bright-blue;
+    	background: $bright-blue;
 		@include clearfix;
 		margin-bottom: $small-spacing;
 		padding-top: $base-spacing;
-		border-top: 1px solid $light-gray;
-    margin: 0 -1.5em -1.5em;
-    padding: 0.5em 0.5em 0.5em;
-    height: 57px;
+		border-top: 1px solid $base-border-color;
+    	margin: 0 -1.5em -1.5em;
+    	padding: 0.5em 0.5em 0.5em;
+    	height: 57px;
 
     form {
       position: relative;
@@ -338,11 +352,42 @@
 		margin-top: 3.5em;
 
 	    li.settings {
-	      width: 39px;
+	      	width: 39px;
+	      	position: relative;
 
-	      strong {
-	        text-indent: -999em;
-	        display: block;
+	      	strong {
+	        	text-indent: -999em;
+	        	display: block;
+      		}
+
+	      	ul { 
+
+	      		@media screen and (min-width: $medium-screen) { 
+		      		display: none;
+		      		background: white;
+		      		position: absolute;
+		      		z-index: 10;
+		      		right: 0;
+		      		margin-top: 3px;
+		      		border: 1px solid $base-border-color;
+		      		border-radius: 0 0 $base-border-radius $base-border-radius;
+
+		      		li {
+		      			display: block; 
+		      			border-bottom: 1px solid $base-border-color;
+
+		      			&:last-child { border-bottom: none; }
+		      			&.active { 
+		      				border: none; 
+		      				border-bottom: 1px solid $base-border-color;
+		      				background: shade(#F9F7F5, 3);
+		      			}
+		      		}
+	      		}
+	      	}
+
+      	&:hover {
+      		ul { display: block; }
       	}
     }
 
@@ -406,10 +451,11 @@
 			text-align: center;
 			margin-top: -3.65em;
 			white-space: nowrap;
-			overflow-x: auto;
-      position: relative;
-      bottom: -0.5px;
-      margin-bottom: 1.375em;
+		    position: relative;
+		    bottom: -0.5px;
+		    margin-bottom: 1.375em;
+
+			@media screen and (max-width: $medium-screen) { overflow-x: auto; }
 
 			li {
 				display: inline-block;
@@ -420,11 +466,11 @@
 				cursor: pointer;
 
 				&:hover {
-          background: shade(#F9F7F5, 5);
+          		background: shade(#F9F7F5, 5);
         }
 
 				&.active { 
-          			border: 1px solid $light-gray;
+          			border: 1px solid $base-border-color;
 					border-bottom: 1px solid white;
 					cursor: inherit;
 					background: $base-background-color;
