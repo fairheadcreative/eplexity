@@ -497,14 +497,9 @@
 
 .chat .plate {
 	.ticket {
-		height: calc(100vh - 270px);
+		height: calc(100vh - 230px);
 		overflow-y: scroll;
 		padding-right: $base-spacing;
-
-		@include media($medium-screen) {
-      height: calc(100vh - 250px);
-    }
-
 	}
 }
 
