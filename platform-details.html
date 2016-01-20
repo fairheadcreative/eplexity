@@ -7,8 +7,7 @@ class: item-edit platform
 <section class="plate tabbed">
   <ul class="tabs">
     <li data-tab="specs" class="active">Specs</li>
-    <li data-tab="function1">Function</li>
-    <li data-tab="function2">Function</li>
+    <li data-tab="function1">Registration</li>
   </ul>
 
   <div class="plate-tab" data-plate="specs">
@@ -261,17 +260,41 @@ class: item-edit platform
     </div>
   </div>
 
-<!--start data plate 2 -->
+  <!-- Start data plate 2 -->
   <div class="plate-tab" data-plate="function1">
     <div class="group">
-      Function 1
-    </div>
-  </div>
+      <label>How often shall we check this platform for updates?</label>
+      <p>Once every 
+      <select class="inline">
+        <option>10 minutes</option>
+        <option>30 minutes</option>
+        <option>hour</option>
+        <option>2 hours</option>
+        <option>6 hours</option>
+        <option>day</option>
+        <option>week</option>
+      </select></p>
+      
+      <a class="button small">Save changes</a>
 
-<!--start data plate 3 -->
-  <div class="plate-tab" data-plate="function2">
-    <div class="group">
-      Function 2
+      <hr />
+
+      <label>Registration status</label>
+      <p>This platform is <span class="label success">registered</span> since we last checked this morning.<br />
+      Your registration key is <code>123-456-7890</code>.</p>
+      <p>To register your Faction Bloc:</p>
+
+      <div class="instructions panel">
+        <ol>
+          <li>Download your <a href="#">Eplexity Platform Appliance.</a></li>
+          <li>Appliance installation step 1 (e.g how to log in)</li>
+          <li>Appliance installation step 2 (e.g. where to upload the file to)</li>
+          <li>Appliance installation step 3 (e.g. how to run the appliance</li>
+          <li>Appliance installation step 4 (e.g. registration key)</li>
+        </ol>
+      </div>
+
+      <a class="button small">Refresh registration status</a>
     </div>
   </div>
 

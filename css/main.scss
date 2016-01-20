@@ -106,3 +106,24 @@ body {
     color: shade($red, 20);
   }
 }
+
+.inline {
+  display: inline;
+}
+
+.instructions ol {
+  padding: 1em 1em 1em 2.5em;
+  background: $bright-gray;
+  border: 1px solid $light-gray;
+  border-radius: $base-border-radius;
+  margin-bottom: 1em;
+
+  li {
+    list-style: decimal;
+    margin-bottom: .5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
