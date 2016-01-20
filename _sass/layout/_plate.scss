@@ -142,14 +142,15 @@
 
 		&.info {
 			text-align: center;
+			@include clearfix;
 
 			ul {
 				list-style: disc;
 				text-align: left;
 				width: 50%;
 				margin-left: 50%;
-				-webkit-transform: translate-x(-50%);
-				transform: translatex(-50%);
+				-webkit-transform: translate-x(-15%);
+				transform: translatex(-15%);
 				margin-bottom: $small-spacing;
 			}
 		}
