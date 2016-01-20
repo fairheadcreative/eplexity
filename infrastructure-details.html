@@ -10,7 +10,7 @@ class: item-edit infrastructure
     <li data-tab="specs" class="active">Specs</li>
     <li data-tab="monitoring">Monitoring</li>
     <li data-tab="snapshots">Snapshots</li>
-    <li data-tab="settings"><div class="icon-settings"><span><em></em></span></div><strong>Settings</strong></li>
+    <li data-tab="settings-power" class="settings"><div class="icon-settings"><span><em></em></span></div><strong>Settings</strong></li>
   </ul>
 
   <div class="plate-tab" data-plate="access">
@@ -176,9 +176,85 @@ class: item-edit infrastructure
     </div>
   </div>
 
+<!-- additionla settings content - work in progress -->
   <div class="plate-tab" data-plate="settings">
     <div class="group">
       Settings
+    </div>
+  </div>
+
+  <div class="plate-tab" data-plate="settings-power">
+    <div class="group action-info">
+      <h2>This slice is turned on.</h2>
+      <p>If you want to turn it off, make sure:</p>
+      <ul>
+        <li>Explanation text</li>
+        <li>More on what one should do to turn it off</li>
+        <li>And in the end, you should also</li>
+      </ul>
+      <form action="#">
+        <input type="submit" value="Switch it off">
+      </form>
+    </div>
+  </div>
+
+  <div class="plate-tab" data-plate="settings-rename">
+    <div class="group action-info">
+      <h2>This slice is called 'Cocoa Slice'.</h2>
+      <p>If you want to rename it, make sure:</p>
+      <ul>
+        <li>Explanation text</li>
+        <li>More on what one should do to rename it</li>
+        <li>And in the end, you should also do this thing that renames it</li>
+      </ul>
+      <form action="#">
+        <input type="text" placeholder="Cocoa Slice">
+        <input type="submit" value="Save changes">
+      </form>
+    </div>
+  </div>
+
+  <div class="plate-tab" data-plate="settings-backups">
+    <div class="group">
+      <div class="row highlight">
+        <p>Next backup is scheduled for February 5 2016.</p>
+      </div>
+      <ul class="heading">
+        <li class="span-8">Backup</li>
+        <li class="span-4">Size</li>
+      </ul>
+      <div class="row">
+        <div class="span-8">Sep 14 2015</div>
+        <div class="span-4">1020MB</div>
+      </div>
+      <div class="row">
+        <div class="span-8">Aug 14 2015</div>
+        <div class="span-4">2020MB</div>
+      </div>
+      <form action="#">
+        <input type="submit" value="Switch it off">
+      </form>
+    </div>
+  </div>
+
+  <div class="plate-tab" data-plate="settings-history">
+    <div class="group">
+      Settings: History
+    </div>
+  </div>
+
+  <div class="plate-tab" data-plate="settings-destroy">
+    <div class="group action-info">
+      <h2>Careful, this can't be undone!</h2>
+      <p>If you want to destroy it, make sure:</p>
+      <ul>
+        <li>Explanation text</li>
+        <li>More on what one should do to rename it</li>
+        <li>And in the end, you should also do this thing that renames it</li>
+      </ul>
+      <form action="#">
+        <input type="submit" value="Destroy slice">
+      </form>
     </div>
   </div>
 

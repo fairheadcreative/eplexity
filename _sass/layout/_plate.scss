@@ -337,13 +337,13 @@
 	&.tabbed {
 		margin-top: 3.5em;
 
-    li[data-tab="settings"] {
-      width: 39px;
+	    li.settings {
+	      width: 39px;
 
-      strong {
-        text-indent: -999em;
-        display: block;
-      }
+	      strong {
+	        text-indent: -999em;
+	        display: block;
+      	}
     }
 
 
