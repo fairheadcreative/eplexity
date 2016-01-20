@@ -111,12 +111,16 @@ body {
   display: inline;
 }
 
-.instructions ol {
-  padding: 1em 1em 1em 2.5em;
+.panel {
+  padding: 1em;
   background: $bright-gray;
   border: 1px solid $light-gray;
   border-radius: $base-border-radius;
   margin-bottom: 1em;
+}
+
+.instructions ol {
+  padding: 0 0 0 1.5em;
 
   li {
     list-style: decimal;
