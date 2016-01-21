@@ -37,40 +37,44 @@ class: item-edit platform
           <li class="span-4">Used</li> 
         </ul>
         <div class="row sub">
-          <div class="span-4"><span class="count">1</span>Capacity</div>
+          <div class="span-4 counted"><span class="count">1</span>Capacity</div>
           <div class="span-4">
-            <input class="half" placeholder="100">
-            <select class="half" name="units">
-              <option value="GB">GB</option>
-              <option value="TB">TB</option>
-              <option value="MB">MB</option>
-            </select>
+            <input class="half connected-left" placeholder="Capacity…" value="100">
+            <div class="select half connected-right">
+              <select name="units">
+                <option value="GB">GB</option>
+                <option value="TB">TB</option>
+                <option value="MB">MB</option>
+              </select>
+            </div>
           </div>
           <div class="span-4">50GB</div>
         </div>
         <div class="row">
-          <div class="span-4">IOPs</div>
+          <div class="span-4 counted">IOPs</div>
           <div class="span-4">
-            <input class="half" placeholder="1000">
+            <input class="half" placeholder="IOPs…" value="1000">
           </div>
           <div class="span-4">520</div>
         </div>
         <div class="row sub">
-          <div class="span-4"><span class="count">2</span>Capacity</div>
+          <div class="span-4 counted"><span class="count">2</span>Capacity</div>
           <div class="span-4">
-            <input class="half" placeholder="100">
-            <select class="half" name="units">
-              <option value="GB">GB</option>
-              <option value="TB">TB</option>
-              <option value="MB">MB</option>
-            </select>
+            <input class="half connected-left" placeholder="Capacity…" value="100">
+            <div class="select half connected-right">
+              <select name="units">
+                <option value="GB">GB</option>
+                <option value="TB">TB</option>
+                <option value="MB">MB</option>
+              </select>
+            </div>
           </div>
           <div class="span-4">50GB</div>
         </div>
         <div class="row">
-          <div class="span-4">IOPs</div>
+          <div class="span-4 counted">IOPs</div>
           <div class="span-4">
-            <input class="half" placeholder="1000">
+            <input class="half" placeholder="IOPs…" value="1000">
           </div>
           <div class="span-4">520</div>
         </div>
@@ -78,8 +82,8 @@ class: item-edit platform
           <a class="value" href="#">Add Datastore</a>
         </div>
         <div class="row">
-            <button class="button small" data-edit="close">Save changes</button>
-            <button class="button small secondary" data-edit="close">Cancel</button>
+          <button class="button small" data-edit="close">Save changes</button>
+          <button class="button small secondary" data-edit="close">Cancel</button>
         </div>
       </div>      
     </div>
@@ -134,12 +138,14 @@ class: item-edit platform
         <div class="row">
           <div class="span-4">Capacity</div>
           <div class="span-4">
-            <input class="half" placeholder="256">
-            <select class="half" name="units">
-              <option value="GB">GB</option>
-              <option value="TB">TB</option>
-              <option value="MB">MB</option>
-            </select>
+            <input class="half connected-left" placeholder="Capacity…" value="256">
+            <div class="select half connected-right">
+              <select name="units">
+                <option value="GB">GB</option>
+                <option value="TB">TB</option>
+                <option value="MB">MB</option>
+              </select>
+            </div>
           </div>
           <div class="span-4">128GB</div>
         </div>
@@ -176,7 +182,7 @@ class: item-edit platform
           <li class="span-4">Used</li>
         </ul>
         <div class="row sub">
-          <div class="span-4">
+          <div class="span-4 counted">
             <span class="left count">1</span>
             <select class="half" name="units">
               <option value="2900">vLAN2900</option>
@@ -194,7 +200,7 @@ class: item-edit platform
           <div class="span-4">5GB</div>
         </div>
         <div class="row">
-          <div class="span-4">
+          <div class="span-4 counted">
             <span class="left count">2</span>
             <select class="half" name="units">
               <option value="2900">vLAN2900</option>
@@ -244,11 +250,13 @@ class: item-edit platform
         <div class="row">
           <div class="span-4">Capacity</div>
           <div class="span-4">
-            <input class="half" placeholder="1">
-            <select class="half" name="units">
-              <option value="GB">Gbit</option>
-              <option value="TB">Mbit</option>
-            </select>
+            <input class="half connected-left" placeholder="Capacity…" value="1">
+            <div class="select half connected-right">
+              <select name="units">
+                <option value="GB">Gbit</option>
+                <option value="TB">Mbit</option>
+              </select>
+            </div>
           </div>
           <div class="span-4">0.5Gbit</div>
         </div>
