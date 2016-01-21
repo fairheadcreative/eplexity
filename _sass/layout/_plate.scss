@@ -94,8 +94,7 @@
 			[data-details="show"] {
 
 	      		.row:last-child {     			
-					border-bottom: 1px solid $base-border-color;
-					margin-bottom: -1px;
+					border-bottom: none;
 	      		}		
 			}
 
@@ -107,6 +106,22 @@
 						border-bottom:  1px solid transparent;
 		      		}
 				}
+
+				&:after {
+					content: none;
+				}
+			}
+
+			&:after {
+				border-bottom: 1px solid $base-border-color;
+				content: "";
+				display: block;
+				height: 0.375em;
+				margin: 0 0.75em 0.375em;
+			}
+
+			.group {
+				margin-bottom: 0;
 			}
 		}
 
@@ -147,10 +162,6 @@
 
 		&[data-details="show"] {
       		margin: 0 0 $small-spacing;
-		}
-
-		& + .details-toggler {
-			margin-top: $small-spacing;
 		}
 
 		&.info {
