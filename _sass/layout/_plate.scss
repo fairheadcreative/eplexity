@@ -4,9 +4,9 @@
 	border: 1px solid $base-border-color;
 	border-radius: 3px;
 	padding: $base-spacing;
-	margin: 0 0 $small-spacing;
+	margin: 0 $small-spacing $small-spacing;
 	position: relative;
-  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  	box-shadow: 0 1px 1px rgba(0,0,0,.05);
 
   .plate-notice {
     padding: 1em;
@@ -154,16 +154,12 @@
 		}
 
 		&.info {
-			text-align: center;
+			text-align: left;
 			@include clearfix;
 
 			ul {
-				list-style: disc;
+				list-style: outside disc;
 				text-align: left;
-				width: 50%;
-				margin-left: 50%;
-				-webkit-transform: translate-x(-15%);
-				transform: translatex(-15%);
 				margin-bottom: $small-spacing;
 			}
 		}
