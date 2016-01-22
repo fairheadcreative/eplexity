@@ -220,13 +220,16 @@
       border: 1px solid #D6E1E6; 
 
       &:after {
-        content: '▼';
+        content: '\25bc';
         font-size: 9px;
         display: block;
         position: absolute;
         top: 8px;
         opacity: .3;
         right: 5px;
+        pointer-events: none;
+
+        @include media(max-width $medium-screen) { right: 3px; }  
       }
 
       select {
