@@ -1,4 +1,3 @@
-//rules for plates with cakes, slices, toppings..
 .plate { 
 	@include clearfix;
 	border: 1px solid $base-border-color;
@@ -128,6 +127,8 @@
 		.group {
 			padding-top: $small-spacing/2;
 		}
+
+		@include media(max-width $medium-screen) { font-size: .90em; }
 	}
 
 	.group {
@@ -188,21 +189,21 @@
 			margin-bottom: 0;
 		}
 
-		*:last-child { 
+		& > *:last-child { 
 			margin-bottom: 0;
 		}
 
 		input:not([type="submit"]),
 		select,
-    .select {
+    	.select {
 			padding: $small-spacing/2;
 			width: 100%;
 
 			&.half,
 			&.half {
 				@include span-columns(6);
-			}
 		}
+	}
 
     .select,
     .select select {
@@ -239,6 +240,7 @@
     .connected-right {
       margin-left: -7px;
       border-radius: 0 3px 3px 0 !important;
+      @include media(max-width $medium-screen) { height: 2.1em; }      
     }
 
     .connect-left {
@@ -274,16 +276,6 @@
 	.sub { 
 		border-bottom: none;
 		padding-bottom: 0;
-	}
-
-
-	.step-billing {
-
-	ul,
-	.row {
-		.span-4 { @include span-columns(4); }
-		.span-8 { @include span-columns(8); }
-		}
 	}
 
 	.ticket {
@@ -405,14 +397,28 @@
 	}
 
 	.count { 
-    position: absolute;
-    left: 0;
-    opacity: .5;
+	    position: absolute;
+	    left: 0;
+	    opacity: .5;
+
+	    @include media(max-width $medium-screen) { 
+	    	background: shade(#D6E1E6, 20%);
+			border-radius: 50%;
+			color: white;
+			font-size: .9em;
+			height: 1.5em;
+			left: -1.7em;
+			opacity: 1;
+			text-align: center;
+			width: 1.5em;
+	    }
 	}
 
-  .counted {
-    padding-left: 1.25em;
-  }
+  	.counted {
+	    padding-left: 1.25em;
+
+	    @include media(max-width $medium-screen) { padding-left: 0; }
+  	}
 
 	&.tabbed {
 		margin-top: 3.5em;
@@ -532,15 +538,15 @@
 			text-align: center;
 			margin-top: -3.65em;
 			white-space: nowrap;
-      position: relative;
-      bottom: -2px;
-      margin-bottom: 1.375em;
+      		position: relative;
+      		bottom: -2px;
+      		margin-bottom: 1.375em;
 
 			@include media(max-width $medium-screen) {
-        margin: -3.65em -1.5em 0 -1.5em;
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-      }
+       			margin: -3.65em -1.5em 1.375em;
+        		padding-left: 1.5em;
+        		padding-right: 1.5em;
+      	}
 
 			@include media($medium-screen) {
         bottom: -0.5px;
@@ -561,12 +567,56 @@
         }
 
 				&.active { 
-          border: 1px solid $base-border-color;
+          			border: 1px solid $base-border-color;
 					border-bottom: 1px solid white;
 					cursor: inherit;
 					background: $base-background-color;
-          bottom: -1px;
+          			bottom: -1px;
 				}
+			}
+		}
+	}
+}
+
+.section {
+
+	@media screen and (max-width: $medium-screen) { 
+		.plate {
+
+			.heading { display: none; }
+
+			.row {
+
+				& > div {
+					border-bottom: 1px solid tint($base-border-color, 10%);
+					width: 100%;
+					padding: $small-spacing/2 $base-spacing+$small-spacing/2 $small-spacing/2 $base-spacing*5;
+					line-height: 1;
+					
+					&:before {
+						content: attr(data-title);
+						display: block;
+						position: absolute;
+						width: 31.7616%;
+						left: 0;
+						color: $medium-gray;
+					}
+
+					&:last-child { border-bottom: none; }
+
+					.progress-bar-indication {
+					  bottom: .1em;
+					  position: relative;
+					}
+				}
+
+
+				&:before {}
+			}
+
+			.icon { 
+				left: auto;
+				right: 0;
 			}
 		}
 	}
