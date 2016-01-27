@@ -17,6 +17,8 @@
 		margin: 0 auto $small-spacing;
 		padding: $base-spacing;
 
+		@media screen and (max-width: $medium-screen) { max-width: 96%; }
+
 		input {
 			margin-bottom: $small-spacing;
 		}
@@ -612,14 +614,42 @@
 					  position: relative;
 					}
 				}
-
-
-				&:before {}
 			}
 
 			.icon { 
 				left: auto;
 				right: 0;
+			}
+		}
+	}
+}
+
+.blocks {
+
+	@media screen and (max-width: $medium-screen) { 
+		.plate {
+
+			.heading { display: none; }
+
+			.row {
+				margin-bottom: $small-spacing;
+				padding-top: $small-spacing/4;
+
+				& > div {
+					width: 100%;
+					padding: $small-spacing/4 0;
+				}
+
+				.push-2 {
+    				padding-left: 2em !important;
+    			}
+
+    			&first-child { padding-top: 0; }
+
+    			&last-child { 
+    				margin-bottom: 0; 
+    				padding-bottom: 0; 
+    			}
 			}
 		}
 	}
