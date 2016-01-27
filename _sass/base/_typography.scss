@@ -46,6 +46,15 @@ a {
   }
 }
 
+.row a:not(.button) {
+  color: $base-font-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 hr {
   border-bottom: $base-border;
   border-left: 0;

@@ -19,12 +19,13 @@ $base-z-index: 0;
 // Colors
 $blue: #00A9FC;
 $light-blue: lighten($blue, 30);
-$bright-blue: lighten($blue, 47);
-$dark-gray: #333;
+//$bright-blue: lighten($blue, 47);
+$bright-blue: lighten(#efefed, 3);
+$dark-gray: #555;
 $medium-gray: #999;
 $light-gray: #ddd;
 $bright-gray: lighten($light-gray, 10);
-$red: #FF1911;
+$red: #ff5245;
 $light-red: lighten($red, 20);
 $bright-red: lighten($red, 30);
 $green: #76DB8F;
@@ -33,7 +34,7 @@ $bright-green: lighten($green, 30);
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$action-color: $red;
 
 // Border
 $base-border-color: $light-gray;

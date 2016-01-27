@@ -3,7 +3,8 @@
   appearance: none;
   background-color: $action-color;
   border: 0;
-  border-radius: $border-radius-round;
+  border-radius: $base-border-radius;
+  border-bottom: 1px solid shade($red, 15);
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -44,8 +45,20 @@
 
 .button.secondary {
   background: $medium-gray;
+  border-bottom-color: shade($medium-gray, 15);
 
   &:hover { background: darken($medium-gray, 10); }
+}
+
+.button.outline {
+  background: transparent;
+  border: 1px solid $red;
+  color: $red;
+
+  &:hover {
+    border-color: shade($red, 25);
+    color: shade($red, 25) !important;
+  }
 }
 
 .button.expand {

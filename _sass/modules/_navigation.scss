@@ -11,10 +11,11 @@ nav {
   $centered-navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
 
+  //box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border-bottom: 1px solid $base-border-color;
   background: white;
   @include clearfix;
-  padding: $small-spacing / 2 0;
+  padding: 0;
 
   @include media($medium-screen) {
     position: fixed;
@@ -33,6 +34,7 @@ nav {
     overflow-y: hidden;
     padding: 0;
     width: 100%;
+    height: 3em;
     white-space: nowrap;
     overflow-x: auto;
     font-size: .9em;
@@ -51,19 +53,19 @@ nav {
             display: inline-block;
             outline: none;
             text-decoration: none;
-            padding: .3em $small-spacing;
-            margin: 0 .25em;
+            padding: .7em 1em;
+            height: 3em;
 
             &:focus,
             &:hover {
-               color: $centered-navigation-color-hover;
+               color: $dark-gray;
+               background: $bright-blue;
             }
          }
 
          &.divider {
-           border-left: 1px solid $base-border-color;
-           padding-left: 1em;
-           margin-left: .7em;
+           border-left: $base-border;
+           padding-left: .3em;
 
            &.active a { margin-left: .52em; }
          }
@@ -88,25 +90,20 @@ nav {
       }
 
       .logo .icon { 
-        background: url('../images/logo.png') no-repeat;
-        background-size: contain;
+        background: url('../images/logo.png') 0 7px no-repeat;
+        background-size: 28px;
         display: block;
-        height: 2em;
-        width: 3.5em;
-        margin-right: $small-spacing;
-        border-right: 1px solid $base-border-color;
-        margin: 0 .5em 0 0;
+        height: 3em;
+        width: 3.3em;
+        border-right: $base-border;
       }
 
       .signout a {
         text-indent: -999em;
         position: relative;
         display: block;
-        height: 2em;
-        width: 3.7em;
-        margin-left: $small-spacing;
-        border-left: 1px solid $base-border-color;
-        top: -1px;
+        height: 3em;
+        width: 2.5em;
 
         &:before {
           right: 10px;

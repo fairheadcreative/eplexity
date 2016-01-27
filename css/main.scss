@@ -56,8 +56,12 @@ $on-laptop:        800px;
         "syntax-highlighting"
 ;
 
+html {
+  background: $dark-gray;
+}
+
 body {
-  background: #F9F7F5;
+  background: #f7f7f7;
 }
 
 .plate {

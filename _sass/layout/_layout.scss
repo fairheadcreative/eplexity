@@ -16,13 +16,20 @@
 
 .page-content {
   @include outer-container;
+  padding-bottom: 3em;
 }
 
 .page-footer {
-  @include outer-container;
   margin-top: $small-spacing;
   text-align: center; 
-  opacity: .4;
+  background: $dark-gray;
+  color: $medium-gray;
+  padding: 2em;
+  position: static;
+  left: 0;
+  right: 0;
+  width: 100%;
+  bottom: 0;
 }
 
 .lead {
