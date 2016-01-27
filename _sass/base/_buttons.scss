@@ -7,6 +7,7 @@
   border-bottom: 1px solid shade($red, 15);
   color: #fff;
   cursor: pointer;
+  outline: none;
   display: inline-block;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -15,7 +16,6 @@
   line-height: 1;
   padding: $small-spacing $base-spacing;
   text-decoration: none;
-  transition: background-color $base-duration $base-timing;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -24,7 +24,9 @@
 
   &:hover,
   &:focus {
-    background-color: shade($action-color, 20%);
+    //background-color: shade($action-color, 20%);
+    background-color: #36c9c6;
+    border-bottom: 1px solid shade(#36c9c6, 15);
     color: #fff;
   }
 
@@ -47,17 +49,10 @@
   background: $medium-gray;
   border-bottom-color: shade($medium-gray, 15);
 
-  &:hover { background: darken($medium-gray, 10); }
-}
-
-.button.outline {
-  background: transparent;
-  border: 1px solid $red;
-  color: $red;
-
   &:hover {
-    border-color: shade($red, 25);
-    color: shade($red, 25) !important;
+    background-color: #36c9c6;
+    border-bottom: 1px solid shade(#36c9c6, 15);
+    color: #fff;
   }
 }
 

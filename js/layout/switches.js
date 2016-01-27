@@ -36,11 +36,13 @@ $(function() {
   detailsShow.on('click', function() {
     $(this).hide();
     $(this).siblings(detailEdit).show();
+    $(this).parent().addClass('is-edit').removeClass('is-show');
   });
 
   detailClose.on('click', function() {
     $(this).closest(detailEdit).hide();
     $(this).closest(detailEdit).siblings(detailsShow).show();
+    $(this).parent().parent().parent().removeClass('is-edit').addClass('is-show');
   });
 
   //toggle buttons content

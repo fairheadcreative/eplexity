@@ -89,23 +89,27 @@
 	}	
 
 	.details-toggler {
+    @include transition(all, .2s);
+    @include transform(scale(1));
+
+    &.is-edit {
+      @include transform(scale(1.08) translateY(-3px));
+      box-shadow: 0 3px 30px rgba(0,0,0,.2);
+    }
 
 		&.divider {
 
 			[data-details="show"] {
-
-	      		.row:last-child {     			
-					border-bottom: none;
-	      		}		
+        .row:last-child {     			
+          border-bottom: none;
+        }		
 			}
 
 			&:last-child {
-
 				[data-details="show"] {
-
-		      		.row:last-child {     			
+          .row:last-child {     			
 						border-bottom:  1px solid transparent;
-		      		}
+          }
 				}
 
 				&:after {
@@ -150,15 +154,16 @@
       margin: 0;
 
 			&:hover {
-				background: $bright-blue;
+				//background: $bright-blue;
         border: $base-border;
+        box-shadow: 0 1px 2px rgba(0,0,0,.1);
 			}			
 		}
 
 		&[data-details="edit"] {
-			background: $bright-blue;
 			border: $base-border;
       margin: 0 0 $small-spacing;
+      background: white;
 
       a:not(.button) { color: $red; }
 		}
