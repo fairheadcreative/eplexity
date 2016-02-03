@@ -1,6 +1,6 @@
 # Site settings
 title: Eplexity
-permalink: /:title/
+permalink: /:title
 baseurl: 
 exclude: ["README.md","Gemfile","Gemfile.lock","gruntfile.js","package.json","node_modules","js/layout","js/production.js",vendor,"Rakefile","Procfile","config.ru"]
 
