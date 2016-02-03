@@ -7,6 +7,12 @@
 .action-handler {
   text-align: center;
   margin-bottom: 2em;
+
+  input { display: inline-block; }
+}
+
+:last-child .action-handler {
+  margin-bottom: 0;
 }
 
 .action-info {
