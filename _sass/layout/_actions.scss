@@ -50,4 +50,17 @@
   color: $medium-gray;
 
   &:hover { color: $dark-gray; }
+
+  @include media(max-width $medium-screen) { 
+      background: $dark-gray;
+      border-radius: 50%;
+      color: white;
+      height: 1em;
+      line-height: 1;
+      right: -0.5em;
+      top: -0.5em;
+      width: 1em;
+
+      &:hover { color: $light-gray; }
+    }
 }
