@@ -1,15 +1,17 @@
 ---
 layout: layout
-title: Cakes
+title: Cloud Platforms
 flash-type: success
 flash-message: This is a success message (since you logged in)
+class: section platform
 ---
 
 <section class="actions">
-  <div class="action-handler">
-    <button>Add a cake</button>
+  <div class="action-info">
+    <p>Describe what cloud platforms are, and why you should use. Adds lots of value, essential improvements to the underlying service, etc.</p>
   </div>
 </section>
+
 <section class="plate">
   <div class="group">
     <ul class="heading">
@@ -20,40 +22,45 @@ flash-message: This is a success message (since you logged in)
       <li class="span-2">Bandwidth</li>
     </ul>
     <div class="row">
-      <div class="span-4 push-2">
-        <span class="icon"></span>
-        <a href="platform-details.html">Chocolate</a>
+      <div class="span-4 push-2" data-title="Name">
+        <span class="icon icon-platform-factionbloc"></span>
+        <a href="platform-details.html">Faction Bloc A</a>
       </div>
-      <div class="span-2">
+      <div class="span-2" data-title="Storage">
+        {% include modules/progress.html status="warning" %}
+      </div>
+      <div class="span-2" data-title="CPUs">
         {% include modules/progress.html %}
       </div>
-      <div class="span-2">
+      <div class="span-2" data-title="vRAM">
         {% include modules/progress.html %}
       </div>
-      <div class="span-2">
-        {% include modules/progress.html %}
-      </div>
-      <div class="span-2">
+      <div class="span-2" data-title="Bandwidth">
         {% include modules/progress.html %}
       </div>
     </div>
     <div class="row">
-      <div class="span-4 push-2">
-        <span class="icon"></span>
-        Vanilla
+      <div class="span-4 push-2" data-title="Name">
+        <span class="icon icon-platform-factionbloc"></span>
+        <a href="platform-details.html">Faction Bloc B</a>
       </div>
-      <div class="span-2">
+      <div class="span-2" data-title="Storage">
+        {% include modules/progress.html status="warning" %}
+      </div>
+      <div class="span-2" data-title="CPUs">
         {% include modules/progress.html %}
       </div>
-      <div class="span-2">
+      <div class="span-2" data-title="vRAM">
         {% include modules/progress.html %}
       </div>
-      <div class="span-2">
-        {% include modules/progress.html %}
-      </div>
-      <div class="span-2">
+      <div class="span-2" data-title="Bandwidth">
         {% include modules/progress.html %}
       </div>
     </div>
+  </div>
+  <div class="group">
+    <div class="action-handler"> 
+      <a href="platform-add-step1.html" class="button">Add a platform</a>
+    </div> 
   </div>
 </section>

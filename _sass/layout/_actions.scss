@@ -9,6 +9,8 @@
   margin-bottom: 2em;
 
   input { display: inline-block; }
+
+  p { padding: 0 $small-spacing; }
 }
 
 :last-child .action-handler {
@@ -46,7 +48,7 @@
   height: 2em;
   width: 2em;
   line-height: 1.8;
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: $medium-gray;
 
   &:hover { color: $dark-gray; }

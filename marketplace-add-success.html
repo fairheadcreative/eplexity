@@ -1,7 +1,8 @@
 ---
 layout: layout
-title: Cocoa Slice
-class: item-edit slices
+title: 
+title: Faction Server 1
+class: item-edit infrastructure
 ---
 
 <section class="actions">
@@ -16,7 +17,7 @@ class: item-edit slices
   <ul class="tabs">
     <li data-tab="access">Access</li>
     <li data-tab="specs" class="active">Specs</li>
-    <li data-tab="backups">Backups</li>
+    <li data-tab="backups">backups</li>
     <li data-tab="monitoring">Monitoring</li>
     <li data-tab="images">Images</li>
     <li class="settings"><div class="icon-settings"><span><em></em></span></div><strong>Settings</strong>
@@ -106,9 +107,18 @@ class: item-edit slices
           <li class="span-4">Available</li> 
         </ul>
         <div class="row">
-          <div class="span-4">Disk 1</div>
+          <div class="span-2 counted">
+            <span class="count">1</span>
+            Disk 1
+          </div>
+          <div class="span-2">
+            <select name="datastore">
+              <option value="1">DS1</option>
+              <option value="2">DS2</option>
+            </select>
+          </div>
           <div class="span-4">
-            <input class="half connected-left" placeholder="500">
+            <input class="half connected-left" value="500">
             <div class="select half connected-right">
               <select name="units">
                 <option value="GB">GB</option>
@@ -120,9 +130,18 @@ class: item-edit slices
           <div class="span-4">250GB</div>
         </div>
         <div class="row">
-          <div class="span-4">Disk 2</div>
+          <div class="span-2 counted">
+            <span class="count">2</span>
+            Disk 2
+          </div>
+          <div class="span-2">
+            <select name="datastore">
+              <option value="1">DS1</option>
+              <option value="2">DS2</option>
+            </select>
+          </div>
           <div class="span-4">
-            <input class="half connected-left" placeholder="500">
+            <input class="half connected-left" value="500">
             <div class="select half connected-right">
               <select name="units">
                 <option value="GB">GB</option>
@@ -134,14 +153,15 @@ class: item-edit slices
           <div class="span-4">250GB</div>
         </div>
         <div class="row">  
-          <a class="value" href="#">Add disk</a>
+          <div class="span-4 counted">
+            <span class="count">+</span>
+            <a class="value" href="#">Add disk</a>
+          </div>
         </div>
         <div class="row">
-            <button class="plate-save button small" data-edit="close">Save changes</button>
-            <button class="plate-cancel button small secondary" data-edit="close">Cancel</button>
-          <span class="actions-link right">
-            <a href="#">Buy more storage</a>
-          </span>
+          <button class="plate-save button small" data-edit="close">Save changes</button>
+          <a href="#" class="button small">Buy more storage</a> 
+          <button class="plate-cancel button small secondary" data-edit="close">Cancel</button>
         </div>
       </div>
     </div>
@@ -169,7 +189,7 @@ class: item-edit slices
         <div class="row">
           <div class="span-4">Capacity</div>
           <div class="span-4">
-            <input class="half connected-left" placeholder="256">
+            <input class="half" value="256">
             <div class="select half connected-right">
               <select name="units">
                 <option value="GB">GB</option>
@@ -233,7 +253,7 @@ class: item-edit slices
 
   <div class="plate-tab" data-plate="images">
     <div class="group">
-      Snapshots & uploaded images
+      Snapshots & uploaded images 
     </div>
   </div>
 
