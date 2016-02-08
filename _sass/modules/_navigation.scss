@@ -24,6 +24,12 @@ nav {
     z-index: 8;
   }
 
+  .user-entry & { 
+    border: none;
+    background: transparent; 
+    position: static;
+  }
+
   // Nav menu
 
   .centered-navigation-menu {
@@ -96,6 +102,8 @@ nav {
         height: 3em;
         width: 3.3em;
         border-right: $base-border;
+
+        .user-entry & { border: none; }
       }
 
       .signout a {

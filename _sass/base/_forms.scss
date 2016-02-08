@@ -87,11 +87,13 @@ select {
 }
 
 .login,
-.registration,
+.user-entry,
 .user-add {
   input {
     @include fill-parent;
   }
+
+  label { display: inline-block; }
 
   select { 
     background-color: $base-background-color;

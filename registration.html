@@ -1,7 +1,7 @@
 ---
 layout: layout
 title: Start your account
-class: registration
+class: user-entry
 ---
 
 <section class="plate plate-small">
@@ -9,17 +9,17 @@ class: registration
 
   <form action="index-registered.html">
   	<fieldset>
-	  	<label>Your name</label>
-	    <input type="text" placeholder="John Cledennen">
-	  	<label>Your email</label>
-	    <input type="text" placeholder="hello@company.com">
-	  	<label>Your company name</label>
-	    <input type="text" placeholder="Company inc.">
-	  	<label>Choose a password</label>
-	    <input type="password" placeholder="password">
+	  	<label>Your name:</label>
+	    <input type="text">
+	  	<label>Your email:</label>
+	    <input type="text">
+	  	<label>Your company name:</label>
+	    <input type="text">
+	  	<label>Choose a password:</label>
+	    <input type="password">
 	</fieldset>
   	<fieldset>
-	  	<label>Your company address</label>
+	  	<label>Your company address:</label>
 	  	<select name="country" class="select-full">
             <option value="USA">United States</option>
             <option value="australia">Australia</option>
@@ -33,6 +33,7 @@ class: registration
 	    <input type="text" placeholder="123 Company Lane">
 	    <input type="text" placeholder="City">
 	  	<select name="state" class="select-half">
+            <option value="">State</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>

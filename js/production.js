@@ -42,7 +42,18 @@ $(function() {
       if(i>0){
         item.addClass('plural');
       }else{item.removeClass('plural');};
-    });   
+    }); 
+
+  //remove input placeholders on focus  
+  $('[placeholder]').each(function() {
+    $(this).on('click', function(){
+     var atri = $(this).attr('placeholder');
+        $(this).attr('placeholder', '');
+        $(this).focusout(function(){
+        $(this).attr('placeholder', atri);
+        });
+    });
+  });
 
 });
 
