@@ -176,7 +176,6 @@
 		padding-top: $small-spacing/2;
 		padding-bottom: $small-spacing;
 		position: relative;
-		//word-wrap: break-word;
 
 		&:last-child { 
 			border-bottom: none;
@@ -187,9 +186,9 @@
 			margin-bottom: 0;
 		}
 
-
 		input:not([type="submit"]),
-		select, .select {
+		select,
+		.select {
 			padding: $small-spacing/2;
 			width: 100%;
 
@@ -199,6 +198,8 @@
 				@include span-columns(6);
 			}
 		}
+
+		input[type="radio"] { width: auto; }
 
     .select,
     .select select {
@@ -548,19 +549,19 @@
 			text-align: center;
 			margin-top: -3.65em;
 			white-space: nowrap;
-      position: relative;
-      bottom: -2px;
-      margin-bottom: 1.375em;
+     		position: relative;
+      		bottom: -2px;
+      		margin-bottom: 1.375em;
 
 			@include media(max-width $medium-screen) {
-        margin: -3.65em -1.5em 1.375em;
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-      }
+		        margin: -3.65em -1.5em 1.375em;
+		        padding-left: 1.5em;
+		        padding-right: 1.5em;
+		    }
 
 			@include media($medium-screen) {
-        bottom: -0.5px;
-      }
+        		bottom: -0.5px;
+      		}
 
 			@media screen and (max-width: $medium-screen) { overflow-x: auto; }
 
@@ -572,25 +573,78 @@
 				padding: .25em $small-spacing;
 				cursor: pointer;
 
-        @include media($medium-screen) {
-          &:hover { background: shade(#F9F7F5, 5); }
-        }
+        	@include media($medium-screen) {
+          		&:hover { background: shade(#F9F7F5, 5); }
+        		}
 
 				&.active { 
 					cursor: inherit;
-          position: relative;
-          border-bottom: 1px solid transparent;
+          			position: relative;
+          			border-bottom: 1px solid transparent;
           
-          &:after {
-            content: '';
-            display: block;
-            background: $red;
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            left: 0;
-            bottom: -1px;
-          }
+			        &:after {
+			            content: '';
+			            display: block;
+			            background: $red;
+			            position: absolute;
+			            width: 100%;
+			            height: 3px;
+			            left: 0;
+			            bottom: -1px;
+			        }
+				}
+			}
+		}
+
+		.sub-tabs {
+			display: block;
+			text-align: center;
+			white-space: nowrap;
+     		position: relative;
+      		bottom: -2px;
+      		margin-bottom: 1.375em;
+      		border-bottom: 1px solid $light-gray;
+
+			@include media(max-width $medium-screen) {
+		        margin: -3.65em -1.5em 1.375em;
+		        padding-left: 1.5em;
+		        padding-right: 1.5em;
+		    }
+
+			@include media($medium-screen) {
+        		bottom: -0.5px;
+      		}
+
+			@media screen and (max-width: $medium-screen) { overflow-x: auto; }
+
+			li {
+				display: inline-block;
+				border: 1px solid transparent;
+				border-bottom: none;
+				border-radius:  $base-border-radius  $base-border-radius 0 0;  
+				padding: .25em $small-spacing;
+				cursor: pointer;
+				margin-bottom: -2px;
+
+        	@include media($medium-screen) {
+          		&:hover { background: shade(#F9F7F5, 5); }
+        		}
+
+				&.sub-active { 
+					cursor: inherit;
+          			position: relative;
+          			border-bottom: 1px solid transparent;
+          
+			        &:after {
+			            content: '';
+			            display: block;
+			            background: $red;
+			            position: absolute;
+			            width: 100%;
+			            height: 3px;
+			            left: 0;
+			            bottom: -1px;
+			        }
 				}
 			}
 		}

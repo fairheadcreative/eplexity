@@ -4,79 +4,27 @@ title: Infrastructure
 class: section infrastructure
 ---
 
-<section class="actions">
-  <div class="action-info">
-    <p>Describe what infrastructure is, and why you should use. Adds lots of value, essential improvements to the underlying service, etc.</p>
-  </div>
-</section>
+<section class="plate tabbed">
+  <ul class="tabs">
+    <li data-tab="servers">Servers</li>
+    <li data-tab="network" class="active">Network</li>
+    <li data-tab="storage">Storage</li>
+    <li data-tab="images">Images</li>
+  </ul>
 
-<section class="plate">
-  <div class="group">
-    <ul class="heading">
-      <li class="span-4 push-2">Name</li>
-      <li class="span-2">IP address</li>
-      <li class="span-2">Memory</li>
-      <li class="span-2">Disc</li>
-      <li class="span-2">Bloc</li>
-    </ul>
-    <div class="row">
-      <div class="span-4 push-2" data-title="Name">
-        <span class="icon icon-platform-factionbloc"></span>
-        <a href="infrastructure-details.html">Faction Server 1</a>
-      </div>
-      <div class="span-2" data-title="IP address">
-        1.61.803.398
-      </div>
-      <div class="span-2" data-title="Memory">
-        512 MB
-      </div>
-      <div class="span-2" data-title="Disc">
-        100 TB
-      </div>
-      <div class="span-2" data-title="Bloc">
-        Faction Bloc A
-      </div>
-    </div>
-    <div class="row">
-      <div class="span-4 push-2" data-title="Name">
-        <span class="icon icon-platform-factionbloc"></span>
-        <a href="infrastructure-details.html">Block Server B</a>
-      </div>
-      <div class="span-2" data-title="IP address">
-        3.141.59.26
-      </div>
-      <div class="span-2" data-title="Memory">
-        256 MB
-      </div>
-      <div class="span-2" data-title="Disc">
-        150 TB
-      </div>
-      <div class="span-2" data-title="Bloc">
-        Faction Bloc A
-      </div>
-    </div>
-    <div class="row">
-      <div class="span-4 push-2" data-title="Name">
-        <span class="icon icon-platform-factionbloc"></span>
-        <a href="infrastructure-details.html">Bloc 01</a>
-      </div>
-      <div class="span-2" data-title="IP address">
-        0.577.215.66
-      </div>
-      <div class="span-2" data-title="Memory">
-        512 MB
-      </div>
-      <div class="span-2" data-title="Disc">
-        200 TB
-      </div>
-      <div class="span-2" data-title="Bloc">
-        Faction Bloc B
-      </div>
-    </div>
+  <div class="plate-tab" data-plate="servers">
+    {% include subpage/infrastructure-tab-servers.html %}
   </div>
-  <div class="group">
-    <div class="action-handler"> 
-      <a class="button" href="infrastructure-add-step0.html">Add a server</a>
-    </div>
+
+  <div class="plate-tab" data-plate="network">
+    {% include subpage/infrastructure-tab-network.html %}
+  </div>
+
+  <div class="plate-tab" data-plate="storage">
+    {% include subpage/infrastructure-tab-storage.html %}
+  </div>
+
+  <div class="plate-tab" data-plate="images">
+    {% include subpage/infrastructure-tab-images.html %}
   </div>
 </section>

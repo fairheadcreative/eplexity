@@ -65,7 +65,8 @@ $(function() {
 
 //toggle tabs
 
-  var plateContent = $('[data-plate]');
+  var plateContent = $('[data-plate]'),
+      subPlateContent = $('[data-sub-plate]');
 
   //find and show active tab content, hide the rest
   plateContent.each(function(){
@@ -80,7 +81,8 @@ $(function() {
 
       e.preventDefault();
       var tabValue = $(this).attr('data-tab'), 
-          siblings = $('.tabs li');
+          siblings = $('.tabs li')
+          subs = $('.' + tabValue + ' .sub-tabs li');
 
       plateContent.each(function(){ 
         $(this).attr('data-plate') == tabValue? $(this).show() : $(this).hide();
@@ -88,6 +90,30 @@ $(function() {
 
       siblings.removeClass('active');
       $(this).addClass('active');
+
+  });
+
+  //find and show active sub-tab content, hide the rest
+  subPlateContent.each(function(){
+
+      var subActive = $('.sub-active').attr('data-sub-tab');
+      $(this).attr('data-sub-plate') == subActive? $(this).show() : $(this).hide();
+
+  });
+
+  //toggle active sub-tab
+  $('.sub-tabs li').on( 'click', function(e) {
+
+      e.preventDefault();
+      var subTabValue = $(this).attr('data-sub-tab'), 
+          siblings = $('.sub-tabs li');
+
+      subPlateContent.each(function(){ 
+        $(this).attr('data-sub-plate') == subTabValue? $(this).show() : $(this).hide();
+      });
+
+      siblings.removeClass('sub-active');
+      $(this).addClass('sub-active');
 
   });
 
