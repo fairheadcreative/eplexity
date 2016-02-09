@@ -563,7 +563,10 @@
         		bottom: -0.5px;
       		}
 
-			@media screen and (max-width: $medium-screen) { overflow-x: auto; }
+			@media screen and (max-width: $medium-screen) { 
+				overflow-x: auto;
+				overflow-y: hidden;
+			}
 
 			li {
 				display: inline-block;
@@ -606,7 +609,6 @@
       		border-bottom: 1px solid $light-gray;
 
 			@include media(max-width $medium-screen) {
-		        margin: -3.65em -1.5em 1.375em;
 		        padding-left: 1.5em;
 		        padding-right: 1.5em;
 		    }
@@ -615,7 +617,10 @@
         		bottom: -0.5px;
       		}
 
-			@media screen and (max-width: $medium-screen) { overflow-x: auto; }
+			@media screen and (max-width: $medium-screen) { 
+				overflow-x: auto;
+				overflow-y: hidden;
+			}
 
 			li {
 				display: inline-block;

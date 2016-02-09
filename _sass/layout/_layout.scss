@@ -37,6 +37,17 @@
   font-size: 1.1em;
 }
 
+.top-link {
+  text-align: center;
+  margin-top: $base-spacing;
+
+  a { 
+    color: $medium-gray;
+
+    &:hover { color: $red; }
+  }
+}
+
 //base grid
 .span-1 { @include span-columns(1); }
 .span-2 { @include span-columns(2); }
@@ -63,4 +74,5 @@
 .hide { display: none !important; }
 .right { float: right !important; }
 .left { float: left !important; }
+.txt-center { text-align: center; }
 .plural:after { content: 's' }
