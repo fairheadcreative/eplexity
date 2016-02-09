@@ -71,8 +71,9 @@ $(function() {
   //find and show active tab content, hide the rest
   plateContent.each(function(){
 
-      var active = $('.active').attr('data-tab');
-      $(this).attr('data-plate') == active? $(this).show() : $(this).hide();
+      var active = $('.active').attr('data-tab'),
+          plateName = $(this).attr('data-plate');
+      plateName == active? $(this).show() : $(this).hide();
 
   });
 
@@ -81,15 +82,19 @@ $(function() {
 
       e.preventDefault();
       var tabValue = $(this).attr('data-tab'), 
-          siblings = $('.tabs li')
-          subs = $('.' + tabValue + ' .sub-tabs li');
+          siblings = $('.tabs li');
 
       plateContent.each(function(){ 
-        $(this).attr('data-plate') == tabValue? $(this).show() : $(this).hide();
+        $(this).attr('data-plate') == tabValue? $(this).show().addClass('open') : $(this).hide().removeClass('open');
       });
 
       siblings.removeClass('active');
       $(this).addClass('active');
+      $('.sub-tabs li').removeClass('sub-active');
+      $('.sub-plate-tab').hide();
+      $('.plate-tab.open .sub-tabs li:first-child()').addClass('sub-active');
+      var subActive = $('.sub-active').attr('data-sub-tab');
+      $('.plate-tab.open .sub-plate-tab[data-sub-plate="'+subActive+'"]').show();
 
   });
 
