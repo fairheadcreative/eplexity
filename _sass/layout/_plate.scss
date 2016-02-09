@@ -19,7 +19,11 @@
 
 		input {
 			margin-bottom: $small-spacing;
-		}
+
+			& + .row { padding-top: 0; }
+
+			& + .button { margin-bottom: $small-spacing; }
+		}		
 	}
 
 	.icon {
