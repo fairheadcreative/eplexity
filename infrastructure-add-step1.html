@@ -6,7 +6,7 @@ class: blocks
 
 <section class="actions">
   <div class="action-info">
-    <p>Description about what an image is. This information will help inform the user as to whether to choose a distro, app or snapshot to start their slice.</p>
+    <p>Description about what an image is. This information will help inform the user as to whether to choose a distro, app or snapshot to start their server.</p>
   </div>
 </section>
 
@@ -24,20 +24,7 @@ class: blocks
         <li class="span-4">Description</li>
       </ul>
       <div class="row">
-        <div class="span-4 push-2"><span class="icon"></span> Ubuntu</div>
-        <div class="span-4">Description</div>
-        <div class="span-4">
-          <form action="infrastructure-add-step2.html">
-            <select name="version" onchange="this.form.submit()">
-              <option value="">Select a version</option>
-              <option value="warty">Warty Warthog</option>
-              <option value="hoary">Hoary Hedgehog</option>
-            </select>            
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span-4 push-2"><span class="icon"></span> Fedora</div>
+        <div class="span-4 push-2"><span class="icon icon-distro-fedora"></span> Fedora</div>
         <div class="span-4">Description</div>
         <div class="span-4">
           <form action="infrastructure-add-step2.html">
@@ -50,7 +37,7 @@ class: blocks
         </div>
       </div>
       <div class="row">
-        <div class="span-4 push-2"><span class="icon"></span> FreeBSD</div>
+        <div class="span-4 push-2"><span class="icon icon-distro-freebsd"></span> FreeBSD</div>
         <div class="span-4">Description</div>
         <div class="span-4">
           <form action="infrastructure-add-step2.html">
@@ -63,14 +50,14 @@ class: blocks
         </div>
       </div>
       <div class="row">
-        <div class="span-4 push-2"><span class="icon"></span> Ubuntu</div>
+        <div class="span-4 push-2"><span class="icon icon-distro-ubuntu"></span> Ubuntu</div>
         <div class="span-4">Description</div>
         <div class="span-4">
           <form action="infrastructure-add-step2.html">
             <select name="version" onchange="this.form.submit()">
               <option value="">Select a version</option>
-              <option value="warty">Warty Warthog</option>
-              <option value="hoary">Hoary Hedgehog</option>
+              <option value="hoary">15.10</option>
+              <option value="warty">14.04.3</option>
             </select>            
           </form>
         </div>
@@ -85,7 +72,7 @@ class: blocks
         <li class="span-4">Description</li>
       </ul>
       <div class="row">
-        <div class="span-4 push-2"><span class="icon"></span> WordPress</div>
+        <div class="span-4 push-2"><span class="icon icon-app-redis"></span> Redis</div>
         <div class="span-4">Description</div>
         <div class="span-4">
           <form action="infrastructure-add-step2.html">
@@ -98,12 +85,52 @@ class: blocks
         </div>
       </div>
       <div class="row">
-        <div class="span-4 push-2"><span class="icon"></span> Ruby on Rails</div>
+        <div class="span-4 push-2"><span class="icon icon-app-phpmyadmin"></span> PHPMyAdmin</div>
         <div class="span-4">Description</div>
         <div class="span-4">
           <form action="infrastructure-add-step2.html">
             <select name="version" onchange="this.form.submit()">
               <option value="">Select a version</option>
+              <option value="warty">4.4.1</option>
+              <option value="hoary">4.4.0</option>
+            </select>            
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span-4 push-2"><span class="icon icon-app-nodejs"></span> Node.js</div>
+        <div class="span-4">Description</div>
+        <div class="span-4">
+          <form action="infrastructure-add-step2.html">
+            <select name="version" onchange="this.form.submit()">
+              <option value="">Select a version</option>
+              <option value="warty">4.4.1</option>
+              <option value="hoary">4.4.0</option>
+            </select>            
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span-4 push-2"><span class="icon icon-app-wordpress"></span> WordPress</div>
+        <div class="span-4">Description</div>
+        <div class="span-4">
+          <form action="infrastructure-add-step2.html">
+            <select name="version" onchange="this.form.submit()">
+              <option value="">Select a version</option>
+              <option value="warty">4.4.1</option>
+              <option value="hoary">4.4.0</option>
+            </select>            
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span-4 push-2"><span class="icon icon-app-rubyonrails"></span> Ruby on Rails</div>
+        <div class="span-4">Description</div>
+        <div class="span-4">
+          <form action="infrastructure-add-step2.html">
+            <select name="version" onchange="this.form.submit()">
+              <option value="">Select a version</option>
+              <option value="warty">5.0.0</option>
               <option value="warty">4.2.0</option>
               <option value="hoary">4.1.0</option>
             </select>            
