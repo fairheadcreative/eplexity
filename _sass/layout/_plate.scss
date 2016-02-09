@@ -175,13 +175,14 @@
 		}
 
 		&.info {
-			text-align: left;
+			text-align: center;
 			@include clearfix;
 
 			ul {
 				list-style: outside disc;
-				text-align: left;
-				margin-bottom: $small-spacing;
+        max-width: 33em;
+        text-align: left;
+        margin: 0 auto $small-spacing;
 			}
 		}
 	}

@@ -443,18 +443,19 @@ class: item-edit infrastructure
 
   <div class="plate-tab" data-plate="settings-power">
     <div class="group info">
-      <h2>This slice is turned on.</h2>
+      <h2>This server is turned on.</h2>
       <p>If you want to turn it off, make sure:</p>
       <ul>
-        <li>Explanation text</li>
-        <li>Explanation text</li>
-        <li>Explanation text</li>
+        <li>That all server actions are being handled by another server, or unneeded.</li>
+        <li>That your team is aware that this server will no longer be powered on.</li>
+        <li>That billing will be unaffected while this server is powered off.</li>
       </ul>
     </div>
     <div class="group">
       <div class="action-handler">  
         <form action="#">
           <input type="submit" value="Switch it off">
+          <a href="#" class="button secondary">Notify the team</a>
         </form>
       </div> 
     </div>
@@ -462,19 +463,20 @@ class: item-edit infrastructure
 
   <div class="plate-tab" data-plate="settings-rename">
     <div class="group info">
-      <h2>This slice is called 'Cocoa Slice'.</h2>
+      <h2>This server is called 'Faction Server 1'.</h2>
       <p>If you want to rename it, make sure:</p>
       <ul>
-        <li>Explanation text</li>
-        <li>Explanation text</li>
-        <li>Explanation text</li>
+        <li>That all references to this server name get updated among your team.</li>
+        <li>That the new name is available (we'll let you know if there's a duplication).</li>
+        <li>That your log this change to keep your ticket &amp; billing info accurate.</li>
       </ul>
     </div>
     <div class="group">
       <div class="action-handler">
         <form action="#">
-            <input type="text" class="range-4" value="Cocoa Slice">
-            <input type="submit" value="Save changes">
+          <input type="text" class="range-4" value="Cocoa Slice">
+          <input type="submit" value="Save changes">
+          <a href="#" class="button secondary">Notify the team</a>
         </form>          
       </div>    
     </div>
@@ -518,15 +520,16 @@ class: item-edit infrastructure
       <h2>Careful, this can't be undone!</h2>
       <p>If you want to destroy it, make sure:</p>
       <ul>
-        <li>Explanation text</li>
-        <li>Explanation text</li>
-        <li>Explanation text</li>
+        <li>That all server actions are being handled by another server, or unneeded.</li>
+        <li>That your team is aware that this server will no longer be available.</li>
+        <li>That billing will be unaffected once this server is destroyed.</li>
       </ul>
     </div>
     <div class="group">
       <div class="action-handler">
         <form action="#">
-          <input type="submit" value="Destroy slice">
+          <input type="submit" value="Destroy server">
+          <a href="#" class="button secondary">Notify the team</a>
         </form>       
       </div>
     </div>
