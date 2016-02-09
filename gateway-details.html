@@ -1,6 +1,6 @@
 ---
 layout: layout
-title: Gateways
+title: Gateway A
 top-link: Gateways
 class: item-edit infrastructure
 ---
@@ -165,14 +165,43 @@ class: item-edit infrastructure
   </div>
 
   <div class="plate-tab" data-plate="settings-power">
+    <div class="group info">
+      <h2>This gateway is enabled.</h2>
+      <p>If you want to disable it, make sure:</p>
+      <ul>
+        <li>That all gateway behavior are being handled by another gateway, or unneeded.</li>
+        <li>That your team is aware that this gateway will no longer be powered on.</li>
+        <li>That billing will be unaffected while this gateway is powered off.</li>
+      </ul>
+    </div>
     <div class="group">
-      Settings: Power
+      <div class="action-handler">  
+        <form action="#">
+          <input type="submit" value="Switch it off">
+          <a href="#" class="button secondary">Notify the team</a>
+        </form>
+      </div> 
     </div>
   </div>
 
   <div class="plate-tab" data-plate="settings-rename">
+    <div class="group info">
+      <h2>This gateway is called 'Gateway A'.</h2>
+      <p>If you want to rename it, make sure:</p>
+      <ul>
+        <li>That all references to this gateway name get updated among your team.</li>
+        <li>That the new name is available (we'll let you know if there's a duplication).</li>
+        <li>That your log this change to keep your ticket &amp; billing info accurate.</li>
+      </ul>
+    </div>
     <div class="group">
-      Settings: Rename  
+      <div class="action-handler">
+        <form action="#">
+          <input type="text" class="range-4" value="Cocoa Slice">
+          <input type="submit" value="Save changes">
+          <a href="#" class="button secondary">Notify the team</a>
+        </form>          
+      </div>    
     </div>
   </div>
 
@@ -189,8 +218,22 @@ class: item-edit infrastructure
   </div>
 
   <div class="plate-tab" data-plate="settings-destroy">
+    <div class="group info">
+      <h2>Careful, this can't be undone!</h2>
+      <p>If you want to destroy it, make sure:</p>
+      <ul>
+        <li>That all gateway actions are being handled by another gateway, or unneeded.</li>
+        <li>That your team is aware that this gateway will no longer be available.</li>
+        <li>That billing will be unaffected once this gateway is destroyed.</li>
+      </ul>
+    </div>
     <div class="group">
-      Settings: Destroy
+      <div class="action-handler">
+        <form action="#">
+          <input type="submit" value="Destroy gateway">
+          <a href="#" class="button secondary">Notify the team</a>
+        </form>       
+      </div>
     </div>
   </div>
 
