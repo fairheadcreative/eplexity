@@ -142,7 +142,56 @@ class: blocks
 
   <div class="plate-tab" data-plate="images">
     <div class="group">
-      Snapshots & uploaded images
+      <ul class="heading">
+        <li class="span-2">Image</li>
+        <li class="span-2">Type</li>
+        <li class="span-1">Public</li>
+        <li class="span-2">Protected</li>
+        <li class="span-2">Format</li>
+        <li class="span-3">Size</li>
+      </ul>
+      <div class="row">
+        <div class="span-2">Build</div>
+        <div class="span-2">Snapshot</div>
+        <div class="span-1">No</div>
+        <div class="span-2">No</div>
+        <div class="span-2">QCOW2</div>
+        <div class="span-1">33.3GB</div>
+        <div class="span-2">
+          <form action="infrastructure-add-step2.html">
+            <input type="hidden" value="build" name="image">
+            <input type="submit" value="Select" class="button small">
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span-2">Production</div>
+        <div class="span-2">Snapshot</div>
+        <div class="span-1">No</div>
+        <div class="span-2">No</div>
+        <div class="span-2">QCOW2</div>
+        <div class="span-1">33.3GB</div>
+        <div class="span-2">
+          <form action="infrastructure-add-step2.html">
+            <input type="hidden" value="production" name="image">
+            <input type="submit" value="Select" class="button small">
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span-2">Ubuntu-PWAuth</div>
+        <div class="span-2">Snapshot</div>
+        <div class="span-1">No</div>
+        <div class="span-2">No</div>
+        <div class="span-2">QCOW2</div>
+        <div class="span-1">33.3GB</div>
+        <div class="span-2">
+          <form action="infrastructure-add-step2.html">
+            <input type="hidden" value="ubuntu" name="image">
+            <input type="submit" value="Select" class="button small">
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -9,13 +9,13 @@ class: item-edit infrastructure
     <li data-tab="access">Access</li>
     <li data-tab="specs" class="active">Specs</li>
     <li data-tab="monitoring">Monitoring</li>
-    <li data-tab="images">Images</li>
+    <li data-tab="images" class="inactive">Images</li>
     <li class="settings"><div class="icon-settings"><span><em></em></span></div><strong>Settings</strong>
       <ul>
         <li data-tab="settings-power">Power</li>
         <li data-tab="settings-rename">Rename</li>
         <li data-tab="settings-backups">Backups</li>
-        <li data-tab="settings-history">History</li>
+        <li data-tab="settings-history" class="inactive">History</li>
         <li data-tab="settings-destroy">Destroy</li>
       </ul>
     </li>
@@ -202,8 +202,8 @@ class: item-edit infrastructure
     <div class="group">
       <ul class="heading">
         <li class="span-4">NICs</li>
-        <li class="span-4">Total</li>
-        <li class="span-4">Available</li>
+        <li class="span-4">Type</li>
+        <li class="span-4">Speed</li>
       </ul>
       <div class="row sub">
         <div class="span-4">vLAN 2900</div>
@@ -217,18 +217,6 @@ class: item-edit infrastructure
       </div>
     </div>
 
-    <div class="group">
-      <ul class="heading">
-        <li class="span-4">Bandwidth</li>
-        <li class="span-4">Total</li>
-        <li class="span-4">Available</li>
-      </ul>
-      <div class="row">
-        <div class="span-4">Capacity</div>
-        <div class="span-4">1GBit</div>
-        <div class="span-4">0.7GBit</div>
-      </div>
-    </div>
   </div>
 
   <div class="plate-tab" data-plate="monitoring">
@@ -474,7 +462,7 @@ class: item-edit infrastructure
     <div class="group">
       <div class="action-handler">
         <form action="#">
-          <input type="text" class="range-4" value="Cocoa Slice">
+          <input type="text" class="range-4" value="Faction Server 1">
           <input type="submit" value="Save changes">
           <a href="#" class="button secondary">Notify the team</a>
         </form>          
