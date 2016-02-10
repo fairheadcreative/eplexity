@@ -659,7 +659,7 @@
         		}
 
 				&.sub-active { 
-					cursor: inherit;
+					cursor: default;
           			position: relative;
           			border-bottom: 1px solid transparent;
           
@@ -673,6 +673,8 @@
 			            left: 0;
 			            bottom: -1px;
 			        }
+
+			        &:hover { background: transparent; }
 				}
 			}
 		}
