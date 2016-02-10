@@ -66,6 +66,7 @@
   padding-left: $base-spacing*2;
   position: relative
 }
+.push-2-right { padding-right: $base-spacing; }
 
 //additional element widths to conform with grid values
 .range-4 { width: 31.7616% !important; }

@@ -34,13 +34,22 @@
 		border-radius: $base-border-radius;
 		left: 0; 
 		top: -1px;
-    background-repeat: no-repeat;
-    background-size: contain;
+    	background-repeat: no-repeat;
+    	background-size: contain;
+
+    	&.icon-right { 
+	    	right: 0;
+	    	left: auto;
+    	}
+
+    	&.icon-trash { 
+	    	top: .5em;
+    	}
 
       $platforms: factionbloc, amazonaws, vmwareblock;
       $apps: rubyonrails, wordpress, nodejs, phpmyadmin, redis;
       $distros: ubuntu, freebsd, fedora;
-      $others: billing-pdf;
+      $others: billing-pdf, trash;
 
       @each $platform in $platforms {
         &.icon-platform-#{$platform} {
