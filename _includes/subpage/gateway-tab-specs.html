@@ -119,3 +119,42 @@
         <div class="span-4">1GBit</div>
       </div>
     </div>
+
+    <div class="details-toggler">
+      <div class="group" data-details="show">
+        <ul class="heading">
+          <li class="span-4">vCPU</li>
+          <li class="span-4">Total</li>
+          <li class="span-4">Available</li>
+        </ul>
+        <div class="row sub">
+          <div class="span-4">2 CPUs</div>
+          <div class="span-4">15GHz</div>
+          <div class="span-4">10GHz</div>
+        </div>
+      </div>
+
+      <div class="group" data-details="edit">
+        <ul class="heading">
+          <li class="span-4">Edit vCPU</li>
+          <li class="span-4">Total</li>
+          <li class="span-4">Available</li> 
+        </ul>
+        <div class="row">
+          <div class="span-4">
+              <select name="units" class="half">
+                <option value="GB">1</option>
+                <option value="TB">2</option>
+                <option value="MB">3</option>
+              </select>
+              <span class="inblock">CPUs</span>
+            </div>
+          <div class="span-4">15GHz</div>
+          <div class="span-4">10GHz</div>
+        </div>
+        <div class="row">
+            <button class="plate-save button small" data-edit="close">Save changes</button>
+            <button class="plate-cancel button small secondary" data-edit="close">Cancel</button>
+        </div>
+      </div>         
+    </div>
