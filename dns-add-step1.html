@@ -1,0 +1,70 @@
+---
+layout: layout
+title: Add some records to your new domain
+---
+
+<form action="infrastructure.html">
+  <section class="plate">
+    <div class="group"> 
+      <ul class="heading">
+        <li class="span-3">&nbsp;</li>
+        <li class="span-2">Type</li>
+        <li class="span-2">Content</li>
+        <li class="span-2">TTL</li>
+        <li class="span-3">Server</li>
+      </ul>  
+      <div class="row">
+        <div class="span-3" data-title="Name">
+          <input name="name1" value="" placeholder="Test1a.test.com">
+        </div>
+        <div class="span-2" data-title="Status">
+          <select name="type">
+            <option value="a">A</option>
+            <option value="b">B</option>
+          </select>
+        </div>
+        <div class="span-2" data-title="Content">
+          <input name="content1" value="" placeholder="52.34.134.200">
+        </div>
+        <div class="span-2" data-title="TTL">
+          <input name="ttl1" value="" placeholder="10,800">
+        </div>
+        <div class="span-3 push-2-right" data-title="Min.">
+          <input name="server1" value="" placeholder="Faction Server 1">
+          <span class="icon-right icon icon-trash inactive"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span-3" data-title="Name">
+          <input  name="name2" value="" placeholder="Test1b.test.com">
+        </div>
+        <div class="span-2" data-title="Status">
+          <select name="type">
+            <option value="a">A</option>
+            <option value="b">B</option>
+          </select>
+        </div>
+        <div class="span-2" data-title="Contact">
+          <input  name="content2" value="" placeholder="52.34.134.200">
+        </div>
+        <div class="span-2" data-title="TTL">
+          <input  name="ttl2" value="" placeholder="10,800">
+        </div>
+        <div class="span-3 push-2-right" data-title="Min.">
+          <input  name="server2" value="" placeholder="Faction Server 1">
+          <span class="icon-right icon icon-trash inactive"></span>
+        </div>
+      </div> 
+      <div class="row">  
+        <div class="span-4 counted">
+          <span class="count">+</span>
+          <a href="#" class="value">Add a record</a>
+        </div>
+      </div>
+    </div> 
+    <div class="action-handler">
+      <input class="half" type="submit" value="Continue">
+      <a class="button" href="infrastructure.html">Cancel</a>
+    </div>
+  </section>
+</form>

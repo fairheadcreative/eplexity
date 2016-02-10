@@ -6,31 +6,32 @@ title: Add a DNS Domain
 <form action="dns-add-step1.html">
   <section class="plate plate-small">
   	<label>New DNS domain name:</label>
-    <input type="text">
+    <input type="text" name="name">
   	<label>TTL (time to lie):</label>
-    <input type="text">
+    <input type="text" name="ttl">
   	<label>Contact email for this domain:</label>
-    <input type="text">
+    <input type="text" name="contact">
     <div class="row">
     	<div class="span-3">
 		  	<label>Expiry:</label>
-		    <input type="text" placeholder="3600">
+		    <input type="text" name="expiry" value="3000">
       </div>
       <div class="span-3">
         <label>Refresh:</label>
-        <input type="text" placeholder="21600">
+        <input type="text" name="refresh" value="21600">
       </div>
       <div class="span-3">
         <label>Retry:</label>
-        <input type="text" placeholder="10800">
+        <input type="text" name="retry" value="10800">
       </div>
       <div class="span-3">
         <label>Minimum:</label>
-        <input type="text" placeholder="10800">
+        <input type="text" name="minimum" value="10800">
       </div>
     </div>
   </section>
   <div class="action-handler">
     <input class="half" type="submit" value="Continue">
+    <a class="button" href="infrastructure.html">Cancel</a>
   </div>
 </form>
