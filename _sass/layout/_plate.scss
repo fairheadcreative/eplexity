@@ -302,6 +302,8 @@
 	.sub { 
 		border-bottom: none;
 		padding-bottom: 0;
+
+		& + .heading { margin-top: $small-spacing; }
 	}
 
 	.ticket {
@@ -450,49 +452,51 @@
 		margin-top: 3.5em;
 
 	    li.settings {
-        @include media(max-width $medium-screen) { 
-          padding: 0 !important;
-        }
+	        @include media(max-width $medium-screen) { 
+	          padding: 0 !important;
+	        }
 
-        @include media($medium-screen) { 
-          width: 39px;
-          position: relative;
-        }
+	        @include media($medium-screen) { 
+	          width: 39px;
+	          position: relative;
+	        }
 
-        strong {
-          display: none;
+	        strong {
+	          display: none;
 
-          @include media($medium-screen) { 
-            text-indent: -999em;
-            display: block;
-          }
-        }
+	          @include media($medium-screen) { 
+	            text-indent: -999em;
+	            display: block;
+	          }
+	        }
 
-        ul { 
-          @include media($medium-screen) { 
-            display: none;
-            background: white;
-            position: absolute;
-            z-index: 10;
-            right: 0;
-            margin-top: 3px;
-            border: 1px solid $base-border-color;
-            border-radius: 0 0 $base-border-radius $base-border-radius;
+	        ul { 
+	          @include media($medium-screen) { 
+	            display: none;
+	            background: white;
+	            position: absolute;
+	            z-index: 10;
+	            right: 0;
+	            margin-top: 3px;
+	            border: 1px solid $base-border-color;
+	            border-radius: 0 0 $base-border-radius $base-border-radius;
 
-            li {
-              display: block; 
-              border-bottom: 1px solid $base-border-color;
+	            li {
+	            	display: block; 
+	            	border-bottom: 1px solid $base-border-color;
 
-              &:last-child { border-bottom: none; }
-              &.active { 
-                border: none; 
-                background: $medium-gray;
-                color: white;
-                border-radius: 0;
-                &:after { display: none; }
-              }
-            }
-          }
+	            	&:last-child { border-bottom: none; }
+	              	&.active { 
+	            		border: none; 
+	                	background: $medium-gray;
+	                	color: white;
+	                	border-radius: 0;
+
+	                	&:after { display: none; }
+	                	&:hover { background: $medium-gray; }
+	            	}
+            	}
+          	}
         }
 
       &:hover {
@@ -598,7 +602,7 @@
         		}
 
 				&.active { 
-					cursor: inherit;
+					cursor: default;
           			position: relative;
           			border-bottom: 1px solid transparent;
           
@@ -612,6 +616,8 @@
 			            left: 0;
 			            bottom: -1px;
 			        }
+
+			        &:hover { background: transparent; }
 				}
 			}
 		}
