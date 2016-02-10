@@ -71,6 +71,7 @@
 .range-4 { width: 31.7616% !important; }
 
 //generic helper/override classes
+.inactive { opacity: .5; pointer-events: none; }
 .hide { display: none !important; }
 .right { float: right !important; }
 .left { float: left !important; }
