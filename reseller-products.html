@@ -12,43 +12,191 @@ role: reseller
 </section>
 <section class="plate">
   <div class="group">
-    <div id="product-factionbloc">
-      <ul class="heading">
-        <li class="span-4">Faction Bloc</li>
-        <li class="span-4">Price</li>
-        <li class="span-2">Markup</li>
-        <li class="span-2"><!--<a href="#" class="button small remove">Remove</a>--></li>
-      </ul>
-      <div class="row sub">
-        <div class="span-4">Storage Capacity</div>
-        <div class="span-4">$100/GB</div>
-        <div class="span-2"><input class="half" type="text" value="10"> %</div>
-      </div>
-      <div class="row sub">
-        <div class="span-4">IOPs</div>
-        <div class="span-4">$100/1000 IOPs</div>
-        <div class="span-2"><input class="half" type="text" value="10"> %</div>
-      </div>
-      <div class="row sub">
-        <div class="span-4">CPU</div>
-        <div class="span-4">$200/unit</div>
-        <div class="span-2"><input class="half" type="text" value="10"> %</div>
-      </div>
-      <div class="row sub">
-        <div class="span-4">vRAM</div>
-        <div class="span-4">$100/GB</div>
-        <div class="span-2"><input class="half" type="text" value="10"> %</div>
-      </div>
-      <div class="row sub">
-        <div class="span-4">Networking</div>
-        <div class="span-4">$250/device</div>
-        <div class="span-2"><input class="half" type="text" value="10"> %</div>
-      </div>
-      <div class="row sub">
-        <div class="span-4">Bandwidth</div>
-        <div class="span-4">$100/GB</div>
-        <div class="span-2"><input class="half" type="text" value="10"> %</div>
+    <ul class="heading">
+      <li class="span-5 push-2">Name</li>
+      <li class="span-5">Description</li>
+    </ul>
+
+    <div class="details-toggler divider">
+      <div class="row">
+        <div data-title="Name" class="span-5 push-2">
+          <span class="icon icon-logo"></span>
+          Eplexity Managed Backup
+        </div>
+        <div data-title="Description" class="span-5">
+          This is where the item description goes
+        </div>
+        <div data-title="Platform" class="span-2">
+          <button class="small" data-action="add">Add</button>
+        </div>
       </div>
     </div>
+
+    <div class="details-toggler divider">
+      <div class="row">
+        <div data-title="Name" class="span-5 push-2">
+          <span class="icon icon-logo"></span>
+          Eplexity Managed Infrastructure
+        </div>
+        <div data-title="Description" class="span-5">
+          This is where the item description goes
+        </div>
+        <div data-title="Platform" class="span-2">
+          <button class="small" data-action="add">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-toggler divider">
+      <div class="row">
+        <div data-title="Name" class="span-5 push-2">
+          <span class="icon icon-logo"></span>
+          Eplexity Managed Monitoring
+        </div>
+        <div data-title="Description" class="span-5">
+          This is where the item description goes
+        </div>
+        <div data-title="Platform" class="span-2">
+          <button class="small" data-action="add">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-toggler divider">
+      <div class="row">
+        <div data-title="Name" class="span-5 push-2">
+          <span class="icon icon-platform-factionbloc"></span>
+          Faction Bloc
+        </div>
+        <div data-title="Description" class="span-5">
+          This is where the item description goes
+        </div>
+        <div data-title="Platform" class="span-2">
+          <button class="small" data-action="add">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-toggler divider">
+      <div class="row">
+        <div data-title="Name" class="span-5 push-2">
+          <span class="icon icon-platform-factionbloc"></span>
+          Faction Processing Unit
+        </div>
+        <div data-title="Description" class="span-5">
+          This is where the item description goes
+        </div>
+        <div data-title="Platform" class="span-2">
+          <button class="small" data-action="add">Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="details-toggler divider">
+      <div data-details="show" style="display: block;"> 
+        <div class="row">
+          <div data-title="Name" class="span-5 push-2">
+            <span class="icon icon-platform-factionbloc"></span>
+            Faction IO Unit
+          </div>
+          <div data-title="Description" class="span-5">
+            This is where the item description goes
+          </div>
+          <div data-title="Platform" class="span-2">
+            <span class="append-action"><button class="small">Add</button></span>
+          </div>
+        </div>
+      </div>
+
+      <div data-details="edit" class="group">
+        <ul class="heading">
+          <li class="span-4 push-2">
+            <span class="icon icon-platform-factionbloc"></span>
+            Faction IO Unit
+          </li>
+          <li class="span-3">Description</li>
+          <li class="span-1">Price</li>
+          <li class="span-2">Margin</li>
+          <li class="span-2">Customer Price</li>
+        </ul>
+        <div class="row">
+          <div data-title="Name" class="span-4 push-2">500 IOPs</div>
+          <div data-title="Description" class="span-3">
+            Line item description here.
+          </div>
+          <div data-title="Price" class="span-1">$100</div>
+          <div data-title="Margin" class="span-2">
+            <input class="half" placeholder="Capacity…" value="50">
+            <span class="inblock">%</span>
+          </div>
+          <div data-title="Customer Price" class="span-2">$150</div>
+        </div>
+        <div class="row">
+          <button data-edit="close" class="button small" data-action="add">Save changes</button>
+          <button data-edit="close" class="button small secondary">Cancel</button>
+          <a data-edit="close" class="right" href="#" data-action="remove">Remove</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-toggler divider">
+      <div class="row">
+        <div data-title="Name" class="span-5 push-2">
+          <span class="icon icon-platform-factionbloc"></span>
+          Faction Storage Unit
+        </div>
+        <div data-title="Description" class="span-5">
+          This is where the item description goes
+        </div>
+        <div data-title="Platform" class="span-2">
+          <button class="small" data-action="add">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-toggler divider">
+      <div class="row">
+        <div data-title="Name" class="span-5 push-2">
+          <span class="icon icon-platform-factionbloc"></span>
+          Faction Storage Unit
+        </div>
+        <div data-title="Description" class="span-5">
+          This is where the item description goes
+        </div>
+        <div data-title="Platform" class="span-2">
+          <button class="small" data-action="add">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-toggler divider">
+      <div class="row">
+        <div data-title="Name" class="span-5 push-2">
+          <span class="icon icon-platform-factionbloc"></span>
+          Faction Network Unit
+        </div>
+        <div data-title="Description" class="span-5">
+          This is where the item description goes
+        </div>
+        <div data-title="Platform" class="span-2">
+          <button class="small" data-action="add">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-toggler divider">
+      <div class="row">
+        <div data-title="Name" class="span-5 push-2">
+          <span class="icon icon-platform-factionbloc"></span>
+          Faction Private Cloud
+        </div>
+        <div data-title="Description" class="span-5">
+          This is where the item description goes
+        </div>
+        <div data-title="Platform" class="span-2">
+          <button class="small" data-action="add">Add</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>

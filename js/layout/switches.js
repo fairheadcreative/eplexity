@@ -87,4 +87,12 @@ $(function() {
     $(this).parent().hide();
   });
 
+  //toggle add/remove actions
+  $('[data-action="add"]').on('click', function(){
+    $(this).closest('.details-toggler').find('.append-action').html('Added');
+  });
+  $('[data-action="remove"]').on('click', function(){
+    $(this).closest('.details-toggler').find('.append-action').html('<button class="small">Add</button>');
+  });
+
 });

@@ -46,6 +46,10 @@
 	    	top: .5em;
     	}
 
+    	&.icon-logo { 
+	    	background-image: url('../images/logo.png');
+    	}
+
       $platforms: factionbloc, amazonaws, vmwareblock;
       $apps: rubyonrails, wordpress, nodejs, phpmyadmin, redis;
       $distros: ubuntu, freebsd, fedora;
@@ -410,23 +414,24 @@
     	padding: 0.5em 0.5em 0.5em;
     	height: 57px;
 
-    form {
-      position: relative;
-    }
+	    form {
+	      position: relative;
+	    }
 
-    input[type="text"] {
-      height: 40px;
-      padding-right: 75px;
-    }
+	    input[type="text"] {
+	      height: 40px;
+	      padding-right: 75px;
+	    }
 
-    .button.small {
-      height: 34px;
-      position: absolute;
-      top: 3px;
-      right: 3px;
-      border-radius: 2px;
-      padding-top: .8em;
-    }
+	    .button.small,
+	    button.small {
+	      height: 34px;
+	      position: absolute;
+	      top: 3px;
+	      right: 3px;
+	      border-radius: 2px;
+	      padding-top: .8em;
+	    }
 	}
 
 	.row-title { 
