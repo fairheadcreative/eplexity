@@ -456,6 +456,7 @@
 			opacity: 1;
 			text-align: center;
 			width: 1.5em;
+			line-height: 1.7;
 	    }
 	}
 
@@ -689,6 +690,10 @@
 			            height: 3px;
 			            left: 0;
 			            bottom: -1px;
+
+			            @media screen and (max-width: $medium-screen) { 
+							bottom: 2px;
+						}
 			        }
 
 			        &:hover { background: transparent; }
