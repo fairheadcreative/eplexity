@@ -108,6 +108,7 @@
     &.is-edit {
       @include transform(scale(1.08) translateY(-3px));
       box-shadow: 0 3px 30px rgba(0,0,0,.2);
+      z-index: 10;
     }
 
 		&.divider {
@@ -137,6 +138,8 @@
 				height: 0.375em;
 				margin: 0 0.75em 0.375em;
 			}
+
+			&.is-edit:after { display: none; }
 
 			.group {
 				margin-bottom: 0;
