@@ -376,15 +376,6 @@
 				}
 			}
 		}
-
-		.ticket-type {
-			@include span-columns(10);
-			padding-bottom:  $small-spacing;
-
-			@include media-query($medium-screen) { @include span-columns(9); }
-
-			//&:first-child { padding: 0 $small-spacing; }
-		}
 	}
 
 	.step-counter { 
