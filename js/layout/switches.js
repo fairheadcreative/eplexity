@@ -59,21 +59,28 @@ $(function() {
 
   });
 
-  //toggle product details edit
-  var detailsShow = $('[data-details="show"]'),
-    detailEdit =  $('[data-details="edit"]').hide(),
-    detailClose = $('[data-edit="close"]');
+//toggle product details editing (expandables)
+  detailsToggler = $('.details-toggler');
 
-  detailsShow.on('click', function() {
-    $(this).hide();
-    $(this).siblings(detailEdit).show();
-    $(this).parent().addClass('is-edit').removeClass('is-show');
-  });
+  $(detailsToggler).each(function(){
 
-  detailClose.on('click', function() {
-    $(this).closest(detailEdit).hide();
-    $(this).closest(detailEdit).siblings(detailsShow).show();
-    $(this).parent().parent().parent().removeClass('is-edit').addClass('is-show');
+    var detailsShow = $(this).find('[data-details="show"]'),
+        detailEdit =  $(this).find('[data-details="edit"]').hide(),
+        detailClose = $(this).find('[data-edit="close"]'),
+        originalHeight = $(this).outerHeight();
+
+    detailsShow.on('click', function() {
+      $(this).hide();
+      $(this).siblings(detailEdit).show();
+      var thisHeight = $(this).next(detailEdit).outerHeight();
+      $(this).closest(detailsToggler).addClass('is-edit').removeClass('is-show').css('height', thisHeight);
+    });
+
+    detailClose.on('click', function() {
+      $(this).closest(detailEdit).hide();
+      $(this).closest(detailEdit).siblings(detailsShow).show();
+      $(this).closest(detailsToggler).removeClass('is-edit').addClass('is-show').css('height', originalHeight);
+    });
   });
 
   //toggle buttons content

@@ -98,18 +98,28 @@
 		@include clearfix;
 		@include plate-line;
 		color: $dark-gray;
-    font-weight: 500;
+    	font-weight: 500;
 	}	
 
 	.details-toggler {
-    @include transition(all, .2s);
-    @include transform(scale(1));
+	    @include transition(transform .2s);
+	    @include transform(scale(1));
 
-    &.is-edit {
-      @include transform(scale(1.08) translateY(-3px));
-      box-shadow: 0 3px 30px rgba(0,0,0,.2);
-      z-index: 10;
-    }
+	    &.is-show {
+	    	@include transition(height .2s);
+	    }
+
+	    &.is-edit {
+	    	@include transform(scale(1.08) translateY(-3px));
+	    	box-shadow: 0 3px 30px rgba(0,0,0,.2);
+	    	z-index: 10;
+	    }
+
+		&.is-show { 
+			margin-bottom: $small-spacing;
+
+			&:last-child { margin-bottom: 0; }
+		}
 
 		&.divider {
 
@@ -117,6 +127,12 @@
 	        	.row:last-child {     			
 	          		border-bottom: none;
 	        	}		
+			}
+
+			&.is-show { 
+				margin-bottom: $small-spacing/2;
+
+				&:last-child { margin-bottom: 0; }
 			}
 
 			&:last-child {
