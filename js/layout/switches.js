@@ -10,7 +10,8 @@ $(function() {
 
       var active = $('.active').attr('data-tab'),
           plateName = $(this).attr('data-plate');
-      plateName == active? $(this).show() : $(this).hide();
+
+      plateName == active? $(this).css({'visibility':'visible','position':'relative'}) : $(this).css({'visibility':'hidden','position':'fixed'});
 
   });
 
@@ -22,16 +23,16 @@ $(function() {
           siblings = $('.tabs li');
 
       plateContent.each(function(){ 
-        $(this).attr('data-plate') == tabValue? $(this).show().addClass('open') : $(this).hide().removeClass('open');
+        $(this).attr('data-plate') == tabValue? $(this).css({'visibility':'visible','position':'relative'}).addClass('open') : $(this).css({'visibility':'hidden','position':'fixed'}).removeClass('open');
       });
 
       siblings.removeClass('active');
       $(this).addClass('active');
       $('.sub-tabs li').removeClass('sub-active');
-      $('.sub-plate-tab').hide();
+      $('.sub-plate-tab').css({'visibility':'hidden','position':'fixed'});
       $('.plate-tab.open .sub-tabs li:first-child()').addClass('sub-active');
       var subActive = $('.sub-active').attr('data-sub-tab');
-      $('.plate-tab.open .sub-plate-tab[data-sub-plate="'+subActive+'"]').show();
+      $('.plate-tab.open .sub-plate-tab[data-sub-plate="'+subActive+'"]').css({'visibility':'visible','position':'relative'});
 
   });
 
@@ -39,7 +40,7 @@ $(function() {
   subPlateContent.each(function(){
 
       var subActive = $('.sub-active').attr('data-sub-tab');
-      $(this).attr('data-sub-plate') == subActive? $(this).show() : $(this).hide();
+      $(this).attr('data-sub-plate') == subActive? $(this).css({'visibility':'visible','position':'relative'}) : $(this).css({'visibility':'hidden','position':'fixed'});
 
   });
 
@@ -51,7 +52,7 @@ $(function() {
           siblings = $('.sub-tabs li');
 
       subPlateContent.each(function(){ 
-        $(this).attr('data-sub-plate') == subTabValue? $(this).show() : $(this).hide();
+        $(this).attr('data-sub-plate') == subTabValue? $(this).css({'visibility':'visible','position':'relative'}) : $(this).css({'visibility':'hidden','position':'fixed'});
       });
 
       siblings.removeClass('sub-active');
@@ -68,6 +69,8 @@ $(function() {
         detailEdit =  $(this).find('[data-details="edit"]').hide(),
         detailClose = $(this).find('[data-edit="close"]'),
         originalHeight = $(this).outerHeight();
+
+        $(this).css('height', originalHeight);
 
     detailsShow.on('click', function() {
       $(this).hide();
