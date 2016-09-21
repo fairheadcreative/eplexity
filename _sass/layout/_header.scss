@@ -1,0 +1,66 @@
+//page header rules 
+
+.page-header {
+  
+  .site-title,
+  .page-lead { 
+    text-align: center; 
+    padding: 0 $base-spacing;
+  }
+  
+  .site-title {
+    font-size: 2.5em;
+    margin: $small-spacing 0 .2em;
+    text-align: center;
+    
+    &.editable {
+      
+      .field-container {
+        display: inline-block;
+        position: relative;
+          
+        .field-edit {
+          position: absolute;
+          right: -20px;
+          content: "";
+          display: block;
+          background: red;
+          top: 50%;
+          @include transform(translateY(-50%));
+          height: 20px;
+          width: 20px;
+          opacity: 0;
+          transition: opacity $base-duration;
+          cursor: pointer;
+        }
+
+        &:hover {
+          color: $gray;
+           
+          .field-edit {
+            opacity: 1;
+          }
+        }
+      }
+      
+      input {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        color: $base-font-color;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-family: $helvetica-condensed;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+      }
+      
+    }
+  }
+
+  @include media($medium-screen) {
+    padding-top: 3.5em;
+  }
+}

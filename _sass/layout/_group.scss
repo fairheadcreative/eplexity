@@ -1,0 +1,12 @@
+//group heading line
+	
+.heading { 
+    @include clearfix;
+    @include plate-line;
+    color: $dark-gray;
+    font-weight: 500;
+
+    .is-edit & {
+        border-bottom: 2px solid $plate-higlight;
+    }
+}

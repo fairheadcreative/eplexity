@@ -12,6 +12,19 @@
 		<a href="{{ page.top-path}}.html">{{ page.top-link }}</a>
 	</div>
   {% endif %}
-
+  
+  {% if page.title and page.title-edit == true %}
+  <div  class="site-title editable">
+    <div class="field-container">
+      <input type="text" name="serverTitle" id="serverTitle" value="{{ page.title }}" data-field="toggle">
+      <label for="serverTitle" class="field-edit"></label>
+    </div>    
+  </div>  
+  {% elsif page.title %}
   <h1 class="site-title">{{ page.title }}</h1>
+  {% endif %}
+  
+  {% if page.lead %}
+  <p class="page-lead">{{ page.lead }}</p>
+  {% endif %}
 </header>

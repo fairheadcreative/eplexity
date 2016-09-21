@@ -98,6 +98,47 @@ $(function() {
       $('.plate-tab.open .sub-plate-tab[data-sub-plate="'+subActive+'"]').css({'visibility':'visible','position':'relative','left':'0'});
 
   });
+  
+//page title input field content toggler
+  
+  var fieldVal,
+      fieldValInitial,
+      titleField = $('[data-field="toggle"]');
+  
+  var fieldValToggler = {
+    //get field value into both variables, then empty the field
+    getValues:  function() {
+                fieldVal = titleField.val();
+                fieldValInitial = titleField.val();
+                titleField.val('');
+    },
+    //if here's no input, fill the field with previous value, otherwise fill it with last input value
+    passValues: function() {
+                fieldVal = titleField.val();
+                if(!fieldVal){
+                  titleField.val(fieldValInitial);
+                }else{
+                  titleField.val(fieldVal);
+                }   
+    }
+  };
+  
+  //uncomment if you want to empty the input value on focus
+  /*
+  */
+  $('[data-field="toggle"]').on( 'focus', function(){
+    fieldValToggler.getValues();
+  });
+  
+  $('[data-field="toggle"]').on( 'blur', function(){
+    fieldValToggler.passValues();
+  });
+  
+  function resizeInput() {
+    $(this).attr('size', $(this).val().length);
+  }
+
+  titleField.keyup(resizeInput).each(resizeInput);
 
   //find and show active sub-tab content, hide the rest
   subPlateContent.each(function(){

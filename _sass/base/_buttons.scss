@@ -19,6 +19,7 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  transition: all $base-duration;
 
   @include media-query($medium-screen) { padding: $small-spacing; }
 

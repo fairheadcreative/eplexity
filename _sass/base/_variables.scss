@@ -19,10 +19,13 @@ $base-z-index: 0;
 // Colors
 $blue: #00A9FC;
 $light-blue: lighten($blue, 30);
-//$bright-blue: lighten($blue, 47);
 $bright-blue: lighten(#efefed, 3);
+$plate-blue: #E2F8F6;
+$plate-hover: #F1FBFC;
+$plate-higlight: #B3DFDE;
 $dark-gray: #555;
 $medium-gray: #999;
+$gray: #999;
 $light-gray: #ddd;
 $bright-gray: lighten($light-gray, 10);
 $red: #ff5245;
@@ -31,6 +34,7 @@ $bright-red: lighten($red, 30);
 $green: #76DB8F;
 $light-green: lighten($green, 20);
 $bright-green: lighten($green, 30);
+$white: #fff;
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -39,6 +43,7 @@ $action-color: $red;
 // Border
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
+$plate-border: 1px solid $plate-higlight;
 
 // Background Colors
 $base-background-color: #fff;
@@ -49,5 +54,5 @@ $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
 // Animations
-$base-duration: 150ms;
+$base-duration: 250ms;
 $base-timing: ease;
