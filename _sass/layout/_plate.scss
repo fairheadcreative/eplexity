@@ -659,6 +659,8 @@
 				padding: .25em $small-spacing;
 				cursor: pointer;
 				margin-bottom: -2px;
+              
+              &.data-sub-description { padding: .25em 0; }
 
                 @include media($medium-screen) {
                     &:hover { background: shade(#F9F7F5, 5); }
