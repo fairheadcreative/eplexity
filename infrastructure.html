@@ -1,15 +1,39 @@
 ---
 layout: layout
 title: Infrastructure
+lead: Infrastructure means anything running on your <a href="#">Cloud Platforms</a>. From here you can <br class="desktop-brek">control infrastructure across all your platforms.
 class: section infrastructure
 ---
 
+<!--tester
+<div style="position: absolute; top:0; left: 50%;transform: translatex(-50%);bottom:0;opacity:.2;pointer-events:none;width:100%;text-align:center;z-index:10;"><img src="images/test.png" alt=""></div>
+<!--/tester--><!---->
+ 
+    <div class="group">
+      <div class="action-handler" data-plate="servers"> 
+        <a class="button" href="infrastructure-add-step0.html">Add a server</a>
+      </div>
+      <div class="action-handler" data-plate="network"> 
+        <a class="button" href="dns-add-step0.html" data-sub-plate="dns">Add a DNS</a>
+        <a class="button" href="#" data-sub-plate="gateway">Add a Gateway</a>
+        <a class="button" href="#" data-sub-plate="loadBalancers">Add a Load Balancer</a>
+        <a class="button" href="#" data-sub-plate="vpn">Add a VPN</a>
+        <a class="button" href="#" data-sub-plate="firewallRules">Add a Firewall Rule</a>
+      </div>
+      <div class="action-handler" data-plate="storage"> 
+        <a class="button" href="infrastructure-add-step0.html">Add a server</a>
+      </div>
+      <div class="action-handler" data-plate="tasks"> 
+        <a class="button" href="infrastructure-add-step0.html">Add a server</a>
+      </div>
+    </div>
+
 <section class="plate tabbed">
   <ul class="tabs">
-    <li data-tab="servers">Servers</li>
-    <li data-tab="network" class="active">Network</li>
+    <li data-tab="servers" class="active">Servers</li>
+    <li data-tab="network">Network</li>
     <li data-tab="storage">Storage</li>
-    <li data-tab="images">Images</li>
+    <li data-tab="tasks">Tasks</li>
   </ul>
 
   <div class="plate-tab" data-plate="servers">
@@ -24,7 +48,7 @@ class: section infrastructure
     {% include subpage/infrastructure-tab-storage.html %}
   </div>
 
-  <div class="plate-tab" data-plate="images">
-    {% include subpage/infrastructure-tab-images.html %}
+  <div class="plate-tab" data-plate="tasks">
+    {% include subpage/infrastructure-tab-tasks.html %}
   </div>
 </section>

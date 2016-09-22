@@ -58,6 +58,12 @@ $(function() {
 });
 
 $(function() {
+  
+  //generic go to url for when you can't use links
+  $('[data-url]').on('click', function(){
+    var location = $(this).attr('data-url');
+    window.location.href = location;
+  });
 
 });
 
@@ -79,6 +85,7 @@ $(function() {
   });
 
   //toggle active tab
+  var subActiveDesc;
   $('.tabs li:not(.settings)').on( 'click', function(e) {
 
       e.preventDefault();
@@ -93,9 +100,11 @@ $(function() {
       $(this).addClass('active');
       $('.sub-tabs li').removeClass('sub-active');
       $('.sub-plate-tab').css({'visibility':'hidden','position':'fixed','left':'-1000%'});
-      $('.plate-tab.open .sub-tabs li:first-child()').addClass('sub-active');
+      $('.plate-tab.open .sub-tabs li:nth-child(2)').addClass('sub-active');
       var subActive = $('.sub-active').attr('data-sub-tab');
       $('.plate-tab.open .sub-plate-tab[data-sub-plate="'+subActive+'"]').css({'visibility':'visible','position':'relative','left':'0'});
+      subActiveDesc = $('.sub-active').attr('data-sub-description');
+      $('.data-sub-description .sub-target').html(subActiveDesc);
 
   });
   
@@ -123,9 +132,6 @@ $(function() {
     }
   };
   
-  //uncomment if you want to empty the input value on focus
-  /*
-  */
   $('[data-field="toggle"]').on( 'focus', function(){
     fieldValToggler.getValues();
   });
@@ -139,6 +145,25 @@ $(function() {
   }
 
   titleField.keyup(resizeInput).each(resizeInput);
+  
+  //show row dropdown
+  $('.dropdown-edit').on('click', function(event){
+    event.stopPropagation();
+    event.preventDefault();
+    $(this).find('.edit-toggler').addClass('is-activated');
+    if($(this).hasClass('has-options')){
+      $(this).parent('.row').addClass('is-highlighted');
+      $(this).find('.edit-toggler').removeClass('click-through');
+    };
+  });
+  
+  //hide all row dropdowns when cicked outsides, revert everything to originla state
+  $('body').bind('click', function(e) {
+    if($(e.target).closest('.dropdown-edit').length == 0) {
+      $('.edit-toggler').removeClass('is-activated').addClass('click-through');
+      $('.row').removeClass('is-highlighted');
+    }
+  });
 
   //find and show active sub-tab content, hide the rest
   subPlateContent.each(function(){
@@ -149,7 +174,7 @@ $(function() {
   });
 
   //toggle active sub-tab
-  $('.sub-tabs li').on( 'click', function(e) {
+  $('.sub-tabs li:not(.data-sub-description)').on( 'click', function(e) {
 
       e.preventDefault();
       var subTabValue = $(this).attr('data-sub-tab'), 
@@ -161,6 +186,8 @@ $(function() {
 
       siblings.removeClass('sub-active');
       $(this).addClass('sub-active');
+      subActiveDesc = $('.sub-active').attr('data-sub-description');
+      $('.data-sub-description .sub-target').html(subActiveDesc);
 
   });
 

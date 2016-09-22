@@ -1,212 +1,341 @@
   <div class="group">  
     <ul class="sub-tabs">
-      <li data-sub-tab="dns" class="sub-active">DNS</li>
-      <li data-sub-tab="gateway">Gateway</li>
-      <li data-sub-tab="loadBalancers">Load Balancers</li>
-      <li data-sub-tab="vpn">VPN</li>
+      <li class="left data-sub-description">Network: <span class="sub-target"></span></li>
+      <li data-sub-tab="dns" data-sub-description="Domain Name System" class="sub-active">DNS</li>
+      <li data-sub-tab="gateway" data-sub-description="Gateway">Gateway</li>
+      <li data-sub-tab="loadBalancers" data-sub-description="Load Balancers">Load Balancers</li>
+      <li data-sub-tab="vpn" data-sub-description="Virtual Private Networks">VPN</li>
+      <li data-sub-tab="firewallRules" data-sub-description="Firewall Rules">Firewall Rules</li>
     </ul>
   </div>
 
+<!-- START DNS SUB TAB -->
   <div class="sub-plate-tab" data-sub-plate="dns">
     <div class="group">
       <ul class="heading">
-        <li class="span-3">Name</li>
-        <li class="span-2">Status</li>
-        <li class="span-3">Contact</li>
-        <li class="span-2">TTL</li>
-        <li class="span-2">Minimum</li>
+        <li class="span-55 push-2">Name</li>
+        <li class="span-2">IP address</li>
+        <li class="span-2">Size</li>
+        <li class="span-2">Datacenter</li>
       </ul>
 
-      <div class="details-toggler divider">
-        <div class="details-show" data-details="show">  
-          <div class="row">
-            <div class="span-3" data-title="Name">
-              Test.test.com
-            </div>
-            <div class="span-2" data-title="Status">
-              <span class="label success">Active</span>
-            </div>
-            <div class="span-3" data-title="Contact">
-              <a href="mailto:test@test.com">test@test.com</a>
-            </div>
-            <div class="span-2" data-title="TTL">
-              10,800
-            </div>
-            <div class="span-2" data-title="Min.">
-              10,800
-            </div>
-          </div>
+      <a class="row" href="infrastructure-details.html">
+        <div class="dropdown-edit has-options">
+          <span class="edit-toggler-icon">&#9660;</span>
+          <ul class="edit-toggler click-through">
+            <li><span data-url="/infrastructure-details.html">Console Access</span></li>
+            <li><span data-url="/infrastructure-details.html">View Details</span></li>
+            <li><span data-url="/infrastructure-details.html">Tickets</span></li>
+            <li><span data-url="/infrastructure-details.html">Monitoring</span></li>
+            <li><span data-url="/infrastructure-details.html">Backups</span></li>
+            <li><span data-url="/infrastructure-details.html">History</span></li>
+            <li><span data-url="/infrastructure-details.html">Power Off</span></li>
+          </ul>
         </div>
-
-        <div class="group details-edit" data-details="edit"> 
-          <ul class="heading">
-            <li class="span-3">Test.test.com</li>
-            <li class="span-2">Type</li>
-            <li class="span-2">Content</li>
-            <li class="span-2">TTL</li>
-            <li class="span-3">Server</li>
-          </ul>  
-          <div class="row">
-            <div class="span-3" data-title="Name">
-              <input value="Test1a.test.com">
-            </div>
-            <div class="span-2" data-title="Status">
-              <select name="type">
-                <option value="a">A</option>
-                <option value="b">B</option>
-              </select>
-            </div>
-            <div class="span-2" data-title="Contact">
-              <input value="52.34.134.200">
-            </div>
-            <div class="span-2" data-title="TTL">
-              <input value="10,800">
-            </div>
-            <div class="span-3 push-2-right" data-title="Min.">
-              <select name="type">
-                <option value="a">Faction Server 1</option>
-              </select>
-              <span class="icon-right icon icon-trash inactive"></span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="span-3" data-title="Name">
-              <input value="Test1b.test.com">
-            </div>
-            <div class="span-2" data-title="Status">
-              <select name="type">
-                <option value="a">A</option>
-                <option value="b">B</option>
-              </select>
-            </div>
-            <div class="span-2" data-title="Contact">
-              <input value="52.34.134.200">
-            </div>
-            <div class="span-2" data-title="TTL">
-              <input value="10,800">
-            </div>
-            <div class="span-3 push-2-right" data-title="Min.">
-              <select name="type">
-                <option value="a">Faction Server 1</option>
-              </select>
-              <span class="icon-right icon icon-trash inactive"></span>
-            </div>
-          </div> 
-          <div class="row">  
-            <div class="span-4 counted">
-              <span class="count">+</span>
-              <a href="#" class="value">Add a record</a>
-            </div>
-          </div>
-
-          <div class="row">
-            <button class="button small">Save changes</button>
-            <button class="button small secondary" data-edit="close">Disable</button>
-            <button class="button small secondary" data-edit="close">Cancel</button>
-            <a href="#" class="right" data-edit="close">Delete this DNS</a>
-          </div>
-        </div> 
-      </div>
-
-      <div class="details-toggler divider">
-        <div class="details-show" data-details="show">  
-          <div class="row">
-            <div class="span-3" data-title="Name">
-              Test2.test.com
-            </div>
-            <div class="span-2" data-title="Status">
-              <span class="label warning">Inactive</span>
-            </div>
-            <div class="span-3" data-title="Contact">
-              <a href="mailto:test@test.com">test@test.com</a>
-            </div>
-            <div class="span-2" data-title="TTL">
-              10,800
-            </div>
-            <div class="span-2" data-title="Min.">
-              10,800
-            </div>
-          </div>
+        <div class="span-55 push-2" data-title="Name">
+          <span class="icon icon-platform-factionbloc"></span>
+          Indra's Test Server
         </div>
+        <div class="span-2" data-title="IP address">
+          1.61.803.398
+        </div>
+        <div class="span-2" data-title="Size">
+          <ul class="dropdown-info">
+            <li><span class="dropdown-info-title">Red Oak</span>
+              <ul>
+                <li class="dropdown-info-title">
+                  Red Oak
+                </li>
+                <li>
+                  <span class="left">vCPUs</span>
+                  <span class="right">6</span>
+                </li>
+                <li>
+                  <span class="left">vRAM</span>
+                  <span class="right">8GB</span>
+                </li>
+                <li>
+                  <span class="left">Storage</span>
+                  <span class="right">160GB</span>
+                </li>
+                <li>
+                  <span class="left">Net Egress</span>
+                  <span class="right">6TB</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="span-2" data-title="Datacenter">
+          100 TB
+        </div>
+      </a>
 
-        <div class="group details-edit" data-details="edit"> 
-          <ul class="heading">
-            <li class="span-3">Test2.test.com</li>
-            <li class="span-2">Type</li>
-            <li class="span-2">Content</li>
-            <li class="span-2">TTL</li>
-            <li class="span-3">Server</li>
-          </ul>  
-          <div class="row">
-            <div class="span-3" data-title="Name">
-              <input value="Test2a.test.com">
-            </div>
-            <div class="span-2" data-title="Status">
-              <select name="type">
-                <option value="a">A</option>
-                <option value="b">B</option>
-              </select>
-            </div>
-            <div class="span-2" data-title="Contact">
-              <input value="52.34.134.200">
-            </div>
-            <div class="span-2" data-title="TTL">
-              <input value="10,800">
-            </div>
-            <div class="span-3 push-2-right" data-title="Min.">
-              <select name="type">
-                <option value="a">Faction Server 1</option>
-              </select>
-              <span class="icon-right icon icon-trash inactive"></span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="span-3" data-title="Name">
-              <input value="Test2b.test.com">
-            </div>
-            <div class="span-2" data-title="Status">
-              <select name="type">
-                <option value="a">A</option>
-                <option value="b">B</option>
-              </select>
-            </div>
-            <div class="span-2" data-title="Contact">
-              <input value="52.34.134.200">
-            </div>
-            <div class="span-2" data-title="TTL">
-              <input value="10,800">
-            </div>
-            <div class="span-3 push-2-right" data-title="Min.">
-              <select name="type">
-                <option value="a">Faction Server 1</option>
-              </select>
-              <span class="icon-right icon icon-trash inactive"></span>
-            </div>
-          </div> 
-          <div class="row">  
-            <div class="span-4 counted">
-              <span class="count">+</span>
-              <a href="#" class="value">Add a record</a>
-            </div>
-          </div>
+      <a class="row" href="infrastructure-details.html">
+        <div class="dropdown-edit has-options">
+          <span class="edit-toggler-icon">&#9660;</span>
+          <ul class="edit-toggler click-through">
+            <li><span>Console Access</span></li>
+            <li><span>View Details</span></li>
+            <li><span>Tickets</span></li>
+            <li><span>Monitoring</span></li>
+            <li><span>Backups</span></li>
+            <li><span>History</span></li>
+            <li><span>Power Off</span></li>
+          </ul>
+        </div>
+        <div class="span-55 push-2" data-title="Name">
+          <span class="icon icon-platform-factionbloc"></span>
+          Win Server w/ SQL 2012
+        </div>
+        <div class="span-2" data-title="IP address">
+          3.141.59.26
+        </div>
+        <div class="span-2" data-title="Size">
+          <ul class="dropdown-info">
+            <li><span class="dropdown-info-title">Dogwood</span>
+              <ul>
+                <li class="dropdown-info-title">
+                  Dogwood
+                </li>
+                <li>
+                  <span class="left">vCPUs</span>
+                  <span class="right">6</span>
+                </li>
+                <li>
+                  <span class="left">vRAM</span>
+                  <span class="right">8GB</span>
+                </li>
+                <li>
+                  <span class="left">Storage</span>
+                  <span class="right">160GB</span>
+                </li>
+                <li>
+                  <span class="left">Net Egress</span>
+                  <span class="right">6TB</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="span-2" data-title="Datacenter">
+          150 TB
+        </div>
+      </a>
 
-          <div class="row">
-            <button class="button small">Save changes</button>
-            <button class="button small secondary" data-edit="close">Disable</button>
-            <button class="button small secondary" data-edit="close">Cancel</button>
-            <a href="#" class="right" data-edit="close">Delete this DNS</a>
-          </div>
-        </div> 
-      </div>
+      <a class="row" href="infrastructure-details.html">
+        <div class="dropdown-edit has-options">
+          <span class="edit-toggler-icon">&#9660;</span>
+          <ul class="edit-toggler click-through">
+            <li><span>Console Access</span></li>
+            <li><span>View Details</span></li>
+            <li><span>Tickets</span></li>
+            <li><span>Monitoring</span></li>
+            <li><span>Backups</span></li>
+            <li><span>History</span></li>
+            <li><span>Power Off</span></li>
+          </ul>
+        </div>
+        <div class="span-55 push-2" data-title="Name">
+          <span class="icon icon-platform-factionbloc"></span>
+          Win R2 2012
+        </div>
+        <div class="span-2" data-title="IP address">
+          0.577.215.66
+        </div>
+        <div class="span-2" data-title="Size">
+          <ul class="dropdown-info">
+            <li><span class="dropdown-info-title">Dogwood</span>
+              <ul>
+                <li class="dropdown-info-title">
+                  Dogwood
+                </li>
+                <li>
+                  <span class="left">vCPUs</span>
+                  <span class="right">6</span>
+                </li>
+                <li>
+                  <span class="left">vRAM</span>
+                  <span class="right">8GB</span>
+                </li>
+                <li>
+                  <span class="left">Storage</span>
+                  <span class="right">160GB</span>
+                </li>
+                <li>
+                  <span class="left">Net Egress</span>
+                  <span class="right">6TB</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="span-2" data-title="Datacenter">
+          200 TB
+        </div>
+      </a>
 
-    </div>
-    <div class="group">
-      <div class="action-handler"> 
-        <a class="button" href="dns-add-step0.html">Add a DNS</a>
-      </div>
-    </div>
+      <a class="row" href="infrastructure-details.html">
+        <div class="dropdown-edit has-options">
+          <span class="edit-toggler-icon">&#9660;</span>
+          <ul class="edit-toggler click-through">
+            <li><span>Console Access</span></li>
+            <li><span>View Details</span></li>
+            <li><span>Tickets</span></li>
+            <li><span>Monitoring</span></li>
+            <li><span>Backups</span></li>
+            <li><span>History</span></li>
+            <li><span>Power Off</span></li>
+          </ul>
+        </div>
+        <div class="span-55 push-2" data-title="Name">
+          <span class="icon icon-platform-factionbloc"></span>
+          AWS i-c4106819
+        </div>
+        <div class="span-2" data-title="IP address">
+          0.577.215.66
+        </div>
+        <div class="span-2" data-title="Size">
+          <ul class="dropdown-info">
+            <li><span class="dropdown-info-title">Aspen</span>
+              <ul>
+                <li class="dropdown-info-title">
+                  Aspen
+                </li>
+                <li>
+                  <span class="left">vCPUs</span>
+                  <span class="right">6</span>
+                </li>
+                <li>
+                  <span class="left">vRAM</span>
+                  <span class="right">8GB</span>
+                </li>
+                <li>
+                  <span class="left">Storage</span>
+                  <span class="right">160GB</span>
+                </li>
+                <li>
+                  <span class="left">Net Egress</span>
+                  <span class="right">6TB</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="span-2" data-title="Datacenter">
+          200 TB
+        </div>
+      </a>
+
+      <a class="row" href="infrastructure-details.html">
+        <div class="dropdown-edit has-options">
+          <span class="edit-toggler-icon">&#9660;</span>
+          <ul class="edit-toggler click-through">
+            <li><span>Console Access</span></li>
+            <li><span>View Details</span></li>
+            <li><span>Tickets</span></li>
+            <li><span>Monitoring</span></li>
+            <li><span>Backups</span></li>
+            <li><span>History</span></li>
+            <li><span>Power Off</span></li>
+          </ul>
+        </div>
+        <div class="span-55 push-2" data-title="Name">
+          <span class="icon icon-platform-factionbloc"></span>
+          AWS i-886f1755
+        </div>
+        <div class="span-2" data-title="IP address">
+          0.577.215.66
+        </div>
+        <div class="span-2" data-title="Size">
+          <ul class="dropdown-info">
+            <li><span class="dropdown-info-title">Hemlock</span>
+              <ul>
+                <li class="dropdown-info-title">
+                  Hemlock
+                </li>
+                <li>
+                  <span class="left">vCPUs</span>
+                  <span class="right">6</span>
+                </li>
+                <li>
+                  <span class="left">vRAM</span>
+                  <span class="right">8GB</span>
+                </li>
+                <li>
+                  <span class="left">Storage</span>
+                  <span class="right">160GB</span>
+                </li>
+                <li>
+                  <span class="left">Net Egress</span>
+                  <span class="right">6TB</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="span-2" data-title="Datacenter">
+          200 TB
+        </div>
+      </a>
+
+      <a class="row" href="infrastructure-details.html">
+        <div class="dropdown-edit has-options">
+          <span class="edit-toggler-icon">&#9660;</span>
+          <ul class="edit-toggler click-through">
+            <li><span>Console Access</span></li>
+            <li><span>View Details</span></li>
+            <li><span>Tickets</span></li>
+            <li><span>Monitoring</span></li>
+            <li><span>Backups</span></li>
+            <li><span>History</span></li>
+            <li><span>Power Off</span></li>
+          </ul>
+        </div>
+        <div class="span-55 push-2" data-title="Name">
+          <span class="icon icon-platform-factionbloc"></span>
+          AWS i-c4106819
+        </div>
+        <div class="span-2" data-title="IP address">
+          0.577.215.66
+        </div>
+        <div class="span-2" data-title="Size">
+          <ul class="dropdown-info">
+            <li><span class="dropdown-info-title">Aspen</span>
+              <ul>
+                <li class="dropdown-info-title">
+                  Aspen
+                </li>
+                <li>
+                  <span class="left">vCPUs</span>
+                  <span class="right">6</span>
+                </li>
+                <li>
+                  <span class="left">vRAM</span>
+                  <span class="right">8GB</span>
+                </li>
+                <li>
+                  <span class="left">Storage</span>
+                  <span class="right">160GB</span>
+                </li>
+                <li>
+                  <span class="left">Net Egress</span>
+                  <span class="right">6TB</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="span-2" data-title="Datacenter">
+          200 TB
+        </div>
+      </a>
+   </div>      
   </div>
-
+  
+<!-- END DNS SUB TAB -->
+ 
+ 
   <div class="sub-plate-tab" data-sub-plate="gateway">
     <div class="group">
       <ul class="heading">
@@ -302,11 +431,6 @@
       </div>
 
     </div>
-    <div class="group">
-      <div class="action-handler"> 
-        <a class="button" href="#">Add a Load Balancer</a>
-      </div>
-    </div>
   </div>
 
   <div class="sub-plate-tab" data-sub-plate="vpn">
@@ -331,12 +455,6 @@
         <div class="span-3" data-title="Type">
           Example Type
         </div>
-      </div>
-    </div>
-
-    <div class="group">
-      <div class="action-handler"> 
-        <a class="button" href="#">Add a VPN</a>
       </div>
     </div>
   </div>

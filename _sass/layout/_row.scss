@@ -1,11 +1,10 @@
-
-
 .row {
     @include clearfix;
     @include plate-line;
     padding-top: $small-spacing/2;
     padding-bottom: $small-spacing;
     position: relative;
+    display: block;
 
     .is-edit & {
         border-bottom: 1px solid $plate-higlight;
@@ -114,4 +113,50 @@
             padding-top: $small-spacing;
         }
     }
+}
+  
+.row.is-highlighted,
+a.row:hover {
+  background: $plate-blue;
+  top: calc(-.375em - 1px);
+  padding-top: $small-spacing;
+  left: -$base-spacing;
+  padding-right: $base-spacing;
+  width: calc(100% + #{$base-spacing*2});
+  border-top: 1px solid $plate-higlight;
+  border-bottom: 1px solid $plate-higlight !important;
+  padding-left: $base-spacing;
+
+  & + .row {
+    margin-top: calc(-.375em - 1px);
+  }
+  
+  &:last-child {
+    margin-bottom: -.5em;
+  }
+}
+
+	
+.heading { 
+    @include clearfix;
+    @include plate-line;
+    color: $dark-gray;
+    font-weight: bold;
+    border-width: 2px;
+
+    .is-edit & {
+        border-bottom: 1px solid $plate-higlight;
+    }
+
+  .sub-plate-tab & {
+    font-weight: normal;
+    font-size: .75em;
+    color: $gray;
+    padding-bottom: $small-spacing;
+  }
+}
+
+.sub-plate-tab .group .heading li {
+    position: relative;
+    top: -1em;
 }

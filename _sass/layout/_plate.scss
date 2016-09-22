@@ -1,6 +1,6 @@
 .plate { 
 	@include clearfix;
-	padding: $base-spacing;
+	padding: $small-spacing;
 	margin: 0 $small-spacing $small-spacing;
 	position: relative;
 	box-shadow: 0 0 2px 0 rgba(0,0,0,.025);
@@ -95,19 +95,7 @@
 	    text-align: center;
 	    position: relative;
 	    top: -10px;
-	 }
-	
-	.heading { 
-		@include clearfix;
-		@include plate-line;
-		color: $dark-gray;
-    	font-weight: bold;
-        border-width: 2px;
-    
-        .is-edit & {
-            border-bottom: 1px solid $plate-higlight;
-        }
-	}	
+	 }	
 
 	.details-toggler {
 	    @include transition(all .2s);
@@ -584,7 +572,7 @@
     .tabs {
         display: block;
         text-align: center;
-        margin-top: -3.65em;
+        margin-top: -2.9em;
         white-space: nowrap;
         position: relative;
         bottom: -2px;
@@ -641,7 +629,8 @@
 
 		.sub-tabs {
 			display: block;
-			text-align: center;
+			text-align: right;
+            font-weight: bold;
 			white-space: nowrap;
      		position: relative;
       		bottom: -2px;
@@ -671,14 +660,19 @@
 				cursor: pointer;
 				margin-bottom: -2px;
 
-        	@include media($medium-screen) {
-          		&:hover { background: shade(#F9F7F5, 5); }
-        		}
+                @include media($medium-screen) {
+                    &:hover { background: shade(#F9F7F5, 5); }
+                    &.data-sub-description:hover { 
+                      background: transparent; 
+                      cursor: text;
+                    }
+                }
 
 				&.sub-active { 
 					cursor: default;
           			position: relative;
           			border-bottom: 1px solid transparent;
+                    color: $red;
           
 			        &:after {
 			            content: '';
@@ -758,10 +752,6 @@
 					width: 100%;
 					padding: $small-spacing/4 0;
 				}
-
-				.push-2 {
-    				padding-left: 2em !important;
-    			}
 
     			&first-child { padding-top: 0; }
 

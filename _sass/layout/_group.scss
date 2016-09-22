@@ -1,6 +1,7 @@
 //group heading line
-	
-.heading { 
+
+.goup {
+  .heading { 
     @include clearfix;
     @include plate-line;
     color: $dark-gray;
@@ -9,4 +10,8 @@
     .is-edit & {
         border-bottom: 2px solid $plate-higlight;
     }
+  }
 }
+
+
+.group + .plate.tabbed { margin-top: 4.35em; }
