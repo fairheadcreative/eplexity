@@ -135,14 +135,14 @@ a.row:hover {
     margin-bottom: -.5em;
   }
 }
-
 	
 .heading { 
-    @include clearfix;
-    @include plate-line;
-    color: $dark-gray;
-    font-weight: bold;
-    border-width: 2px;
+  @include clearfix;
+  @include plate-line;
+  color: $dark-gray;
+  font-weight: bold;
+  border-width: 2px;
+  line-height: 1;
 
     .is-edit & {
         border-bottom: 1px solid $plate-higlight;
@@ -160,3 +160,5 @@ a.row:hover {
     position: relative;
     top: -1em;
 }
+
+.edit-highlighted { color: darken($plate-higlight, 30); }

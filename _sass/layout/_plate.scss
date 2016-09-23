@@ -81,21 +81,7 @@
           background-image: url('../images/icon-#{$other}.png');
         }
       }
-    }
-
-  	.ticket-unread:after {
-	    content: '1';
-	    background: $red;
-	    color: white;
-	    border-radius: $border-radius-round;
-	    width: 1.4em;
-	    height: 1.4em;
-	    display: inline-block;
-	    font-size: .7em;
-	    text-align: center;
-	    position: relative;
-	    top: -10px;
-	 }	
+    }	
 
 	.details-toggler {
 	    @include transition(all .2s);
@@ -317,62 +303,6 @@
 		& + .heading { margin-top: $small-spacing; }
 	}
 
-	.ticket {
-		border-radius: $base-border-radius;
-    margin-right: -1.5em;
-    margin-top: -1.5em;
-    padding-top: 1.5em;
-		@include clearfix;
-
-		.ticket-message {			
-			margin-bottom: $base-spacing;
-      border-radius: $base-border-radius;
-      width: auto;
-     
-			&.user,
-			&.admin {
-        clear: both;
-			}
-
-      &.admin {
-        background: $bright-gray;
-      }
-
-      &.user {
-        background: $green;
-        color: white;
-				float: right;	
-
-				.msg-info {
-          text-align: right;
-          
-          time { opacity: .7; }
-        } 
-			}
-
-      .msg-info {
-        font-size: .7em;
-        padding: 1em 1em 0;
-        
-        time { opacity: .4; }
-      }
-
-      .msg-text {
-        padding: 0.3em 0.75em 0.75em;
-      }
-
-			&.image {
-				@include span-columns(5);
-
-				.image-placeholder {
-					height: 140px;
-					width: 100%;
-					background: $secondary-background-color;
-				}
-			}
-		}
-	}
-
 	.step-counter { 
 		text-align: center;
 
@@ -391,36 +321,6 @@
 	.step-right {
 		text-align: right;
 		float: right;
-	}
-
-	.ticket-post {
-    	background: $bright-blue;
-		@include clearfix;
-		margin-bottom: $small-spacing;
-		padding-top: $base-spacing;
-		border-top: 1px solid $base-border-color;
-    	margin: 0 -1.5em -1.5em;
-    	padding: 0.5em 0.5em 0.5em;
-    	height: 57px;
-
-	    form {
-	      position: relative;
-	    }
-
-	    input[type="text"] {
-	      height: 40px;
-	      padding-right: 75px;
-	    }
-
-	    .button.small,
-	    button.small {
-	      height: 34px;
-	      position: absolute;
-	      top: 3px;
-	      right: 3px;
-	      border-radius: 2px;
-	      padding-top: .8em;
-	    }
 	}
 
 	.row-title { 
@@ -475,29 +375,35 @@
 	        }
 
 	        ul { 
+              @extend .toggler-visual;
 	          @include media($medium-screen) { 
 	            display: none;
 	            background: white;
 	            position: absolute;
 	            z-index: 10;
-	            right: 0;
+	            right: -3px;
 	            margin-top: 3px;
-	            border: 1px solid $base-border-color;
+	            top: -.375em;
 	            border-radius: 0 0 $base-border-radius $base-border-radius;
+                text-align: left;
+                padding: .375em;
 
 	            li {
 	            	display: block; 
-	            	border-bottom: 1px solid $base-border-color;
+	            	//border-bottom: 1px solid $base-border-color;
+	               &:hover { 
+                      color: $red;
+                      background: transparent;
+                    }
 
 	            	&:last-child { border-bottom: none; }
 	              	&.active { 
 	            		border: none; 
-	                	background: $medium-gray;
-	                	color: white;
+	                	background: transparent;
+	                	color: $gray;
 	                	border-radius: 0;
 
 	                	&:after { display: none; }
-	                	&:hover { background: $medium-gray; }
 	            	}
             	}
           	}
@@ -763,14 +669,6 @@
     			}
 			}
 		}
-	}
-}
-
-.chat .plate {
-	.ticket {
-		height: calc(100vh - 230px);
-		overflow-y: scroll;
-		padding-right: $base-spacing;
 	}
 }
 

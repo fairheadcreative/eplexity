@@ -1,24 +1,32 @@
 ---
 layout: layout
-title: Sensible Server Title
+title: Server Details
 title-edit: true
 lead: This server belongs to the <a href="/">DC00036</a> platform. From here you can adjust the server <br class="desktop-brek"> configuration, and review server performance history.
 class: item-edit infrastructure pars-uri
 ---
-
+ 
+<div class="group">
+  <div class="action-handler" data-plate="tickets"> 
+    <a class="button" href="ticket-add-step1.html">Add a Ticket</a>
+  </div>
+</div>
+  
 <section class="plate tabbed">
   <ul class="tabs">
     <li data-tab="access">Access</li>
     <li data-tab="specs" class="active">Specs</li>
+    <li data-tab="tickets">Tickets</li>
     <li data-tab="monitoring">Monitoring</li>
-    <li data-tab="images">Images</li>
+    <!--<li data-tab="images">Images</li>-->
     <li class="settings"><div class="icon-settings"><span><em></em></span></div><strong>Settings</strong>
       <ul>
-        <li data-tab="settings-power">Power</li>
-        <li data-tab="settings-rename">Rename</li>
-        <li data-tab="settings-backups">Backups</li>
+        <li data-tab="settings-power">Turn Server Off</li>
+        <li data-tab="settings-rename">Rename Server</li>
         <li data-tab="settings-history">History</li>
-        <li data-tab="settings-destroy">Destroy</li>
+        <li data-tab="settings-remove">Remove Server</li>
+        <li data-tab="settings-backups">Managed Backups</li>
+        <li data-tab="settings-monitoring">Monitoring</li>
       </ul>
     </li>
   </ul>
@@ -31,16 +39,20 @@ class: item-edit infrastructure pars-uri
     {% include subpage/infrastructure-details-tab-specs.html %}
   </div>
 
+  <div class="plate-tab" data-plate="tickets">
+    {% include subpage/infrastructure-details-tab-tickets.html %}
+  </div>
+
   <div class="plate-tab" data-plate="monitoring">
     {% include subpage/infrastructure-details-tab-monitoring.html %}
   </div>
-
+<!--
   <div class="plate-tab" data-plate="images">
     <div class="group">
       {% include subpage/infrastructure-details-tab-images.html %}
     </div>
   </div>
-
+-->
   {% include subpage/infrastructure-details-tab-settings.html %}
 
 </section>

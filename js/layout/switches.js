@@ -1,5 +1,36 @@
 $(function() {
 
+//pickup url parameters and apply to parts of a page  
+  if ($('body.pars-uri').length) {
+       
+    function GetURLParameter(stringParam) {
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == stringParam) {
+          return sParameterName[1];
+        }
+      }
+    }
+    
+    //pick up and apply server name
+    var serverString = GetURLParameter('serverName');
+    var serverName = decodeURIComponent(serverString);
+    if (typeof serverString != 'undefined') {
+        $('.site-title.editable #serverTitle').attr('value', serverName);
+      }  
+    
+    //pick up and apply active tab
+    var activeTabString = GetURLParameter('activeTab');
+    var activeTab = decodeURIComponent(activeTabString);
+    if (typeof activeTabString != 'undefined') {
+        $('[data-tab]').removeClass('active');
+        $('[data-tab="'+activeTab+'"]').addClass('active');
+      }    
+    
+    };
+
 //toggle tabs
 
   var plateContent = $('[data-plate]'),
