@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     concat: {   
       dist: {
         src: [
-          'js/libs/jquery.min.js',
+          'js/libs/*.js',
           'js/layout/*.js'
         ],
         dest: 'js/production.js',

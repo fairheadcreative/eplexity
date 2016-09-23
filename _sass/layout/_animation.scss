@@ -1,0 +1,71 @@
+//fade in on load
+@keyframes fadein {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+//cross color
+@keyframes bgColor {
+    0% { background: $bright-gray; }
+    50% { background: $bright-gray; }
+    70% { background: $dark-gray; }
+}
+
+@-moz-keyframes bgColor {
+    0% { background: $bright-gray; }
+    50% { background: $bright-gray; }
+    70% { background: $dark-gray; }
+}
+
+@-webkit-keyframes bgColor {
+    0% { background: $bright-gray; }
+    50% { background: $bright-gray; }
+    70% { background: $dark-gray; }
+}
+
+@-ms-keyframes bgColor {
+    0% { background: $bright-gray; }
+    50% { background: $bright-gray; }
+    70% { background: $dark-gray; }
+}
+
+@-o-keyframes bgColor {
+    0% { background: $bright-gray; }
+    50% { background: $bright-gray; }
+    70% { background: $dark-gray; }
+}
+
+.page-content,
+.site-title,
+.page-lead {
+  -webkit-animation: fadein .75s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein .75s; /* Firefox < 16 */
+        -ms-animation: fadein .75s; /* Internet Explorer */
+         -o-animation: fadein .75s; /* Opera < 12.1 */
+            animation: fadein .75s;
+}
