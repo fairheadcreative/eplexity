@@ -1,198 +1,104 @@
 ---
 layout: layout
-title: OK. First, let's choose an image
+title: OK. Now choose a server size
+lead: This will determine how much of the cloud platform this server lives on will consume. <br class="desktop-beak">If you choose a server that's larger than the cloud platform it lives on, we'll bump up the <br class="desktop-beak">size of your cloud platform to handle it.
 class: blocks
 ---
 
-<section class="actions">
-  <div class="action-info">
-    <p>Description about what an image is. This information will help inform the user as to whether to choose a distro, app or snapshot to start their server.</p>
-  </div>
-</section>
+<section class="plate">
 
-<section class="plate tabbed">
-  <ul class="tabs">
-    <li data-tab="distros" class="active">Distros</li>
-    <li data-tab="apps">Apps</li>
-    <li data-tab="images">Images</li>
-  </ul>
-
-  <div class="plate-tab" data-plate="distros">
     <div class="group">
+     
       <ul class="heading">
-        <li class="span-4 push-2">Name</li>
-        <li class="span-4">Description</li>
+        <li class="span-3 push-2">Name</li>
+        <li class="span-1">vCPUS</li>
+        <li class="span-1">vRAM</li>
+        <li class="span-1">Storage</li>
+        <li class="span-2">Net Egress</li>
+        <li class="span-1">Ver</li>
+        <li class="span-3">Monthly Charge</li>
       </ul>
+      
       <div class="row">
-        <div class="span-4 push-2"><span class="icon icon-distro-fedora"></span> Fedora</div>
-        <div class="span-4">Description</div>
-        <div class="span-4">
+        <div class="span-3 push-2"><span class="icon icon-distro-fedora"></span>Shrubbery</div>
+        <div class="span-1">1</div>
+        <div class="span-1">1GB</div>
+        <div class="span-1">30GB</div>
+        <div class="span-2">2TB</div>
+        <div class="span-1">7</div>
+        <div class="span-1">50USD</div>
+        <div class="span-2 txt-right">
           <form action="infrastructure-add-step2.html">
-            <select name="version" onchange="this.form.submit()">
-              <option value="">Select a version</option>
-              <option value="yarrow">Yarrow</option>
-              <option value="tettnang">Tettnang</option>
-            </select>            
+            <input type="hidden" name="bloc" value="a">
+            <input type="submit" class="button small" value="Select">
           </form>
         </div>
       </div>
+      
       <div class="row">
-        <div class="span-4 push-2"><span class="icon icon-distro-freebsd"></span> FreeBSD</div>
-        <div class="span-4">Description</div>
-        <div class="span-4">
+        <div class="span-3 push-2"><span class="icon icon-distro-fedora"></span>Dogwood</div>
+        <div class="span-1">2</div>
+        <div class="span-1">2GB</div>
+        <div class="span-1">40GB</div>
+        <div class="span-2">3TB</div>
+        <div class="span-1">2</div>
+        <div class="span-1">70USD</div>
+        <div class="span-2 txt-right">
           <form action="infrastructure-add-step2.html">
-            <select name="version" onchange="this.form.submit()">
-              <option value="">Select a version</option>
-              <option value="102">10.2</option>
-              <option value="92">9.2</option>
-            </select>            
+            <input type="hidden" name="bloc" value="a">
+            <input type="submit" class="button small" value="Select">
           </form>
         </div>
       </div>
+      
       <div class="row">
-        <div class="span-4 push-2"><span class="icon icon-distro-ubuntu"></span> Ubuntu</div>
-        <div class="span-4">Description</div>
-        <div class="span-4">
+        <div class="span-3 push-2"><span class="icon icon-distro-fedora"></span>Aspen</div>
+        <div class="span-1">4</div>
+        <div class="span-1">2GB</div>
+        <div class="span-1">60GB</div>
+        <div class="span-2">4TB</div>
+        <div class="span-1">7</div>
+        <div class="span-1">200USD</div>
+        <div class="span-2 txt-right">
           <form action="infrastructure-add-step2.html">
-            <select name="version" onchange="this.form.submit()">
-              <option value="">Select a version</option>
-              <option value="hoary">15.10</option>
-              <option value="warty">14.04.3</option>
-            </select>            
+            <input type="hidden" name="bloc" value="a">
+            <input type="submit" class="button small" value="Select">
           </form>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="plate-tab" data-plate="apps">
-    <div class="group">
-      <ul class="heading">
-        <li class="span-4 push-2">Name</li>
-        <li class="span-4">Description</li>
-      </ul>
+      
       <div class="row">
-        <div class="span-4 push-2"><span class="icon icon-app-redis"></span> Redis</div>
-        <div class="span-4">Description</div>
-        <div class="span-4">
+        <div class="span-3 push-2"><span class="icon icon-distro-fedora"></span>Hemlock</div>
+        <div class="span-1">8</div>
+        <div class="span-1">4GB</div>
+        <div class="span-1">80GB</div>
+        <div class="span-2">5TB</div>
+        <div class="span-1">2</div>
+        <div class="span-1">240USD</div>
+        <div class="span-2 txt-right">
           <form action="infrastructure-add-step2.html">
-            <select name="version" onchange="this.form.submit()">
-              <option value="">Select a version</option>
-              <option value="warty">4.4.1</option>
-              <option value="hoary">4.4.0</option>
-            </select>            
+            <input type="hidden" name="bloc" value="a">
+            <input type="submit" class="button small" value="Select">
           </form>
         </div>
       </div>
+      
       <div class="row">
-        <div class="span-4 push-2"><span class="icon icon-app-phpmyadmin"></span> PHPMyAdmin</div>
-        <div class="span-4">Description</div>
-        <div class="span-4">
+        <div class="span-3 push-2"><span class="icon icon-distro-fedora"></span>Red Oak</div>
+        <div class="span-1">16</div>
+        <div class="span-1">8GB</div>
+        <div class="span-1">160GB</div>
+        <div class="span-2">6TB</div>
+        <div class="span-1">7</div>
+        <div class="span-1">400USD</div>
+        <div class="span-2 txt-right">
           <form action="infrastructure-add-step2.html">
-            <select name="version" onchange="this.form.submit()">
-              <option value="">Select a version</option>
-              <option value="warty">4.4.1</option>
-              <option value="hoary">4.4.0</option>
-            </select>            
+            <input type="hidden" name="bloc" value="a">
+            <input type="submit" class="button small" value="Select">
           </form>
         </div>
       </div>
-      <div class="row">
-        <div class="span-4 push-2"><span class="icon icon-app-nodejs"></span> Node.js</div>
-        <div class="span-4">Description</div>
-        <div class="span-4">
-          <form action="infrastructure-add-step2.html">
-            <select name="version" onchange="this.form.submit()">
-              <option value="">Select a version</option>
-              <option value="warty">4.4.1</option>
-              <option value="hoary">4.4.0</option>
-            </select>            
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span-4 push-2"><span class="icon icon-app-wordpress"></span> WordPress</div>
-        <div class="span-4">Description</div>
-        <div class="span-4">
-          <form action="infrastructure-add-step2.html">
-            <select name="version" onchange="this.form.submit()">
-              <option value="">Select a version</option>
-              <option value="warty">4.4.1</option>
-              <option value="hoary">4.4.0</option>
-            </select>            
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span-4 push-2"><span class="icon icon-app-rubyonrails"></span> Ruby on Rails</div>
-        <div class="span-4">Description</div>
-        <div class="span-4">
-          <form action="infrastructure-add-step2.html">
-            <select name="version" onchange="this.form.submit()">
-              <option value="">Select a version</option>
-              <option value="warty">5.0.0</option>
-              <option value="warty">4.2.0</option>
-              <option value="hoary">4.1.0</option>
-            </select>            
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="plate-tab" data-plate="images">
-    <div class="group">
-      <ul class="heading">
-        <li class="span-2">Image</li>
-        <li class="span-2">Type</li>
-        <li class="span-1">Public</li>
-        <li class="span-2">Protected</li>
-        <li class="span-2">Format</li>
-        <li class="span-3">Size</li>
-      </ul>
-      <div class="row">
-        <div class="span-2">Build</div>
-        <div class="span-2">Snapshot</div>
-        <div class="span-1">No</div>
-        <div class="span-2">No</div>
-        <div class="span-2">QCOW2</div>
-        <div class="span-1">33.3GB</div>
-        <div class="span-2">
-          <form action="infrastructure-add-step2.html">
-            <input type="hidden" value="build" name="image">
-            <input type="submit" value="Select" class="button small">
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span-2">Production</div>
-        <div class="span-2">Snapshot</div>
-        <div class="span-1">No</div>
-        <div class="span-2">No</div>
-        <div class="span-2">QCOW2</div>
-        <div class="span-1">33.3GB</div>
-        <div class="span-2">
-          <form action="infrastructure-add-step2.html">
-            <input type="hidden" value="production" name="image">
-            <input type="submit" value="Select" class="button small">
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span-2">Ubuntu-PWAuth</div>
-        <div class="span-2">Snapshot</div>
-        <div class="span-1">No</div>
-        <div class="span-2">No</div>
-        <div class="span-2">QCOW2</div>
-        <div class="span-1">33.3GB</div>
-        <div class="span-2">
-          <form action="infrastructure-add-step2.html">
-            <input type="hidden" value="ubuntu" name="image">
-            <input type="submit" value="Select" class="button small">
-          </form>
-        </div>
-      </div>
-    </div>
+      
   </div>
 
 </section>

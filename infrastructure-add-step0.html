@@ -1,46 +1,32 @@
 ---
 layout: layout
-title: Which platform are we creating this server on?
+title: Ok. First, let's choose an image
+lead: An image gets you up and running without having to configure the same thing over and <br class="desktop-beak">over again. Think of it as a complete clone of a Hard Disk and Operating System.
 class: section
 ---
 
-<section class="actions">
-  <div class="action-info">
-    <p>Description about what an image is. This information will help inform the user as to whether to choose a distro, app or snapshot to start their slice.</p>
+<section class="plate tabbed">
+  <ul class="tabs">
+    <li data-tab="images" class="active">Images</li>
+    <li data-tab="applications">Applications</li>
+    <li data-tab="snapshots">Snapshots</li>
+    <li data-tab="search">Search</li>
+  </ul>
+  
+  <div class="plate-tab" data-plate="images">
+   {% include subpage/infrastructure-add-tab-images.html %}    
   </div>
-</section>
-
-<section class="plate">
-  <div class="group">
-    <ul class="heading">
-      <li class="span-4 push-2">Name</li>
-      <li class="span-8">Specs</li>
-    </ul>
-    <div class="row">
-      <div class="span-4 push-2" data-title="Name"><span class="icon icon-platform-factionbloc"></span>Faction Bloc A</div>
-      <div class="span-6" data-title="Specs">Specs</div>
-      <div class="span-2">
-        <form action="infrastructure-add-step1.html">
-          <input type="hidden" name="bloc" value="a">
-          <input type="submit" class="button small" value="Select">
-        </form>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span-4 push-2" data-title="Name"><span class="icon icon-platform-factionbloc"></span>Faction Bloc B</div>
-      <div class="span-6" data-title="Specs">Specs</div>
-      <div class="span-2">
-        <form action="infrastructure-add-step1.html">
-          <input type="hidden" name="bloc" value="b">
-          <input type="submit" class="button small" value="Select">
-        </form>
-      </div>
-    </div>
+  
+  <div class="plate-tab" data-plate="applications">
+   {% include subpage/infrastructure-add-tab-applications.html %}    
   </div>
-</section>
-
-<section class="actions">
-  <div class="action-handler">
-    <p>Want to add a server to a different platform? Let’s first <a href="platform-add-step1.html">add that platform to the application.</a></p>
+  
+  <div class="plate-tab" data-plate="snapshots">
+   {% include subpage/infrastructure-add-tab-snapshots.html %}    
   </div>
+  
+  <div class="plate-tab" data-plate="search">
+   {% include subpage/infrastructure-add-tab-search.html %}    
+  </div>
+  
 </section>
