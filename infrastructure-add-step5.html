@@ -1,31 +1,23 @@
 ---
 layout: layout
-title: How many slices like this do you want?
+title: Name your new server
+lead: This name will be used throughout the Eplexity CXOS interface. We recommend keeping <br class="desktop-break">it short an sweet, so that it's easy to identify in the future.
+progress: 90
 class: item-edit infrastructure
 ---
 
-<section class="actions">
-  <div class="action-info">
-    <p>Explanation text</p>
-  </div>
-</section>
-
 <section class="plate plate-small">
-  <div class="step-counter">
-    <div class="row">
-      <span class="button small secondary decrement">-</span>
-      <span class="counter-text">
-        <span class="item-count">Just one</span><span class="item-type"> Slice</span>
-      </span>
-      <span class="button small secondary increment">+</span>
-    </div>
+  <label>Server name:</label>
+  <input type="text" placeholder="Type your server name here" value="Faction Server 1">
+  <span class="icon-rounded icon-regular">&times;</span>
 </section>
 
 <section class="actions">
   <div class="action-handler">
-    <form action="infrastructure-add-step6.html">
-      <input type="submit" value="Continue">
-      <input type="hidden" name="quantity" value="1"> 
+    <form action="infrastructure-add-success.html">
+      <input type="submit" value="Complete Server">
+      <button class="button secondary">Add another just like this one</button>
+      <input type="hidden" name="quantity" value="Faction Server 1"> 
     </form>
   </div>
 </section>

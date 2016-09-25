@@ -98,16 +98,24 @@
   }
 }
 
-.icon-rounded.icon-highlighted {
-    display: inline-block;
-    width: 1.2em;
-    height: 1.2em;
-    background: darken($plate-higlight, 10);
-    border-radius: 50%;
-    color: $plate-blue;
-    font-weight: bold;
-    font-size: 1.1em;
-    text-align: center;
-    cursor: pointer;
-    line-height: 1.25;
+.icon-rounded {
+      display: inline-block;
+      width: 1.2em;
+      height: 1.2em;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-align: center;
+      cursor: pointer;
+      line-height: 1.25;
+  
+    &.icon-highlighted {
+      background: darken($plate-higlight, 10);
+      color: $plate-blue;
+  }
+  
+    &.icon-regular {
+      background: lighten($gray, 10);
+      color: $white;
+  }
 }

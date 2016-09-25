@@ -1,3 +1,4 @@
+//dropdown menu that works with down arrows
 .toggler-visual {
   transition: all $base-duration;
   padding: $small-spacing/2 $small-spacing;
@@ -9,4 +10,20 @@
   position: absolute;
   display: inline-block;
   white-space: nowrap;
+}
+
+//remove input type text styling in order for it to appear as regular text
+.unfielded {
+  border: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  display: inline !important;
+}
+
+//truncate text 
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

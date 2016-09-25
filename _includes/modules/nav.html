@@ -1,5 +1,5 @@
 {% unless page.navigation == false %}
-<nav role="navigation">
+<nav class="nav-main" role="navigation">
   <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
     <li class="nav-link logo">
         <a href="index.html" class="icon">&nbsp;</a>
@@ -20,6 +20,9 @@
     <li class="signout divider"><a href="#">Sign out</a></li>
     {% endunless %}
   </ul>
+  {% if page.progress %}
+  <div class="step-progress" style="width:{{ page.progress }}%;"></div>
+  {% endif %}
 </nav>
 
 {% endunless %}

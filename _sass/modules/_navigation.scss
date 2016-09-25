@@ -1,4 +1,4 @@
-nav {
+.nav-main {
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
   $centered-navigation-background: $light-gray;
@@ -150,19 +150,26 @@ nav {
           background: $action-color; 
         }
       }
-
+  }
+  
+  //step progress line
+  .step-progress {
+    position: absolute;
+    left: 0;
+    height: 4px;
+    background: $red;
   }
 }
 
 //select navigation items relative to active page
 
-.platform .platform a,
-.infrastructure .infrastructure a,
-.marketplace .marketplace a,
-.tickets .tickets a,
-.billing .billing a,
-.clients .reseller-clients a,
-.products .reseller-products a,
-.user .user a {
+.platform .nav-main .platform a,
+.infrastructure .nav-main .infrastructure a,
+.marketplace .nav-main .marketplace a,
+.tickets .nav-main .tickets a,
+.billing .nav-main .billing a,
+.clients .nav-main .reseller-clients a,
+.products .nav-main .reseller-products a,
+.user .nav-main .user a {
   color: $medium-gray;
 }

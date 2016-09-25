@@ -102,11 +102,13 @@ $(function() {
     fieldValToggler.passValues();
   });
   
+  //scale down various input fields to fit tex size
   function resizeInput() {
     $(this).attr('size', $(this).val().length);
   }
 
   titleField.keyup(resizeInput).each(resizeInput);
+  $('.unfielded').each(resizeInput);
   
   //show row dropdown
   $('.dropdown-edit').on('click', function(event){

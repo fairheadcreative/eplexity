@@ -6,12 +6,17 @@
     @include plate-line;
     color: $dark-gray;
     font-weight: 500;
+    
+    .sub-value {
+      color: $gray;
+      font-size: .9em;
+      font-weight: 500;
+    }
 
     .is-edit & {
         border-bottom: 2px solid $plate-higlight;
     }
   }
 }
-
 
 .group + .plate.tabbed { margin-top: 4.35em; }
