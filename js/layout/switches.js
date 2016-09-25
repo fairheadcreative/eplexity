@@ -27,6 +27,17 @@ $(function() {
     if (typeof activeTabString != 'undefined') {
         $('[data-tab]').removeClass('active');
         $('[data-tab="'+activeTab+'"]').addClass('active');
+      }  
+    
+    //check if, and apply AWS tab
+    var AWSString = GetURLParameter('AWS');
+    var AWS = decodeURIComponent(AWSString);
+    if (typeof AWSString != 'undefined') {
+        $('[data-aws="true"]').show();
+        $('[data-aws="false"]').hide();
+      }else{
+        $('[data-aws="true"]').hide();
+        $('[data-aws="false"]').show();
       }    
     
     };
