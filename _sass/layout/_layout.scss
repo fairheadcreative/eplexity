@@ -1,12 +1,13 @@
 @import
   "extendables",
+  "animation",
   "plate",
   "row",
   "group",
   "actions",
   "details",
   "tickets",
-  "animation",
+  "marketplace",
   "header"
 ;
 
@@ -52,12 +53,15 @@
 .span-4 { @include span-columns(4); }
 .span-5 { @include span-columns(5); }
 .span-55 { @include span-columns(5.5); }
-.span-6 { @include span-columns(6); }
+.span-6 { @include span-columns(6); @include omega(2n); }
 .span-7 { @include span-columns(7); }
 .span-8 { @include span-columns(8); }
 .span-9 { @include span-columns(9); }
 .span-10 { @include span-columns(10); }
 .span-11 { @include span-columns(11); }
+.span-12 { @include span-columns(12); }
+.fill-parent { @include fill-parent(); }
+.omega { @include omega(); }
 
 .push-1 { padding-left: $base-spacing; }
 .push-2 { 

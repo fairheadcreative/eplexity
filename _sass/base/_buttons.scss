@@ -69,6 +69,19 @@ button.small {
   }
 }
 
+.button.black {
+  background: $black;
+  color: $white;
+  width: 100%;
+  text-align: center;
+  border: none;
+
+  &:hover {
+    background: lighten($black, 30);
+    border: none;
+  }
+}
+
 .button.expand {
   width: 100%;
   text-align: center;
