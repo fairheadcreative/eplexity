@@ -1,4 +1,6 @@
 .marketplace {  
+  
+  .page-content { max-width: 780px; }
 
   .plate { 
     border: $base-border;
@@ -8,15 +10,15 @@
       background: transparent;
       border: none;
       border-bottom: $base-border;
-      padding: 1.1em 3.8em .75em;
+      padding: 1.1em 0 .75em;
       box-shadow: none;
       
       .span-6 {
-        padding-right: $base-spacing/5;
+        padding-right: $base-spacing/6;
         
         &:nth-child(2n) {
           padding-right: 0;
-          padding-left: $base-spacing/5;
+          padding-left: $base-spacing/6;
         }
       }
     }
@@ -164,7 +166,55 @@
   }
 }
 
+.smallnote {
+  font-size: .9em;
+}
+
 .marketplace-item {
   border-left: $base-border;
-  padding: 0 $base-spacing;
+  padding: 0 0 0 $base-spacing;
+  
+  h2 {
+    font-weight: 500;
+    font-size: 1.55em;
+    margin-bottom: .5em;
+  }
+  
+  p { 
+    font-size: .85em; 
+    margin-bottom: 1em;
+  }
+  
+  .price-additional {
+    color: $gray;
+    text-transform: uppercase;
+  }
+  
+  .product-header {
+    .span-6:first-child {
+      border-bottom: $base-border;
+      
+      form { margin-bottom: .75em; }
+      
+      [class^="span-"] {
+        line-height: 1.2;
+        
+        img { width: 37px; }
+      }
+    }    
+  }
+  
+  .product-information {
+    padding-top: 1em;
+    
+    h3 { font-size: .9em; }
+    
+    p { color: $gray; }
+  }
+}
+
+.marketplace-review-item {
+  @include outer-container();
+  border-bottom: $base-border;
+  
 }

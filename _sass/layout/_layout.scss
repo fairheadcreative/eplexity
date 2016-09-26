@@ -11,6 +11,14 @@
   "header"
 ;
 
+html {
+  background: $dark-gray;
+}
+
+body {
+  background: $body-gray;
+}
+
 .page-content {
   @include outer-container;
   padding-bottom: 3em;
@@ -54,6 +62,7 @@
 .span-5 { @include span-columns(5); }
 .span-55 { @include span-columns(5.5); }
 .span-6 { @include span-columns(6); @include omega(2n); }
+.span-6-half { @include span-columns(3 of 6); }
 .span-7 { @include span-columns(7); }
 .span-8 { @include span-columns(8); }
 .span-9 { @include span-columns(9); }
