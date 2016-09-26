@@ -1,0 +1,28 @@
+---
+layout: layout
+title: Add Gateway
+lead: Explanation text
+class: gateway
+---
+
+<form action="/">
+  <section class="plate plate-small">
+      <label for="gatewayName">Gateway Name</label>
+      <input type="text" name="gatewayName">
+      <label for="ipAdress">IP Adress</label>
+      <input type="text" name="gatewayName">
+      <label for="datacenter">Datacenter</label>
+      <select name="datacenter" id="datacenter" class="fill-parent">
+        <option value="DC-001">DC-001</option>
+        <option value="DC-002">DC-002</option>
+      </select>
+      <label for="virtualNetworks">Virtual Networks</label>
+      <input type="text" name="virtualNetworks">
+  </section> 
+  <section class="actions">
+    <div class="action-handler">
+      <input class="button" type="submit" value="Save">
+      <button class="button secondary" data-url="/eplexity/infrastructure-details.html">Cancel</button>
+    </div>    
+  </section>       
+</form>
