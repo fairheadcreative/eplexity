@@ -22,13 +22,15 @@ $(function() {
 
   // Add disk
   var detailAddDisk = $(this).find('[data-details="add-disk"]');
+  var monthlyCost = $(this).find('[data-details="cost"]').text();
   
   detailAddDisk.on('click', function() {
-    var rowNumber = $('.disk span.count').length;
+    var rowNumber = $('.disk span.count').length;   
     rowNumber = rowNumber + 1;
     var $clone = $( ".disk:last" ).clone(true, true)
     $clone.find('input[type=text]').val('Disk ' + rowNumber);
     $clone.find(".count").text(rowNumber);
+    $clone.find('[data-details="no-changes"]').text(monthlyCost);
     $clone.insertBefore( ".add-disk" );
   });
 
@@ -36,5 +38,29 @@ $(function() {
   $('[data-remove="add-disk"]').click(function () {
     $(this).parent().remove();
   });
-  
+
+  var addAmount = $(this).find('[data-details="add-amount"]');
+  var value = $(this).find('[data-details="value"]');
+  startAmount = 123;
+  totalAmount = startAmount;
+
+  addAmount.on('click', function(e) {
+
+    var amount = $(value).closest('[data-details="value"]:first').text();
+    var amountInt = parseInt(amount.replace(/[^0-9\.]/g, ''), 10);
+    $(this).toggleClass('white');
+
+    if ($(this).hasClass('white')) {
+      $(this).val('Remove');
+      totalAmount = totalAmount + amountInt;
+      $('[data-details="total"]').text('+' + totalAmount + ' USD');
+    } else {
+      $(this).val('Add');
+      totalAmount = totalAmount - amountInt;
+      $('[data-details="total"]').text('+' + totalAmount + ' USD');
+    }
+
+    e.preventDefault();
+  });
+
 });
