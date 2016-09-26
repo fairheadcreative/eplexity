@@ -153,6 +153,25 @@ a.row:hover {
   }
 }
 
+.details-toggler .row.is-highlighted {
+  left: 0;
+  width: 100%;
+  top: 0;
+  border: none !important;
+  padding-left: 0;
+  padding-right: 0;
+  background: $plate-hover;
+  padding-top: $small-spacing/2;
+  
+  & + .row {
+    margin-top: 0;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .heading {
   @include clearfix;
   @include plate-line;

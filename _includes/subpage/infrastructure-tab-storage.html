@@ -1,60 +1,55 @@
   <div class="group">  
     <ul class="sub-tabs">
-      <li data-sub-tab="block" class="sub-active">Block</li>
-      <li data-sub-tab="object">Object</li>
-      <li data-sub-tab="file">File</li>
+      <li class="left data-sub-description">Storage Type: <span class="sub-target"></span></li>
+      <li data-sub-tab="block" data-sub-description="Block" class="sub-active">Block</li>
+      <li data-sub-tab="object" data-sub-description="Object">Object</li>
     </ul>
   </div>
 
   <div class="sub-plate-tab" data-sub-plate="block">
     <div class="group">
       <ul class="heading">
-        <li class="span-3 push-2">Name</li>
-        <li class="span-2">Server</li>
-        <li class="span-2">Platform</li>
-        <li class="span-2">Volume ID</li>
+        <li class="span-4 push-2">Name</li>
         <li class="span-2">Capacity</li>
-        <li class="span-1">IOPs</li>
+        <li class="span-3">Server</li>
+        <li class="span-3">Datacenter</li>
       </ul>
-
+      
+<!-- START ONE BLOCK ITEM -->
       <div class="details-toggler divider">
-        <div class="details-show" data-details="show"> 
+        <div class="details-show details-highlight-row" data-details="show"> 
           <div class="row">
-            <div class="span-3 push-2" data-title="Name">
-              <span class="icon icon-platform-factionbloc"></span>
-              Disk 1
+            <div class="dropdown-edit has-options">
+              <span class="edit-toggler-icon">&#9660;</span>
+              <ul class="edit-toggler click-through">
+                <li><span>Edit Storage</span></li>
+                <li><span>Remove</span></li>
+              </ul>
             </div>
-            <div class="span-2" data-title="Server">
-              Faction Server 1
-            </div>
-            <div class="span-2" data-title="Platform">
-              Faction Bloc A
-            </div>
-            <div class="span-2" data-title="Volume ID">
-              IQ
+            <div class="span-4 push-2" data-title="Name">
+              <span class="icon icon-platform-amazonaws"></span>
+              Disk 466
             </div>
             <div class="span-2" data-title="Capacity">
-              100GB
+              10GB
             </div>
-            <div class="span-1" data-title="IOPs">
-              1,000
+            <div class="span-3" data-title="Server">
+              Disconnected
+            </div>
+            <div class="span-3" data-title="Datacenter">
+              DC1
             </div>
           </div>
         </div>
 
         <div class="group details-edit" data-details="edit">
-          <ul class="heading">
-            <li class="span-3 push-2">
-              <span class="icon icon-platform-factionbloc"></span>
-              <input placeholder="Disk 1">
-            </li>
-            <li class="span-2">Total</li>
-            <li class="span-2">Available</li>
-          </ul>
-          <div class="row sub">
-            <div class="span-3 push-2" data-title="Name">Capacity</div>
-            <div class="span-2" data-title="Server">
-              <input value="100" placeholder="Capacity…" class="half connected-left">
+          <div class="row">
+            <div class="span-4 push-2">
+              <span class="icon icon-platform-amazonaws"></span>
+              <input placeholder="Disk 466">
+            </div>
+            <div class="span-2">
+              <input value="500" placeholder="Capacity…" class="half connected-left">
               <div class="select half connected-right">
                 <select name="units">
                   <option value="GB">GB</option>
@@ -63,65 +58,66 @@
                 </select>
               </div>
             </div>
-            <div class="span-2" data-title="Platform">
-              200GB
+            <div class="span-3">
+              <div class="select">
+                <select name="units">
+                  <option value="disconnected">Disconnected</option>
+                  <option value="connected">Connected</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="span-3 push-2" data-title="Name">IOPs</div>
-            <div class="span-2" data-title="Server">
-              <input value="100" placeholder="1000">
-            </div>
-            <div class="span-2" data-title="Platform">
-              1250
+            <div class="span-3">
+              <div class="select">
+                <select name="units">
+                  <option value="disconnected">DC1</option>
+                  <option value="connected">DC2</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="row">
             <button class="button small" data-edit="close">Save changes</button>
             <button class="button small secondary" data-edit="close">Cancel</button>
-            <a href="#" class="right" data-edit="close">Delete</a>
           </div>
         </div>
       </div>
-
+<!-- END ONE BLOCK ITEM -->
+      
+<!-- START ONE BLOCK ITEM -->
       <div class="details-toggler divider">
-        <div class="details-show" data-details="show">
+        <div class="details-show details-highlight-row" data-details="show"> 
           <div class="row">
-            <div class="span-3 push-2" data-title="Name">
-              <span class="icon icon-platform-factionbloc"></span>
-              Disk 2
+            <div class="dropdown-edit has-options">
+              <span class="edit-toggler-icon">&#9660;</span>
+              <ul class="edit-toggler click-through">
+                <li><span>Edit Storage</span></li>
+                <li><span>Remove</span></li>
+              </ul>
             </div>
-            <div class="span-2" data-title="Server">
-              Faction Server 1
-            </div>
-            <div class="span-2" data-title="Platform">
-              Faction Bloc A
-            </div>
-            <div class="span-2" data-title="Volume ID">
-              IQ
+            <div class="span-4 push-2" data-title="Name">
+              <span class="icon icon-platform-amazonaws"></span>
+              Disk 467
             </div>
             <div class="span-2" data-title="Capacity">
-              100GB
+              10GB
             </div>
-            <div class="span-1" data-title="IOPs">
-              1,000
+            <div class="span-3" data-title="Server">
+              Disconnected
+            </div>
+            <div class="span-3" data-title="Datacenter">
+              DC1
             </div>
           </div>
         </div>
 
         <div class="group details-edit" data-details="edit">
-          <ul class="heading">
-            <li class="span-3 push-2">
-              <span class="icon icon-platform-factionbloc"></span>
-              <input placeholder="Disk 2">
-            </li>
-            <li class="span-2">Total</li>
-            <li class="span-2">Available</li>
-          </ul>
-          <div class="row sub">
-            <div class="span-3 push-2" data-title="Name">Capacity</div>
-            <div class="span-2" data-title="Server">
-              <input value="100" placeholder="Capacity…" class="half connected-left">
+          <div class="row">
+            <div class="span-4 push-2">
+              <span class="icon icon-platform-amazonaws"></span>
+              <input placeholder="Disk 467">
+            </div>
+            <div class="span-2">
+              <input value="500" placeholder="Capacity…" class="half connected-left">
               <div class="select half connected-right">
                 <select name="units">
                   <option value="GB">GB</option>
@@ -130,225 +126,217 @@
                 </select>
               </div>
             </div>
-            <div class="span-2" data-title="Platform">
-              200GB
+            <div class="span-3">
+              <div class="select">
+                <select name="units">
+                  <option value="disconnected">Disconnected</option>
+                  <option value="connected">Connected</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="span-3 push-2" data-title="Name">IOPs</div>
-            <div class="span-2" data-title="Server">
-              <input value="100" placeholder="1000">
-            </div>
-            <div class="span-2" data-title="Platform">
-              1250
+            <div class="span-3">
+              <div class="select">
+                <select name="units">
+                  <option value="disconnected">DC1</option>
+                  <option value="connected">DC2</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="row">
             <button class="button small" data-edit="close">Save changes</button>
             <button class="button small secondary" data-edit="close">Cancel</button>
-            <a href="#" class="right" data-edit="close">Delete</a>
           </div>
         </div>
       </div>
+<!-- END ONE BLOCK ITEM -->
+
+<!-- START ONE BLOCK ITEM -->
+      <div class="details-toggler divider">
+        <div class="details-show details-highlight-row" data-details="show"> 
+          <div class="row">
+            <div class="dropdown-edit has-options">
+              <span class="edit-toggler-icon">&#9660;</span>
+              <ul class="edit-toggler click-through">
+                <li><span>Edit Storage</span></li>
+                <li><span>Remove</span></li>
+              </ul>
+            </div>
+            <div class="span-4 push-2" data-title="Name">
+              <span class="icon icon-platform-amazonaws"></span>
+              Disk 469
+            </div>
+            <div class="span-2" data-title="Capacity">
+              10GB
+            </div>
+            <div class="span-3" data-title="Server">
+              Disconnected
+            </div>
+            <div class="span-3" data-title="Datacenter">
+              DC1
+            </div>
+          </div>
+        </div>
+
+        <div class="group details-edit" data-details="edit">
+          <div class="row">
+            <div class="span-4 push-2">
+              <span class="icon icon-platform-amazonaws"></span>
+              <input placeholder="Disk 469">
+            </div>
+            <div class="span-2">
+              <input value="500" placeholder="Capacity…" class="half connected-left">
+              <div class="select half connected-right">
+                <select name="units">
+                  <option value="GB">GB</option>
+                  <option value="TB">TB</option>
+                  <option value="MB">MB</option>
+                </select>
+              </div>
+            </div>
+            <div class="span-3">
+              <div class="select">
+                <select name="units">
+                  <option value="disconnected">Disconnected</option>
+                  <option value="connected">Connected</option>
+                </select>
+              </div>
+            </div>
+            <div class="span-3">
+              <div class="select">
+                <select name="units">
+                  <option value="disconnected">DC1</option>
+                  <option value="connected">DC2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <button class="button small" data-edit="close">Save changes</button>
+            <button class="button small secondary" data-edit="close">Cancel</button>
+          </div>
+        </div>
+      </div>
+<!-- END ONE BLOCK ITEM -->
+   
+<!-- START ONE BLOCK ITEM -->
+      <div class="details-toggler divider">
+        <div class="details-show details-highlight-row" data-details="show"> 
+          <div class="row">
+            <div class="dropdown-edit has-options">
+              <span class="edit-toggler-icon">&#9660;</span>
+              <ul class="edit-toggler click-through">
+                <li><span>Edit Storage</span></li>
+                <li><span>Remove</span></li>
+              </ul>
+            </div>
+            <div class="span-4 push-2" data-title="Name">
+              <span class="icon icon-platform-vmwareblock"></span>
+              Disk 470
+            </div>
+            <div class="span-2" data-title="Capacity">
+              10GB
+            </div>
+            <div class="span-3" data-title="Server">
+              Disconnected
+            </div>
+            <div class="span-3" data-title="Datacenter">
+              DC1
+            </div>
+          </div>
+        </div>
+
+        <div class="group details-edit" data-details="edit">
+          <div class="row">
+            <div class="span-4 push-2">
+              <span class="icon icon-platform-amazonaws"></span>
+              <input placeholder="Disk 470">
+            </div>
+            <div class="span-2">
+              <input value="500" placeholder="Capacity…" class="half connected-left">
+              <div class="select half connected-right">
+                <select name="units">
+                  <option value="GB">GB</option>
+                  <option value="TB">TB</option>
+                  <option value="MB">MB</option>
+                </select>
+              </div>
+            </div>
+            <div class="span-3">
+              <div class="select">
+                <select name="units">
+                  <option value="disconnected">Disconnected</option>
+                  <option value="connected">Connected</option>
+                </select>
+              </div>
+            </div>
+            <div class="span-3">
+              <div class="select">
+                <select name="units">
+                  <option value="disconnected">DC1</option>
+                  <option value="connected">DC2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <button class="button small" data-edit="close">Save changes</button>
+            <button class="button small secondary" data-edit="close">Cancel</button>
+          </div>
+        </div>
+      </div>
+<!-- END ONE BLOCK ITEM -->
     </div>
   </div>
 
+<!-- START OBJECT TAB -->
   <div class="sub-plate-tab" data-sub-plate="object">
     <div class="group">
       <ul class="heading">
-        <li class="span-4 push-2">Name</li>
-        <li class="span-3">Platform</li>
-        <li class="span-2">Volume ID</li>
-        <li class="span-3">Capacity</li>
+        <li class="span-5 push-2">File Name</li>
+        <li class="span-7">DataCenter</li>
       </ul>
 
+<!-- START ONE BLOCK ITEM -->
       <div class="details-toggler divider">
-        <div class="details-show" data-details="show">      
+        <div class="details-show details-highlight-row" data-details="show">      
           <div class="row">
-            <div class="span-4 push-2" data-title="Name">
-              <span class="icon icon-platform-factionbloc"></span>
-              Disk 1
+            <div class="dropdown-edit has-options">
+              <span class="edit-toggler-icon">&#9660;</span>
+              <ul class="edit-toggler click-through">
+                <li><span>Edit Storage</span></li>
+                <li><span>View in Browser</span></li>
+                <li><span>Remove</span></li>
+              </ul>
             </div>
-            <div class="span-3" data-title="Platform">
-              Faction Bloc A
+            <div class="span-5 push-2" data-title="Name">
+              <span class="icon icon-platform-amazonaws"></span>
+              director/filename.pdf
             </div>
-            <div class="span-2" data-title="Volume ID">
-              IQ
-            </div>
-            <div class="span-3" data-title="Capacity">
-              Infinite
+            <div class="span-7" data-title="Platform">
+              John's New DC-005
             </div>
           </div>
         </div>
 
-        <div class="group details-edit" data-details="edit">     
+        <div class="group details-edit" data-details="edit">  
           <div class="row">
-            <div class="span-4 push-2" data-title="Name">
-              <span class="icon icon-platform-factionbloc"></span>
-              Disk 1
+            <div class="span-5 push-2">
+              <span class="icon icon-platform-amazonaws"></span>
+              <input placeholder="John's New DC-005">
             </div>
-            <div class="span-3" data-title="Platform">
-              Faction Bloc A
+            <div class="span-6">
+              Directory and datacenter changes coming soon
             </div>
-            <div class="span-2" data-title="Volume ID">
-              IQ
-            </div>
-            <div class="span-3" data-title="Capacity">
-              Infinite
-            </div>
+            <div class="span1 txt-right" data-edit="close"><span class="icon-rounded icon-highlighted">&times;</span></div>
           </div>
-          <div class="row">Description of available action to the user goes here.</div>
           <div class="row">
-            <button class="button small">Email these to a team member</button>
-            <button class="button small secondary" data-edit="close">Close</button>
-            <a href="#" class="right" data-edit="close">Delete</a>
+            <button class="button small" data-edit="close">Save changes</button>
+            <button class="button small secondary" data-edit="close">Cancel</button>
           </div>
         </div>
       </div>
-
-      <div class="details-toggler divider">
-        <div class="details-show" data-details="show">      
-          <div class="row">
-            <div class="span-4 push-2" data-title="Name">
-              <span class="icon icon-platform-factionbloc"></span>
-              Disk 2
-            </div>
-            <div class="span-3" data-title="Platform">
-              Faction Bloc A
-            </div>
-            <div class="span-2" data-title="Volume ID">
-              IQ
-            </div>
-            <div class="span-3" data-title="Capacity">
-              Infinite
-            </div>
-          </div>
-        </div>
-
-        <div class="group details-edit" data-details="edit">     
-          <div class="row">
-            <div class="span-4 push-2" data-title="Name">
-              <span class="icon icon-platform-factionbloc"></span>
-              Disk 2
-            </div>
-            <div class="span-3" data-title="Platform">
-              Faction Bloc A
-            </div>
-            <div class="span-2" data-title="Volume ID">
-              IQ
-            </div>
-            <div class="span-3" data-title="Capacity">
-              Infinite
-            </div>
-          </div>
-          <div class="row">Description of available action to the user goes here.</div>
-          <div class="row">
-            <button class="button small">Email these to a team member</button>
-            <button class="button small secondary" data-edit="close">Close</button>
-            <a href="#" class="right" data-edit="close">Delete</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="sub-plate-tab" data-sub-plate="file">
-    <div class="group">
-      <ul class="heading">
-        <li class="span-4 push-2">Name</li>
-        <li class="span-3">Object</li>
-        <li class="span-3">Platform</li>
-        <li class="span-2">Capacity</li>
-      </ul>
-
-      <div class="details-toggler divider">
-        <div class="details-show" data-details="show"> 
-          <div class="row">
-            <div class="span-4 push-2" data-title="Name">
-              <span class="icon icon-platform-factionbloc"></span>
-              Disk 1
-            </div>
-            <div class="span-3" data-title="Object">
-              IQ
-            </div>
-            <div class="span-3" data-title="Platform">
-              Faction Bloc A
-            </div>
-            <div class="span-2" data-title="Capacity">
-              Infinite
-            </div>
-          </div>
-        </div>
-
-        <div class="group details-edit" data-details="edit"> 
-          <div class="row">
-            <div class="span-4 push-2" data-title="Name">
-              <span class="icon icon-platform-factionbloc"></span>
-              Disk 1
-            </div>
-            <div class="span-3" data-title="Object">
-              IQ
-            </div>
-            <div class="span-3" data-title="Platform">
-              Faction Bloc A
-            </div>
-            <div class="span-2" data-title="Capacity">
-              Infinite
-            </div>
-          </div>  
-          <div class="row">Description of available action to the user goes here.</div>
-          <div class="row">
-            <button class="button small">Email these to a team member</button>
-            <button class="button small secondary" data-edit="close">Close</button>
-            <a href="#" class="right" data-edit="close">Delete</a>
-          </div>
-        </div>      
-      </div>
-
-      <div class="details-toggler divider">
-        <div class="details-show" data-details="show"> 
-          <div class="row">
-            <div class="span-4 push-2" data-title="Name">
-              <span class="icon icon-platform-factionbloc"></span>
-              Disk 2
-            </div>
-            <div class="span-3" data-title="Object">
-              IQ
-            </div>
-            <div class="span-3" data-title="Platform">
-              Faction Bloc A
-            </div>
-            <div class="span-2" data-title="Capacity">
-              Infinite
-            </div>
-          </div>
-        </div>
-
-        <div class="group details-edit" data-details="edit"> 
-          <div class="row">
-            <div class="span-4 push-2" data-title="Name">
-              <span class="icon icon-platform-factionbloc"></span>
-              Disk 2
-            </div>
-            <div class="span-3" data-title="Object">
-              IQ
-            </div>
-            <div class="span-3" data-title="Platform">
-              Faction Bloc A
-            </div>
-            <div class="span-2" data-title="Capacity">
-              Infinite
-            </div>
-          </div>  
-          <div class="row">Description of available action to the user goes here.</div>
-          <div class="row">
-            <button class="button small">Email these to a team member</button>
-            <button class="button small secondary" data-edit="close">Close</button>
-            <a href="#" class="right" data-edit="close">Delete</a>
-          </div>
-        </div>      
-      </div>
+<!-- END ONE BLOCK ITEM -->
 
     </div>
   </div>
