@@ -25,25 +25,32 @@ $(function() {
   var monthlyCost = $(this).find('[data-details="cost"]').text();
   
   detailAddDisk.on('click', function() {
-    var rowNumber = $('.disk span.count').length;   
+    var rowNumber = $('.disk span.count').length;
     rowNumber = rowNumber + 1;
     var $clone = $( ".disk:last" ).clone(true, true)
     $clone.find('input[type=text]').val('Disk ' + rowNumber);
     $clone.find(".count").text(rowNumber);
     $clone.find('[data-details="no-changes"]').text(monthlyCost);
+    $clone.find(".span1.txt-right").attr('data-remove', 'add-disk');
     $clone.insertBefore( ".add-disk" );
+    $clone.on("click", function(){
+      $(this).remove();
+    });
   });
 
-  // Delete current disk
-  $('[data-remove="add-disk"]').click(function () {
-    $(this).parent().remove();
+  // Remove disk
+  var detailRemoveDisk = $(this).find('[data-remove="add-disk"]');
+
+  detailRemoveDisk.on('click', function() {
+      $(this).parent().remove();
   });
 
   var addAmount = $(this).find('[data-details="add-amount"]');
   var value = $(this).find('[data-details="value"]');
-  startAmount = 123;
+  startAmount = 0;
   totalAmount = startAmount;
 
+  //Calculate total amount
   addAmount.on('click', function(e) {
 
     var amount = $(value).closest('[data-details="value"]:first').text();
@@ -59,6 +66,16 @@ $(function() {
       totalAmount = totalAmount - amountInt;
       $('[data-details="total"]').text('+' + totalAmount + ' USD');
     }
+
+    if (totalAmount == 0) {
+      $('[data-details="btn-continue"]').addClass("secondary");
+      $('[data-details="btn-continue"]').val('No thanks, I like to do everything myself');      
+    }  else if (totalAmount != 0) {
+      $('[data-details="btn-continue"]').removeClass("secondary");
+      $('[data-details="btn-continue"]').val('Continue'); 
+    }
+
+
 
     e.preventDefault();
   });
