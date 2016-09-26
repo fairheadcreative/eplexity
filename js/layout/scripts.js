@@ -27,13 +27,13 @@ $(function() {
     var rowNumber = $('.disk span.count').length;
     rowNumber = rowNumber + 1;
     var $clone = $( ".disk:last" ).clone(true, true)
-    $clone.find('input').val('Disk ' + rowNumber);
+    $clone.find('input[type=text]').val('Disk ' + rowNumber);
     $clone.find(".count").text(rowNumber);
     $clone.insertBefore( ".add-disk" );
   });
 
   // Delete current disk
-  $(".span1").click(function () {
+  $('[data-remove="add-disk"]').click(function () {
     $(this).parent().remove();
   });
   

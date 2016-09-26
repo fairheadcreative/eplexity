@@ -150,7 +150,7 @@
           <li class="span-4">Total</li>
           <li class="span-4">Monthly Cost</li> 
         </ul>
-        <div class="row" data-details="add-disk">
+        <div class="row disk">
           <div class="span-2 counted">
             <span class="count">1</span>
             <input type="text" value="Disk 1">
@@ -172,9 +172,9 @@
             </div>
           </div>
           <div class="span-3 edit-highlighted">No Changes</div>
-          <div class="span1 txt-right"><span class="icon-rounded icon-highlighted">&times;</span></div>
+          <div class="span1 txt-right" data-remove="add-disk"><span class="icon-rounded icon-highlighted">&times;</span></div>
         </div>
-        <div class="row">
+        <div class="row disk">
           <div class="span-2 counted">
             <span class="count">2</span>
             <input type="text" value="Disk 2">
@@ -196,12 +196,12 @@
             </div>
           </div>
           <div class="span-3 edit-highlighted">+50 USD (250GB)</div>
-          <div class="span1 txt-right"><span class="icon-rounded icon-highlighted">&times;</span></div>
+          <div class="span1 txt-right" data-remove="add-disk"><span class="icon-rounded icon-highlighted">&times;</span></div>
         </div>
-        <div class="row">  
+        <div class="row add-disk">  
           <div class="span-4 counted">
             <span class="count">+</span>
-            <a class="value" href="#">Add disk</a>
+            <a class="value" href="#" data-details="add-disk">Add disk</a>
           </div>
         </div>
         <div class="row">

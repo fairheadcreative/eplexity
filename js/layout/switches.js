@@ -182,13 +182,13 @@ $(function() {
       $(this).hide();
       $(this).siblings(detailEdit).show();
       var thisHeight = $(this).next(detailEdit).outerHeight();
-      $(this).closest(detailsToggler).addClass('is-edit').removeClass('is-show').css('height', thisHeight);
+      $(this).closest(detailsToggler).addClass('is-edit').removeClass('is-show');
     });
 
     detailClose.on('click', function() {
       $(this).closest(detailEdit).hide();
       $(this).closest(detailEdit).siblings(detailsShow).show();
-      $(this).closest(detailsToggler).removeClass('is-edit').addClass('is-show').css('height', originalHeight);
+      $(this).closest(detailsToggler).removeClass('is-edit').addClass('is-show');
     });
   });
 
