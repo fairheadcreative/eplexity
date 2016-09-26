@@ -1,6 +1,7 @@
 @import
   "extendables",
   "animation",
+  "icons",
   "plate",
   "row",
   "group",
@@ -74,10 +75,11 @@ body {
 
 .push-1 { padding-left: $base-spacing; }
 .push-2 { 
-  padding-left: 2em;
+  padding-left: $base-spacing*2;
   position: relative
 }
 .push-2-right { padding-right: $base-spacing; }
+.push-down { padding-top: $base-spacing; }
 
 //additional element widths to conform with grid values
 .range-4 { width: 31.7616% !important; }
@@ -93,3 +95,5 @@ body {
 .inblock { display: inline-block; }
 .plural:after { content: 's' }
 .click-through { pointer-events: none; }
+relative { position: relative !important; }
+absolute { position: absolute !important; }

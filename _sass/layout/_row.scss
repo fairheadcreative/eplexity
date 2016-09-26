@@ -10,7 +10,8 @@
     border-bottom: 1px solid $plate-higlight;
   }
   
-  &:last-child {
+  &:last-child,
+  &.is-last {
     border-bottom: none;
     margin-bottom: 0;
   }
@@ -36,6 +37,7 @@
   
   [class^="span-"] {
     @extend .truncate;
+    line-height: 2;
   }
   
   input[type="radio"] {
