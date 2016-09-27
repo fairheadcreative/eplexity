@@ -71,6 +71,7 @@ input[type="checkbox"],
 input[type="radio"] {
   display: inline;
   margin-right: $small-spacing / 2;
+  width: auto !important;
 
   + label {
     display: inline-block;
@@ -89,7 +90,8 @@ select {
 .login,
 .nav-mini,
 .user-add,
-.plate-small {
+.plate-small,
+.user {
   input {
     @include fill-parent;
   }
@@ -107,13 +109,37 @@ select {
     margin-bottom: $small-spacing;
     transition: border-color $base-duration $base-timing;
     padding: $base-spacing / 3;
-
     &.select-full { 
       @include fill-parent; 
     }
 
     &.select-half { 
       @include span-columns(6); 
+    }
+  }
+}
+
+.user {
+  form {
+  }
+  
+  input.button {
+    display: inline-block;
+    width: auto;
+  }
+  
+  input {
+    margin-bottom: $small-spacing;
+  }
+  
+  .plate .action-handler {
+    @include fill-parent;
+    float: left;
+    
+    &.divider {
+      border-top: $base-border;
+      padding-top: $base-spacing;
+      margin-top: $small-spacing;      
     }
   }
 }

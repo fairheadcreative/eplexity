@@ -1,15 +1,40 @@
 ---
 layout: layout
-title: User account details
-class: item-edit user
+title: Account Settings
+lead: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper mi <br class="desktop-break">finibus massa solicitudin, a rutrum metus pharetra.
+class: user
 ---
 
-<section class="plate plate-small">
-  <label>Email address:</label>
-  <input type="email" placeholder="Your email address" value="indra51@eplexity.com">
+<div class="group">
+  <div class="action-handler" data-plate="users"> 
+    <a class="button" href="#">Add User</a>
+  </div>
+  <div class="action-handler" data-plate="roles"> 
+    <a class="button" href="#">Add Role</a>
+  </div>
+</div>
 
-  <label>Company name:</label>
-  <input type="text" placeholder="Your company name" value="Eplexity">
+<section class="plate tabbed">
+  <ul class="tabs">
+    <li data-tab="settings" class="active">Settings</li>
+    <li data-tab="users">Users</li>
+    <li data-tab="roles">Roles</li>
+    <li data-tab="impersonate">Impersonate</li>
+  </ul>
 
-  <a href="#" class="button expand">Save changes</a>
+  <div class="plate-tab" data-plate="settings">
+    {% include subpage/user-tab-settings.html %}
+  </div>
+
+  <div class="plate-tab" data-plate="users">
+    {% include subpage/user-tab-users.html %}
+  </div>
+
+  <div class="plate-tab" data-plate="roles">
+    {% include subpage/user-tab-roles.html %}
+  </div>
+
+  <div class="plate-tab" data-plate="impersonate">
+    {% include subpage/user-tab-impersonate.html %}
+  </div>
 </section>

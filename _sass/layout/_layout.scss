@@ -97,5 +97,6 @@ body {
 .inblock { display: inline-block; }
 .plural:after { content: 's' }
 .click-through { pointer-events: none; }
-relative { position: relative !important; }
-absolute { position: absolute !important; }
+.relative { position: relative !important; }
+.absolute { position: absolute !important; }
+.txt-bold, .testuser { font-weight: bold; }
