@@ -27,3 +27,14 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+//row activator (hover or active states row that spreads to plate borders)
+.activate-row {
+  background: $plate-blue;
+  left: -$base-spacing;
+  padding-right: $base-spacing;
+  width: calc(100% + #{$base-spacing*2});
+  border-top: 1px solid $plate-higlight;
+  border-bottom: 1px solid $plate-higlight !important;
+  padding-left: $base-spacing;
+}

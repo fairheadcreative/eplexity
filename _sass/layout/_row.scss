@@ -134,15 +134,9 @@
 
 .row.is-highlighted,
 a.row:hover {
-  background: $plate-blue;
+  @extend .activate-row;
   top: calc(-.375em - 1px);
   padding-top: $small-spacing;
-  left: -$base-spacing;
-  padding-right: $base-spacing;
-  width: calc(100% + #{$base-spacing*2});
-  border-top: 1px solid $plate-higlight;
-  border-bottom: 1px solid $plate-higlight !important;
-  padding-left: $base-spacing;
   
   & + .row {
     margin-top: calc(-.375em - 1px);
