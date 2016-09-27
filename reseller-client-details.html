@@ -1,254 +1,38 @@
 ---
 layout: layout
-title: Fred inc.
-class: item-edit clients
+title: Clients
+subtitle: Fred inc.
+class: user clients
 role: reseller
 ---
 
 <section class="plate tabbed">
   <ul class="tabs">
-    <li data-tab="usage" class="active">Usage</li>
+    <li data-tab="profile" class="active">Profile</li>
+    <li data-tab="catalogs">Catalogs</li>
+    <li data-tab="usage">Usage</li>
     <li data-tab="tickets">Tickets</li>
     <li data-tab="contracts">Contracts</li>
   </ul>
 
+  <div class="plate-tab" data-plate="profile">
+    {% include subpage/client-details-profile.html %}
+  </div>
+
+  <div class="plate-tab" data-plate="catalogs">
+    {% include subpage/client-details-catalogs.html %}
+  </div>
+
   <div class="plate-tab" data-plate="usage">
-
-    <!--details toggler-->
-    <div class="details-toggler">
-      <div class="group details-show" data-details="show">
-        <ul class="heading">
-          <li class="span-4">Faction Bloc 1</li>
-          <li class="span-8">Usage</li>
-        </ul>
-        <div class="row">
-          <div class="span-4">$4,000/month</div>
-          <div class="span-8">
-            {% include modules/progress.html %}
-          </div>
-        </div>
-      </div>
-
-      <div class="group details-edit" data-details="edit">
-        <ul class="heading">
-          <li>Faction Bloc 1</li>
-        </ul>
-        <ul class="heading">
-          <li class="span-4">Storage</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li> 
-        </ul>
-        <div class="row sub">
-          <div class="span-4">Capacity</div>
-          <div class="span-4">200TB</div>
-          <div class="span-4">120TB</div>
-        </div>
-        <div class="row">
-          <div class="span-4">IOPs</div>
-          <div class="span-4">2000</div>
-          <div class="span-4">500</div>
-        </div>
-        <ul class="heading">
-          <li class="span-4">CPU</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li>
-        </ul>
-        <div class="row">
-          <div class="span-4">Count</div>
-          <div class="span-4">4</div>
-          <div class="span-4">2</div>
-        </div>
-        <ul class="heading">
-          <li class="span-4">vRAM</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li>
-        </ul>
-        <div class="row">
-          <div class="span-4">Capacity</div>
-          <div class="span-4">256GB</div>
-          <div class="span-4">128GB</div>
-        </div>
-        <ul class="heading">
-          <li class="span-4">Networking</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li>
-        </ul>
-        <div class="row sub">
-          <div class="span-4">vLAN2900</div>
-          <div class="span-4">10GB</div>
-          <div class="span-4">5GB</div>
-        </div>
-        <div class="row sub">
-          <div class="span-4">vLAN2901</div>
-          <div class="span-4">5GB</div>
-          <div class="span-4">3GB</div>
-        </div>
-        <div class="row">
-          <div class="span-4">Capacity</div>
-          <div class="span-4">256GB</div>
-          <div class="span-4">128GB</div>
-        </div>
-        <ul class="heading">
-          <li class="span-4">Bandwidth</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li>
-        </ul>
-        <div class="row">
-          <div class="span-4">Capacity</div>
-          <div class="span-4">1GBit</div>
-          <div class="span-4">1GBit</div>
-        </div>
-        <div class="row">
-            <button class="button small secondary" data-edit="close">Close</button>
-          <span class="right">
-            <a href="#">Propose increase</a>
-          </span>
-        </div>
-      </div>
-    </div>
-    <!--end: details toggler-->
-
-    <!--details toggler-->
-    <div class="details-toggler">
-      <div class="group details-show" data-details="show">
-        <ul class="heading">
-          <li class="span-4">AWS</li>
-          <li class="span-8">Usage</li>
-        </ul>
-        <div class="row">
-          <div class="span-4">$4,000/month</div>
-          <div class="span-8">
-            {% include modules/progress.html %}
-          </div>
-        </div>
-      </div>
-
-      <div class="group details-edit" data-details="edit">
-        <ul class="heading">
-          <li>AWS</li>
-        </ul>
-        <ul class="heading">
-          <li class="span-4">Storage</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li> 
-        </ul>
-        <div class="row sub">
-          <div class="span-4">Capacity</div>
-          <div class="span-4">200TB</div>
-          <div class="span-4">120TB</div>
-        </div>
-        <div class="row">
-          <div class="span-4">IOPs</div>
-          <div class="span-4">2000</div>
-          <div class="span-4">500</div>
-        </div>
-        <ul class="heading">
-          <li class="span-4">CPU</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li>
-        </ul>
-        <div class="row">
-          <div class="span-4">Count</div>
-          <div class="span-4">4</div>
-          <div class="span-4">2</div>
-        </div>
-        <ul class="heading">
-          <li class="span-4">vRAM</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li>
-        </ul>
-        <div class="row">
-          <div class="span-4">Capacity</div>
-          <div class="span-4">256GB</div>
-          <div class="span-4">128GB</div>
-        </div>
-        <ul class="heading">
-          <li class="span-4">Networking</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li>
-        </ul>
-        <div class="row sub">
-          <div class="span-4">vLAN2900</div>
-          <div class="span-4">10GB</div>
-          <div class="span-4">5GB</div>
-        </div>
-        <div class="row sub">
-          <div class="span-4">vLAN2901</div>
-          <div class="span-4">5GB</div>
-          <div class="span-4">3GB</div>
-        </div>
-        <div class="row">
-          <div class="span-4">Capacity</div>
-          <div class="span-4">256GB</div>
-          <div class="span-4">128GB</div>
-        </div>
-        <ul class="heading">
-          <li class="span-4">Bandwidth</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li>
-        </ul>
-        <div class="row">
-          <div class="span-4">Capacity</div>
-          <div class="span-4">1GBit</div>
-          <div class="span-4">1GBit</div>
-        </div>
-        <div class="row">
-          <span class="actions-buttons">
-            <button class="button small secondary" data-edit="close">Close</button>
-          </span>
-          <span class="right">
-            <a href="#">Propose increase</a>
-          </span>
-        </div>
-      </div>
-    </div>
-    <!--end: details toggler-->
-
+    {% include subpage/client-details-usage.html %}
   </div>
 
   <div class="plate-tab" data-plate="tickets">
-    <div class="group">
-      <div class="row highlight">
-        <div class="span-10 push-2"><span class="icon"></span> <a href="ticket-details.html">Scheduled maintenance on 24/12/2015</a></div>
-        <div class="span-2">Open</div>
-      </div>
-      <div class="row">
-        <div class="span-10 push-2"><span class="icon"></span> <a href="ticket-details.html">Add Managed Backups to  Faction Server 1</a></div>
-        <div class="span-2">Open</div>
-      </div>
-      <div class="row">
-        <div class="span-10 push-2"><span class="icon"></span> <a href="ticket-details.html">Question about Managed Backups</a></div>
-        <div class="span-2">Closed</div>
-      </div>
-      <div class="row">
-        <div class="span-10 push-2"><span class="icon"></span> <a href="ticket-details.html">Scheduled maintenance July 2015</a></div>
-        <div class="span-2">Closed</div>
-      </div>
-    </div>
+    {% include subpage/client-details-tickets.html %}
   </div>
 
   <div class="plate-tab" data-plate="contracts">
-    <div class="group">
-      <ul class="heading">
-        <li class="span-8 push-2">Name</li>
-        <li class="span-4">Date</li>
-      </ul>
-      <div class="row">
-        <div class="span-8 push-2"><span class="icon"></span> <a href="#">Terms & Conditions (clean)</a></div>
-        <div class="span-4">Nov 14 2015</div>
-      </div>
-      <div class="row">
-        <div class="span-8 push-2"><span class="icon"></span> <a href="#">Terms & Conditions (signed)</a></div>
-        <div class="span-4">Nov 14 2015</div>
-      </div>
-      <div class="row">
-        <div class="span-8 push-2"><span class="icon"></span> <a href="#">First Service Order</a></div>
-        <div class="span-4">Nov 14 2015</div>
-      </div>
-    </div>
-    <div class="action-handler">
-      <a href="#" class="button">Upload more PDFs</a>
-    </div>
+    {% include subpage/client-details-contracts.html %}
   </div>
 
 </section>
