@@ -63,6 +63,7 @@ body {
 .span-5 { @include span-columns(5); }
 .span-55 { @include span-columns(5.5); }
 .span-6 { @include span-columns(6); @include omega(2n); }
+.span-6-margin { @include span-columns(6); }
 .span-6-half { @include span-columns(3 of 6); }
 .span-7 { @include span-columns(7); }
 .span-8 { @include span-columns(8); }
@@ -87,6 +88,7 @@ body {
 //generic helper/override classes
 .inactive { opacity: .5; pointer-events: none; }
 .hide { display: none !important; }
+.hide-soft { display: none; }
 .right { float: right !important; }
 .left { float: left !important; }
 .txt-center { text-align: center !important; }

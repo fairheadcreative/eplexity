@@ -46,11 +46,11 @@ class: infrastructure section
       
       <div class="row">
         <div class="span-4 push-2"><span class="icon icon-distro-ubuntu"></span>Cloud in a box</div>
-        <div class="span-6">Be the first to know when on-premises cloud is available:</div>
+        <div class="span-6-margin">Be the first to know when on-premises cloud is available:</div>
         <div class="span-2 txt-right">
+            <button class="button small" data-switch="notify-field">Get notified</button>
           <form action="infrastructure-add-step3.html">
-            <input type="submit" class="button small" value="Select">
-            <input type="text" onchange="this.form.submit()">
+            <input type="text" onchange="this.form.submit()" autofocus data-switch-target="notify-field" class="hide-soft">
           </form>
         </div>
       </div>

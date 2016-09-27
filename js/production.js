@@ -1439,6 +1439,15 @@ $(function() {
       }    
     
     };
+  
+//generic turn self off and switch with something else that has same data attribute
+  
+  $('[data-switch]').on('click', function(){
+    var target = $(this).attr('data-switch');
+    $(this).hide();
+    $('[data-switch-target="'+target+'"]').show();
+  });
+  
 
 //toggle tabs
 
