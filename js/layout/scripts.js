@@ -44,6 +44,13 @@ $(function() {
   detailRemoveDisk.on('click', function() {
       $(this).parent().remove();
   });
+  
+  //generic item deletion
+  
+  $('[data-remove]').on('click', function(){
+    var target = $(this).attr('data-remove');
+    $('[data-remove-target="'+target+'"]').remove();
+  });
 
   var addAmount = $(this).find('[data-details="add-amount"]');
   var value = $(this).find('[data-details="value"]');

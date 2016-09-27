@@ -1358,6 +1358,13 @@ $(function() {
   detailRemoveDisk.on('click', function() {
       $(this).parent().remove();
   });
+  
+  //generic item deletion
+  
+  $('[data-remove]').on('click', function(){
+    var target = $(this).attr('data-remove');
+    $('[data-remove-target="'+target+'"]').remove();
+  });
 
   var addAmount = $(this).find('[data-details="add-amount"]');
   var value = $(this).find('[data-details="value"]');
@@ -1581,7 +1588,8 @@ $(function() {
     var detailsShow = $(this).find('[data-details="show"]'),
         detailEdit =  $(this).find('[data-details="edit"]').hide(),
         detailClose = $(this).find('[data-edit="close"]'),
-        originalHeight = $(this).outerHeight();
+        originalHeight = $(this).outerHeight(),
+        detailsOpener = $(this).find('[data-details="open"]');
 
         //$(this).css('height', originalHeight);
 
@@ -1596,6 +1604,11 @@ $(function() {
       $(this).closest(detailEdit).hide();
       $(this).closest(detailEdit).siblings(detailsShow).show();
       $(this).closest(detailsToggler).removeClass('is-edit').addClass('is-show');
+    });
+    
+    detailsOpener.on('click', function(){
+      detailsShow.hide();
+      detailEdit.show();
     });
   });
 

@@ -183,7 +183,8 @@ $(function() {
     var detailsShow = $(this).find('[data-details="show"]'),
         detailEdit =  $(this).find('[data-details="edit"]').hide(),
         detailClose = $(this).find('[data-edit="close"]'),
-        originalHeight = $(this).outerHeight();
+        originalHeight = $(this).outerHeight(),
+        detailsOpener = $(this).find('[data-details="open"]');
 
         //$(this).css('height', originalHeight);
 
@@ -198,6 +199,11 @@ $(function() {
       $(this).closest(detailEdit).hide();
       $(this).closest(detailEdit).siblings(detailsShow).show();
       $(this).closest(detailsToggler).removeClass('is-edit').addClass('is-show');
+    });
+    
+    detailsOpener.on('click', function(){
+      detailsShow.hide();
+      detailEdit.show();
     });
   });
 

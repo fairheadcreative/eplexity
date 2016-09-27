@@ -179,6 +179,8 @@
       width: 3.5em !important;
       background: $plate-higlight;
       border: $plate-border; 
+      
+      &.select-full { width: 100% !important; }
 
       &:after {
         content: '\25bc';
