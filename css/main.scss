@@ -121,3 +121,38 @@ $on-laptop:        800px;
     display: none;
   }
 }
+
+
+
+// Credit Card
+
+.cc-expiry {
+  label { display: block; }
+
+  @include media(em(550)) {
+    width: 73%;
+    float: left;
+    margin-right: 2%;
+  }
+}
+
+@include media(em(550)) {
+  .cc-cvc {
+    width: 25%;
+    float: right;
+  }
+}
+
+#expiry-month {
+  float: left;
+  width: 70%;
+  margin-right: 2%;
+  height: 29px;
+  @include media($medium-screen) { height: 36px; }
+}
+#expiry-year {
+  float: left;
+  width: 28%;
+  height: 29px;
+  @include media($medium-screen) { height: 36px; }
+}
