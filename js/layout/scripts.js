@@ -20,6 +20,8 @@ $(function() {
       $('.equalize').css('height', getHighest); 
     };
 
+
+
   // Add disk
   var detailAddDisk = $(this).find('[data-details="add-disk"]');
   var monthlyCost = $(this).find('[data-details="cost"]').text();
@@ -31,10 +33,10 @@ $(function() {
     $clone.find('input[type=text]').val('Disk ' + rowNumber);
     $clone.find(".count").text(rowNumber);
     $clone.find('[data-details="no-changes"]').text(monthlyCost);
-    $clone.find(".span1.txt-right").attr('data-remove', 'add-disk');
+    $clone.find(".icon-rounded.icon-highlighted").attr('data-remove', 'add-disk');
     $clone.insertBefore( ".add-disk" );
-    $clone.on("click", function(){
-      $(this).remove();
+    $clone.find('[data-remove="add-disk"]').on("click", function(){
+      $(this).parent().parent().remove();
     });
   });
 
@@ -42,22 +44,62 @@ $(function() {
   var detailRemoveDisk = $(this).find('[data-remove="add-disk"]');
 
   detailRemoveDisk.on('click', function() {
-      $(this).parent().remove();
+      $(this).parent().parent().remove();
+  });
+
+
+
+  // Add server
+  var detailAddServer = $(this).find('[data-details="add-server"]');
+  var serverNumber = 1;
+
+    $(function(){
+    if (serverNumber ==1 ) {
+      $('.delete-clone').hide();
+    } else {
+      $('.delete-clone').show();
+    }
+  });
+
+  detailAddServer.on('click', function(e) {
+    if (serverNumber == 1) {
+      $('.server-name').text('Server 1 Name');
+    }
+    serverNumber = serverNumber + 1;
+    $('.plate').addClass('cloned');
+    var $clone = $( ".serverField:first" ).clone(true, true).appendTo( '.plate');
+    $clone.find('label').text('Server ' + serverNumber + ' Name');
+    $('.delete-clone').show();
+    e.preventDefault();
+  });
+
+  // Remove Server
+  var detailRemoveServer = $(this).find('[data-remove="add-server"]');
+
+  detailRemoveServer.on('click', function() {
+    serverNumber = serverNumber - 1;
+    if (serverNumber ==1 ) {
+      $('.delete-clone').hide();
+      $('.plate').removeClass('cloned');
+      $('.server-name').text('Server Name');
+    }
+    $(this).parent().remove();
   });
   
   //generic item deletion
   
-  $('[data-remove]').on('click', function(){
-    var target = $(this).attr('data-remove');
-    $('[data-remove-target="'+target+'"]').remove();
-  });
+  // $('[data-remove]').on('click', function(){
+  //   var target = $(this).attr('data-remove');
+  //   $('[data-remove-target="'+target+'"]').remove();
+  // });
 
+
+  //Calculate total amount
   var addAmount = $(this).find('[data-details="add-amount"]');
   var value = $(this).find('[data-details="value"]');
   startAmount = 0;
   totalAmount = startAmount;
 
-  //Calculate total amount
   addAmount.on('click', function(e) {
 
     var amount = $(value).closest('[data-details="value"]:first').text();

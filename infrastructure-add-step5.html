@@ -7,16 +7,18 @@ class: item-edit infrastructure
 ---
 
 <section class="plate plate-small">
-  <label>Server name:</label>
-  <input type="text" placeholder="Type your server name here" value="Faction Server 1">
-  <span class="icon-rounded icon-regular">&times;</span>
+  <div class="serverField" data-details="clone-disk">
+    <label class="server-name">Server Name:</label>
+    <input type="text" placeholder="Type your server name here" value="">
+    <span class="icon-rounded icon-regular delete-clone" data-remove="add-server">&times;</span>
+  </div>
 </section>
 
 <section class="actions">
   <div class="action-handler">
     <form action="infrastructure-add-success.html">
       <input type="submit" value="Complete Server">
-      <button class="button secondary">Add another just like this one</button>
+      <button class="button secondary" data-details="add-server">Add another just like this one</button>
       <input type="hidden" name="quantity" value="Faction Server 1"> 
     </form>
   </div>
