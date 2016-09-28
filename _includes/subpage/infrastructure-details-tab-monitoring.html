@@ -1,11 +1,15 @@
     <div class="group">  
-      <ul class="sub-tabs">
-        <li data-sub-tab="current">Current</li>
-        <li data-sub-tab="24" class="sub-active">24 Hours</li>
-        <li data-sub-tab="7">7 Days</li>
-        <li data-sub-tab="30">30 Days</li>
-        <li data-sub-tab="365">365 Days</li>
+      <ul class="sub-tabs" data-toggle-target="sub-details-monitoring">
+        <li data-sub-tab="current" data-toggle="sub-details-monitoring">Current</li>
+        <li data-sub-tab="24" class="sub-active" data-toggle="sub-details-monitoring">24 Hours</li>
+        <li data-sub-tab="7" data-toggle="sub-details-monitoring">7 Days</li>
+        <li data-sub-tab="30" data-toggle="sub-details-monitoring">30 Days</li>
+        <li data-sub-tab="365" data-toggle="sub-details-monitoring">365 Days</li>
       </ul>
+    <div class="toggler-icon-hitarea" data-toggle="sub-details-monitoring">
+      <span class="edit-toggler-icon">&#9660;</span>
+    </div> 
+    <div class="sub-tab-overlay" data-toggle="sub-details-monitoring" data-toggle-target="sub-details-monitoring"></div>   
     </div>
 
     <div class="sub-plate-tab" data-sub-plate="current">

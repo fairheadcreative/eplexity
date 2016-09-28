@@ -88,10 +88,10 @@ $(function() {
   
   //generic item deletion
   
-  // $('[data-remove]').on('click', function(){
-  //   var target = $(this).attr('data-remove');
-  //   $('[data-remove-target="'+target+'"]').remove();
-  // });
+  $('[data-remove]').on('click', function(){
+     var target = $(this).attr('data-remove');
+     $('[data-remove-target="'+target+'"]').remove();
+  });
 
 
   //Calculate total amount

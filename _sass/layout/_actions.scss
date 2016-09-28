@@ -66,3 +66,11 @@
       &:hover { color: $light-gray; }
     }
 }
+
+.action-buttons {
+  @include media(max-width $medium-screen) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

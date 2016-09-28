@@ -1,6 +1,11 @@
 {% unless page.navigation == false %}
-<nav class="nav-main" role="navigation">
+<nav class="nav-main" role="navigation" data-toggle-target="navigation">
   <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+    <li class="hamby" data-toggle="navigation"> 
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </li>
     <li class="nav-link logo"> 
         <a href="index.html" class="site-icon">&nbsp;</a>
     </li>
@@ -24,5 +29,5 @@
   <div class="step-progress" style="width:{{ page.progress }}%;"></div>
   {% endif %}
 </nav>
-
+<div class="mobile-cover" data-toggle="navigation" data-toggle-target="navigation"></div>
 {% endunless %}

@@ -23,6 +23,7 @@ body {
 .page-content {
   @include outer-container;
   padding-bottom: 3em;
+  position: relative;
 }
 
 .page-footer {

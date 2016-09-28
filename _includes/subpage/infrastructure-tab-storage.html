@@ -1,9 +1,13 @@
   <div class="group">  
-    <ul class="sub-tabs">
-      <li class="left data-sub-description">Storage Type: <span class="sub-target"></span></li>
-      <li data-sub-tab="block" data-sub-description="Block" class="sub-active">Block</li>
-      <li data-sub-tab="object" data-sub-description="Object">Object</li>
+    <ul class="sub-tabs" data-toggle-target="sub-storage">
+      <li class="left data-sub-description" data-toggle="sub-storage">Storage Type: <span class="sub-target"></span></li>
+      <li data-sub-tab="block" data-sub-description="Block" class="sub-active" data-toggle="sub-storage">Block</li>
+      <li data-sub-tab="object" data-sub-description="Object" data-toggle="sub-storage">Object</li>
     </ul>
+    <div class="toggler-icon-hitarea" data-toggle="sub-storage">
+      <span class="edit-toggler-icon">&#9660;</span>
+    </div> 
+    <div class="sub-tab-overlay" data-toggle="sub-storage" data-toggle-target="sub-storage"></div>   
   </div>
 
   <div class="sub-plate-tab" data-sub-plate="block">

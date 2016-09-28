@@ -10,29 +10,30 @@
   $centered-navigation-submenu-width: 12em;
   $centered-navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
-
-  //box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  
   border-bottom: 1px solid $base-border-color;
   background: $dark-gray;
   @include clearfix;
   padding: 0;
   font-family: $helvetica-condensed;
-
-  @include media($medium-screen) {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 8;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 8;
+  
+  @include media(max-width $medium-screen) {
+    height: 48px;
+    border-bottom: none;
   }
-
-  .nav-mini & { 
+  
+  .nav-mini & {
     border: none;
-    background: transparent; 
+    background: transparent;
     position: static;
   }
-
+  
   // Nav menu
-
+  
   .centered-navigation-menu {
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     clear: both;
@@ -45,114 +46,124 @@
     white-space: nowrap;
     overflow-x: auto;
     font-size: .9em;
-
+    
+    @include media(max-width $medium-screen) {
+      font-size: 1.15em;
+    }
+    
     &.show {
       display: block;
     }
-
-      li {
-         background: transparent;
-         display: inline-block;
-         overflow: hidden;
-
-         a {
-            color: $light-gray;
-            display: inline-block;
-            outline: none;
-            text-decoration: none;
-            padding: .7em 1em;
-            text-transform: uppercase;
-            transition: all .3s;
-            font-weight: 700;
-            
-
-            &:focus,
-            &:hover {
-              color:$bright-blue;
-              background: lighten($dark-gray, 10);
-            }
-         }
-
-         &.divider {
-           border-left:  1px solid $gray;
-           padding-left: .3em;
-
-           &.active a { margin-left: .52em; }
-         }
-
-         &:first-child { margin-left: $small-spacing; }
-      }
-
-      .nav-close {
-        border: 1px solid $medium-gray;
-        border-radius: 50%;
-        height: 2.3em;
-        text-align: center;
-        width: 2.3em;
-        line-height: 2.3em;
-        position: relative;
-        top: -1px;
-
-        a {
-          display: block;
-          padding: 0;
+    
+    li {
+      background: transparent;
+      display: inline-block;
+      overflow: hidden;
+      
+      a {
+        color: $light-gray;
+        display: inline-block;
+        outline: none;
+        text-decoration: none;
+        padding: .7em 1em;
+        text-transform: uppercase;
+        transition: all .3s;
+        font-weight: 700;
+        
+        &:focus,
+        &:hover {
+          color: $bright-blue;
+          background: lighten($dark-gray, 10);
         }
       }
-
-      .logo .site-icon { 
-        background: url('../images/logo.png') 0 7px no-repeat;
-        background-size: 28px;
+      
+      &.divider {
+        border-left: 1px solid $gray;
+        padding-left: .3em;
+        
+        &.active a {
+          margin-left: .52em;
+        }
+      }
+      
+      &:first-child {
+        margin-left: $small-spacing;
+      }
+    }
+    
+    .nav-close {
+      border: 1px solid $medium-gray;
+      border-radius: 50%;
+      height: 2.3em;
+      text-align: center;
+      width: 2.3em;
+      line-height: 2.3em;
+      position: relative;
+      top: -1px;
+      
+      a {
         display: block;
-        height: 3em;
-        width: 3.3em;
-        border-right: 1px solid $gray;
-
-        .nav-mini & { border: none; }
+        padding: 0;
       }
-
-      .signout a {
-        text-indent: -999em;
-        position: relative;
-        display: block;
-        height: 3em;
-        width: 2.5em;
-
-        &:before {
-          right: 10px;
-          width: 16px;
-          height: 16px;
-          border: 2px solid $medium-gray;
-          margin-top: -6px;
-          background: transparent;
-          border-radius: $border-radius-round;
-          content: "";
-          position: absolute;
-          top: 50%;
-        }
-
-        &:after {
-          right: 16px;
-          width: 4px;
-          height: 11px;
-          border: 1px solid #fff;
-          margin: -8px 0 0;
-          background: $medium-gray;
-          content: "";
-          position: absolute;
-          top: 47%;
-        }
-
-        &:hover:before {
-          border-color: $action-color;
-        }
-
-        &:hover:after {
-          background: $action-color; 
-        }
+    }
+    
+    .logo .site-icon {
+      background: url('../images/logo-alt.png') 0 7px no-repeat;
+      background-size: 28px;
+      display: block;
+      height: 3em;
+      width: 3.3em;
+      border-right: 1px solid $gray;
+      .nav-mini & {
+        border: none;
       }
+    }
+    
+    .signout a {
+      text-indent: -999em;
+      position: relative;
+      display: block;
+      height: 3em;
+      width: 2.5em;
+      
+      &:before {
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        border: 2px solid $light-gray;
+        margin-top: -6px;
+        background: transparent;
+        border-radius: $border-radius-round;
+        content: "";
+        position: absolute;
+        top: 50%;
+      }
+      
+      &:after {
+        right: 16px;
+        width: 4px;
+        height: 11px;
+        border: 1px solid #555;
+        margin: -8px 0 0;
+        background: $light-gray;
+        content: "";
+        position: absolute;
+        top: 47%;
+      }
+      
+      &:hover:before {
+        border-color: $action-color;
+      }
+      
+      &:hover:after {
+        background: $action-color;
+        border: 1px solid #6f6f6f;
+      }
+    }
   }
   
   //step progress line
+  
   .step-progress {
     position: absolute;
     left: 0;
@@ -162,7 +173,6 @@
 }
 
 //select navigation items relative to active page
-
 .platform .nav-main .platform a,
 .infrastructure .nav-main .infrastructure a,
 .marketplace .nav-main .marketplace a,
@@ -172,4 +182,156 @@
 .products .nav-main .reseller-products a,
 .user .nav-main .user a {
   color: $medium-gray;
+  
+  @include media(max-width $medium-screen) {
+    color: $white;
+    position: absolute;
+    top: 3px;
+    left: 60px;
+    display: block;
+    padding-left: 0 !important;
+  }
+}
+
+//cascading mobile modifications
+.mobile-cover {
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  background: #555;
+  opacity: 0;
+  transition: opacity $base-duration;
+}
+
+@include media(max-width $medium-screen) {
+  .mobile-cover.is-activated {
+    bottom: 0;
+    opacity: .6;
+  }
+  
+  .nav-main {
+    z-index: 100;
+    
+    .centered-navigation-menu {
+      text-align: left;
+      overflow-y: visible;
+      white-space: initial;
+      overflow-x: visible;
+      position: absolute;
+      padding-top: 46px;
+      
+      li {
+        transition: background $base-duration;
+        background: transparent;
+        display: block;
+      }
+    }
+    
+    .centered-navigation-menu li a {
+      display: none;
+    }
+    
+    .centered-navigation-menu li.signout {
+      display: none;
+    }
+    
+    .centered-navigation-menu li.nav-link.logo {
+      margin-left: 0;
+      position: absolute;
+      right: 0;
+      top: 1px;
+    }
+    
+    .centered-navigation-menu li.divider {
+      border-left: none; 
+      padding-left: 0; 
+    }
+  }
+  
+  .nav-main.is-activated {
+    
+    .centered-navigation-menu li {
+        background: #555;
+      
+        a {
+        display: block;
+        padding-left: 60px;
+
+        &:hover,
+        &:active {
+          background: #555;
+        }
+      }
+    } 
+    
+    .centered-navigation-menu li.signout {
+      position: absolute;
+      top: -2px;
+      right: 8px;
+      display: block;
+    }
+    
+    .centered-navigation-menu li.nav-link.logo {
+      display: none;
+    }
+  } 
+}
+
+//open/close toggler
+
+.hamby {
+  display: none;
+  height: 46px;
+  width: 46px;
+  position: absolute;
+  top: 0;
+  left: -3px;
+
+  @include media(max-width $medium-screen){
+    display: block;
+
+    .line {
+      background: $white;
+      display: block;
+      height: 3px;
+      width: 24px;
+      left: 11px;
+      position: absolute;
+      transition: all $base-duration;
+
+      &:first-child {
+        top: 14px;
+      }
+
+      &:nth-child(2) {
+        top: 22px;
+      }
+
+      &:last-child {
+        top: 30px;
+      }
+    }
+  }
+}
+    
+.is-activated {
+
+  .hamby .line:first-child {
+    top: 22px;
+    transform: rotate(45deg);
+  }
+
+  .hamby .line:nth-child(2) {
+    top: 22px;
+    opacity: 0;
+    transform: scale(.1);
+  }
+
+  .hamby .line:last-child {
+    top: 22px;
+    transform: rotate(-45deg);
+  }      
 }

@@ -147,10 +147,10 @@ $(function() {
   
   //generic item deletion
   
-  // $('[data-remove]').on('click', function(){
-  //   var target = $(this).attr('data-remove');
-  //   $('[data-remove-target="'+target+'"]').remove();
-  // });
+  $('[data-remove]').on('click', function(){
+     var target = $(this).attr('data-remove');
+     $('[data-remove-target="'+target+'"]').remove();
+  });
 
 
   //Calculate total amount
@@ -240,6 +240,13 @@ $(function() {
     var target = $(this).attr('data-switch');
     $(this).hide();
     $('[data-switch-target="'+target+'"]').show();
+  });
+  
+    
+//generic toggler
+  $('[data-toggle]').on('click', function(){
+    var toggleTarget = $(this).attr('data-toggle');
+    $('[data-toggle-target="'+toggleTarget+'"]').toggleClass('is-activated');
   });
   
 
@@ -396,6 +403,7 @@ $(function() {
     detailsOpener.on('click', function(){
       detailsShow.hide();
       detailEdit.show();
+      $(this).closest(detailsToggler).addClass('is-edit').removeClass('is-show');
     });
   });
 

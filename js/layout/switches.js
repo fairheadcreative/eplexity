@@ -50,6 +50,13 @@ $(function() {
     $('[data-switch-target="'+target+'"]').show();
   });
   
+    
+//generic toggler
+  $('[data-toggle]').on('click', function(){
+    var toggleTarget = $(this).attr('data-toggle');
+    $('[data-toggle-target="'+toggleTarget+'"]').toggleClass('is-activated');
+  });
+  
 
 //toggle tabs
 
@@ -204,6 +211,7 @@ $(function() {
     detailsOpener.on('click', function(){
       detailsShow.hide();
       detailEdit.show();
+      $(this).closest(detailsToggler).addClass('is-edit').removeClass('is-show');
     });
   });
 
