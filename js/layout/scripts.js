@@ -85,12 +85,32 @@ $(function() {
     }
     $(this).parent().remove();
   });
+
+  //search form
+  $(".searchForm").bind('input', function(){
+    $('.resultContainer').empty();
+    $('.searchable').removeClass('clonedItmes');
+    var searchString = $(".searchForm").val();
+    var searchables = $('.searchtext');
+    var stringLenght = searchString.length;
+
+    // start the search only after the third character
+    if ( searchString.length > 2 ) {
+      var searchResult = $(searchables).each(function(){
+        if($(this).text().toUpperCase().indexOf(searchString.toUpperCase()) != -1){
+          var $clone = $(this).parent().parent().removeClass('searchtext').clone(true, true).appendTo('.resultContainer');
+        }
+      });
+    }
+
+  });
   
   //generic item deletion
   
   $('[data-remove]').on('click', function(){
      var target = $(this).attr('data-remove');
      $('[data-remove-target="'+target+'"]').remove();
+
   });
 
 
