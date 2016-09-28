@@ -62,7 +62,11 @@ body {
 .span-4 { @include span-columns(4); }
 .span-5 { @include span-columns(5); }
 .span-55 { @include span-columns(5.5); }
-.span-6 { @include span-columns(6); @include omega(2n); }
+.span-6 { @include span-columns(6); 
+  .grid & {
+    @include omega(2n);
+  }
+}
 .span-6-margin { @include span-columns(6); }
 .span-6-half { @include span-columns(3 of 6); }
 .span-7 { @include span-columns(7); }
@@ -81,6 +85,7 @@ body {
 }
 .push-2-right { padding-right: $base-spacing; }
 .push-down { padding-top: $base-spacing; }
+.push-vertical { padding: $base-spacing 0 $base-spacing*.75; }
 
 //additional element widths to conform with grid values
 .range-4 { width: 31.7616% !important; }

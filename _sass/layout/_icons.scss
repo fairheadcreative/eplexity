@@ -64,4 +64,23 @@
       background-image: url('../images/icon-#{$other}.png');
     }
   }
+}
+
+.label {
+  background: $bright-gray;
+  border-radius: $base-border-radius;
+  padding: .25em .5em .35em;
+  font-size: .7em;
+  text-transform: uppercase;
+  color: $medium-gray;
+
+  &.success {
+    background: $light-green;
+    color: shade($green, 20);
+  }
+
+  &.warning {
+    background: $bright-red;
+    color: shade($red, 20);
+  }
 }	
