@@ -291,3 +291,44 @@ body .page-content .row {
   background: #E2F8F6;
   border: 1px solid #B3DFDE;
 }
+
+.marketplace-nav,
+.marketplace-section {
+}
+
+.marketplace-nav {
+  width: 25%;
+  float: left;
+  padding-right: 2em;
+  padding-left: 1em;
+}
+
+.marketplace-section {
+  width: 75%;
+  float: left;
+  background: white;
+  padding-right: 1em;
+  background: #f7f7f7;
+
+	@include media(max-width $medium-screen) {
+		padding-left: 1em;
+	}
+}
+
+.section-box-link {
+  border: none;
+  border-bottom: 12px solid #f7f7f7;
+  background: white;
+}
+
+.section-box-link .section-box-link-inner {
+  border: 1px solid transparent;
+  @include transition(0.2s all);
+}
+
+.section-box-link:hover .section-box-link-inner {
+  background: #E2F8F6;
+  border: 1px solid #B3DFDE;
+  color: #555;
+}
+
