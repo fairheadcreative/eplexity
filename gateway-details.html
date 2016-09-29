@@ -4,34 +4,20 @@ title: Gateway A
 top-link: Gateways
 top-path: infrastructure
 class: item-edit infrastructure
+title-edit: true
 ---
 
 <section class="plate tabbed">
   <ul class="tabs">
-    <li data-tab="access" class="inactive">Access</li>
-    <li data-tab="specs" class="active">Specs</li>
+    <li data-tab="rules" class="active">Rules</li>
     <li data-tab="monitoring">Monitoring</li>
-    <li data-tab="rules">Rules</li>
     <li class="settings"><div class="icon-settings"><span><em></em></span></div><strong>Settings</strong>
       <ul>
-        <li data-tab="settings-power">Power</li>
-        <li data-tab="settings-rename">Rename</li>
-        <li data-tab="settings-backups">Backups</li>
-        <li data-tab="settings-history">History</li>
+        <li data-tab="settings-power">Refresh</li>
         <li data-tab="settings-destroy">Destroy</li>
       </ul>
     </li>
   </ul>
-
-  <div class="plate-tab" data-plate="access">
-    <div class="group">
-      Access
-    </div>
-  </div>
-
-  <div class="plate-tab" data-plate="specs">
-    {% include subpage/gateway-tab-specs.html %}
-  </div>
 
   <div class="plate-tab" data-plate="monitoring">
       {% include subpage/gateway-tab-monitoring.html %}
@@ -43,66 +29,22 @@ class: item-edit infrastructure
 
   <div class="plate-tab" data-plate="settings-power">
     <div class="group info">
-      <h2>This gateway is enabled.</h2>
-      <p>If you want to disable it, make sure:</p>
-      <ul>
-        <li>That all gateway behavior are being handled by another gateway, or unneeded.</li>
-        <li>That your team is aware that this gateway will no longer be powered on.</li>
-        <li>That billing will be unaffected while this gateway is powered off.</li>
-      </ul>
+      <h2>Refresh Gateway</h2>
+      <p>Here is a description of what happens when you refresh a gateway. If this is OK, and you're ready etc., go ahead:</p>
     </div>
     <div class="group">
       <div class="action-handler">  
         <form action="#">
           <input type="submit" value="Switch it off">
-          <a href="#" class="button secondary">Notify the team</a>
         </form>
       </div> 
-    </div>
-  </div>
-
-  <div class="plate-tab" data-plate="settings-rename">
-    <div class="group info">
-      <h2>This gateway is called 'Gateway A'.</h2>
-      <p>If you want to rename it, make sure:</p>
-      <ul>
-        <li>That all references to this gateway name get updated among your team.</li>
-        <li>That the new name is available (we'll let you know if there's a duplication).</li>
-        <li>That your log this change to keep your ticket &amp; billing info accurate.</li>
-      </ul>
-    </div>
-    <div class="group">
-      <div class="action-handler">
-        <form action="#">
-          <input type="text" class="range-4" value="Faction Server 1">
-          <input type="submit" value="Save changes">
-          <a href="#" class="button secondary">Notify the team</a>
-        </form>          
-      </div>    
-    </div>
-  </div>
-
-  <div class="plate-tab" data-plate="settings-backups">
-    <div class="group">
-      Settings: Backups
-    </div>
-  </div>
-
-  <div class="plate-tab" data-plate="settings-history">
-    <div class="group">
-      Settings: History
     </div>
   </div>
 
   <div class="plate-tab" data-plate="settings-destroy">
     <div class="group info">
       <h2>Careful, this can't be undone!</h2>
-      <p>If you want to destroy it, make sure:</p>
-      <ul>
-        <li>That all gateway actions are being handled by another gateway, or unneeded.</li>
-        <li>That your team is aware that this gateway will no longer be available.</li>
-        <li>That billing will be unaffected once this gateway is destroyed.</li>
-      </ul>
+      <p>Confirmation notice on destroying a gateway.</p>
     </div>
     <div class="group">
       <div class="action-handler">

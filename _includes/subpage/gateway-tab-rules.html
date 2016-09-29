@@ -1,427 +1,402 @@
     <div class="group">
       <ul class="heading">
-        <li class="span-2">NAT</li>
+        <li class="span-2">Name</li>
         <li class="span-6">Type</li>
-        <li class="span-2">Status</li>
+        <li class="span-2">Priority</li>
         <li class="span-2">Applied To</li>
       </ul>
-    </div>
-
-    <div class="details-toggler divider">
-	    <div class="group details-show" data-details="show">
-	        <div class="row">
-	          <div class="span-2">SN1</div>
-	          <div class="span-6">SNAT</div>
-	          <div class="span-2"><span class="label success">ACTIVE</span></div>
-	          <div class="span-2">d10plSu3</div>
-	        </div>
-	    </div>
-
-	    <div class="group details-edit" data-details="edit">
-	        <div class="row sub">
-	          	<div class="span-2">
-		          	<select name="nat">
-		              <option value="SN1">SN1</option>
-		              <option value="temp">Temp</option>
-		              <option value="NAT">NATO</option>
-		            </select>
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="snat" class="half">
-		              <option value="SNAT">SNAT</option>
-		              <option value="NAT">NAT</option>
-		            </select>
-	        	</div>
-	        	<div class="span-2">
-		          	<select name="snat">
-		              <option value="active">ACTIVE</option>
-		              <option value="inactive">INACTIVE</option>
-		            </select>
-	        	</div>
-	        	<div class="span-2">d10plSu3</div>
-	        </div>
-	        <ul class="heading">
-	          <li class="span-8">IP Address</li>
-	          <li class="span-2">Port</li>
-	        </ul>
-	        <div class="row">
-	          <div class="span-2">Original</div>
-	          <div class="span-6">
-	          	<input class="half" placeholder="192.168.109.2">
-	          </div>
-	          <div class="span-2">
-	          	<input placeholder="Any">
-	          </div>
-	        </div>
-	        <div class="row">
-	          <div class="span-2">Translated</div>
-	          <div class="span-6">
-	          	<input class="half" placeholder="192.168.109.2">
-	          </div>
-	          <div class="span-2">
-	          	<input placeholder="Any">
-	          </div>
-	        </div>
-	        <div class="row">
-	          <button class="button small" data-edit="close">Save changes</button>
-	          <button class="button small secondary" data-edit="close">Cancel</button>
-	          <a href="#" class="right" data-edit="close">Delete</a>
-	        </div>
-	    </div>
-    </div>
     
-    <div class="details-toggler divider">
-		<div class="group details-show" data-details="show">
-			<div class="row">
-			  <div class="span-2">Temp</div>
-			  <div class="span-6">NAT</div>
-			  <div class="span-2"><span class="label warning">INACTIVE</span></div>
-			  <div class="span-2">d10plSu3</div>
+			<div class="details-toggler single-line">
+				<div class="details-show details-highlight-row" data-details="show">
+					<div class="row">
+						<div class="dropdown-edit has-options">
+							<span class="edit-toggler-icon">▼</span>
+							<ul class="edit-toggler click-through">
+								<li><span data-details="open">Edit NAT</span></li>
+								<li><span data-remove="NAME">Remove</span></li>
+							</ul>
+						</div>
+						<div class="span-2">SN1</div>
+						<div class="span-6">SNAT</div>
+						<div class="span-2">1</div>
+						<div class="span-2">d10plSu3</div>
+					</div>
+				</div>
+
+				<div class="group details-edit" data-details="edit">
+					<div class="row">
+						<div class="span-2">
+							<select name="nat">
+								<option value="SN1">SN1</option>
+								<option value="temp">Temp</option>
+								<option value="NAT">NATO</option>
+							</select>
+						</div>
+						<div class="span-6">
+							<select name="snat" class="half">
+								<option value="SNAT">SNAT</option>
+								<option value="NAT">NAT</option>
+							</select>
+						</div>
+						<div class="span-2">
+							<input type="text" value="1">
+						</div>
+						<div class="span-2">d10plSu3</div>
+					</div>
+					<ul class="heading">
+						<li class="span-8">IP Address</li>
+						<li class="span-2">Port</li>
+					</ul>
+					<div class="row">
+						<div class="span-2">Original</div>
+						<div class="span-6">
+							<input class="half" placeholder="192.168.109.2">
+						</div>
+						<div class="span-2">
+							<input placeholder="Any">
+						</div>
+					</div>
+					<div class="row">
+						<div class="span-2">Translated</div>
+						<div class="span-6">
+							<input class="half" placeholder="192.168.109.2">
+						</div>
+						<div class="span-2">
+							<input placeholder="Any">
+						</div>
+					</div>
+					<div class="row">
+						<button class="button small" data-edit="close">Save changes</button>
+						<button class="button small secondary" data-edit="close">Cancel</button>
+						<a href="#" class="right" data-edit="close">Delete</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="details-toggler single-line">
+				<div class="details-show details-highlight-row" data-details="show">
+					<div class="row">
+						<div class="dropdown-edit has-options">
+							<span class="edit-toggler-icon">▼</span>
+							<ul class="edit-toggler click-through">
+								<li><span data-details="open">Edit NAT</span></li>
+								<li><span data-remove="NAME">Remove</span></li>
+							</ul>
+						</div>
+						<div class="span-2">Temp</div>
+						<div class="span-6">NAT</div>
+						<div class="span-2">40</div>
+						<div class="span-2">d10plSu3</div>
+					</div>
+				</div>
+
+				<div class="group details-edit" data-details="edit">
+					<div class="row">
+						<div class="span-2">
+							<select name="nat">
+								<option value="SN1">SN1</option>
+								<option value="temp">Temp</option>
+								<option value="NAT">NATO</option>
+							</select>
+						</div>
+						<div class="span-6">
+							<select name="snat" class="half">
+								<option value="SNAT">SNAT</option>
+								<option value="NAT">NAT</option>
+							</select>
+						</div>
+						<div class="span-2">
+							<input type="text" value="40">
+						</div>
+						<div class="span-2">d10plSu3</div>
+					</div>
+					<ul class="heading">
+						<li class="span-8">IP Address</li>
+						<li class="span-2">Port</li>
+					</ul>
+					<div class="row">
+						<div class="span-2">Original</div>
+						<div class="span-6">
+							<input class="half" placeholder="192.168.109.2">
+						</div>
+						<div class="span-2">
+							<input placeholder="Any">
+						</div>
+					</div>
+					<div class="row">
+						<div class="span-2">Translated</div>
+						<div class="span-6">
+							<input class="half" placeholder="192.168.109.2">
+						</div>
+						<div class="span-2">
+							<input placeholder="Any">
+						</div>
+					</div>
+					<div class="row">
+						<button class="button small" data-edit="close">Save changes</button>
+						<button class="button small secondary" data-edit="close">Cancel</button>
+						<a href="#" class="right" data-edit="close">Delete</a>
+					</div>
+				</div>
+		</div>
+			
+			<div class="details-toggler single-line">
+			<div class="details-show details-highlight-row" data-details="show">
+				<div class="row">
+					<div class="dropdown-edit has-options">
+						<span class="edit-toggler-icon">▼</span>
+						<ul class="edit-toggler click-through">
+							<li><span data-details="open">Edit NAT</span></li>
+							<li><span data-remove="NAME">Remove</span></li>
+						</ul>
+					</div>
+					<div class="span-2">NATO</div>
+					<div class="span-6">NAT</div>
+					<div class="span-2">500</div>
+					<div class="span-2">d10plSu3</div>
+				</div>
+			</div>
+
+				<div class="group details-edit" data-details="edit">
+					<div class="row">
+						<div class="span-2">
+							<select name="nat">
+								<option value="SN1">SN1</option>
+								<option value="temp">Temp</option>
+								<option value="NAT">NATO</option>
+							</select>
+						</div>
+						<div class="span-6">
+							<select name="snat" class="half">
+								<option value="SNAT">SNAT</option>
+								<option value="NAT">NAT</option>
+							</select>
+						</div>
+						<div class="span-2">
+							<input type="text" value="500">
+						</div>
+						<div class="span-2">d10plSu3</div>
+					</div>
+					<ul class="heading">
+						<li class="span-8">IP Address</li>
+						<li class="span-2">Port</li>
+					</ul>
+					<div class="row">
+						<div class="span-2">Original</div>
+						<div class="span-6">
+							<input class="half" placeholder="192.168.109.2">
+						</div>
+						<div class="span-2">
+							<input placeholder="Any">
+						</div>
+					</div>
+					<div class="row">
+						<div class="span-2">Translated</div>
+						<div class="span-6">
+							<input class="half" placeholder="192.168.109.2">
+						</div>
+						<div class="span-2">
+							<input placeholder="Any">
+						</div>
+					</div>
+					<div class="row">
+						<button class="button small" data-edit="close">Save changes</button>
+						<button class="button small secondary" data-edit="close">Cancel</button>
+						<a href="#" class="right" data-edit="close">Delete</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
-	    <div class="group details-edit" data-details="edit">
-	        <div class="row sub">
-	          	<div class="span-2">
-		          	<select name="nat">
-		              <option value="SN1">SN1</option>
-		              <option value="temp">Temp</option>
-		              <option value="NAT">NATO</option>
-		            </select>
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="snat" class="half">
-		              <option value="SNAT">SNAT</option>
-		              <option value="NAT">NAT</option>
-		            </select>
-	        	</div>
-	        	<div class="span-2">
-		          	<select name="status">
-		              <option value="active">ACTIVE</option>
-		              <option value="inactive">INACTIVE</option>
-		            </select>
-	        	</div>
-	        	<div class="span-2">d10plSu3</div>
-	        </div>
-	        <ul class="heading">
-	          <li class="span-8">IP Address</li>
-	          <li class="span-2">Port</li>
-	        </ul>
-	        <div class="row">
-	          <div class="span-2">Original</div>
-	          <div class="span-6">
-	          	<input class="half" placeholder="192.168.109.2">
-	          </div>
-	          <div class="span-2">
-	          	<input placeholder="Any">
-	          </div>
-	        </div>
-	        <div class="row">
-	          <div class="span-2">Translated</div>
-	          <div class="span-6">
-	          	<input class="half" placeholder="192.168.109.2">
-	          </div>
-	          <div class="span-2">
-	          	<input placeholder="Any">
-	          </div>
-	        </div>
-	        <div class="row">
-	          <button class="button small" data-edit="close">Save changes</button>
-	          <button class="button small secondary" data-edit="close">Cancel</button>
-	          <a href="#" class="right" data-edit="close">Delete</a>
-	        </div>
-	    </div>
-	</div>
-    
-    <div class="details-toggler divider">
-		<div class="group details-show" data-details="show">
-			<div class="row">
-			  <div class="span-2">NATO</div>
-			  <div class="span-6">NAT</div>
-			  <div class="span-2"><span class="label success">ACTIVE</span></div>
-			  <div class="span-2">d10plSu3</div>
-			</div>
+		<div class="group">
+			<button>Add NAT</button>
 		</div>
-
-	    <div class="group details-edit" data-details="edit">
-	        <div class="row sub">
-	          	<div class="span-2">
-		          	<select name="nat">
-		              <option value="SN1">SN1</option>
-		              <option value="temp">Temp</option>
-		              <option value="NAT">NATO</option>
-		            </select>
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="snat" class="half">
-		              <option value="SNAT">SNAT</option>
-		              <option value="NAT">NAT</option>
-		            </select>
-	        	</div>
-	        	<div class="span-2">
-		          	<select name="status">
-		              <option value="active">ACTIVE</option>
-		              <option value="inactive">INACTIVE</option>
-		            </select>
-	        	</div>
-	        	<div class="span-2">d10plSu3</div>
-	        </div>
-	        <ul class="heading">
-	          <li class="span-8">IP Address</li>
-	          <li class="span-2">Port</li>
-	        </ul>
-	        <div class="row">
-	          <div class="span-2">Original</div>
-	          <div class="span-6">
-	          	<input class="half" placeholder="192.168.109.2">
-	          </div>
-	          <div class="span-2">
-	          	<input placeholder="Any">
-	          </div>
-	        </div>
-	        <div class="row">
-	          <div class="span-2">Translated</div>
-	          <div class="span-6">
-	          	<input class="half" placeholder="192.168.109.2">
-	          </div>
-	          <div class="span-2">
-	          	<input placeholder="Any">
-	          </div>
-	        </div>
-	        <div class="row">
-	          <button class="button small" data-edit="close">Save changes</button>
-	          <button class="button small secondary" data-edit="close">Cancel</button>
-	          <a href="#" class="right" data-edit="close">Delete</a>
-	        </div>
-	    </div>
-	</div>
-
-	<div class="group">
-	    <button>Add DNAT Rule</button>
-	    <button>Add SNAT Rule</button>
-	</div>
 
     <div class="group">
       <ul class="heading">
-        <li class="span-8">Firewall</li>
-        <li class="span-2">Status</li>
-        <li class="span-2">Logging</li>
+        <li class="span-3">Firewall Name</li>
+        <li class="span-1">Priority</li>
+        <li class="span-2">Source</li>
+        <li class="span-2">Destination</li>
+        <li class="span-2">Protocol</li>
+        <li class="span-1">Status</li>
       </ul>
-    </div>
 
-    <div class="details-toggler divider">
-	    <div class="group details-show" data-details="show">
-	        <div class="row">
-	          <div class="span-8">FW INTERNET:VM-ou5d:1454:192.168.111.11</div>
-	          <div class="span-2"><span class="label success">ACTIVE</span></div>
-	          <div class="span-2"><span class="label success">ACTIVE</span></div>
-	        </div>
-	    </div>
+			<div class="details-toggler single-line is-show">
+				<div class="details-show details-highlight-row" data-details="show">
+					<div class="row">
+						<div class="dropdown-edit has-options">
+							<span class="edit-toggler-icon">▼</span>
+							<ul class="edit-toggler click-through">
+								<li><span data-details="open">Edit Firewall Rule</span></li>
+								<li><span data-remove="NAME">Remove</span></li>
+							</ul>
+						</div>
+						<div class="span-3">FW INTERNET:VM-ou5d:1454:192.168.111.11</div>
+						<div class="span-1">500</div>
+						<div class="span-2">Any</div>
+						<div class="span-2">Any</div>
+						<div class="span-2">RDP(TCP/3389)</div>
+						<div class="span-2"><span class="label success">ACTIVE</span></div>
+					</div>
+				</div>
 
-	    <div class="group details-edit" data-details="edit">
-	        <div class="row sub">
-	        	<div class="span-8">
-		          	<input placeholder="FW INTERNET:VM-ou5d:1454:192.168.111.11">
-	        	</div>
-	        	<div class="span-2">
-		          	<select name="status">
-		              <option value="active">ACTIVE</option>
-		              <option value="inactive">INACTIVE</option>
-		            </select>
-	        	</div>
-	        	<div class="span-2">
-		          	<select name="logging">
-		              <option value="active">ACTIVE</option>
-		              <option value="inactive">INACTIVE</option>
-		            </select>
-	        	</div>
-	        </div>
-	        <div class="row sub">
-	        	<div class="span-2">
-		          	Source
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="source">
-		              <option value="any">Any</option>
-		              <option value="source">Source</option>
-		              <option value="source">Source</option>
-		            </select>
-	        	</div>
-	        </div>
-	        <div class="row sub">
-	        	<div class="span-2">
-		          	Destination
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="destination">
-		              <option value="any">Any</option>
-		              <option value="destination">Dest.</option>
-		              <option value="destination">Dest.</option>
-		            </select>
-	        	</div>
-	        </div>
-	        <div class="row">
-	        	<div class="span-2">
-		          	Protocol
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="protocol">
-		              <option value="any">Any</option>
-		              <option value="any">Any</option>
-		            </select>
-	        	</div>
-	        </div>
+				<div class="group details-edit" data-details="edit">
+					<div class="row">
+						<div class="span-3">
+							<input value="FW INTERNET:VM-ou5d:1454:192.168.111.11">
+						</div>
+						<div class="span-1">
+							<input value="500">
+						</div>
+						<div class="span-2">
+							<select name="status">
+								<option value="active">Any</option>
+							</select>
+						</div>
+						<div class="span-2">
+							<select name="status">
+								<option value="active">Any</option>
+							</select>
+						</div>
+						<div class="span-2">
+							<select name="status">
+								<option value="active">RDP(TCP/3389)</option>
+							</select>
+						</div>
+						<div class="span-2">
+							<select name="status">
+								<option value="active">ACTIVE</option>
+								<option value="inactive">INACTIVE</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span-4">
+							Description
+						</div>
+						<div class="span-8">
+							<textarea></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span-4">
+							Inbound or Outbound?
+						</div>
+						<div class="span-4">
+							<select name="source">
+								<option value="inbound">Inbound</option>
+								<option value="outbound">Outbound</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span-4">
+							Port range
+						</div>
+						<div class="span-1">
+							<input type="text" value="20">
+						</div>
+						<div class="span-1">
+							<input type="text" value="60">
+						</div>
+					</div>
+					<div class="row">
+						<button class="button small" data-edit="close">Save changes</button>
+						<button class="button small secondary" data-edit="close">Cancel</button>
+						<a href="#" class="right" data-edit="close">Delete</a>
+					</div>
+				</div>
+			</div>
 
-	        <div class="row">
-	          <button class="button small" data-edit="close">Save changes</button>
-	          <button class="button small secondary" data-edit="close">Cancel</button>
-	          <a href="#" class="right" data-edit="close">Delete</a>
-	        </div>
-	    </div>
-    </div>
+			<div class="details-toggler single-line is-show">
+				<div class="details-show details-highlight-row" data-details="show">
+					<div class="row">
+						<div class="dropdown-edit has-options">
+							<span class="edit-toggler-icon">▼</span>
+							<ul class="edit-toggler click-through">
+								<li><span data-details="open">Edit Firewall Rule</span></li>
+								<li><span data-remove="NAME">Remove</span></li>
+							</ul>
+						</div>
+						<div class="span-3">FW INTERNET:VM-ou5d:1454:192.168.111.11</div>
+						<div class="span-1">500</div>
+						<div class="span-2">Any</div>
+						<div class="span-2">Any</div>
+						<div class="span-2">RDP(TCP/3389)</div>
+						<div class="span-2"><span class="label success">ACTIVE</span></div>
+					</div>
+				</div>
 
-    <div class="details-toggler divider">
-	    <div class="group details-show" data-details="show">
-	        <div class="row">
-	          <div class="span-8">FW INTERNET:VM-ou5d:1454:192.168.111.11</div>
-	          <div class="span-2"><span class="label success">ACTIVE</span></div>
-	          <div class="span-2"><span class="label success">ACTIVE</span></div>
-	        </div>
-	    </div>
+				<div class="group details-edit" data-details="edit">
+					<div class="row">
+						<div class="span-3">
+							<input value="FW INTERNET:VM-ou5d:1454:192.168.111.11">
+						</div>
+						<div class="span-1">
+							<input value="500">
+						</div>
+						<div class="span-2">
+							<select name="status">
+								<option value="active">Any</option>
+							</select>
+						</div>
+						<div class="span-2">
+							<select name="status">
+								<option value="active">Any</option>
+							</select>
+						</div>
+						<div class="span-2">
+							<select name="status">
+								<option value="active">RDP(TCP/3389)</option>
+							</select>
+						</div>
+						<div class="span-2">
+							<select name="status">
+								<option value="active">ACTIVE</option>
+								<option value="inactive">INACTIVE</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span-4">
+							Description
+						</div>
+						<div class="span-8">
+							<textarea></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span-4">
+							Inbound or Outbound?
+						</div>
+						<div class="span-4">
+							<select name="source">
+								<option value="inbound">Inbound</option>
+								<option value="outbound">Outbound</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="span-4">
+							Port range
+						</div>
+						<div class="span-1">
+							<input type="text" value="20">
+						</div>
+						<div class="span-1">
+							<input type="text" value="60">
+						</div>
+					</div>
+					<div class="row">
+						<button class="button small" data-edit="close">Save changes</button>
+						<button class="button small secondary" data-edit="close">Cancel</button>
+						<a href="#" class="right" data-edit="close">Delete</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-	    <div class="group details-edit" data-details="edit">
-	        <div class="row sub">
-	        	<div class="span-8">
-		          	<input placeholder="FW INTERNET:VM-ou5d:1454:192.168.111.11">
-	        	</div>
-	        	<div class="span-2">
-		          	<select name="status">
-		              <option value="active">ACTIVE</option>
-		              <option value="inactive">INACTIVE</option>
-		            </select>
-	        	</div>
-	        	<div class="span-2">
-		          	<select name="logging">
-		              <option value="active">ACTIVE</option>
-		              <option value="inactive">INACTIVE</option>
-		            </select>
-	        	</div>
-	        </div>
-	        <div class="row sub">
-	        	<div class="span-2">
-		          	Source
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="source">
-		              <option value="any">Any</option>
-		              <option value="source">Source</option>
-		              <option value="source">Source</option>
-		            </select>
-	        	</div>
-	        </div>
-	        <div class="row sub">
-	        	<div class="span-2">
-		          	Destination
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="destination">
-		              <option value="any">Any</option>
-		              <option value="destination">Dest.</option>
-		              <option value="destination">Dest.</option>
-		            </select>
-	        	</div>
-	        </div>
-	        <div class="row">
-	        	<div class="span-2">
-		          	Protocol
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="protocol">
-		              <option value="any">Any</option>
-		              <option value="any">Any</option>
-		            </select>
-	        	</div>
-	        </div>
-
-	        <div class="row">
-	          <button class="button small" data-edit="close">Save changes</button>
-	          <button class="button small secondary" data-edit="close">Cancel</button>
-	          <a href="#" class="right" data-edit="close">Delete</a>
-	        </div>
-	    </div>
-    </div>
-
-    <div class="details-toggler divider">
-	    <div class="group details-show" data-details="show">
-	        <div class="row">
-	          <div class="span-8">FW INTERNET:VM-ou5d:1454:192.168.111.11</div>
-	          <div class="span-2"><span class="label success">ACTIVE</span></div>
-	          <div class="span-2"><span class="label success">ACTIVE</span></div>
-	        </div>
-	    </div>
-
-	    <div class="group details-edit" data-details="edit">
-	        <div class="row sub">
-	        	<div class="span-8">
-		          	<input placeholder="FW INTERNET:VM-ou5d:1454:192.168.111.11">
-	        	</div>
-	        	<div class="span-2">
-		          	<select name="status">
-		              <option value="active">ACTIVE</option>
-		              <option value="inactive">INACTIVE</option>
-		            </select>
-	        	</div>
-	        	<div class="span-2">
-		          	<select name="logging">
-		              <option value="active">ACTIVE</option>
-		              <option value="inactive">INACTIVE</option>
-		            </select>
-	        	</div>
-	        </div>
-	        <div class="row sub">
-	        	<div class="span-2">
-		          	Source
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="source">
-		              <option value="any">Any</option>
-		              <option value="source">Source</option>
-		              <option value="source">Source</option>
-		            </select>
-	        	</div>
-	        </div>
-	        <div class="row sub">
-	        	<div class="span-2">
-		          	Destination
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="destination">
-		              <option value="any">Any</option>
-		              <option value="destination">Dest.</option>
-		              <option value="destination">Dest.</option>
-		            </select>
-	        	</div>
-	        </div>
-	        <div class="row">
-	        	<div class="span-2">
-		          	Protocol
-	        	</div>
-	        	<div class="span-6">
-		          	<select name="protocol">
-		              <option value="any">Any</option>
-		              <option value="any">Any</option>
-		            </select>
-	        	</div>
-	        </div>
-
-	        <div class="row">
-	          <button class="button small" data-edit="close">Save changes</button>
-	          <button class="button small secondary" data-edit="close">Cancel</button>
-	          <a href="#" class="right" data-edit="close">Delete</a>
-	        </div>
-	    </div>
-    </div>
-
-	<div class="group">
-	    <button>Add Firewall Rule</button>
-	</div>
+		<div class="group">
+			<button>Add Firewall Rule</button>
+		</div>
