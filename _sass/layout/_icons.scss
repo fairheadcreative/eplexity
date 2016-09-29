@@ -36,10 +36,10 @@
     width: 1.5em;
   }
 
-  $platforms: factionbloc, amazonaws, vmwareblock;
-  $apps: rubyonrails, wordpress, nodejs, phpmyadmin, redis;
+  $platforms: factionbloc, amazonaws, vmwareblock, softlayer;
+  $apps: rubyonrails, wordpress, nodejs, phpmyadmin, redis, centros, mongodb, mssqlserver, mysql, nginx;
   $distros: ubuntu, freebsd, fedora;
-  $others: billing-pdf, trash, size-1, size-2, size-3, size-4, size-5, firewall, gateway, info, lb, star-off, star-on, vpn;
+  $others: billing-pdf, trash, size-1, size-2, size-3, size-4, size-5, firewall, gateway, info, lb, star-off, star-on, vpn, title-edit;
 
   @each $platform in $platforms {
     &.icon-platform-#{$platform} {

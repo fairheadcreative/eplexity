@@ -143,3 +143,24 @@ select {
     }
   }
 }
+
+.serverField {
+  
+  input { float: left; }
+  
+  .icon-rounded.delete-clone {
+    float: left;
+    margin-left: 3%;
+    margin-top: 7px;
+  }
+  
+  .cloned & {
+    input { 
+      width: 91%;
+      
+      @include media(max-width 360px){
+        width: 85%;
+      }
+    }
+  }
+}

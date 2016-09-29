@@ -32,9 +32,9 @@
         .field-edit {
           position: absolute;
           right: -20px;
+          left: auto;
           content: "";
           display: block;
-          background: red;
           top: 50%;
           @include transform(translateY(-50%));
           height: 20px;
@@ -42,6 +42,10 @@
           opacity: 0;
           transition: opacity $base-duration;
           cursor: pointer;
+          
+          @include media(max-width $medium-screen){
+            opacity: 1;
+          }
         }
 
         &:hover {

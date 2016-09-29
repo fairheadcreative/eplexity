@@ -89,7 +89,7 @@ $(function() {
   //search form
   $(".searchForm").bind('input', function(){
     $('.resultContainer').empty();
-    $('.searchable').removeClass('clonedItmes');
+    $('.searchable').removeClass('is-cloned');
     var searchString = $(".searchForm").val();
     var searchables = $('.searchtext');
     var stringLenght = searchString.length;

@@ -28,12 +28,12 @@
   right: $small-spacing;
   top: $base-spacing/3;
   cursor: pointer;
-  z-index: 100;
   
   @include media(max-width $medium-screen){
     right: 0;
     padding: 1em !important;
     width: auto !important;
+    z-index: 100;
   }
 
   .edit-toggler {
@@ -107,9 +107,11 @@
       color: $base-font-color;
     }
   }
-  
-  .dropdown-info-title:hover + ul {
-    opacity: 1;
+
+  @include media($medium-screen+1){
+    .dropdown-info-title:hover + ul {
+      opacity: 1;
+    }
   }
 }
 

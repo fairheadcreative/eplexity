@@ -38,6 +38,10 @@
   [class^="span-"] {
     @extend .truncate;
     line-height: 2;
+    
+    &.dropdown-info {
+      overflow: visible;
+    }
   }
   
   input[type="radio"] {
