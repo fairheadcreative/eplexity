@@ -28,6 +28,13 @@
   right: $small-spacing;
   top: $base-spacing/3;
   cursor: pointer;
+  z-index: 100;
+  
+  @include media(max-width $medium-screen){
+    right: 0;
+    padding: 1em !important;
+    width: auto !important;
+  }
 
   .edit-toggler {
     @extend .toggler-visual;
@@ -37,6 +44,10 @@
 
     &.is-activated {
       opacity: 1;
+      
+      @include media(max-width $medium-screen){
+        li { padding: .5em 0; }
+      }
     }
     
     span {
@@ -59,7 +70,11 @@
   .is-highlighted &,
   a.row:hover & {
     right: $small-spacing + $base-spacing;
-    top: calc(#{$base-spacing/3} + .375em);
+    top: calc(#{$base-spacing/3} + .375em); 
+        
+    @include media(max-width $medium-screen){
+    z-index: 110;
+    }
   }
 }
 

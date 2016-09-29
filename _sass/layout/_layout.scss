@@ -66,6 +66,10 @@ body {
 .span-6 { @include span-columns(6); 
   .grid & {
     @include omega(2n);
+    
+    @include media(max-width $small-screen){
+      @include fill-parent();
+    }
   }
 }
 .span-6-margin { @include span-columns(6); }
@@ -93,6 +97,7 @@ body {
 
 //generic helper/override classes
 .inactive { opacity: .5; pointer-events: none; }
+.block { display: block !important; }
 .hide { display: none !important; }
 .hide-soft { display: none; }
 .right { float: right !important; }

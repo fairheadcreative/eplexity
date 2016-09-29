@@ -38,3 +38,19 @@
   border-bottom: 1px solid $plate-higlight !important;
   padding-left: $base-spacing;
 }
+
+//data attribute title for mobile layouts
+.data-title {
+    &:before {
+    @media (max-width $medium-screen){
+      content: attr(data-title);
+      display: block;
+      position: absolute;
+      max-width: $small-spacing*9;
+      left: 2.5em;
+      color: $medium-gray;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -8,6 +8,11 @@
 
   @include media(max-width $medium-screen) {
     margin: 0 0 $small-spacing;
+    padding: $small-spacing 0;
+    
+    .tickets & {
+      padding: $small-spacing $base-spacing;
+    }
   }
 
   .plate-notice {
@@ -70,7 +75,7 @@
       }
 
       .row.is-highlighted {
-        background: transparent;
+        background: transparent;     
       }
     }
 
@@ -340,6 +345,7 @@
     position: absolute;
     left: 0;
     opacity: .5;
+    
     @include media(max-width $medium-screen) {
       background: shade(#D6E1E6, 20%);
       border-radius: 50%;
@@ -351,6 +357,7 @@
       text-align: center;
       width: 1.5em;
       line-height: 1.7;
+      display: none;
     }
   }
 
@@ -363,24 +370,42 @@
 
   &.tabbed {
     margin-top: 3.85em;
+    
+    @include media(max-width $medium-screen) {
+      margin-top: 3.65em;
+    }
+    
     li.settings {
       @include media(max-width $medium-screen) {
         padding: 0 !important;
       }
-      @include media($medium-screen) {
+      
+      @include media($medium-screen+1) {
         width: 39px;
         position: relative;
       }
+      
       strong {
         display: none;
-        @include media($medium-screen) {
+        @include media($medium-screen+1) {
           text-indent: -999em;
           display: block;
         }
       }
+      
       ul {
         @extend .toggler-visual;
-        @include media($medium-screen) {
+        
+        @include media(max-width $medium-screen) {
+          position: relative;
+          box-shadow: none;
+          background: transparent;
+          padding: inherit;
+          font-size: inherit;
+          margin-top: -1px;
+        }
+        
+        @include media($medium-screen+1) {
           display: none;
           background: white;
           position: absolute;
@@ -391,16 +416,20 @@
           border-radius: 0 0 $base-border-radius $base-border-radius;
           text-align: left;
           padding: .375em;
+          
           li {
             display: block;
             //border-bottom: 1px solid $base-border-color;
+            
             &:hover {
               color: $red;
               background: transparent;
             }
+            
             &:last-child {
               border-bottom: none;
             }
+            
             &.active {
               border: none;
               background: transparent;
@@ -428,7 +457,7 @@
         display: none;
       }
 
-      @include media($medium-screen) {
+      @include media($medium-screen+1) {
         width: 13px;
         background: #F9F7F5;
         height: 13px;
@@ -498,7 +527,7 @@
       margin-bottom: 1.375em;
 
       @include media(max-width $medium-screen) {
-        margin: -4em -1.5em 1.375em;
+        margin: -4em 0 1.375em -1.5em;
         padding-left: 1.5em;
         padding-right: 1.5em;
         overflow-x: auto;
@@ -511,14 +540,21 @@
           font-weight: bold;
           line-height: 3;
           border-radius: 0 !important;
+          
           &.active {
             background: $red !important;
             color: $white !important;
           }
+          
+          &[data-tab="search"] {
+            @include media(max-width $medium-screen+1) {
+              background: lighten($light-gray, 2);
+            }
+          }
         }
       }
 
-      @include media($medium-screen) {
+      @include media($medium-screen+1) {
         bottom: -0.5px;
       }
 
@@ -530,7 +566,7 @@
         padding: .25em $small-spacing;
         cursor: pointer;
 
-        @include media($medium-screen) {
+        @include media($medium-screen+1) {
           &:hover {
             background: shade(#F9F7F5, 5);
           }
@@ -581,14 +617,21 @@
         top: -1em;
         left: 0;
         right: 0;
-        padding-left: $small-spacing;
-        padding-right: $small-spacing;
+        padding: 0 $small-spacing 0;
         border-bottom: none;
+        z-index: 120;
         
         &.is-activated {
+          padding: $base-spacing*2 $small-spacing $small-spacing;
+          box-shadow: 0px 28px 53px 0px rgba(0,0,0,.05);
           
           li {
             display: block !important;
+            margin-bottom: 0;
+            
+            &:last-child {
+              border-bottom: none;
+            }
             
             &.data-sub-description {
               display: none !important;
@@ -597,7 +640,7 @@
         }
       }
 
-      @include media($medium-screen) {
+      @include media($medium-screen+1) {
         bottom: -0.5px;
       }
       
@@ -614,7 +657,7 @@
         
         @include media(max-width $medium-screen) {
           display: block;
-          z-index: 110;
+          z-index: 130;
           position: absolute;
           right: 0;
           top: -1em;
@@ -643,7 +686,7 @@
       
       &.is-activated + .toggler-icon-hitarea + .sub-tab-overlay {
         bottom: 0;
-        background: rgba(0,0,0,.2);
+        background: rgba(0,0,0,.15);
       }
           
 
@@ -670,7 +713,7 @@
           }
         }
 
-        @include media($medium-screen) {
+        @include media($medium-screen+1) {
 
           &:hover {
             background: shade(#F9F7F5, 5);
@@ -745,22 +788,25 @@
 
         & > div {
 
-          border-bottom: 1px solid tint($base-border-color, 10%);
+          //border-bottom: 1px solid tint($base-border-color, 10%);
           width: 100%;
-          padding: $small-spacing/2 $base-spacing+$small-spacing/2 $small-spacing/2 $base-spacing*5;
+          padding: $base-spacing/3 $base-spacing+$small-spacing/2 $base-spacing/3 $base-spacing*7;
           line-height: 1;
 
           &:before {
             content: attr(data-title);
             display: block;
             position: absolute;
-            width: 31.7616%;
-            left: 0;
+            max-width: $small-spacing*9;
+            left: 2.5em;
             color: $medium-gray;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
 
           &:last-child {
             border-bottom: none;
+            text-align: left !important;
           }
 
           .progress-bar-indication {
@@ -771,10 +817,14 @@
       }
 
       .icon {
-        left: auto;
-        right: 0;
+        left: 0;
+        right: auto;
       }
     }
+  }
+
+  @media screen and (max-width: $tiny-screen) {
+    
   }
 }
 

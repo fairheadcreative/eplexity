@@ -19,6 +19,10 @@
     &.marketplace-review {
       margin-bottom: $base-spacing;
     }
+    
+    .row > div {
+      @extend .data-title;
+    }
   }
 }
 
@@ -28,12 +32,41 @@
   }
 }
 
-.marketplace-review-title { 
-  //font-size: 1.1em; 
+.marketplace-section,
+.marketplace-item { 
+  @include media(max-width 650px) {
+    width: 100% !important;
+  }
+}
+
+.marketplace-section {
+  @include media(max-width $small-screen) {
+    .section-box-link {
+      padding-left: $base-spacing;
+      
+      img {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+      }
+      
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .marketplace-nav {
   
+  @include media(max-width 650px){
+    width: 100% !important;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: $base-spacing;
+  }
+     
   h3 {
     //font-size: $base-font-size*.9;
     line-height: 1.65;
@@ -41,17 +74,29 @@
     width: 100%;
     @extend .truncate;
     text-transform: uppercase;
+    
+    @include media(max-width 650px){
+      margin-bottom: 0;
+      font-size: 1.5em;
+      text-align: center;
+    }
   }
   
   li {
     display: block;
     float: left;
     clear: both;
-    //font-size: .8em;
     line-height: 1.35;
     margin: 0;
     width: 100%;
     margin-bottom: 1.25em;
+    
+    @include media(max-width 650px){
+      display: inline-block;
+      width: auto;
+      margin-right: $small-spacing;
+      float: none;
+    }
     
     a { 
       //color: $black; 
@@ -84,6 +129,11 @@
   float: left;
   min-height: calc(#{$base-spacing*2} + 142px);
   width: 100%;
+  
+  @include media(max-width 650px){
+    width: 100%;
+    border-left: none;
+  }
 
   &:first-child { 
     padding-top: 0; 
@@ -181,6 +231,10 @@
 .marketplace-item {
   border-left: $base-border;
   padding: 0 0 0 $base-spacing + $small-spacing/2;
+  
+  @include media(max-width 650px){
+    border-left: none;
+  }
   
   h2 {
     font-weight: 500;

@@ -154,7 +154,7 @@ $(function() {
     var stringLenght = searchString.length;
 
     // start the search only after the third character
-    if ( searchString.length > 2 ) {
+    if ( searchString.length > 0 ) {
       var searchResult = $(searchables).each(function(){
         if($(this).text().toUpperCase().indexOf(searchString.toUpperCase()) != -1){
           var $clone = $(this).parent().parent().removeClass('searchtext').clone(true, true).appendTo('.resultContainer');
