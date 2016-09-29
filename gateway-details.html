@@ -9,6 +9,7 @@ title-edit: true
 
 <section class="plate tabbed">
   <ul class="tabs">
+    <li data-tab="specs">Specs</li>
     <li data-tab="rules" class="active">Rules</li>
     <li data-tab="monitoring">Monitoring</li>
     <li class="settings"><div class="icon-settings"><span><em></em></span></div><strong>Settings</strong>
@@ -18,6 +19,10 @@ title-edit: true
       </ul>
     </li>
   </ul>
+
+  <div class="plate-tab" data-plate="specs">
+      {% include subpage/gateway-tab-specs.html %}
+  </div>
 
   <div class="plate-tab" data-plate="monitoring">
       {% include subpage/gateway-tab-monitoring.html %}

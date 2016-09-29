@@ -1,103 +1,147 @@
-    <div class="group">
-      <ul class="heading">
-        <li class="span-4">Storage</li>
-        <li class="span-4">Total</li>
-        <li class="span-4">Used</li>
-      </ul>
-      <div class="row sub">
-        <div class="span-4">Capacity</div>
-        <div class="span-4">200TB</div>
-        <div class="span-4">120TB</div>
-      </div>
-      <div class="row">
-        <div class="span-4">IOPs</div>
-        <div class="span-4">2000</div>
-        <div class="span-4">500</div>
-      </div>
-    </div>
-
-    <div class="group">
-      <ul class="heading">
-        <li class="span-4">vRAM</li>
-        <li class="span-4">Total</li>
-        <li class="span-4">Used</li>
-      </ul>
-      <div class="row">
-        <div class="span-4">Capacity</div>
-        <div class="span-4">256GB</div>
-        <div class="span-4">128GB</div>
-      </div>
-    </div>
-
-    <div class="details-toggler">
+    <div class="details-toggler" data-aws="true">
       <div class="group details-show" data-details="show">
         <ul class="heading">
-          <li class="span-4">NICs</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Used</li> 
+          <li class="dropdown-edit click-through">
+            <span class="edit-toggler-icon">&#9660;</span>
+          </li>
+          <li class="span-4">Gateway Size</li>
         </ul>
-        <div class="row sub">
-          <div class="span-4">vLAN2900</div>
-          <div class="span-4">10GB</div>
-          <div class="span-4">5GB</div>
-        </div>
         <div class="row">
-          <div class="span-4">vLAN2901</div>
-          <div class="span-4">5GB</div>
-          <div class="span-4">3GB</div>
+          <div class="span-4">X1</div>
         </div>
       </div>
 
       <div class="group details-edit" data-details="edit">
         <ul class="heading">
-          <li class="span-4">Edit NIC Types</li>
-          <li class="span-4">Adapter Type</li>
-          <li class="span-4 push-2">Primary</li> 
+          <li class="span-3 push-2">Name</li>
+          <li class="span-1">vCPUS</li>
+          <li class="span-1">vRAM</li>
+          <li class="span-1">Storage</li>
+          <li class="span-2">Net Egress</li>
+          <li class="span-1">Ver</li>
+          <li class="span-3">Monthly Charge</li>
+        </ul>
+
+        <div class="row">
+          <div class="span-3 push-2"><span class="icon icon-size-1 icon-suptext">7</span>X1</div>
+          <div class="span-1">1</div>
+          <div class="span-1">1GB</div>
+          <div class="span-1">30GB</div>
+          <div class="span-2">2TB</div>
+          <div class="span-1">7</div>
+          <div class="span-15">50USD</div>
+          <div class="span-15 txt-right">
+            <form action="infrastructure-add-step2.html">
+              <input type="hidden" name="bloc" value="a">
+              <input type="submit" class="button small hide" value="Select">
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span-3 push-2"><span class="icon icon-size-2 icon-suptext">2</span>X2</div>
+          <div class="span-1">2</div>
+          <div class="span-1">2GB</div>
+          <div class="span-1">40GB</div>
+          <div class="span-2">3TB</div>
+          <div class="span-1">2</div>
+          <div class="span-15">70USD</div>
+          <div class="span-15 txt-right">
+            <form action="infrastructure-add-step2.html">
+              <input type="hidden" name="bloc" value="a">
+              <input type="submit" class="button small" value="Select">
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span-3 push-2"><span class="icon icon-size-3 icon-suptext">7</span>X3</div>
+          <div class="span-1">4</div>
+          <div class="span-1">2GB</div>
+          <div class="span-1">60GB</div>
+          <div class="span-2">4TB</div>
+          <div class="span-1">7</div>
+          <div class="span-15">200USD</div>
+          <div class="span-15 txt-right">
+            <form action="infrastructure-add-step2.html">
+              <input type="hidden" name="bloc" value="a">
+              <input type="submit" class="button small" value="Select">
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span-3 push-2"><span class="icon icon-size-4 icon-suptext">2</span>X4</div>
+          <div class="span-1">8</div>
+          <div class="span-1">4GB</div>
+          <div class="span-1">80GB</div>
+          <div class="span-2">5TB</div>
+          <div class="span-1">2</div>
+          <div class="span-15">240USD</div>
+          <div class="span-15 txt-right">
+            <form action="infrastructure-add-step2.html">
+              <input type="hidden" name="bloc" value="a">
+              <input type="submit" class="button small" value="Select">
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span-3 push-2"><span class="icon icon-size-5 icon-suptext">7</span>X5</div>
+          <div class="span-1">16</div>
+          <div class="span-1">8GB</div>
+          <div class="span-1">160GB</div>
+          <div class="span-2">6TB</div>
+          <div class="span-1">7</div>
+          <div class="span-15">400USD</div>
+          <div class="span-15 txt-right">
+            <form action="infrastructure-add-step2.html">
+              <input type="hidden" name="bloc" value="a">
+              <input type="submit" class="button small" value="Select">
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <button class="plate-cancel button small secondary" data-edit="close">Cancel</button>
+        </div>
+      </div>   
+    </div>
+
+    <div class="details-toggler">
+      <div class="group details-show" data-details="show">
+        <ul class="heading">
+          <li class="span-4">Address Type</li>
+          <li class="span-8">Address</li>
+        </ul>
+        <div class="row sub">
+          <div class="span-4">Gateway IP</div>
+          <div class="span-8">123.323.21.2</div>
+        </div>
+        <div class="row">
+          <div class="span-4">Router IP</div>
+          <div class="span-8">123.323.21.2</div>
+        </div>
+      </div>
+
+      <div class="group details-edit" data-details="edit">
+        <ul class="heading">
+          <li class="span-4">Edit Addresses</li>
+          <li class="span-8">Address</li>
         </ul>
         <div class="row">
-          <div class="span-4 counted">
-            <span class="count">1</span>
-            <select name="units">
-              <option value="2900">vLAN2900</option>
-              <option value="2901">vLAN2901</option>
-              <option value="2911">vLAN2911</option>
-            </select>
+          <div class="span-4">
+            Gateway IP
           </div>
           <div class="span-4">
-            <select name="adapter">
-              <option value="1">VMXNET 3</option>
-              <option value="2">VMXNET 2</option>
-              <option value="2">Flexible</option>
-            </select>
-          </div>
-          <div class="span-4 push-2">
-            <input type="radio" name="primary" value="1" checked>
+            <input type="text" value="123.323.21.1">
           </div>
         </div>
         <div class="row">
-          <div class="span-4 counted">
-            <span class="count">1</span>
-            <select name="units">
-              <option value="2900">vLAN2900</option>
-              <option value="2901">vLAN2901</option>
-              <option value="2911">vLAN2911</option>
-            </select>
+          <div class="span-4">
+            Router IP
           </div>
           <div class="span-4">
-            <select name="adapter">
-              <option value="1">VMXNET 3</option>
-              <option value="2">VMXNET 2</option>
-              <option value="2">Flexible</option>
-            </select>
-          </div>
-          <div class="span-4 push-2">
-            <input type="radio" name="primary" value="2">
-          </div>
-        </div>
-        <div class="row">  
-          <div class="span-4 counted">
-            <span class="count">+</span>
-            <a class="value" href="#">Add Network Device</a>
+            <input type="text" value="123.323.21.1">
           </div>
         </div>
         <div class="row">
@@ -107,54 +151,50 @@
       </div>
     </div>
 
-    <div class="group">
-      <ul class="heading">
-        <li class="span-4">Bandwidth</li>
-        <li class="span-4">Total</li>
-        <li class="span-4">Used</li>
-      </ul>
-      <div class="row">
-        <div class="span-4">Capacity</div>
-        <div class="span-4">1GBit</div>
-        <div class="span-4">1GBit</div>
-      </div>
-    </div>
-
     <div class="details-toggler">
       <div class="group details-show" data-details="show">
         <ul class="heading">
-          <li class="span-4">vCPU</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Available</li>
+          <li class="span-6">Virtual Networks</li>
         </ul>
         <div class="row sub">
-          <div class="span-4">2 CPUs</div>
-          <div class="span-4">15GHz</div>
-          <div class="span-4">10GHz</div>
+          <div class="span-12">us-west-2c [172.31.0.0/20 (Maps to public IP)] for AWS</div>
+        </div>
+        <div class="row">
+          <div class="span-12">esxi135.eplx.den3.loc [DEN3-EPLX01-MGMT-1099] for Softlayer</div>
         </div>
       </div>
 
       <div class="group details-edit" data-details="edit">
         <ul class="heading">
-          <li class="span-4">Edit vCPU</li>
-          <li class="span-4">Total</li>
-          <li class="span-4">Available</li> 
+          <li class="span-12">Edit Virtual Networks</li>
         </ul>
-        <div class="row">
-          <div class="span-4">
-              <select name="units" class="half">
-                <option value="GB">1</option>
-                <option value="TB">2</option>
-                <option value="MB">3</option>
-              </select>
-              <span class="inblock">CPUs</span>
-            </div>
-          <div class="span-4">15GHz</div>
-          <div class="span-4">10GHz</div>
+        <div class="row disk">
+          <div class="span-8 counted">
+            <span class="count">1</span>
+            <select>
+              <option>us-west-2c [172.31.0.0/20 (Maps to public IP)] for AWS</option>
+            </select>
+          </div>
+          <div class="span1 txt-right"><span class="icon-rounded icon-highlighted" data-remove="add-disk">&times;</span></div>
+        </div>
+        <div class="row disk">
+          <div class="span-8 counted">
+            <span class="count">2</span>
+            <select>
+              <option>esxi135.eplx.den3.loc [DEN3-EPLX01-MGMT-1099] for Softlayer</option>
+            </select>
+          </div>
+          <div class="span1 txt-right"><span class="icon-rounded icon-highlighted" data-remove="add-disk">&times;</span></div>
+        </div>
+        <div class="row add-disk">  
+          <div class="span-4 counted">
+            <span class="count">+</span>
+            <a class="value" href="#" data-details="add-disk">Add a network</a>
+          </div>
         </div>
         <div class="row">
-            <button class="plate-save button small" data-edit="close">Save changes</button>
-            <button class="plate-cancel button small secondary" data-edit="close">Cancel</button>
+          <button class="plate-save button small" data-edit="close">Save changes</button>
+          <button class="plate-cancel button small secondary" data-edit="close">Cancel</button>
         </div>
-      </div>         
+      </div>
     </div>
