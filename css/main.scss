@@ -232,3 +232,62 @@ body .page-content .row {
     font-size: 16px !important;
   }
 }
+
+
+
+// Extra Marketplace bits for refactor
+
+.catalog-grid {
+  @include row;
+  padding-top: 1em;
+  background: #f7f7f7;
+
+  @include media(max-width $medium-screen - 1) {
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+  }
+
+  @include media($medium-screen) {
+    margin-left: -0.4em;
+    margin-right: -0.4em;
+  }
+}
+
+.plate-collapse {
+  padding: 0;
+}
+
+.catalog-grid a {
+  margin-bottom: 0;
+  border: 6px solid #f7f7f7;
+  @include transition(0s all);
+
+  @include media(max-width em(560)) {
+    max-width: em(480);
+    margin: 0 auto;
+  }
+
+  @include media(em(560)) {
+    width: 50%;
+    float: left;
+  }
+
+  &:hover {
+    color: #555;
+  }
+}
+
+.content-box-link {
+  padding: 0;
+}
+
+.content-box-link .content-box-link-inner {
+  border: 1px solid transparent;
+  padding: 1.65em 3em;
+  @include transition(0.2s all);
+}
+
+.content-box-link:hover .content-box-link-inner {
+  background: #E2F8F6;
+  border: 1px solid #B3DFDE;
+}

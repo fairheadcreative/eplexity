@@ -170,14 +170,11 @@
 .content-box-link {
   @extend .box-link;
   background: $white;
-  //border: $base-border;
   padding: 1.65em 3em;
   color: $dark-gray;
   text-decoration: none;
   text-align: center;
   margin-bottom: $base-spacing;
-  
-  &:hover { color: $action-color; }
   
   &.featured {
     
