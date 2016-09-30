@@ -113,7 +113,6 @@ $(function() {
 
   });
 
-
   //Calculate total amount
   var addAmount = $(this).find('[data-details="add-amount"]');
   var value = $(this).find('[data-details="value"]');
@@ -143,9 +142,7 @@ $(function() {
       $('[data-details="btn-continue"]').removeClass("secondary");
       $('[data-details="btn-continue"]').val('Continue'); 
     }
-
-
-
+    
     e.preventDefault();
   });
 

@@ -6,7 +6,9 @@
   position: relative;
 
   &:hover {
+    @include media($medium-screen+1){
       background: $plate-hover;
+    }      
   }	
 }
 
@@ -31,7 +33,7 @@
   
   @include media(max-width $medium-screen){
     right: 0;
-    padding: 1em !important;
+    padding: .5em 1em !important;
     width: auto !important;
     z-index: 100;
   }
@@ -46,6 +48,7 @@
       opacity: 1;
       
       @include media(max-width $medium-screen){
+        right: 3px;
         li { padding: .5em 0; }
       }
     }
@@ -56,7 +59,9 @@
       transition: color $base-duration;
       
       &:hover {
-        color: red;
+        @include media($medium-screen+1){
+          color: red;          
+        }
       }
     }
   }
@@ -69,8 +74,11 @@
   
   .is-highlighted &,
   a.row:hover & {
-    right: $small-spacing + $base-spacing;
-    top: calc(#{$base-spacing/3} + .375em); 
+    @include media($medium-screen+1){
+      right: $small-spacing + $base-spacing;
+      top: calc(#{$base-spacing/3} + .375em);
+    }
+     
         
     @include media(max-width $medium-screen){
     z-index: 110;

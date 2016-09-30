@@ -44,6 +44,12 @@
   .plate-tab,
   .sub-plate-tab {
     width: 100%;
+    
+    &.open {
+      @include media(max-width $medium-screen){
+        padding-top: .01em;
+      }      
+    }
   }
 
   .details-toggler {
@@ -71,6 +77,11 @@
         border-bottom: 1px solid transparent;
         .details-show {
           @extend .activate-row;
+          
+          @include media(max-width $medium-screen){
+            width: calc(100% + 2.4em);
+            padding-right: 0;
+          }
         }
       }
 
@@ -90,6 +101,11 @@
         @extend .activate-row;
         border-right: 1px solid $plate-higlight;
         border-left: 1px solid $plate-higlight;
+          
+        @include media(max-width $medium-screen){
+          width: calc(100% + 2.25em);
+        }
+        
         .group {
           padding: .75em 0;
         }
@@ -145,7 +161,7 @@
     }
 
     @include media(max-width $medium-screen) {
-      font-size: .8em;
+      //font-size: .8em;
     }
   }
 
@@ -287,7 +303,7 @@
     .button {
       width: auto;
       @media screen and (max-width: $medium-screen) {
-        margin-top: .5em;
+        //margin-top: .5em;
       }
     }
 
@@ -623,7 +639,7 @@
         z-index: 120;
         
         &.is-activated {
-          padding: $base-spacing*2 $small-spacing $small-spacing;
+          padding: $base-spacing*2+$small-spacing $small-spacing $small-spacing;
           box-shadow: 0px 28px 53px 0px rgba(0,0,0,.05);
           
           li {
@@ -660,7 +676,7 @@
           display: block;
           z-index: 130;
           position: absolute;
-          right: 0;
+          right: 1em;
           top: -1em;
         }
       }
@@ -754,7 +770,7 @@
             color: $dark-gray;
             left: 0;
             font-size: 1.5em;
-            line-height: 1;
+            line-height: 1.75;
             top: 0;
             display: block;
             padding-left: .5em;
@@ -796,6 +812,8 @@
           width: 100%;
           padding: $base-spacing/3 $base-spacing+$small-spacing/2 $base-spacing/3 $base-spacing*7;
           line-height: 1;
+          
+          @include media(max-width $medium-screen){ padding-right: $base-spacing+$small-spacing; }
 
           &:before {
             content: attr(data-title);
@@ -817,6 +835,24 @@
             bottom: .1em;
             position: relative;
           }
+        }
+
+        //remove data-title content from the first item, make it a title and position it t the left
+        @include media(max-width $medium-screen){
+
+          & > div.push-2:first-child,
+          .dropdown-edit + div.push-2 {
+            font-weight: bold;
+            padding-left: 2.5em;
+
+            &:before {
+              display: none;
+            }
+          } 
+          
+          & > div.push-2:not([data-title]) {
+            padding-left: 2.5em;
+          }    
         }
       }
 

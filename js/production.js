@@ -148,12 +148,12 @@ $(function() {
   //search form
   $(".searchForm").bind('input', function(){
     $('.resultContainer').empty();
-    $('.searchable').removeClass('clonedItmes');
+    $('.searchable').removeClass('is-cloned');
     var searchString = $(".searchForm").val();
     var searchables = $('.searchtext');
     var stringLenght = searchString.length;
 
-    // start the search only after the third character
+    // set the number of characters needed to kick-off the search
     if ( searchString.length > 0 ) {
       var searchResult = $(searchables).each(function(){
         if($(this).text().toUpperCase().indexOf(searchString.toUpperCase()) != -1){
@@ -171,7 +171,6 @@ $(function() {
      $('[data-remove-target="'+target+'"]').remove();
 
   });
-
 
   //Calculate total amount
   var addAmount = $(this).find('[data-details="add-amount"]');
@@ -202,9 +201,7 @@ $(function() {
       $('[data-details="btn-continue"]').removeClass("secondary");
       $('[data-details="btn-continue"]').val('Continue'); 
     }
-
-
-
+    
     e.preventDefault();
   });
 
@@ -258,8 +255,8 @@ $(function() {
   
   $('[data-switch]').on('click', function(){
     var target = $(this).attr('data-switch');
-    $(this).hide();
     $('[data-switch-target="'+target+'"]').show();
+    $(this).hide();
   });
   
     

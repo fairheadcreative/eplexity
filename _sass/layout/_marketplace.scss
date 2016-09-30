@@ -119,6 +119,8 @@
   display: block;
   position: relative;
   transition: all $base-duration;
+  
+  @include media(max-width 650px){ padding-bottom: $base-spacing; }
 }
   
 .section-box-link {

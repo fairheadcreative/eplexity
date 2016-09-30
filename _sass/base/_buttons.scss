@@ -37,7 +37,7 @@
     opacity: 0.5;
 
     &:hover {
-      background-color: $teal;
+      @include media($medium-screen+1){ background-color: $teal; }
     }
   }
 }

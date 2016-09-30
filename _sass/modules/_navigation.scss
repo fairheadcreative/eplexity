@@ -72,8 +72,10 @@
         
         &:focus,
         &:hover {
-          color: $bright-blue;
-          background: lighten($dark-gray, 10);
+          @include media($medium-screen+1){
+            color: $bright-blue;
+            background: lighten($dark-gray, 10);
+          }
         }
       }
       
@@ -178,9 +180,11 @@
 .marketplace .nav-main .marketplace a,
 .tickets .nav-main .tickets a,
 .billing .nav-main .billing a,
+.billing .nav-main .reseller-billing a,
 .clients .nav-main .reseller-clients a,
 .products .nav-main .reseller-products a,
-.user .nav-main .user a {
+.partner-products .nav-main .reseller-products a,
+.user:not(.clients) .nav-main .user a {
   color: $medium-gray;
   
   @include media(max-width $medium-screen) {

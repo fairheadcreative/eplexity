@@ -46,8 +46,8 @@ $(function() {
   
   $('[data-switch]').on('click', function(){
     var target = $(this).attr('data-switch');
-    $(this).hide();
     $('[data-switch-target="'+target+'"]').show();
+    $(this).hide();
   });
   
     

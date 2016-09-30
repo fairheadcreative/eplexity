@@ -39,6 +39,10 @@
     @extend .truncate;
     line-height: 2;
     
+    @media screen and (max-width: $medium-screen) {
+      line-height: 2.25;
+    }
+    
     &.dropdown-info {
       overflow: visible;
     }
@@ -116,8 +120,9 @@
   button,
   .button {
     width: auto;
+    
     @media screen and (max-width: $medium-screen) {
-      margin-top: .5em;
+      //margin-top: .5em;
     }
   }
   
@@ -141,6 +146,10 @@ a.row:hover {
   @extend .activate-row;
   top: calc(-.375em - 1px);
   padding-top: $small-spacing;
+          
+  @include media(max-width $medium-screen){
+    width: calc(100% + 2.25em);
+  }
   
   & + .row {
     margin-top: calc(-.375em - 1px);
