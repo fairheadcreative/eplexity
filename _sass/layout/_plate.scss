@@ -590,6 +590,7 @@
 
         &.active {
           cursor: default;
+          pointer-events: none;
           position: relative;
           border-bottom: 1px solid transparent;
           color: $red;

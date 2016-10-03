@@ -1,7 +1,6 @@
 $(function() {
 
-//pickup url parameters and apply to parts of a page  
-  if ($('body.pars-uri').length) {
+//pickup url parameters and apply to parts of a page 
        
     function GetURLParameter(stringParam) {
       var sPageURL = window.location.search.substring(1);
@@ -12,7 +11,7 @@ $(function() {
           return sParameterName[1];
         }
       }
-    }
+    };
     
     //pick up and apply server name
     var serverString = GetURLParameter('serverName');
@@ -27,7 +26,16 @@ $(function() {
     if (typeof activeTabString != 'undefined') {
         $('[data-tab]').removeClass('active');
         $('[data-tab="'+activeTab+'"]').addClass('active');
-      }  
+        $('[data-plate="'+activeTab+'"]').addClass('open');
+      }; 
+    
+    //pick up and apply active sub-tab
+    var activeSubTabString = GetURLParameter('activeSubTab');
+    var activeSubTab = decodeURIComponent(activeSubTabString);
+    if (typeof activeSubTabString != 'undefined') {
+        $('.plate-tab.open [data-sub-tab]').removeClass('sub-active');
+        $('.plate-tab.open [data-sub-tab="'+activeSubTab+'"]').addClass('sub-active');
+      };   
     
     //check if, and apply AWS tab
     var AWSString = GetURLParameter('AWS');
@@ -38,9 +46,7 @@ $(function() {
       }else{
         $('[data-aws="true"]').hide();
         $('[data-aws="false"]').show();
-      }    
-    
-    };
+      };
   
 //generic turn self off and switch with something else that has same data attribute
   
@@ -78,8 +84,14 @@ $(function() {
   $('.tabs li:not(.settings)').on( 'click', function(e) {
 
       e.preventDefault();
-      var tabValue = $(this).attr('data-tab'), 
+      var tabValue = $(this).attr('data-tab'),
+          targetValue = $(this).attr('data-target-url'),
           siblings = $('.tabs li');
+    
+      if(typeof targetValue != 'undefined' && targetValue.match("^/") || typeof targetValue != 'undefined' && targetValue.match("^http")) {
+        window.location.href = targetValue;
+        return;
+      }
 
       plateContent.each(function(){ 
         $(this).attr('data-plate') == tabValue? $(this).css({'visibility':'visible','position':'relative','left':'0'}).addClass('open') : $(this).css({'visibility':'hidden','position':'fixed','left':'-1000%'}).removeClass('open');
@@ -90,8 +102,9 @@ $(function() {
       $('.sub-tabs li').removeClass('sub-active');
       $('.sub-plate-tab').css({'visibility':'hidden','position':'fixed','left':'-1000%'});
       $('.plate-tab.open .sub-tabs li:nth-child(2)').addClass('sub-active');
-      var subActive = $('.sub-active').attr('data-sub-tab');
-      $('.plate-tab.open .sub-plate-tab[data-sub-plate="'+subActive+'"]').css({'visibility':'visible','position':'relative','left':'0'});
+      var subActive = $('.sub-active').attr('data-sub-tab'),
+          subActiveOpen = $('.plate-tab.open .sub-plate-tab[data-sub-plate="'+subActive+'"]');
+      subActiveOpen.css({'visibility':'visible','position':'relative','left':'0'});
       subActiveDesc = $('.sub-active').attr('data-sub-description');
       $('.data-sub-description .sub-target').html(subActiveDesc);
 
@@ -157,7 +170,7 @@ $(function() {
   });
 
   //find and show active sub-tab content, hide the rest
-  subPlateContent.each(function(){
+  subPlateContent.each(function() {
 
       var subActive = $('.sub-active').attr('data-sub-tab');
       $(this).attr('data-sub-plate') == subActive? $(this).css({'visibility':'visible','position':'relative','left':'0'}) : $(this).css({'visibility':'hidden','position':'fixed','left':'-1000%'});
@@ -168,8 +181,14 @@ $(function() {
   $('.sub-tabs li:not(.data-sub-description)').on( 'click', function(e) {
 
       e.preventDefault();
-      var subTabValue = $(this).attr('data-sub-tab'), 
+      var subTabValue = $(this).attr('data-sub-tab'),
+          targetValue = $(this).attr('data-target-url'), 
           siblings = $('.sub-tabs li');
+    
+      if(typeof targetValue != 'undefined' && targetValue.match("^/") || typeof targetValue != 'undefined' && targetValue.match("^http")) {
+        window.location.href = targetValue;
+        return;
+      }
 
       subPlateContent.each(function(){ 
         $(this).attr('data-sub-plate') == subTabValue? $(this).css({'visibility':'visible','position':'relative','left':'0'}) : $(this).css({'visibility':'hidden','position':'fixed','left':'-1000%'});
